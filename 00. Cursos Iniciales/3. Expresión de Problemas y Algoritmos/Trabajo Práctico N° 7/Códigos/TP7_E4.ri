@@ -1,0 +1,66 @@
+programa TP7_E4
+procesos
+  proceso contar_flores (ES flores: numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      flores:=flores+1
+  fin
+  proceso contar_papeles (ES papeles: numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      papeles:=papeles+1
+  fin
+  proceso recorrer_calle (ES calles: numero)
+  variables
+    tot_flores, tot_papeles, esquinas: numero
+  comenzar
+    tot_flores:=0
+    tot_papeles:=0
+    esquinas:=0
+    repetir 99
+      contar_flores(tot_flores)
+      contar_papeles(tot_papeles)
+      mover
+    contar_flores(tot_flores)
+    contar_papeles(tot_papeles)
+    Pos (1,PosCa)
+    si (tot_flores>=tot_papeles)
+      mientras (HayFlorEnLaBolsa & (PosCa<100))
+        depositarFlor
+        mover
+        esquinas:=esquinas+1
+      si (HayFlorEnLaBolsa)
+        depositarFlor
+        esquinas:=esquinas+1
+    sino
+      mientras (HayPapelEnLaBolsa & (PosCa<100))
+        depositarPapel
+        mover
+      si (HayPapelEnLaBolsa)
+        depositarPapel
+    si (esquinas=100)
+      calles:=calles+1
+  fin
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  variables
+    tot_calles: numero
+  comenzar
+    tot_calles:=0
+    derecha
+    repetir 99
+      recorrer_calle(tot_calles)
+      Pos (1,PosCa+1)
+    recorrer_calle(tot_calles)
+    Informar (tot_calles)
+  fin
+variables
+  R-info: robot1
+comenzar
+  AsignarArea(R-info,ciudad)
+  Iniciar(R-info,1,1)
+fin

@@ -4,8 +4,8 @@ Bienvenido/a al repositorio de los trabajos prácticos de las materias de la Lic
 
 ## Descripción
 
-Este repositorio contiene las resoluciones de los trabajos prácticos realizados durante la carrera (iniciada en el año 2023), organizados por materia.
-Para cada resolución, se incluyen los códigos (dado el lenguaje utilizado en la materia correspondiente) y el informe en formato .docx y .pdf.
+Este repositorio contiene las resoluciones de los trabajos prácticos realizados durante la carrera (Plan 2021), organizadas por materia.
+Para cada resolución, se incluyen los códigos (dado el lenguaje utilizado en la materia correspondiente) y el informe (en formato .docx y .pdf).
 
 ## Estructura del Repositorio (hasta el momento)
 
@@ -27,6 +27,6 @@ Para cada resolución, se incluyen los códigos (dado el lenguaje utilizado en l
 
 ## Contacto
 
-Si tienes alguna pregunta o comentario, no dudes en contactarme a través de mi correo electrónico: menduinajuan@gmail.com.
+Si tenés alguna pregunta o comentario, no dudes en contactarme a través de mi correo electrónico: menduinajuan@gmail.com.
 
 ¡Gracias por visitar mi repositorio!

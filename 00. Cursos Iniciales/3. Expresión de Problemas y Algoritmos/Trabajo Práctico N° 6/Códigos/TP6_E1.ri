@@ -1,0 +1,22 @@
+programa TP6_E1
+procesos
+  proceso cuadrado (E lado: numero)
+  comenzar
+    repetir 4
+      repetir lado
+        mover
+      derecha
+  fin
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  comenzar
+    cuadrado(2)
+  fin
+variables
+  R-info: robot1
+comenzar
+  AsignarArea(R-info,ciudad)
+  Iniciar(R-info,1,1)
+fin
