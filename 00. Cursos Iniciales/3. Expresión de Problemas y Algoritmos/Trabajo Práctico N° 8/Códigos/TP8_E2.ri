@@ -1,0 +1,63 @@
+programa TP8_E2
+procesos
+  proceso contar_flores (ES flores: numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      flores:=flores+1
+    repetir flores
+      depositarFlor
+  fin
+  proceso contar_papeles (ES papeles: numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      papeles:=papeles+1
+    repetir papeles
+      depositarPapel
+  fin
+  proceso recorrer_avenida (ES esquinas: numero; ES avenidas: numero)
+  variables
+    tot_flores, tot_papeles, papeles_avenida: numero
+  comenzar
+    papeles_avenida:=0
+    repetir 99
+      tot_flores:=0
+      tot_papeles:=0
+      contar_flores(tot_flores)
+      contar_papeles(tot_papeles)
+      si (tot_flores=20)
+        esquinas:=esquinas+1
+      papeles_avenida:=papeles_avenida+tot_papeles
+      mover
+    tot_flores:=0
+    tot_papeles:=0
+    contar_flores(tot_flores)
+    contar_papeles(tot_papeles)
+    si (tot_flores=20)
+      esquinas:=esquinas+1
+    papeles_avenida:=papeles_avenida+tot_papeles
+    si (papeles_avenida<60)
+      avenidas:=avenidas+1
+  fin
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  variables
+    tot_esquinas, tot_avenidas: numero
+  comenzar
+    tot_esquinas:=0
+    tot_avenidas:=0
+    repetir 99
+      recorrer_avenida(tot_esquinas,tot_avenidas)
+      Pos (PosAv+1,1)
+    recorrer_avenida(tot_esquinas,tot_avenidas)
+    Informar (tot_esquinas,tot_avenidas)
+  fin
+variables
+  R-info: robot1
+comenzar
+  AsignarArea(R-info,ciudad)
+  Iniciar(R-info,1,1)
+fin

@@ -1,0 +1,66 @@
+programa TP8_E5
+procesos
+  proceso contar_flores (ES flores: numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      flores:=flores+1
+  fin
+  proceso contar_papeles (ES papeles: numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      papeles:=papeles+1
+  fin
+  proceso recorrer_calle (E pasos: numero; ES esquinas: numero; ES flores_calles: numero; ES papeles_calles: numero)
+  variables
+    tot_flores, tot_papeles, aux: numero
+  comenzar
+    repetir pasos
+      tot_flores:=0
+      tot_papeles:=0
+      aux:=0
+      contar_flores(tot_flores)
+      contar_papeles(tot_papeles)
+      flores_calles:=flores_calles+tot_flores
+      papeles_calles:=papeles_calles+tot_papeles
+      aux:=2 * tot_papeles
+      si ((tot_flores=aux) & (tot_papeles>0))
+        esquinas:=esquinas+1
+      mover
+    tot_flores:=0
+    tot_papeles:=0
+    aux:=0
+    contar_flores(tot_flores)
+    contar_papeles(tot_papeles)
+    flores_calles:=flores_calles+tot_flores
+    papeles_calles:=papeles_calles+tot_papeles
+    aux:=2 * tot_papeles
+    si ((tot_flores=aux) & (tot_papeles>0))
+      esquinas:=esquinas+1
+  fin
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  variables
+    tot_pasos, tot_esquinas, tot_flores_calles, tot_papeles_calles: numero
+  comenzar
+    tot_pasos:=7
+    tot_flores_calles:=0
+    tot_papeles_calles:=0
+    derecha
+    repetir 10
+      tot_esquinas:=0
+      recorrer_calle(tot_pasos,tot_esquinas,tot_flores_calles,tot_papeles_calles)
+      Informar (tot_esquinas)
+      tot_pasos:=tot_pasos+2
+      Pos (1,PosCa+1)
+    Informar (tot_flores_calles,tot_papeles_calles)
+  fin
+variables
+  R-info: robot1
+comenzar
+  AsignarArea(R-info,ciudad)
+  Iniciar(R-info,1,1)
+fin
