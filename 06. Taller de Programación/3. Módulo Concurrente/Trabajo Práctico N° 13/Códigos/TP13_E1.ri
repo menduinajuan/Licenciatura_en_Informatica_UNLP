@@ -1,33 +1,33 @@
 programa TP13_E1
 procesos
-  proceso juntarFloresEsquina (ES flores : numero)
+  proceso juntarFloresEsquina (ES flores: numero)
   comenzar
     mientras (HayFlorEnLaEsquina)
       tomarFlor
-      flores := flores + 1
+      flores:=flores+1
   fin
-  proceso juntarPapelesEsquina (ES papeles : numero)
+  proceso juntarPapelesEsquina (ES papeles: numero)
   comenzar
     mientras (HayPapelEnLaEsquina)
       tomarPapel
-      papeles := papeles + 1
+      papeles:=papeles+1
   fin
 areas
-  areaD : AreaC(10,10,10,10)
-  areaF : AreaPC(1,1,5,10)
-  areaP : AreaPC(6,1,10,9)
-  areaF1 : AreaP(6,10,6,10)
-  areaF2 : AreaP(7,10,7,10)
-  areaP1 : AreaP(8,10,8,10)
-  areaP2 : AreaP(9,10,9,10)
+  areaC: AreaC(10,10,10,10)
+  areaF: AreaPC(1,1,5,10)
+  areaP: AreaPC(6,1,10,9)
+  areaF1: AreaP(6,10,6,10)
+  areaF2: AreaP(7,10,7,10)
+  areaP1: AreaP(8,10,8,10)
+  areaP2: AreaP(9,10,9,10)
 robots
-  robot florero
+  robot tipoF
   variables
-    avIni, caIni, av, ca, flores : numero
+    avIni, caIni, av, ca, flores: numero
   comenzar
-    avIni := PosAv
-    caIni := PosCa
-    flores := 0
+    avIni:=PosAv
+    caIni:=PosCa
+    flores:=0
     repetir 5
       Random(av,1,5)
       Random(ca,1,10)
@@ -43,13 +43,13 @@ robots
       Pos (avIni,caIni)
       LiberarEsquina(10,10)
   fin
-  robot papelero
+  robot tipoP
   variables
-    avIni, caIni, av, ca, papeles : numero
+    avIni, caIni, av, ca, papeles: numero
   comenzar
-    avIni := PosAv
-    caIni := PosCa
-    papeles := 0  
+    avIni:=PosAv
+    caIni:=PosCa
+    papeles:=0	
     repetir 3
       Random(av,6,10)
       Random(ca,1,9)
@@ -66,19 +66,19 @@ robots
       LiberarEsquina(10,10)
   fin
 variables
-  robotF1, robotF2 : florero
-  robotP3, robotP4 : papelero
+  robotF1, robotF2: tipoF
+  robotP3, robotP4: tipoP
 comenzar
-  AsignarArea(robotF1,areaD)
+  AsignarArea(robotF1,areaC)
   AsignarArea(robotF1,areaF)
   AsignarArea(robotF1,areaF1)
-  AsignarArea(robotF2,areaD)
+  AsignarArea(robotF2,areaC)
   AsignarArea(robotF2,areaF)
   AsignarArea(robotF2,areaF2)
-  AsignarArea(robotP3,areaD)
+  AsignarArea(robotP3,areaC)
   AsignarArea(robotP3,areaP)
   AsignarArea(robotP3,areaP1)
-  AsignarArea(robotP4,areaD)
+  AsignarArea(robotP4,areaC)
   AsignarArea(robotP4,areaP)
   AsignarArea(robotP4,areaP2)
   Iniciar(robotF1,6,10)

@@ -1,16 +1,16 @@
 programa TP13_E3
 procesos
-  proceso accederEsquina(ES flores : numero ; E av : numero ; E ca : numero)
+  proceso accederEsquina (ES flores: numero; E av: numero; E ca: numero)
   variables
-    avIni, caIni : numero
+    avIni, caIni: numero
   comenzar
-    avIni := PosAv
-    caIni := PosCa
+    avIni:=PosAv
+    caIni:=PosCa
     BloquearEsquina(av,ca)
     Pos (av,ca)
     mientras (HayFlorEnLaEsquina)
       tomarFlor
-      flores := flores + 1
+      flores:=flores+1
       Pos (avIni,caIni)
       LiberarEsquina(av,ca)
       BloquearEsquina(av,ca)
@@ -18,11 +18,11 @@ procesos
     Pos (avIni,caIni)
     LiberarEsquina(av,ca)
   fin
-  proceso actualizarMax (E flores : numero ; ES floresMax : numero ; E rob : numero ; ES robMax : numero)
+  proceso actualizarMaximo (E flores: numero; E rob: numero; ES floresMax: numero; ES robMax: numero)
   comenzar
-    si (flores > floresMax)
-      floresMax := flores
-      robMax := rob
+    si (flores>floresMax)
+      floresMax:=flores
+      robMax:=rob
   fin
 areas
   areaPC: AreaPC(2,2,10,10)
@@ -32,11 +32,11 @@ areas
   area4: AreaP(5,1,5,1)
   areaJ: AreaP(1,1,1,1)
 robots
-  robot recolector
+  robot tipoR
   variables
-    av, ca, flores, rob : numero
+    av, ca, flores, rob: numero
   comenzar
-    flores := 0
+    flores:=0
     RecibirMensaje(rob,robotJ)
     RecibirMensaje(av,robotJ)
     RecibirMensaje(ca,robotJ)
@@ -44,12 +44,12 @@ robots
     EnviarMensaje(rob,robotJ)
     EnviarMensaje(flores,robotJ)
   fin
-  robot jefe
+  robot tipoJ
   variables
-    av, ca, flores, floresMax, rob, robMax : numero
+    av, ca, flores, floresMax, rob, robMax: numero
   comenzar
-    floresMax := 0
-    robMax := 0
+    floresMax:=0
+    robMax:=0
     EnviarMensaje(1,robot1)
     EnviarMensaje(2,robot2)
     EnviarMensaje(3,robot3)
@@ -66,22 +66,22 @@ robots
     EnviarMensaje(ca,robot4)
     repetir 4
       RecibirMensaje(rob,*)
-      si (rob = 1)
+      si (rob=1)
         RecibirMensaje(flores,robot1)
       sino
-        si (rob = 2)
+        si (rob=2)
           RecibirMensaje(flores,robot2)
         sino
-          si (rob = 3)
+          si (rob=3)
             RecibirMensaje(flores,robot3)
           sino
             RecibirMensaje(flores,robot4)
-      actualizarMax(flores,floresMax,rob,robMax)
+      actualizarMaximo(flores,rob,floresMax,robMax)
     Informar ('RobotGanador',robMax)
   fin
 variables
-  robot1, robot2, robot3, robot4 : recolector
-  robotJ : jefe
+  robot1, robot2, robot3, robot4: tipoR
+  robotJ: tipoJ
 comenzar
   AsignarArea(robot1,areaPC)
   AsignarArea(robot1,area1)
