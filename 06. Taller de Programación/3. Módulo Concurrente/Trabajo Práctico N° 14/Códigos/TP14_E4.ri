@@ -55,13 +55,13 @@ robots
     rob2Act:=V
     repetir 10
       rob:=0
-      si ((rob1Act=V) & (rob1Act=V))
+      si ((rob1Act) & (rob1Act))
         Random(rob,1,2)
       sino
-        si (rob1Act=V)
+        si (rob1Act)
           rob:=1
         sino
-          si (rob2Act=V)
+          si (rob2Act)
             rob:=2
       si (rob<>0)
         Random(tarea,1,4)
@@ -81,9 +81,9 @@ robots
             EnviarMensaje(ca,robot2)
           sino
             rob2Act:=F
-    si (rob1Act=V)
+    si (rob1Act)
       EnviarMensaje(4,robot1)
-    si (rob2Act=V)
+    si (rob2Act)
       EnviarMensaje(4,robot2)
   fin
 variables

@@ -15,20 +15,16 @@ procesos
   proceso juntarFlores (ES flores: numero)
   comenzar
     repetir 9
-      si (HayFlorEnLaEsquina)
-        juntarFloresEsquina(flores)
-      mover
-    si (HayFlorEnLaEsquina)
       juntarFloresEsquina(flores)
+      mover
+    juntarFloresEsquina(flores)
   fin
   proceso juntarPapeles (ES papeles: numero)
   comenzar
     repetir 9
-      si (HayPapelEnLaEsquina)
-        juntarPapelesEsquina(papeles)
-      mover
-    si (HayPapelEnLaEsquina)
       juntarPapelesEsquina(papeles)
+      mover
+    juntarPapelesEsquina(papeles)
   fin
 areas
   areaA1a: AreaP(1,1,10,1)
@@ -111,3 +107,4 @@ comenzar
   Iniciar(robotB1,1,5)
   Iniciar(robotB2,11,5)
 fin
+
