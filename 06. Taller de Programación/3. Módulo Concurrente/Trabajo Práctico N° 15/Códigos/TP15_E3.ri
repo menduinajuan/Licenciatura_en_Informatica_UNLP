@@ -2,10 +2,10 @@ programa TP15_E3
 procesos
   proceso vaciarFloresBolsa
   variables
-    av, ca : numero
+    av, ca: numero
   comenzar
-    av := PosAv
-    ca := PosCa
+    av:=PosAv
+    ca:=PosCa
     BloquearEsquina(10,10)
     Pos (10,10)
     mientras (HayFlorEnLaBolsa)
@@ -13,113 +13,88 @@ procesos
     Pos (av,ca)
     LiberarEsquina(10,10)
   fin
-  proceso recorrerCalle (E ok : boolean ; E rob : numero)
+  proceso recorrerCalle
   variables
-    av, ca, flores, esquinas : numero
+    ok: boolean
+    av, ca, flores, esquinas: numero
   comenzar
-    flores := 0
-    esquinas := 0
+    ok:=V
+    flores:=0
+    esquinas:=0
     repetir 99
       mientras (HayFlorEnLaEsquina)
         tomarFlor
-        flores := flores + 1
-        si (flores = 10)
+        flores:=flores+1
+        si (flores=10)
           vaciarFloresBolsa
-          EnviarMensaje(rob,robotC)
           EnviarMensaje(ok,robotC)
-          EnviarMensaje(flores,robotC)
-          flores := 0
-          esquinas := 0
-      esquinas := esquinas + 1
-      si (esquinas = 5)
+          flores:=0
+      si (esquinas=5)
         vaciarFloresBolsa
-        EnviarMensaje(rob,robotC)
         EnviarMensaje(ok,robotC)
-        EnviarMensaje(flores,robotC)
-        flores := 0
-        esquinas := 0
+        esquinas:=0
+      esquinas:=esquinas+1
       mover
     mientras (HayFlorEnLaEsquina)
       tomarFlor
-      flores := flores + 1
-      si (flores = 10)
+      flores:=flores+1
+      si (flores=10)
         vaciarFloresBolsa
-        EnviarMensaje(rob,robotC)
         EnviarMensaje(ok,robotC)
-        EnviarMensaje(flores,robotC)
-        flores := 0
-        esquinas := 0
-    esquinas := esquinas + 1
-    si (esquinas = 5)
+    si (esquinas=5)
       vaciarFloresBolsa
-      EnviarMensaje(rob,robotC)
       EnviarMensaje(ok,robotC)
-      EnviarMensaje(flores,robotC)
-      flores := 0
-      esquinas := 0
   fin
 areas
-  esquina : AreaC(10,10,10,10)
-  area1 : AreaP(1,3,100,3)
-  area2 : AreaP(1,4,100,4)
-  areaC : AreaP(1,5,1,5)
+  esquina: AreaC(10,10,10,10)
+  area1: AreaP(1,3,100,3)
+  area2: AreaP(1,4,100,4)
+  areaC: AreaP(1,5,1,5)
 robots
   robot recolector
-  variables
-    ok : boolean
-    rob : numero
   comenzar
-    ok := V
     derecha
-    RecibirMensaje(rob,robotC)    
-    recorrerCalle(ok,rob)
-    ok := F
-    EnviarMensaje(rob,robotC)
-    EnviarMensaje(ok,robotC)
+    EnviarMensaje(V,robotC)
+    recorrerCalle
+    EnviarMensaje(F,robotC)
   fin
   robot cosechador
   variables
-    ok : boolean
-    av, ca, flores, floresTotal, rob, term : numero
+    ok1, ok2, cosechar: boolean
+    av, ca, flores: numero
   comenzar
-    av := PosAv
-    ca := PosCa
-    floresTotal := 0
-    term := 0
-    EnviarMensaje(1,robot1)
-    EnviarMensaje(2,robot2)
-    mientras (term < 2)
-      RecibirMensaje(rob,*)
-      si (rob = 1)
-        RecibirMensaje(ok,robot1)
-        si (ok)
-          RecibirMensaje(flores,robot1)
-      sino
-        RecibirMensaje(ok,robot2)
-        si (ok)
-          RecibirMensaje(flores,robot2)
-      si (ok)
+    av:=PosAv
+    ca:=PosCa
+    flores:=0
+    RecibirMensaje(ok1,*)
+    RecibirMensaje(ok2,*)
+    mientras ((ok1) | (ok2))
+      RecibirMensaje(cosechar,*)
+      si (cosechar)
         BloquearEsquina(10,10)
         Pos (10,10)
-        repetir flores
+        mientras (HayFlorEnLaEsquina)
           tomarFlor
-          floresTotal := floresTotal + 1
+          flores:=flores+1
         Pos (av,ca)
         LiberarEsquina(10,10)
       sino
-        term := term + 1
-    Informar ('FloresRecolectadas',floresTotal)
+        si (ok1)
+          ok1:=F
+        sino
+          ok2:=F
+    Informar ('FloresRecolectadas',flores)
   fin
 variables
-  robot1, robot2 : recolector
-  robotC : cosechador
+  robot1, robot2: recolector
+  robotC: cosechador
 comenzar
-  AsignarArea(robot1,area1)
   AsignarArea(robot1,esquina)
-  AsignarArea(robot2,area2)
+  AsignarArea(robot1,area1)
   AsignarArea(robot2,esquina)
-  AsignarArea(robotC,areaC)
+  AsignarArea(robot2,area2)
   AsignarArea(robotC,esquina)
+  AsignarArea(robotC,areaC)
   Iniciar(robot1,1,3)
   Iniciar(robot2,1,4)
   Iniciar(robotC,1,5)

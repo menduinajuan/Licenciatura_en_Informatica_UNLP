@@ -17,12 +17,10 @@ procesos
       tomarPapel
       papeles:=papeles+1
   fin
-  proceso esquina (ES flores: numero; ES papeles: numero)
+  proceso juntarFloresyPapelesEsquina (ES flores: numero; ES papeles: numero)
   comenzar
-    si (HayFlorEnLaEsquina)
-      juntarFloresEsquina(flores)
-    si (HayPapelEnLaEsquina) 
-      juntarPapelesEsquina(papeles)
+    juntarFloresEsquina(flores)
+    juntarPapelesEsquina(papeles)
   fin
   proceso escalon (E alto: numero; ES escalones: numero)
   variables
@@ -31,9 +29,9 @@ procesos
     flores:=0
     papeles:=0
     repetir alto
-      esquina(flores,papeles)
+      juntarFloresyPapelesEsquina(flores,papeles)
       mover
-    esquina(flores,papeles)
+    juntarFloresyPapelesEsquina(flores,papeles)
     derecha
     mover
     izquierda

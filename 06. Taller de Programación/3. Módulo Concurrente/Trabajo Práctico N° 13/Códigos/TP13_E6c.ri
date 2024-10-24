@@ -1,14 +1,5 @@
 programa TP13_E6c
 procesos
-  proceso juntarFloresyPapelesEsquina (ES flores: numero; ES papeles: numero)
-  comenzar
-    mientras (HayFlorEnLaEsquina)
-      tomarFlor
-      flores:=flores+1
-    mientras (HayPapelEnLaEsquina)
-      tomarPapel
-      papeles:=papeles+1
-  fin
   proceso juntarFloresEsquina (ES flores: numero)
   comenzar
     mientras (HayFlorEnLaEsquina)
@@ -21,17 +12,10 @@ procesos
       tomarPapel
       papeles:=papeles+1
   fin
-  proceso recorrerCalleyDepositarFloresyPapeles (E flores: numero; E papeles: numero)
+  proceso juntarFloresyPapelesEsquina (ES flores: numero; ES papeles: numero)
   comenzar
-    mientras (((flores>0) & (papeles>0)) & (PosAv<100))
-      depositarFlor
-      depositarPapel
-      flores:=flores-1
-      papeles:=papeles-1
-      mover
-    si ((flores>0) & (papeles>0))
-      depositarFlor
-      depositarPapel
+    juntarFloresEsquina(flores)
+    juntarPapelesEsquina(papeles)
   fin
   proceso recorrerCalleyDepositarFlores (E flores: numero)
   comenzar
@@ -50,6 +34,18 @@ procesos
       mover
     si (papeles>0)
       depositarPapeles
+  fin
+  proceso recorrerCalleyDepositarFloresyPapeles (E flores: numero; E papeles: numero)
+  comenzar
+    mientras (((flores>0) & (papeles>0)) & (PosAv<100))
+      depositarFlor
+      depositarPapel
+      flores:=flores-1
+      papeles:=papeles-1
+      mover
+    si ((flores>0) & (papeles>0))
+      depositarFlor
+      depositarPapel
   fin
 areas
   areaPC1: AreaPC(2,2,16,16)

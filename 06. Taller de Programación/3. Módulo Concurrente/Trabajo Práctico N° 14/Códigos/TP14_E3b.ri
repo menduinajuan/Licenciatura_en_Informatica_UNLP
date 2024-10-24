@@ -23,7 +23,7 @@ robots
     ok1:=V
     ok2:=V
     RecibirMensaje(rob,robotC)
-    mientras ((PosCa<100) & (ok1=V) & (ok2=V))
+    mientras ((PosCa<100) & (ok1) & (ok2))
       papeles:=0
       Random(papelesEtapa,1,5)
       mientras ((papeles<papelesEtapa) & (PosCa<100))
@@ -61,4 +61,5 @@ comenzar
   Iniciar(robot2,2,1)
   Iniciar(robot3,3,1)
   Iniciar(robotC,5,5)
-fin
+fin 
+
