@@ -1,6 +1,6 @@
 programa TP12_E1c
 procesos
-  proceso juntarFlores (ES flores: numero)
+  proceso juntarFloresEsquina (ES flores: numero)
   comenzar
     mientras (HayFlorEnLaEsquina)
       tomarFlor
@@ -9,9 +9,9 @@ procesos
   proceso recorrerAvenida (ES flores: numero)
   comenzar
     repetir 9
-      juntarFlores(flores)
+      juntarFloresEsquina(flores)
       mover
-    juntarFlores(flores)
+    juntarFloresEsquina(flores)
   fin
   proceso actualizarMaximo (E flores: numero; ES floresMax: numero)
   comenzar
@@ -27,7 +27,7 @@ areas
   area6: AreaP(6,51,6,60)
   areaF: AreaP(2,1,2,1)
 robots
-  robot tipo1
+  robot jugador
   variables
     flores: numero
   comenzar
@@ -35,7 +35,7 @@ robots
     recorrerAvenida(flores)
     EnviarMensaje(flores,robotF)
   fin
-  robot tipoF
+  robot fiscalizador
   variables
     flores, floresMax: numero
   comenzar
@@ -46,8 +46,8 @@ robots
     Informar ('FloresGanador',floresMax)
   fin
 variables
-  robot1, robot2, robot3, robot4, robot5, robot6: tipo1
-  robotF: tipoF
+  robot1, robot2, robot3, robot4, robot5, robot6: jugador
+  robotF: fiscalizador
 comenzar
   AsignarArea(robot1,area1)
   AsignarArea(robot2,area2)

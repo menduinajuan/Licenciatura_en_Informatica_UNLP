@@ -1,26 +1,40 @@
 programa TP11_E4
 procesos
-  proceso juntarFloresPapelesEsquina (E rob: numero)
+  proceso juntarFloresEsquina
   comenzar
-    si (rob=1)
-      mientras (HayFlorEnLaEsquina)
-        tomarFlor
-    sino
-      mientras (HayPapelEnLaEsquina)
-        tomarPapel
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
   fin
-  proceso recorrerArea (E rob: numero)
+  proceso juntarPapelesEsquina
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+  fin
+  proceso recorrerAreaImpar
   comenzar
     repetir 24
       repetir 99
-        juntarFloresPapelesEsquina(rob)
+        juntarFloresEsquina
         mover
-      juntarFloresPapelesEsquina(rob)
+      juntarFloresEsquina
       Pos (PosAv+1,1)
     repetir 99
-      juntarFloresPapelesEsquina(rob)
+      juntarFloresEsquina
       mover
-    juntarFloresPapelesEsquina(rob)
+    juntarFloresEsquina
+  fin
+  proceso recorrerAreaPar
+  comenzar
+    repetir 24
+      repetir 99
+        juntarPapelesEsquina
+        mover
+      juntarPapelesEsquina
+      Pos (PosAv+1,1)
+    repetir 99
+      juntarPapelesEsquina
+      mover
+    juntarPapelesEsquina
   fin
 areas
   area1: AreaP(1,1,25,100)
@@ -28,21 +42,21 @@ areas
   area3: AreaP(51,1,75,100)
   area4: AreaP(76,1,100,100)
 robots
-  robot tipo1
+  robot limpiador1
   comenzar
-    recorrerArea(1)
+    recorrerAreaImpar
     Pos (PosAv+26,1)
-    recorrerArea(1)
+    recorrerAreaImpar
   fin
-  robot tipo2
+  robot limpiador2
   comenzar
-    recorrerArea(2)
+    recorrerAreaPar
     Pos (PosAv+26,1)
-    recorrerArea(2)
+    recorrerAreaPar
   fin
 variables
-  robot1: tipo1
-  robot2: tipo2
+  robot1: limpiador1
+  robot2: limpiador2
 comenzar
   AsignarArea(robot1,area1)
   AsignarArea(robot1,area3)

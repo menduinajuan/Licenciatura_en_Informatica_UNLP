@@ -57,7 +57,7 @@ areas
   area4a: AreaP(10,1,10,10)
   area4b: AreaP(15,1,15,10)
 robots
-  robot tipo1
+  robot limpiador1
   variables
     av: numero
   comenzar
@@ -67,7 +67,7 @@ robots
     Pos (av,PosCa+5)
     recorrerCalle(15)
   fin
-  robot tipo2
+  robot limpiador2
   variables
     ca: numero
   comenzar
@@ -76,7 +76,7 @@ robots
     Pos (PosAv+5,ca) 
     recorrerAvenida(20)
   fin
-  robot tipo3
+  robot limpiador3
   variables
     av: numero
   comenzar
@@ -86,7 +86,7 @@ robots
     Pos (av,PosCa+5)
     recorrerCalle(30)
   fin
-  robot tipo4
+  robot limpiador4
   variables
     ca: numero
   comenzar
@@ -96,10 +96,10 @@ robots
     recorrerAvenida(10)
   fin
 variables 
-  robot1: tipo1
-  robot2: tipo2
-  robot3: tipo3
-  robot4: tipo4
+  robot1: limpiador1
+  robot2: limpiador2
+  robot3: limpiador3
+  robot4: limpiador4
 comenzar
   AsignarArea(robot1,area1a)
   AsignarArea(robot1,area1b)

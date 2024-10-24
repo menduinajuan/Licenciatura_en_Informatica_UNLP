@@ -35,7 +35,7 @@ procesos
 areas
   ciudad: AreaC(1,1,100,100)
 robots
-  robot tipo1
+  robot recolector
   comenzar
     repetir 2
       recorrerAvenida
@@ -43,7 +43,7 @@ robots
     recorrerAvenida
   fin
 variables
-  robot1: tipo1
+  robot1: recolector
 comenzar
   AsignarArea(robot1,ciudad)
   Iniciar(robot1,1,1)

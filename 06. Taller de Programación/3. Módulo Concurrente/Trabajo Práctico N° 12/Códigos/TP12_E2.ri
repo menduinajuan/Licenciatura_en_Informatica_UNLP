@@ -46,7 +46,7 @@ areas
   area3: AreaP(12,1,16,21)
   areaJ: AreaP(1,1,1,1)
 robots
-  robot tipo1
+  robot recogedor
   variables
     alto, escalones: numero
   comenzar
@@ -56,7 +56,7 @@ robots
       escalon(alto,escalones)
     EnviarMensaje(escalones,robotJ)
   fin
-  robot tipoJ
+  robot jefe
   variables
     sumaEscalones, escalones: numero
   comenzar
@@ -67,8 +67,8 @@ robots
     Informar ('SumaEscalones',sumaEscalones)
   fin
 variables
-  robot1, robot2, robot3: tipo1
-  robotJ: tipoJ
+  robot1, robot2, robot3: recogedor
+  robotJ: jefe
 comenzar
   AsignarArea(robot1,area1)
   AsignarArea(robot2,area2)

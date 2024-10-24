@@ -36,7 +36,7 @@ areas
   areaB1: AreaP(1,5,10,5)
   areaB2: AreaP(11,5,20,5)
 robots
-  robot tipoA1
+  robot jugadorA1
   variables
     papeles: numero
   comenzar
@@ -45,7 +45,7 @@ robots
     juntarPapeles(papeles)
     EnviarMensaje(papeles,robotA2)
   fin
-  robot tipoA2
+  robot jugadorA2
   variables
     papeles: numero
   comenzar
@@ -54,7 +54,7 @@ robots
     juntarPapeles(papeles)
     Informar ('TotalPapelesEquipoA',papeles)
   fin
-  robot tipoB1
+  robot jugadorB1
   variables
     flores: numero
   comenzar
@@ -63,7 +63,7 @@ robots
     juntarFlores(flores)
     EnviarMensaje(flores,robotB2)
   fin
-  robot tipoB2
+  robot jugadorB2
   variables
     flores: numero
   comenzar
@@ -73,10 +73,10 @@ robots
     Informar ('TotalFloresEquipoB',flores)
   fin
 variables
-  robotA1: tipoA1
-  robotA2: tipoA2
-  robotB1: tipoB1
-  robotB2: tipoB2
+  robotA1: jugadorA1
+  robotA2: jugadorA2
+  robotB1: jugadorB1
+  robotB2: jugadorB2
 comenzar
   AsignarArea(robotA1,areaA1)
   AsignarArea(robotA2,areaA2)

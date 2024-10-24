@@ -37,12 +37,12 @@ areas
   area2: AreaP(3,1,3,100)
   area3: AreaP(5,1,5,100)
 robots
-  robot tipo1
+  robot recolector
   comenzar
     recorrerAvenida
   fin
 variables
-  robot1, robot2, robot3: tipo1
+  robot1, robot2, robot3: recolector
 comenzar
   AsignarArea(robot1,area1)
   AsignarArea(robot2,area2)
