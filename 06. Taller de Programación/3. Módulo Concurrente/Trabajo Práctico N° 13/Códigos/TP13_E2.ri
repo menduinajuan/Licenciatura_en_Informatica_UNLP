@@ -110,13 +110,13 @@ procesos
       juntarPapelesEsquina(papeles)
       derecha
       pasos:=pasos+1
-  fin
+z  fin
 areas
   areaPC: AreaPC(16,16,16,16)
   areaF: AreaPC(1,1,15,30)
   areaP: AreaP(17,1,31,30)
 robots
-  robot tipo1
+  robot jugador1
   variables
     flores, rob: numero
   comenzar
@@ -128,7 +128,7 @@ robots
     Informar ('Flores',flores)
     EnviarMensaje(V,robotJ)
   fin
-  robot tipo2
+  robot jugador2
   variables
     papeles, rob: numero
   comenzar
@@ -140,7 +140,7 @@ robots
     Informar ('Papeles',papeles)
     EnviarMensaje(V,robotJ)
   fin
-  robot tipoJ
+  robot jefe
   variables
     termino: boolean
     rob, robGanador: numero
@@ -155,9 +155,9 @@ robots
     Informar ('RobotGanador',robGanador)
   fin
 variables
-  robot1: tipo1
-  robot2: tipo2
-  robotJ: tipoJ
+  robot1: jugador1
+  robot2: jugador2
+  robotJ: jefe
 comenzar
   AsignarArea(robot1,areaPC)
   AsignarArea(robot1,areaF)

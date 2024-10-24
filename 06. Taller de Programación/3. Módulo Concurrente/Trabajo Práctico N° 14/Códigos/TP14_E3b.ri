@@ -1,78 +1,47 @@
 programa TP14_E3b
 procesos
-  proceso juntarPapelEsquina (ES papeles : numero)
+  proceso juntarPapelEsquina (ES papeles: numero)
   comenzar
     si (HayPapelEnLaEsquina)
       tomarPapel
-      papeles := papeles + 1
+      papeles:=papeles+1
     sino
-      si (PosCa < 100)
-        mover
+      mover
   fin
 areas
-  area1 : AreaP(1,1,1,100)
-  area2 : AreaP(2,1,2,100)
-  area3 : AreaP(3,1,3,100)
-  areaC : AreaP(5,5,5,5)
+  area1: AreaP(1,1,1,100)
+  area2: AreaP(2,1,2,100)
+  area3: AreaP(3,1,3,100)
+  areaC: AreaP(5,5,5,5)
 robots
-  robot tipo1
+  robot sincronizado
   variables
-    rob, papeles, papelesEtapa, term, term1, term2, term3 : numero
+    ok, ok1, ok2: boolean
+    rob, papeles, papelesEtapa: numero
   comenzar
-    term := 0
-    term1 := 0
-    term2 := 0
-    term3 := 0
-    papeles := 0
+    ok:=V
+    ok1:=V
+    ok2:=V
     RecibirMensaje(rob,robotC)
-    mientras ((PosCa < 100) & (term <> 1))
+    mientras ((PosCa<100) & (ok1=V) & (ok2=V))
+      papeles:=0
       Random(papelesEtapa,1,5)
-      mientras (papeles < papelesEtapa)
+      mientras ((papeles<papelesEtapa) & (PosCa<100))
         juntarPapelEsquina(papeles)
-      si (rob = 1)
-        EnviarMensaje(rob,robot2)
-        EnviarMensaje(rob,robot3)
-        EnviarMensaje(term,robot2)
-        EnviarMensaje(term,robot3)
+      si (papeles<papelesEtapa)
+        ok:=F
+      si (rob=1)
+        EnviarMensaje(ok,robot2)
+        EnviarMensaje(ok,robot3)
       sino
-        si (rob = 2)
-          EnviarMensaje(rob,robot1)
-          EnviarMensaje(rob,robot3)
-          EnviarMensaje(term,robot1)
-          EnviarMensaje(term,robot3)
+        si (rob=2)
+          EnviarMensaje(ok,robot1)
+          EnviarMensaje(ok,robot3)
         sino
-          EnviarMensaje(rob,robot1)
-          EnviarMensaje(rob,robot2)
-          EnviarMensaje(term,robot1)
-          EnviarMensaje(term,robot2)
-      repetir 2
-        RecibirMensaje(rob,*)
-        si (rob = 1)
-          RecibirMensaje(term1,robot1)
-        sino
-          si (rob = 2)
-            RecibirMensaje(term2,robot2)
-          sino
-            RecibirMensaje(term3,robot3)
-      term := term1 + term2 + term3
-    si (term <> 1)
-      term := 1
-    si (rob = 1)
-      EnviarMensaje(rob,robot2)
-      EnviarMensaje(rob,robot3)
-      EnviarMensaje(term,robot2)
-      EnviarMensaje(term,robot3)
-    sino
-      si (rob = 2)
-        EnviarMensaje(rob,robot1)
-        EnviarMensaje(rob,robot3)
-        EnviarMensaje(term,robot1)
-        EnviarMensaje(term,robot3)
-      sino
-        EnviarMensaje(rob,robot1)
-        EnviarMensaje(rob,robot2)
-        EnviarMensaje(term,robot1)
-        EnviarMensaje(term,robot2)
+          EnviarMensaje(ok,robot1)
+          EnviarMensaje(ok,robot2)
+      RecibirMensaje(ok1,*)
+      RecibirMensaje(ok2,*)
   fin
   robot coordinador
   comenzar
@@ -81,8 +50,8 @@ robots
     EnviarMensaje(3,robot3)
   fin
 variables
-  robot1, robot2, robot3 : tipo1
-  robotC : coordinador
+  robot1, robot2, robot3: sincronizado
+  robotC: coordinador
 comenzar
   AsignarArea(robot1,area1)
   AsignarArea(robot2,area2)

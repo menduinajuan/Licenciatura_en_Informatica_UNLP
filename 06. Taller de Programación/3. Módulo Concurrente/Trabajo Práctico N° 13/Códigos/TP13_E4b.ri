@@ -2,10 +2,10 @@ programa TP4_E4b
 procesos
   proceso trasladarFlor
   variables
-    avIni, caIni : numero
+    avIni, caIni: numero
   comenzar
-    avIni := PosAv
-    caIni := PosCa
+    avIni:=PosAv
+    caIni:=PosCa
     BloquearEsquina(10,10)
     Pos (10,10)
     mientras (HayFlorEnLaEsquina)
@@ -34,17 +34,17 @@ procesos
     Pos (1,1)
   fin
 areas
-  areaPC1 : AreaPC(10,10,10,10)
-  areaPC2 : AreaPC(11,11,11,11)
-  area1 : AreaP(9,9,9,9)
-  area2 : AreaP(9,10,9,10)
-  area3 : AreaP(9,11,9,11)
-  area4 : AreaP(9,12,9,12)
-  areaC : AreaP(1,1,1,1)
+  areaPC1: AreaPC(10,10,10,10)
+  areaPC2: AreaPC(11,11,11,11)
+  area1: AreaP(9,9,9,9)
+  area2: AreaP(9,10,9,10)
+  area3: AreaP(9,11,9,11)
+  area4: AreaP(9,12,9,12)
+  areaC: AreaP(1,1,1,1)
 robots
   robot recolector
   variables
-    rob : numero
+    rob: numero
   comenzar
     RecibirMensaje(rob,robotC)
     trasladarFlor
@@ -52,7 +52,7 @@ robots
   fin
   robot coordinador
   variables
-    rob : numero
+    rob: numero
   comenzar
     EnviarMensaje(1,robot1)
     EnviarMensaje(2,robot2)
@@ -64,8 +64,8 @@ robots
     recolectarFlores
   fin
 variables
-  robot1, robot2, robot3, robot4 : recolector
-  robotC : coordinador
+  robot1, robot2, robot3, robot4: recolector
+  robotC: coordinador
 comenzar
   AsignarArea(robot1,areaPC1)
   AsignarArea(robot1,areaPC2)

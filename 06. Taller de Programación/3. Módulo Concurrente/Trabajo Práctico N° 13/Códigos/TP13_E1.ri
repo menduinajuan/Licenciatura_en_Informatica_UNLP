@@ -21,7 +21,7 @@ areas
   areaP1: AreaP(8,10,8,10)
   areaP2: AreaP(9,10,9,10)
 robots
-  robot tipoF
+  robot recolectorFlores
   variables
     avIni, caIni, av, ca, flores: numero
   comenzar
@@ -43,7 +43,7 @@ robots
       Pos (avIni,caIni)
       LiberarEsquina(10,10)
   fin
-  robot tipoP
+  robot recolectorPapeles
   variables
     avIni, caIni, av, ca, papeles: numero
   comenzar
@@ -66,8 +66,8 @@ robots
       LiberarEsquina(10,10)
   fin
 variables
-  robotF1, robotF2: tipoF
-  robotP3, robotP4: tipoP
+  robotF1, robotF2: recolectorFlores
+  robotP3, robotP4: recolectorPapeles
 comenzar
   AsignarArea(robotF1,areaC)
   AsignarArea(robotF1,areaF)

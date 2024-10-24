@@ -32,7 +32,7 @@ areas
   area4: AreaP(5,1,5,1)
   areaJ: AreaP(1,1,1,1)
 robots
-  robot tipoR
+  robot recolector
   variables
     av, ca, flores, rob: numero
   comenzar
@@ -44,7 +44,7 @@ robots
     EnviarMensaje(rob,robotJ)
     EnviarMensaje(flores,robotJ)
   fin
-  robot tipoJ
+  robot jefe
   variables
     av, ca, flores, floresMax, rob, robMax: numero
   comenzar
@@ -80,8 +80,8 @@ robots
     Informar ('RobotGanador',robMax)
   fin
 variables
-  robot1, robot2, robot3, robot4: tipoR
-  robotJ: tipoJ
+  robot1, robot2, robot3, robot4: recolector
+  robotJ: jefe
 comenzar
   AsignarArea(robot1,areaPC)
   AsignarArea(robot1,area1)

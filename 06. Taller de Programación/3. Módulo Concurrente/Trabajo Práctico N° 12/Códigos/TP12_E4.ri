@@ -1,6 +1,6 @@
 programa TP12_E4
 procesos
-  proceso limpiarEsquina (ES cant: numero)
+  proceso juntarFloresyPapelesEsquina (ES cant: numero)
   comenzar
     mientras (HayFlorEnLaEsquina)
       tomarFlor
@@ -18,7 +18,7 @@ procesos
     Random(av,25,75)
     Random(ca,25,75)
     Pos (av,ca)
-    limpiarEsquina(cant)
+    juntarFloresyPapelesEsquina(cant)
     Pos (avIni,caIni)
   fin
   proceso obtenerMaximo (E cant1: numero; E cant2: numero; E cant3: numero; E cant4: numero; ES robMax: numero)
@@ -69,7 +69,7 @@ areas
   area4: AreaP(40,1,40,1) 
   areaF: AreaP(1,1,1,1)
 robots
-  robot tipoR
+  robot recolector
   variables
     ok, gane: boolean
     cant: numero
@@ -84,7 +84,7 @@ robots
     si (gane)
       Pos (50,50)
   fin
-  robot tipoF
+  robot fiscalizador
   variables
     ok: boolean
     cant1, cant2, cant3, cant4, rob, robMax: numero
@@ -125,8 +125,8 @@ robots
     Informar ('RobotGanador',robMax)
   fin
 variables
-  robot1, robot2, robot3, robot4: tipoR
-  robotF: tipoF
+  robot1, robot2, robot3, robot4: recolector
+  robotF: fiscalizador
 comenzar
   AsignarArea(robot1,areaPC)
   AsignarArea(robot1,area1)

@@ -51,7 +51,7 @@ procesos
 areas
   ciudad: AreaC(1,1,100,100)
 robots
-  robot tipo1
+  robot recolector
   variables
     escalones: numero
   comenzar
@@ -60,7 +60,7 @@ robots
     Informar ('EscalonesConUnPapelMás',escalones)
   fin
 variables
-  robot1, robot2, robot3: tipo1
+  robot1, robot2, robot3: recolector
 comenzar
   AsignarArea(robot1,ciudad)
   AsignarArea(robot2,ciudad)
