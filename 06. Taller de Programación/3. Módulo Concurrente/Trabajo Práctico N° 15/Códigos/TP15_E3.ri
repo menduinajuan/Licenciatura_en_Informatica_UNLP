@@ -15,12 +15,12 @@ procesos
   fin
   proceso recorrerCalle
   variables
-    ok: boolean
     av, ca, flores, esquinas: numero
+    ok: boolean
   comenzar
-    ok:=V
     flores:=0
     esquinas:=0
+    ok:=V
     repetir 99
       mientras (HayFlorEnLaEsquina)
         tomarFlor
@@ -29,11 +29,11 @@ procesos
           vaciarFloresBolsa
           EnviarMensaje(ok,robotC)
           flores:=0
+      esquinas:=esquinas+1
       si (esquinas=5)
         vaciarFloresBolsa
         EnviarMensaje(ok,robotC)
         esquinas:=0
-      esquinas:=esquinas+1
       mover
     mientras (HayFlorEnLaEsquina)
       tomarFlor
@@ -41,6 +41,7 @@ procesos
       si (flores=10)
         vaciarFloresBolsa
         EnviarMensaje(ok,robotC)
+    esquinas:=esquinas+1
     si (esquinas=5)
       vaciarFloresBolsa
       EnviarMensaje(ok,robotC)
@@ -60,8 +61,8 @@ robots
   fin
   robot cosechador
   variables
-    ok1, ok2, cosechar: boolean
     av, ca, flores: numero
+    ok1, ok2, cosechar: boolean
   comenzar
     av:=PosAv
     ca:=PosCa

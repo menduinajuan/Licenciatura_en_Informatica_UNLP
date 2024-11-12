@@ -1,4 +1,4 @@
-programa TP_E5
+programa TP13_E5
 procesos
   proceso juntarPapelyAvanzar (E av: numero; ES ca: numero)
   comenzar
@@ -32,7 +32,7 @@ areas
 robots
   robot jugador
   variables
-    av, ca, rob: numero
+    rob, av, ca: numero
   comenzar
     av:=PosAv
     ca:=PosCa
@@ -43,7 +43,7 @@ robots
   fin
   robot coordinador
   variables
-    ca, caMax, rob, robMax: numero
+    rob, robMax, ca, caMax: numero
   comenzar
     caMax:=0
     robMax:=0

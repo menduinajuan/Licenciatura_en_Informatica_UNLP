@@ -48,14 +48,14 @@ robots
   fin
   robot master
   variables
+    rob, av, ca, tarea: numero
     rob1Act, rob2Act: boolean
-    av, ca, rob, tarea: numero
   comenzar
     rob1Act:=V
     rob2Act:=V
     repetir 10
       rob:=0
-      si ((rob1Act) & (rob1Act))
+      si ((rob1Act) & (rob2Act))
         Random(rob,1,2)
       sino
         si (rob1Act)

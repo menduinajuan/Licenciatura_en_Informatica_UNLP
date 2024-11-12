@@ -16,8 +16,8 @@ areas
 robots
   robot florero
   variables
-    ok: boolean
     avIni, caIni, av, ca, flores: numero
+    ok: boolean
   comenzar
     avIni:=PosAv
     caIni:=PosCa
@@ -42,11 +42,11 @@ robots
   fin
   robot fiscalizador
   variables
+    rob, av, ca, flores, floresTotal: numero
     ok: boolean
-    av, ca, flores, floresTotal, rob: numero
   comenzar
-    ok:=V
     flores:=0
+    ok:=V
     repetir 8
       Random(rob,1,3)
       Random(av,40,60)

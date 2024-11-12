@@ -118,7 +118,7 @@ areas
 robots
   robot jugador1
   variables
-    flores, rob: numero
+    rob, flores: numero
   comenzar
     flores:=0
     RecibirMensaje(rob,robotJ)
@@ -130,7 +130,7 @@ robots
   fin
   robot jugador2
   variables
-    papeles, rob: numero
+    rob, papeles: numero
   comenzar
     papeles:=0
     RecibirMensaje(rob,robotJ)
@@ -142,13 +142,12 @@ robots
   fin
   robot jefe
   variables
-    termino: boolean
     rob, robGanador: numero
+    termino: boolean
   comenzar
     EnviarMensaje(1,robot1)
     EnviarMensaje(2,robot2)
-    RecibirMensaje(rob,*)
-    robGanador:=rob
+    RecibirMensaje(robGanador,*)
     RecibirMensaje(rob,*)
     repetir 2
       RecibirMensaje(termino,*)

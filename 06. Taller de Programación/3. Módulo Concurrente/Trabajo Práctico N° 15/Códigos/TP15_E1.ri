@@ -60,7 +60,7 @@ areas
 robots
   robot equipoR
   variables
-    flores, rob: numero
+    rob, flores: numero
   comenzar
     flores:=0
     RecibirMensaje(rob,robotF)
@@ -70,7 +70,7 @@ robots
   fin
   robot equipoA
   variables
-    papeles, rob: numero
+    rob, papeles: numero
   comenzar
     papeles:=0
     derecha
@@ -81,7 +81,7 @@ robots
   fin
   robot fiscalizador
   variables
-    flores, papeles, rob, elem: numero
+    rob, flores, papeles, elem: numero
   comenzar
     flores:=0
     papeles:=0

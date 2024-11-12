@@ -30,7 +30,7 @@ areas
 robots
   robot jugador
   variables
-    flores, rob: numero
+    rob, flores: numero
   comenzar
     flores:=0
     RecibirMensaje(rob,robotF)
@@ -40,7 +40,7 @@ robots
   fin
   robot fiscalizador
   variables
-    flores, floresMax, rob, robMax: numero
+    rob, robMax, flores, floresMax: numero
   comenzar
     floresMax:=0
     robMax:=0

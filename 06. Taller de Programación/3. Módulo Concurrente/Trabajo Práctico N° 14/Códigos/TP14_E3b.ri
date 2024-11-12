@@ -16,8 +16,8 @@ areas
 robots
   robot sincronizado
   variables
-    ok, ok1, ok2: boolean
     rob, papeles, papelesEtapa: numero
+    ok, ok1, ok2: boolean
   comenzar
     ok:=V
     ok1:=V
@@ -61,5 +61,4 @@ comenzar
   Iniciar(robot2,2,1)
   Iniciar(robot3,3,1)
   Iniciar(robotC,5,5)
-fin 
-
+fin

@@ -13,8 +13,8 @@ areas
 robots
   robot sincronizado
   variables
-    ok: boolean
     rob: numero
+    ok: boolean
   comenzar
     ok:=V
     RecibirMensaje(rob,robotC)

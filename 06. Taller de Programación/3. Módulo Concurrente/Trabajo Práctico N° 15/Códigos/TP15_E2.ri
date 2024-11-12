@@ -16,17 +16,17 @@ procesos
     juntarFloresEsquina(flores)
     juntarPapelesEsquina
   fin
-  proceso recorrerCalle (E cant: numero)
+  proceso recorrerCalle (E pasos: numero)
   variables
     av, ca, flores: numero
   comenzar
     flores:=0
-    repetir cant
+    repetir pasos
       juntarFloresyPapelesEsquina(flores)
       mover
     av:=PosAv
     ca:=PosCa
-    si (cant=9)
+    si (pasos=9)
       juntarFloresyPapelesEsquina(flores)
     BloquearEsquina(50,50)
     Pos (50,50)
@@ -44,8 +44,8 @@ areas
 robots
   robot sincronizado
   variables
-    ok: boolean
     rob: numero
+    ok: boolean
   comenzar
     ok:=V
     derecha
@@ -81,8 +81,8 @@ robots
   fin
   robot fiscalizador
   variables
-    ok: boolean
     av, ca, flores: numero
+    ok: boolean
   comenzar
     flores:=0
     EnviarMensaje(1,robot1)

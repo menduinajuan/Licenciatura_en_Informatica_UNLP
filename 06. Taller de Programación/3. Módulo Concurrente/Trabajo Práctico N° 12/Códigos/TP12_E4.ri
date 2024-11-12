@@ -41,8 +41,8 @@ procesos
   fin
   proceso avisarRobots (E robMax: numero)
   variables
-    gane: boolean
     rob: numero
+    gane: boolean
   comenzar
     rob:=1
     repetir 4
@@ -71,8 +71,8 @@ areas
 robots
   robot recolector
   variables
-    ok, gane: boolean
     cant: numero
+    ok, gane: boolean
   comenzar
     RecibirMensaje(ok,robotF)
     mientras (ok)
@@ -86,14 +86,14 @@ robots
   fin
   robot fiscalizador
   variables
+    rob, robMax, cant1, cant2, cant3, cant4: numero
     ok: boolean
-    cant1, cant2, cant3, cant4, rob, robMax: numero
   comenzar
-    ok:=V
     cant1:=0
     cant2:=0
     cant3:=0
     cant4:=0
+    ok:=V
     repetir 10
       Random(rob,1,4)
       si (rob=1)

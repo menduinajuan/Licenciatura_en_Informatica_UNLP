@@ -1,4 +1,4 @@
-programa TP4_E4a
+programa TP13_E4a
 procesos
   proceso trasladarFlor
   variables
@@ -18,7 +18,7 @@ procesos
       LiberarEsquina(11,11)
       BloquearEsquina(10,10)
       Pos (10,10)
-    Pos (avIni, caIni)
+    Pos (avIni,caIni)
     LiberarEsquina(10,10)
   fin
   proceso juntarFloresEsquina

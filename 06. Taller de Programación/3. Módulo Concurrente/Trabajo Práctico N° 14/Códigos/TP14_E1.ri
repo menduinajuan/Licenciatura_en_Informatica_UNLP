@@ -20,8 +20,8 @@ areas
 robots
   robot cliente
   variables
+    rob, av, ca, flores: numero
     ok: boolean
-    av, ca, flores, rob: numero
   comenzar
     RecibirMensaje(rob,robotS)
     mientras (PosCa<100)
@@ -42,13 +42,13 @@ robots
   fin
   robot servidor
   variables
+    rob, avIni, caIni, av, ca, flores, term: numero
     ok: boolean
-    avIni, caIni, av, ca, flores, rob, term: numero
   comenzar
-    ok:=V
     avIni:=PosAv
     caIni:=PosCa
     term:=0
+    ok:=V
     EnviarMensaje(1,robot1)
     EnviarMensaje(2,robot2)
     EnviarMensaje(3,robot3)
@@ -108,4 +108,3 @@ comenzar
   Iniciar(robot3,3,1)
   Iniciar(robotS,100,100)
 fin
-
