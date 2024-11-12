@@ -54,7 +54,7 @@ areas
 robots
   robot recolector1
   variables
-    flores, rob, ca: numero
+    rob, flores, ca: numero
   comenzar
     flores:=0
     RecibirMensaje(rob,robotF)
@@ -100,7 +100,7 @@ robots
   fin
   robot recolector2
   variables
-    flores, papeles, rob, ca: numero
+    rob, flores, papeles, ca: numero
   comenzar
     flores:=0
     papeles:=0
@@ -165,7 +165,7 @@ robots
   fin
   robot recolector3
   variables
-    papeles, rob, ca: numero
+    rob, papeles, ca: numero
   comenzar
     papeles:=0
     RecibirMensaje(rob,robotF)
@@ -205,7 +205,7 @@ robots
   fin
   robot fiscalizador
   variables
-    ca, ca1, ca2, ca3, rob: numero
+    rob, ca, ca1, ca2, ca3: numero
   comenzar
     ca:=20
     EnviarMensaje(1,robot1)

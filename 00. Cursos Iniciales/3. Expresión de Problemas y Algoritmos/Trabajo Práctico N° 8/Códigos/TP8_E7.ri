@@ -43,8 +43,8 @@ areas
 robots
   robot robot1
   variables
-    esquina: boolean
     tot_flores_avenida, tot_papeles_avenida: numero
+    esquina: boolean
   comenzar
     esquina:=F
     tot_flores_avenida:=0

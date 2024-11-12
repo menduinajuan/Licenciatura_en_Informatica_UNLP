@@ -34,7 +34,7 @@ areas
 robots
   robot recolector
   variables
-    av, ca, flores, rob: numero
+    rob, av, ca, flores: numero
   comenzar
     flores:=0
     RecibirMensaje(rob,robotJ)
@@ -46,7 +46,7 @@ robots
   fin
   robot jefe
   variables
-    av, ca, flores, floresMax, rob, robMax: numero
+    rob, robMax, av, ca, flores, floresMax: numero
   comenzar
     floresMax:=0
     robMax:=0
