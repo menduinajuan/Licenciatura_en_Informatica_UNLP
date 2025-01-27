@@ -26,13 +26,13 @@ type
     distancia: real;
   end;
   t_vector_galaxias=array[t_galaxia] of t_registro_galaxia;
-  t_vector_tipos=array[t_tipo] of int16;
-procedure inicializar_vector_tipos(var vector_tipos: t_vector_tipos);
+  t_vector_cantidades=array[t_tipo] of int16;
+procedure inicializar_vector_cantidades(var vector_cantidades: t_vector_cantidades);
 var
   i: t_tipo;
 begin
   for i:= tipo_ini to tipo_fin do
-    vector_tipos[i]:=0;
+    vector_cantidades[i]:=0;
 end;
 function random_string(length: int8): string;
 var
@@ -58,8 +58,8 @@ begin
   else
     registro_galaxia.nombre:='Galaxia '+random_string(5+random(6));
   registro_galaxia.tipo:=tipo_ini+random(tipo_fin);
-  registro_galaxia.masa:=11+random(99991)/10;
-  registro_galaxia.masa:=11+random(99991)/10;
+  registro_galaxia.masa:=1+random(99991)/10;
+  registro_galaxia.masa:=1+random(99991)/10;
 end;
 procedure cargar_vector_galaxias(var vector_galaxias: t_vector_galaxias);
 var
@@ -104,7 +104,7 @@ begin
       nombre_min2:=nombre;
     end;
 end;
-procedure procesar_vector_galaxias(vector_galaxias: t_vector_galaxias; var vector_tipos: t_vector_tipos; var masa_principales, porcentaje_principales: real; var galaxias_corte: int8; var nombre_max1, nombre_max2, nombre_min1, nombre_min2: string);
+procedure procesar_vector_galaxias(vector_galaxias: t_vector_galaxias; var vector_cantidades: t_vector_cantidades; var masa_principales, porcentaje_principales: real; var galaxias_corte: int8; var nombre_max1, nombre_max2, nombre_min1, nombre_min2: string);
 var
   i: t_galaxia;
   masa_total, masa_max1, masa_max2, masa_min1, masa_min2: real;
@@ -114,7 +114,7 @@ begin
   masa_min1:=9999999; masa_min2:=9999999;
   for i:= 1 to galaxias_total do
   begin
-    vector_tipos[vector_galaxias[i].tipo]:=vector_tipos[vector_galaxias[i].tipo]+1;
+    vector_cantidades[vector_galaxias[i].tipo]:=vector_cantidades[vector_galaxias[i].tipo]+1;
     masa_total:=masa_total+vector_galaxias[i].masa;
     if ((vector_galaxias[i].nombre=galaxia_corte1) or (vector_galaxias[i].nombre=galaxia_corte2) or (vector_galaxias[i].nombre=galaxia_corte3)) then
       masa_principales:=masa_principales+vector_galaxias[i].masa;
@@ -126,24 +126,24 @@ begin
   porcentaje_principales:=masa_principales/masa_total*100;
 end;
 var
-  vector_tipos_string: array[t_tipo] of string=('eliptica', 'espiral', 'lenticular', 'irregular');
+  vector_cantidades_string: array[t_tipo] of string=('eliptica', 'espiral', 'lenticular', 'irregular');
   vector_galaxias: t_vector_galaxias;
-  vector_tipos: t_vector_tipos;
+  vector_cantidades: t_vector_cantidades;
   galaxias_corte: int8;
   masa_principales, porcentaje_principales: real;
   nombre_max1, nombre_max2, nombre_min1, nombre_min2: string;
 begin
   randomize;
-  inicializar_vector_tipos(vector_tipos);
+  inicializar_vector_cantidades(vector_cantidades);
   masa_principales:=0; porcentaje_principales:=0;
   galaxias_corte:=0;
   nombre_max1:=''; nombre_max2:='';
   nombre_min1:=''; nombre_min2:='';
   cargar_vector_galaxias(vector_galaxias);
-  procesar_vector_galaxias(vector_galaxias,vector_tipos,masa_principales,porcentaje_principales,galaxias_corte,nombre_max1,nombre_max2,nombre_min1,nombre_min2);
-  textcolor(green); write('La cantidad de galaxias de cada tipo (1. elíptica; 2. espiral; 3. lenticular; 4. irregular) es '); textcolor(red); write(vector_tipos[1],', ',vector_tipos[2],', ',vector_tipos[3],', ',vector_tipos[4]); textcolor(green); writeln(', respectivamente');
+  procesar_vector_galaxias(vector_galaxias,vector_cantidades,masa_principales,porcentaje_principales,galaxias_corte,nombre_max1,nombre_max2,nombre_min1,nombre_min2);
+  textcolor(green); write('La cantidad de galaxias de cada tipo (1. elíptica; 2. espiral; 3. lenticular; 4. irregular) es '); textcolor(red); write(vector_cantidades[1],', ',vector_cantidades[2],', ',vector_cantidades[3],', ',vector_cantidades[4]); textcolor(green); writeln(', respectivamente');
   textcolor(green); write('La masa total acumulada de las 3 galaxias principales ('); textcolor(yellow); write(galaxia_corte1,', ',galaxia_corte2,', ',galaxia_corte3); textcolor(green); write(') y el porcentaje que esto representa respecto a la masa de todas las galaxias son '); textcolor(red); write(masa_principales:0:2); textcolor(green); write(' y '); textcolor(red); write(porcentaje_principales:0:2); textcolor(green); writeln('%, respectivamente');
-  textcolor(green); write('La cantidad de galaxias no '); textcolor(yellow); write(vector_tipos_string[tipo_corte]); textcolor(green); write(' que se encuentran a menos de '); textcolor(yellow); write(distancia_corte:0:2); textcolor(green); write(' pc es '); textcolor(red); writeln(galaxias_corte);
+  textcolor(green); write('La cantidad de galaxias no '); textcolor(yellow); write(vector_cantidades_string[tipo_corte]); textcolor(green); write(' que se encuentran a menos de '); textcolor(yellow); write(distancia_corte:0:2); textcolor(green); write(' pc es '); textcolor(red); writeln(galaxias_corte);
   textcolor(green); write('Los nombres de las dos galaxias con mayor masa son '); textcolor(red); write(nombre_max1); textcolor(green); write(' y '); textcolor(red); writeln(nombre_max2);
   textcolor(green); write('Los nombres de las dos galaxias con menor masa son '); textcolor(red); write(nombre_min1); textcolor(green); write(' y '); textcolor(red); write(nombre_min2);
 end.

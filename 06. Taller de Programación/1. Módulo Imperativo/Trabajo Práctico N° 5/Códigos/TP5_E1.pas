@@ -1,6 +1,7 @@
 {TRABAJO PRÁCTICO N° 5}
 {EJERCICIO 1}
-{El administrador de un edificio de oficinas cuenta, en papel, con la información del pago de las expensas de dichas oficinas. Implementar un programa con:
+{El administrador de un edificio de oficinas cuenta, en papel, con la información del pago de las expensas de dichas oficinas.
+Implementar un programa con:
 (a) Un módulo que retorne un vector, sin orden, con, a lo sumo, las 300 oficinas que administra.
 Se debe leer, para cada oficina, el código de identificación, DNI del propietario y valor de la expensa.
 La lectura finaliza cuando llega el código de identificación -1.

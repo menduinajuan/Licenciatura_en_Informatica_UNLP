@@ -51,15 +51,14 @@ procedure leer_reclamo(var registro_reclamo1: t_registro_reclamo1; dni: int32);
 var
   i: int8;
 begin
-  i:=random(100);
+  i:=random(101);
   if (i=0) then
     registro_reclamo1.codigo:=codigo_salida
   else
     registro_reclamo1.codigo:=1+random(high(int16));
   if (registro_reclamo1.codigo<>codigo_salida) then
   begin
-    i:=random(2);
-    if (i=0) then
+    if (i<=50) then
       registro_reclamo1.dni:=dni
     else
       registro_reclamo1.dni:=10000000+random(40000001);

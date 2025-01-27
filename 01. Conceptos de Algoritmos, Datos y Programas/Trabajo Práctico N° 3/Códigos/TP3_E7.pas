@@ -34,7 +34,7 @@ procedure leer_centro(var registro_centro: t_registro_centro; universidad: strin
 var
   i: int8;
 begin
-  i:=random(100);
+  i:=random(101);
   if (i=0) then
     registro_centro.investigadores:=investigadores_salida
   else
@@ -42,8 +42,7 @@ begin
   if (registro_centro.investigadores<>investigadores_salida) then
   begin
     registro_centro.centro:='Centro '+random_string(5+random(6));
-    i:=random(2);
-    if (i=0) then
+    if (i<=50) then
       registro_centro.universidad:=universidad
     else
       registro_centro.universidad:='Universidad '+random_string(5+random(6));

@@ -69,7 +69,7 @@ begin
       else
         registro_procesador.marca:=marca;
     registro_procesador.linea:=vector_lineas[1+random(5)];
-    registro_procesador.velocidad:=1+random(40)/10;
+    registro_procesador.velocidad:=1+random(41)/10;
     registro_procesador.transistores:=vector_nms[1+random(4)];
   end;
 end;

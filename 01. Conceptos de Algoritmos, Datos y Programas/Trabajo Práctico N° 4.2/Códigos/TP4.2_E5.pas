@@ -265,7 +265,7 @@ begin
   writeln(); textcolor(red); write('El año en que se firmó la mayor cantidad de contratos es '); textcolor(red); writeln(anio_max); writeln();
   writeln(); textcolor(red); writeln('La cantidad de clientes para cada categoría de monotributo es '); writeln();
   imprimir_vector_categorias(vector_categorias);
-  writeln(); textcolor(red); writeln('El código de las 10 ciudades con mayor cantidad de clientes es '); writeln();
+  writeln(); textcolor(red); writeln('Los códigos de las 10 ciudades con mayor cantidad de clientes son '); writeln();
   imprimir_vector_ciudades(vector_ciudades2);
   writeln(); textcolor(red); writeln('La cantidad de clientes que superan, mensualmente, el monto promedio entre todos los clientes es '); writeln();
   imprimir_vector_meses(vector_meses2);

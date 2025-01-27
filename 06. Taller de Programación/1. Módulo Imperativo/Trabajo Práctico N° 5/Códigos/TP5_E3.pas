@@ -1,6 +1,7 @@
 {TRABAJO PRÁCTICO N° 5}
 {EJERCICIO 3}
-{Un supermercado requiere el procesamiento de sus productos. De cada producto, se conoce código, rubro (1..10), stock y precio unitario. Se pide:
+{Un supermercado requiere el procesamiento de sus productos. De cada producto, se conoce código, rubro (1..10), stock y precio unitario.
+Se pide:
 (a) Generar una estructura adecuada que permita agrupar los productos por rubro.
 A su vez, para cada rubro, se requiere que la búsqueda de un producto por código sea lo más eficiente posible.
 La lectura finaliza con el código de producto igual a -1.

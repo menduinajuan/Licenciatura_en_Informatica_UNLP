@@ -31,13 +31,13 @@ type
     ele: t_registro_alumno;
     sig: t_lista_alumnos;
   end;
-  t_vector_turnos=array[t_turno] of t_lista_alumnos;
-procedure inicializar_vector_turnos(var vector_turnos: t_vector_turnos);
+  t_vector_alumnos=array[t_turno] of t_lista_alumnos;
+procedure inicializar_vector_alumnos(var vector_alumnos: t_vector_alumnos);
 var
   i: t_turno;
 begin
   for i:= turno_ini to turno_fin do
-    vector_turnos[i]:=nil;
+    vector_alumnos[i]:=nil;
 end;
 function random_string(length: int8): string;
 var
@@ -85,17 +85,17 @@ begin
     leer_alumno(registro_alumno);
   end;
 end;
-procedure procesar_lista_alumnos(lista_alumnos: t_lista_alumnos; var vector_turnos: t_vector_turnos);
+procedure procesar_lista_alumnos(lista_alumnos: t_lista_alumnos; var vector_alumnos: t_vector_alumnos);
 var
-  vector_turnos1: array[1..2] of int8=(1, 4);
-  vector_turnos2: array[1..3] of int8=(2, 3, 5);
+  vector_alumnos1: array[1..2] of int8=(1, 4);
+  vector_alumnos2: array[1..3] of int8=(2, 3, 5);
 begin
   while (lista_alumnos<>nil) do
   begin
     if (lista_alumnos^.ele.nota>=nota_corte1) then
-      agregar_adelante_lista_alumnos(vector_turnos[vector_turnos1[1+random(2)]],lista_alumnos^.ele)
+      agregar_adelante_lista_alumnos(vector_alumnos[vector_alumnos1[1+random(2)]],lista_alumnos^.ele)
     else if (lista_alumnos^.ele.nota>=nota_corte2) then
-      agregar_adelante_lista_alumnos(vector_turnos[vector_turnos2[1+random(3)]],lista_alumnos^.ele);
+      agregar_adelante_lista_alumnos(vector_alumnos[vector_alumnos2[1+random(3)]],lista_alumnos^.ele);
     lista_alumnos:=lista_alumnos^.sig;
   end;
 end;
@@ -107,27 +107,27 @@ begin
     lista_alumnos:=lista_alumnos^.sig;
   end;
 end;
-procedure imprimir_vector_turnos(vector_turnos: t_vector_turnos);
+procedure imprimir_vector_alumnos(vector_alumnos: t_vector_alumnos);
 var
   i: t_turno;
 begin
   for i:= turno_ini to turno_fin do
   begin
-    imprimir_lista_alumnos(vector_turnos[i],i);
+    imprimir_lista_alumnos(vector_alumnos[i],i);
     writeln();
   end;
 end;
 var
-  vector_turnos: t_vector_turnos;
+  vector_alumnos: t_vector_alumnos;
   lista_alumnos: t_lista_alumnos;
 begin
   randomize;
   lista_alumnos:=nil;
-  inicializar_vector_turnos(vector_turnos);
+  inicializar_vector_alumnos(vector_alumnos);
   cargar_lista_alumnos(lista_alumnos);
   if (lista_alumnos<>nil) then
   begin
-    procesar_lista_alumnos(lista_alumnos,vector_turnos);
-    imprimir_vector_turnos(vector_turnos);
+    procesar_lista_alumnos(lista_alumnos,vector_alumnos);
+    imprimir_vector_alumnos(vector_alumnos);
   end;
 end.
