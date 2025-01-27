@@ -1,6 +1,7 @@
 {TRABAJO PRÁCTICO N° 5}
 {EJERCICIO 2}
-{Una agencia dedicada a la venta de autos ha organizado su stock y dispone, en papel, de la información de los autos en venta. Implementar un programa que:
+{Una agencia dedicada a la venta de autos ha organizado su stock y dispone, en papel, de la información de los autos en venta.
+Implementar un programa que:
 (a) Lea la información de los autos (patente, año de fabricación (2010 .. 2018), marca y modelo) y los almacene en dos estructuras de datos:
   (i) Una estructura eficiente para la búsqueda por patente.
   (ii) Una estructura eficiente para la búsqueda por marca. Para cada marca, se deben almacenar todos juntos los autos pertenecientes a ella.

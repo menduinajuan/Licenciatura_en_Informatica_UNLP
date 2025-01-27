@@ -21,36 +21,36 @@ const
   num_corte=0;
 type
   t_digito=0..digitos_total;
-  t_vector_digitos=array[t_digito] of int16;
-procedure inicializar_vector_digitos(var vector_digitos: t_vector_digitos);
+  t_vector_cantidades=array[t_digito] of int16;
+procedure inicializar_vector_cantidades(var vector_cantidades: t_vector_cantidades);
 var
   i: t_digito;
 begin
   for i:= 1 to digitos_total do
-    vector_digitos[i]:=0;
+    vector_cantidades[i]:=0;
 end;
-procedure descomponer_numero(var vector_digitos: t_vector_digitos; num: int16);
+procedure descomponer_numero(var vector_cantidades: t_vector_cantidades; num: int16);
 var
   digito: t_digito;
 begin
   if (num=0) then 
-    vector_digitos[0]:=vector_digitos[0]+1
+    vector_cantidades[0]:=vector_cantidades[0]+1
   else
     while (num<>0) do
     begin
       digito:=num mod 10;
-      vector_digitos[digito]:=vector_digitos[digito]+1;
+      vector_cantidades[digito]:=vector_cantidades[digito]+1;
       num:=num div 10;
     end;
 end;
-procedure cargar_vector_digitos(var vector_digitos: t_vector_digitos);
+procedure cargar_vector_cantidades(var vector_cantidades: t_vector_cantidades);
 var
   num: int8;
 begin
   num:=num_salida+random(high(int8));
   while (num<>num_salida) do
   begin
-    descomponer_numero(vector_digitos,num);
+    descomponer_numero(vector_cantidades,num);
     num:=num_salida+random(102);
   end;
 end;
@@ -62,28 +62,28 @@ begin
     digito_max:=digito;
   end;
 end;
-procedure digitos_sin_ocurrencias(num: int16; digito: int8; var vector_digitos2: t_vector_digitos; var dimL: int8);
+procedure digitos_sin_ocurrencias(num: int16; digito: int8; var vector_cantidades2: t_vector_cantidades; var dimL: int8);
 begin
   if (num=num_corte) then
   begin
     dimL:=dimL+1;
-    vector_digitos2[dimL]:=digito;
+    vector_cantidades2[dimL]:=digito;
   end;
 end;
-procedure procesar_vector_digitos(vector_digitos: t_vector_digitos);
+procedure procesar_vector_cantidades(vector_cantidades: t_vector_cantidades);
 var
   i: t_digito;
   digito_max, dimL: int8;
   num_max: int16;
-  vector_digitos2: t_vector_digitos;
+  vector_cantidades2: t_vector_cantidades;
 begin
   num_max:=low(int16); digito_max:=-1;
   dimL:=0;
   for i:= 0 to digitos_total do
   begin
-    textcolor(green); write('Número ',i,': '); textcolor(red); write(vector_digitos[i]); textcolor(green); writeln(' veces');
-    digito_mas_leido(vector_digitos[i],i,num_max,digito_max);
-    digitos_sin_ocurrencias(vector_digitos[i],i,vector_digitos2,dimL);
+    textcolor(green); write('Número ',i,': '); textcolor(red); write(vector_cantidades[i]); textcolor(green); writeln(' veces');
+    digito_mas_leido(vector_cantidades[i],i,num_max,digito_max);
+    digitos_sin_ocurrencias(vector_cantidades[i],i,vector_cantidades2,dimL);
   end;
   textcolor(green); write('El dígito más leído fue el '); textcolor(red); writeln(digito_max);
   if (dimL>0) then
@@ -93,11 +93,11 @@ begin
     begin
       if (i<dimL) then
       begin
-        textcolor(red); write(vector_digitos2[i]); textcolor(green); write(', ');
+        textcolor(red); write(vector_cantidades2[i]); textcolor(green); write(', ');
       end
       else
       begin
-        textcolor(red); write(vector_digitos2[i]);
+        textcolor(red); write(vector_cantidades2[i]);
       end;
     end;
   end
@@ -107,10 +107,10 @@ begin
   end;
 end;
 var
-  vector_digitos: t_vector_digitos;
+  vector_cantidades: t_vector_cantidades;
 begin
   randomize;
-  inicializar_vector_digitos(vector_digitos);
-  cargar_vector_digitos(vector_digitos);
-  procesar_vector_digitos(vector_digitos);
+  inicializar_vector_cantidades(vector_cantidades);
+  cargar_vector_cantidades(vector_cantidades);
+  procesar_vector_cantidades(vector_cantidades);
 end.

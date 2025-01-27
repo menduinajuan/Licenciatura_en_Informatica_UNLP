@@ -28,19 +28,19 @@ type
     distancia: real;
   end;
   t_vector_viajes=array[t_viaje] of t_registro_viaje;
-  t_vector_dias=array[t_dia] of int16;
-procedure inicializar_vector_dias(var vector_dias: t_vector_dias);
+  t_vector_cantidades=array[t_dia] of int16;
+procedure inicializar_vector_cantidades(var vector_cantidades: t_vector_cantidades);
 var
   i: t_dia;
 begin
   for i:= dia_ini to dia_fin do
-    vector_dias[i]:=0;
+    vector_cantidades[i]:=0;
 end;
 procedure leer_viaje(var registro_viaje: t_registro_viaje);
 var
   i: int8;
 begin
-  i:=random(100);
+  i:=random(101);
   if (i=0) then
     registro_viaje.distancia:=distancia_salida
   else if (i<=50) then
@@ -76,7 +76,7 @@ begin
 end;
 procedure calcular_informar_vector_viajes(vector_viajes: t_vector_viajes; viajes: int16);
 var
-  vector_dias: t_vector_dias;
+  vector_cantidades: t_vector_cantidades;
   i: t_viaje;
   j: t_dia;
   dia_min: int8;
@@ -84,19 +84,19 @@ var
 begin
   monto_total:=0; monto_prom:=0;
   monto_min:=9999999; distancia_min:=0; dia_min:=0; 
-  inicializar_vector_dias(vector_dias);
+  inicializar_vector_cantidades(vector_cantidades);
   for i:= 1 to viajes do
   begin
     monto_total:=monto_total+vector_viajes[i].monto;
     actualizar_minimo(vector_viajes[i].monto,vector_viajes[i].dia,vector_viajes[i].distancia,monto_min,dia_min,distancia_min);
-    vector_dias[vector_viajes[i].dia]:=vector_dias[vector_viajes[i].dia]+1;
+    vector_cantidades[vector_viajes[i].dia]:=vector_cantidades[vector_viajes[i].dia]+1;
   end;
   monto_prom:=monto_total/viajes;
   textcolor(green); write('El monto promedio de los viajes realizados es $'); textcolor(red); writeln(monto_prom:0:2);
   textcolor(green); write('La distancia recorrida y el día del mes en que se realizó el viaje que transportó menos dinero son '); textcolor(red); write(distancia_min:0:2); textcolor(green); write(' y '); textcolor(red); write(dia_min); textcolor(green); writeln(', respectivamente');
   for j:= dia_ini to dia_fin do
   begin
-    textcolor(green); write('La cantidad de viajes realizados el día ',j,' del mes de marzo es '); textcolor(red); writeln(vector_dias[j]);
+    textcolor(green); write('La cantidad de viajes realizados el día ',j,' del mes de marzo es '); textcolor(red); writeln(vector_cantidades[j]);
   end;
 end;
 procedure buscar_desordenado_vector_viajes(vector_viajes: t_vector_viajes; viajes: int16; var pos: int16);

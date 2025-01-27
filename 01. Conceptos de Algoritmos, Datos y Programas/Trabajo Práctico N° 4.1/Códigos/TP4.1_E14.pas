@@ -24,7 +24,7 @@ const
 type
   t_proyecto=proyecto_ini..proyecto_fin;
   t_rol=rol_ini..rol_fin;
-   t_registro_participante=record
+  t_registro_participante=record
     pais: string;
     proyecto: int16;
     nombre: string;

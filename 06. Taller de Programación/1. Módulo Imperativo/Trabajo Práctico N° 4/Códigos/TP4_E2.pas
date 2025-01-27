@@ -1,7 +1,8 @@
 {TRABAJO PRÁCTICO N° 4}
 {EJERCICIO 2}
 {Una biblioteca nos ha encargado procesar la información de los préstamos realizados durante el año 2021.
-De cada préstamo, se conoce el ISBN del libro, el número de socio, día y mes del préstamo y cantidad de días prestados. Implementar un programa con:
+De cada préstamo, se conoce el ISBN del libro, el número de socio, día y mes del préstamo y cantidad de días prestados.
+Implementar un programa con:
 (a) Un módulo que lea préstamos y retorne 2 estructuras de datos con la información de los préstamos. La lectura de los préstamos finaliza con ISBN -1.
 Las estructuras deben ser eficientes para buscar por ISBN.
   (i) En una estructura, cada préstamo debe estar en un nodo.

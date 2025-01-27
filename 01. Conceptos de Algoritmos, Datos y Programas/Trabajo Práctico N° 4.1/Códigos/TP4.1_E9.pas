@@ -104,7 +104,8 @@ begin
       alumnos_pares:=alumnos_pares+1;
     actualizar_minimos(vector_alumnos[i].nacimiento,vector_alumnos[i].apellido,vector_alumnos[i].nombre,nacimiento_min1,nacimiento_min2,apellido_min1,nombre_min1,apellido_min2,nombre_min2);
   end;
-  porcentaje_pares:=alumnos_pares/alumnos*100;
+  if (alumnos>0) then
+    porcentaje_pares:=alumnos_pares/alumnos*100;
 end;
 var
   vector_alumnos: t_vector_alumnos;

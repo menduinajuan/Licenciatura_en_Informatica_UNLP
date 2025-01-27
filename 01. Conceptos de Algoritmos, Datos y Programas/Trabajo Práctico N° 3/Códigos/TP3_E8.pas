@@ -104,10 +104,7 @@ begin
       impares:=impares+1;
     proyecto:=proyecto div 10;
   end;
-  if (pares=impares) then
-    contar_pares_impares:=true
-  else
-    contar_pares_impares:=false; 
+  contar_pares_impares:=(pares=impares);
 end;
 procedure leer_proyectos(var escuelas_total: int16; var escuela_max1, escuela_max2: string);
 var

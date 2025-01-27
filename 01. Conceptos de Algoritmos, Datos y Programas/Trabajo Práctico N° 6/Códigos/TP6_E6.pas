@@ -32,13 +32,13 @@ type
     ele: t_registro_sonda;
     sig: t_lista_sondas;
   end;
-  t_vector_rangos=array[t_rango] of int16;
-procedure inicializar_vector_rangos(var vector_rangos: t_vector_rangos);
+  t_vector_cantidades=array[t_rango] of int16;
+procedure inicializar_vector_cantidades(var vector_cantidades: t_vector_cantidades);
 var
   i: t_rango;
 begin
   for i:= rango_ini to rango_fin do
-    vector_rangos[i]:=0;
+    vector_cantidades[i]:=0;
 end;
 function random_string(length: int8): string;
 var
@@ -99,7 +99,7 @@ begin
     nombre_max:=nombre;
   end;
 end;
-procedure procesar_lista_sondas(lista_sondas: t_lista_sondas; duracion_prom, costo_prom: real; var nombre_max: string; var vector_rangos: t_vector_rangos; var sondas_prom: int16);
+procedure procesar_lista_sondas(lista_sondas: t_lista_sondas; duracion_prom, costo_prom: real; var nombre_max: string; var vector_cantidades: t_vector_cantidades; var sondas_prom: int16);
 var
   costo_sonda, costo_max: real;
 begin
@@ -108,7 +108,7 @@ begin
   begin
     costo_sonda:=lista_sondas^.ele.costo_construccion+lista_sondas^.ele.costo_mantenimiento*lista_sondas^.ele.duracion;
     actualizar_maximo(costo_sonda,lista_sondas^.ele.nombre,costo_max,nombre_max);
-    vector_rangos[lista_sondas^.ele.rango]:=vector_rangos[lista_sondas^.ele.rango]+1;
+    vector_cantidades[lista_sondas^.ele.rango]:=vector_cantidades[lista_sondas^.ele.rango]+1;
     if (lista_sondas^.ele.duracion>duracion_prom) then
       sondas_prom:=sondas_prom+1;
     if (lista_sondas^.ele.costo_construccion>costo_prom) then
@@ -118,17 +118,17 @@ begin
     lista_sondas:=lista_sondas^.sig;
   end;
 end;
-procedure imprimir_vector_rangos(vector_rangos: t_vector_rangos);
+procedure imprimir_vector_cantidades(vector_cantidades: t_vector_cantidades);
 var
   i: t_rango;
 begin
   for i:= rango_ini to rango_fin do
   begin
-    textcolor(green); write('La cantidad de sondas que realizarán estudios en el rango ',i,' del espectro electromagnético es '); textcolor(red); writeln(vector_rangos[i]);
+    textcolor(green); write('La cantidad de sondas que realizarán estudios en el rango ',i,' del espectro electromagnético es '); textcolor(red); writeln(vector_cantidades[i]);
   end;
 end;
 var
-  vector_rangos: t_vector_rangos;
+  vector_cantidades: t_vector_cantidades;
   lista_sondas: t_lista_sondas;
   sondas_prom: int16;
   duracion_prom, costo_prom: real;
@@ -137,12 +137,12 @@ begin
   randomize;
   lista_sondas:=nil;
   nombre_max:='';
-  inicializar_vector_rangos(vector_rangos);
+  inicializar_vector_cantidades(vector_cantidades);
   duracion_prom:=0; sondas_prom:=0;
   costo_prom:=0;
   cargar_lista_sondas(lista_sondas,duracion_prom,costo_prom);
-  procesar_lista_sondas(lista_sondas,duracion_prom,costo_prom,nombre_max,vector_rangos,sondas_prom);
+  procesar_lista_sondas(lista_sondas,duracion_prom,costo_prom,nombre_max,vector_cantidades,sondas_prom);
   textcolor(green); write('El nombre de la sonda más costosa (considerando su costo de construcción y de mantenimiento es '); textcolor(red); writeln(nombre_max);
-  imprimir_vector_rangos(vector_rangos);
+  imprimir_vector_cantidades(vector_cantidades);
   textcolor(green); write('La cantidad de sondas cuya duración estimada supera la duración promedio de todas las sondas es '); textcolor(red); write(sondas_prom);
 end.

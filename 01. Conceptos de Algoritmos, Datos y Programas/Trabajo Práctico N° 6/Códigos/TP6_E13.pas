@@ -26,18 +26,18 @@ type
     dias: int16;
   end;
   t_vector_usuarios=array[t_usuario] of t_registro_usuario;
-  t_vector_roles=array[t_rol] of int16;
+  t_vector_cantidades=array[t_rol] of int16;
   t_lista_usuarios=^t_nodo_usuarios;
   t_nodo_usuarios=record
     ele: t_registro_usuario;
     sig: t_lista_usuarios;
   end;
-procedure inicializar_vector_roles(var vector_roles: t_vector_roles);
+procedure inicializar_vector_cantidades(var vector_cantidades: t_vector_cantidades);
 var
   i: t_rol;
 begin
   for i:= rol_ini to rol_fin do
-    vector_roles[i]:=0;
+    vector_cantidades[i]:=0;
 end;
 function random_string(length: int8): string;
 var
@@ -66,8 +66,8 @@ begin
 end;
 procedure cargar_vector_usuarios(var vector_usuarios: t_vector_usuarios);
 var
-  i: t_usuario;
   registro_usuario: t_registro_usuario;
+  i: t_usuario;
 begin
   for i:= 1 to usuarios_total do
   begin
@@ -109,7 +109,7 @@ begin
       email_max2:=email;
     end;
 end;
-procedure procesar_vector_usuarios(vector_usuarios: t_vector_usuarios; var lista_usuarios: t_lista_usuarios; var vector_roles: t_vector_roles; var email_max1, email_max2: string);
+procedure procesar_vector_usuarios(vector_usuarios: t_vector_usuarios; var lista_usuarios: t_lista_usuarios; var vector_cantidades: t_vector_cantidades; var email_max1, email_max2: string);
 var
   i: t_usuario;
   dias_max1, dias_max2: int16;
@@ -119,7 +119,7 @@ begin
   begin
     if (vector_usuarios[i].revista=revista_corte) then
       agregar_ordenado_lista_usuarios(lista_usuarios,vector_usuarios[i]);
-    vector_roles[vector_usuarios[i].rol]:=vector_roles[vector_usuarios[i].rol]+1;
+    vector_cantidades[vector_usuarios[i].rol]:=vector_cantidades[vector_usuarios[i].rol]+1;
     actualizar_maximos(vector_usuarios[i].dias,vector_usuarios[i].email,dias_max1,dias_max2,email_max1,email_max2);
   end;
 end;
@@ -131,29 +131,29 @@ begin
     lista_usuarios:=lista_usuarios^.sig;
   end;
 end;
-procedure imprimir_vector_roles(vector_roles: t_vector_roles);
+procedure imprimir_vector_cantidades(vector_cantidades: t_vector_cantidades);
 var
   i: t_rol;
 begin
   for i:= rol_ini to rol_fin do
   begin
-    textcolor(green); write('La cantidad de usuarios para el rol ',i,' para todas las revistas del portal es '); textcolor(red); writeln(vector_roles[i]); 
+    textcolor(green); write('La cantidad de usuarios para el rol ',i,' para todas las revistas del portal es '); textcolor(red); writeln(vector_cantidades[i]); 
   end;
 end;
 var
   vector_usuarios: t_vector_usuarios;
-  vector_roles: t_vector_roles;
+  vector_cantidades: t_vector_cantidades;
   lista_usuarios: t_lista_usuarios;
   email_max1, email_max2: string;
 begin
   randomize;
   lista_usuarios:=nil;
-  inicializar_vector_roles(vector_roles);
+  inicializar_vector_cantidades(vector_cantidades);
   email_max1:=''; email_max2:='';
   cargar_vector_usuarios(vector_usuarios);
-  procesar_vector_usuarios(vector_usuarios,lista_usuarios,vector_roles,email_max1,email_max2);
+  procesar_vector_usuarios(vector_usuarios,lista_usuarios,vector_cantidades,email_max1,email_max2);
   if (lista_usuarios<>nil) then
     imprimir_lista_usuarios(lista_usuarios);
-  imprimir_vector_roles(vector_roles);
+  imprimir_vector_cantidades(vector_cantidades);
   textcolor(green); write('Los emails de los dos usuarios que hace más tiempo que no ingresan al portal son '); textcolor(red); write(email_max1); textcolor(green); write(' y '); textcolor(red); write(email_max2);
 end.

@@ -38,7 +38,7 @@ procedure leer_vuelo(var registro_vuelo: t_registro_vuelo; avion: int16; pais_sa
 var
   i: int8;
 begin
-  i:=random(100);
+  i:=random(101);
   if (i=0) then
     registro_vuelo.avion:=avion_salida
   else if (i<=50) then

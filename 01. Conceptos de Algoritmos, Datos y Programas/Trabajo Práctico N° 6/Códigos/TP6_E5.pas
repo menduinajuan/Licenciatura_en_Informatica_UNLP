@@ -122,7 +122,8 @@ begin
     actualizar_minimos(lista_productos^.ele.precio,lista_productos^.ele.producto,precio_min1,precio_min2,producto_min1,producto_min2);
     lista_productos:=lista_productos^.sig;
   end;
-  porcentaje_debajo:=productos_debajo/productos_total*100;
+  if (productos_total>0) then
+    porcentaje_debajo:=productos_debajo/productos_total*100;
 end;
 var
   lista_productos: t_lista_productos;

@@ -1,6 +1,7 @@
 {TRABAJO PRÁCTICO N° 4}
 {EJERCICIO 3}
-{Una facultad nos ha encargado procesar la información de sus alumnos de la carrera XXX. Esta carrera tiene 30 materias. Implementar un programa con:
+{Una facultad nos ha encargado procesar la información de sus alumnos de la carrera XXX. Esta carrera tiene 30 materias.
+Implementar un programa con:
 (a) Un módulo que lea la información de los finales rendidos por los alumnos y los almacene en dos estructuras de datos.
   (i) Una estructura que, para cada alumno, se almacenen sólo código y nota de las materias aprobadas (4 a 10).
   De cada final rendido, se lee el código del alumno, el código de materia y la nota (valor entre 1 y 10). La lectura de los finales finaliza con nota -1.
