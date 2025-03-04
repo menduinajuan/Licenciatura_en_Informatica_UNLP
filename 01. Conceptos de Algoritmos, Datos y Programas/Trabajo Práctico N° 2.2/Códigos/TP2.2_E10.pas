@@ -19,7 +19,7 @@ function cumple_secuenciaA(cumple: boolean): boolean;
 var
   c: char;
 begin
-  textcolor(green); writeln('Introducir caracter de la secuencia A:');
+  textcolor(green); write('Introducir caracter de la secuencia A: ');
   textcolor(yellow); readln(c);
   while ((c<>caracter_corte1) and (cumple=true)) do
   begin
@@ -27,6 +27,7 @@ begin
       cumple:=false
     else
     begin
+      textcolor(green); write('Introducir caracter de la secuencia A: ');
       textcolor(yellow); readln(c);
     end;
   end;
@@ -36,7 +37,7 @@ function cumple_secuenciaB(cumple: boolean): boolean;
 var
   c: char;
 begin
-  textcolor(green); writeln('Introducir caracter de la secuencia B:');
+  textcolor(green); write('Introducir caracter de la secuencia B: ');
   textcolor(yellow); readln(c);
   while ((c<>caracter_corte2) and (cumple=true)) do
   begin
@@ -44,6 +45,7 @@ begin
       cumple:=false
     else
     begin
+      textcolor(green); write('Introducir caracter de la secuencia B: ');
       textcolor(yellow); readln(c);
     end;
   end;
