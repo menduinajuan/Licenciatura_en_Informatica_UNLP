@@ -15,6 +15,7 @@ var
   num: int16;
   suma: real;
 begin
+  reset(archivo);
   suma:=0;
   textcolor(green); write('El contenido del archivo es: ');
   while (not eof(archivo)) do
@@ -25,8 +26,10 @@ begin
       nums_corte:=nums_corte+1;
     suma:=suma+num;
   end;
-  prom:=suma/fileSize(archivo);
+  if (fileSize(archivo)>0) then
+    prom:=suma/fileSize(archivo);
   writeln();
+  close(archivo);
 end;
 var
   archivo: t_archivo;
@@ -37,16 +40,7 @@ begin
   nombre:='TP1_E1';
   nums_corte:=0; prom:=0;
   assign(archivo,nombre);
-  reset(archivo);
-  if (fileSize(archivo)>0) then
-  begin
-    procesar_archivo(archivo,nums_corte,prom);
-    textcolor(green); write('La cantidad de números menores a '); textcolor(yellow); write(num_corte); textcolor(green); write(' es '); textcolor(red); writeln(nums_corte);
-    textcolor(green); write('El promedio de los números ingresados es '); textcolor(red); write(prom:0:2);
-  end
-  else
-  begin
-    textcolor(red); write('No hay números en el archivo');
-  end;
-  close(archivo);
+  procesar_archivo(archivo,nums_corte,prom);
+  textcolor(green); write('La cantidad de números menores a '); textcolor(yellow); write(num_corte); textcolor(green); write(' es '); textcolor(red); writeln(nums_corte);
+  textcolor(green); write('El promedio de los números ingresados es '); textcolor(red); write(prom:0:2);
 end.

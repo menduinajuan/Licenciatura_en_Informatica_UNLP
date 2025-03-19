@@ -33,6 +33,7 @@ begin
     write(archivo,num);
     leer_numero(num);
   end;
+  close(archivo);
 end;
 var
   nombre: string;
@@ -43,5 +44,4 @@ begin
   assign(archivo,nombre);
   rewrite(archivo);
   cargar_archivo(archivo);
-  close(archivo);
 end.
