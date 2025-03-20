@@ -3,7 +3,7 @@ set more off
 
 *local disco="C:/"
 local disco="G:/Mi unidad"
-cd "`disco'/JM/Facultad de Informática (FI)/Licenciatura en Informática/29. Matemática 4/Trabajo Práctico/Datos"
+cd "`disco'/JM/Facultad de Informática (FI)/Licenciatura en Informática/29. Matemática 4/Trabajo Práctico/Códigos"
 
 
 capture log close

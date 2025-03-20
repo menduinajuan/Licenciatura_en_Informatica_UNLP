@@ -1,8 +1,8 @@
 {TRABAJO PRÁCTICO N° 2.2}
 {EJERCICIO 11}
 {Realizar un programa modularizado que lea una secuencia de caracteres y verifique si cumple con el patrón A%B*, donde:
-•	A es una secuencia de caracteres en la que no existe el carácter ‘$’.
-•	B es una secuencia con la misma cantidad de caracteres que aparecen en A y en la que aparece, a lo sumo, 3 veces el carácter ‘@’.
+•	A es una secuencia de caracteres en la que no existe el caracter ‘$’.
+•	B es una secuencia con la misma cantidad de caracteres que aparecen en A y en la que aparece, a lo sumo, 3 veces el caracter ‘@’.
 •	Los caracteres % y * seguro existen.
 Nota: En caso de no cumplir, informar que parte del patrón no se cumplió.}
 

@@ -27,7 +27,7 @@ public class TP6_E2 {
         }
         System.out.println();
 
-        // Informar la Saltura promedio
+        // Informar la altura promedio
         double prom=suma/dimF;
         System.out.println("La altura promedio es " + String.format("%.2f", prom) + " centímetros");
         System.out.println();

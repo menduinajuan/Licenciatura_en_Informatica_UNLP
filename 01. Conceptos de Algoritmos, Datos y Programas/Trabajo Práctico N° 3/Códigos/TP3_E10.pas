@@ -41,7 +41,7 @@ var
   vector_climas: array[1..4] of string=('templado', 'continental', 'subtropical', 'desertico');
   i: int8;
 begin
-  i:=random(10);
+  i:=random(11);
   if (i=0) then
   begin
     registro_planta.nombre:='Especie '+random_string(5+random(6));
@@ -58,15 +58,18 @@ begin
   i:=random(20);
   if (i=0) then
   begin
-    registro_planta.nombre:='Especie '+random_string(5+random(6));
     tipo_pos:=tipo_pos+1;
-    if (tipo_pos<=5) then
+    if ((tipo_pos>=1) and (tipo_pos<=5)) then
       registro_planta.tipo:=vector_tipos[tipo_pos]
     else
       registro_planta.tipo:='Tipo '+random_string(5+random(6));
+    if (registro_planta.nombre=planta) then
+      registro_planta.nombre:='Especie '+random_string(5+random(6))
+    else
+      registro_planta.pais:=random_string(5+random(6));
   end
   else
-    if (tipo_pos<=5) then
+    if ((tipo_pos>=1) and (tipo_pos<=5)) then
       registro_planta.tipo:=vector_tipos[tipo_pos]
     else
       registro_planta.tipo:=tipo;
@@ -120,7 +123,7 @@ begin
   plantas_min:=high(int16);
   vida_max1:=low(int16); vida_max2:=low(int16);
   paises_max3:=low(int16);
-  planta:='Especie XXX'; tipo:=''; tipo_pos:=1;
+  planta:='Especie XXX'; tipo:='Tipo XXX'; tipo_pos:=1;
   leer_planta(registro_planta,planta,tipo,tipo_pos);
   while (plantas<plantas_total) do
   begin
