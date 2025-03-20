@@ -25,6 +25,7 @@ procedure cargar_archivo(var archivo: t_archivo);
 var
   num: int16;
 begin
+  rewrite(archivo);
   textcolor(green); write('Los números ingresados son: ');
   leer_numero(num);
   while (num<>num_salida) do
@@ -36,12 +37,11 @@ begin
   close(archivo);
 end;
 var
-  nombre: string;
   archivo: t_archivo;
+  nombre: string;
 begin
   randomize;
   nombre:='TP1_E1';
   assign(archivo,nombre);
-  rewrite(archivo);
   cargar_archivo(archivo);
 end.
