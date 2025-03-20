@@ -33,6 +33,10 @@ begin
   end;
   cumple_secuenciaA:=cumple;
 end;
+function es_consonante(c: char): boolean;
+begin
+  es_consonante:=(((c>='a') and (c<='z')) or ((c>='A') and (c<='Z'))) and (es_vocal(c)=false);
+end;
 function cumple_secuenciaB(cumple: boolean): boolean;
 var
   c: char;
@@ -41,7 +45,7 @@ begin
   textcolor(yellow); readln(c);
   while ((c<>caracter_corte2) and (cumple=true)) do
   begin
-    if (es_vocal(c)=true) then
+    if (es_consonante(c)=false) then
       cumple:=false
     else
     begin

@@ -134,7 +134,7 @@ var
   cantidad_min: int16;
 begin
   cantidad_min:=high(int16);
-  for i:= dia_ini+1 to dia_fin do
+  for i:= dia_ini to dia_fin do
   begin
     actualizar_minimo(vector_cantidades[i],i,cantidad_min,dia_min);
     textcolor(green); write('La cantidad de préstamos que se realizaron el día ',i,' es '); textcolor(red); writeln(vector_cantidades[i]);

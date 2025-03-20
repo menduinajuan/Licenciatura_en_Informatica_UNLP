@@ -125,7 +125,7 @@ var
   anterior, actual: t_lista_clientes;
 begin
   actual:=lista_clientes;
-  while ((actual<>nil) and (actual^.ele.codigo<>codigo)) do
+  while (actual^.ele.codigo<>codigo) do
   begin
     anterior:=actual;
     actual:=actual^.sig;
