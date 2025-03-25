@@ -81,7 +81,7 @@ var
 begin
   new(nuevo);
   nuevo^.ele:=registro_usuario;
-  anterior:=lista_usuarios; actual:=lista_usuarios;
+  actual:=lista_usuarios;
   while ((actual<>nil) and (actual^.ele.dias<nuevo^.ele.dias)) do
   begin
     anterior:=actual;

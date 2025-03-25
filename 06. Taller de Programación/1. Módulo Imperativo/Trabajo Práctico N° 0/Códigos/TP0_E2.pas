@@ -77,7 +77,7 @@ var
 begin
   new(nuevo);
   cargar_registro_propiedad2(nuevo^.ele,registro_propiedad1);
-  anterior:=lista_propiedades1; actual:=lista_propiedades1;
+  actual:=lista_propiedades1;
   while ((actual<>nil) and (actual^.ele.tipo<nuevo^.ele.tipo)) do
   begin
     anterior:=actual;

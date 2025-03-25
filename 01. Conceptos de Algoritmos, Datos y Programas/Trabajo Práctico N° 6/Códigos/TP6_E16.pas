@@ -79,7 +79,7 @@ var
 begin
   new(nuevo);
   nuevo^.ele:=registro_corredor;
-  anterior:=lista_corredores; actual:=lista_corredores;
+  actual:=lista_corredores;
   while ((actual<>nil) and (actual^.ele.ciudad_ini<nuevo^.ele.ciudad_ini)) do
   begin
     anterior:=actual;
