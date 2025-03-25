@@ -55,7 +55,7 @@ var
 begin
   new(nuevo);
   nuevo^.ele:=registro_alumno;
-  anterior:=lista_alumnos; actual:=lista_alumnos;
+  actual:=lista_alumnos;
   while ((actual<>nil) and (actual^.ele.promedio>nuevo^.ele.promedio)) do
   begin
     anterior:=actual;

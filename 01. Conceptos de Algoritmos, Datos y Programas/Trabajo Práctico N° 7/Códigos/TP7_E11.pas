@@ -92,7 +92,7 @@ begin
   new(nuevo);
   nuevo^.ele:=registro_venta;
   nuevo^.sig:=nil;
-  anterior:=lista_ventas; actual:=lista_ventas;
+  actual:=lista_ventas;
   while ((actual<>nil) and (actual^.ele.evento<nuevo^.ele.evento)) do
   begin
     anterior:=actual;

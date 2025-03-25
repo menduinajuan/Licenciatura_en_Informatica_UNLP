@@ -60,7 +60,7 @@ begin
   new(nuevo);
   nuevo^.ele:=registro_viaje;
   nuevo^.sig:=nil;
-  anterior:=lista_viajes1; actual:=lista_viajes1;
+  actual:=lista_viajes1;
   while ((actual<>nil) and (actual^.ele.auto<nuevo^.ele.auto)) do
   begin
     anterior:=actual;
@@ -112,7 +112,7 @@ begin
   new(nuevo);
   nuevo^.ele:=registro_viaje;
   nuevo^.sig:=nil;
-  anterior:=lista_viajes2; actual:=lista_viajes2;
+  actual:=lista_viajes2;
   while ((actual<>nil) and (actual^.ele.numero<nuevo^.ele.numero)) do
   begin
     anterior:=actual;

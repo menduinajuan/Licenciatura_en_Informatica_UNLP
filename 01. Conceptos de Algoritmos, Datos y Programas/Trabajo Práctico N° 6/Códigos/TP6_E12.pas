@@ -48,7 +48,7 @@ var
 begin
   new(nuevo);
   nuevo^.ele:=registro_celular;
-  anterior:=lista_celulares; actual:=lista_celulares;
+  actual:=lista_celulares;
   while ((actual<>nil) and (actual^.ele.version<nuevo^.ele.version)) do
   begin
     anterior:=actual;

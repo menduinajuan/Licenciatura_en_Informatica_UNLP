@@ -142,7 +142,7 @@ begin
   new(nuevo);
   nuevo^.ele:=registro_transferencia;
   nuevo^.sig:=nil;
-  anterior:=lista_transferencias2; actual:=lista_transferencias2;
+  actual:=lista_transferencias2;
   while ((actual<>nil) and (actual^.ele.numero_origen<nuevo^.ele.numero_origen)) do
   begin
     anterior:=actual;

@@ -99,7 +99,7 @@ var
 begin
   new(nuevo);
   cargar_registro_viaje2(nuevo^.ele,registro_viaje1);
-  anterior:=lista_viajes; actual:=lista_viajes;
+  actual:=lista_viajes;
   while ((actual<>nil) and (actual^.ele.dia<nuevo^.ele.dia)) do
   begin
     anterior:=actual;

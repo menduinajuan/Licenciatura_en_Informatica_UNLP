@@ -68,7 +68,7 @@ var
 begin
   new(nuevo);
   cargar_registro_producto2(nuevo^.ele,registro_producto1);
-  anterior:=lista_productos; actual:=lista_productos;
+  actual:=lista_productos;
   while ((actual<>nil) and (actual^.ele.codigo<nuevo^.ele.codigo)) do
   begin
     anterior:=actual;

@@ -134,7 +134,7 @@ begin
   new(nuevo);
   cargar_registro_cliente2(nuevo^.ele,registro_cliente1);
   nuevo^.sig:=nil;
-  anterior:=lista_clientes2; actual:=lista_clientes2;
+  actual:=lista_clientes2;
   while ((actual<>nil) and (actual^.ele.dni<nuevo^.ele.dni)) do
   begin
     anterior:=actual;
