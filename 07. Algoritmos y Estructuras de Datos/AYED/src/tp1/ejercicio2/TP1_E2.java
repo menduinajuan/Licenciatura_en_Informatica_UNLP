@@ -16,16 +16,16 @@ public class TP1_E2 {
         Scanner scanner=new Scanner(System.in);
         int nSalida=0;
         int n;
-        int vector[];
+        int vectorNum[];
 
         System.out.print("Introducir número n: ");
         n=scanner.nextInt();
 
         while (n!=nSalida) {
-            System.out.print("Elementos del vector: ");
-            vector=Clase.crearVectorMultiplosN(n);
+            System.out.print("Elementos del vector nums: ");
+            vectorNum=Clase.crearVectorMultiplosN(n);
             for (int i=0; i<n; i++)
-                System.out.print(vector[i] + " ");
+                System.out.print(vectorNum[i] + " ");
             System.out.print("\n\nIntroducir número n: ");
             n=scanner.nextInt();
         }

@@ -10,15 +10,15 @@ En la computadora, ejecutar el programa y verificar que se cumple con lo pedido.
 
 package tp1.ejercicio1;
 
-import java.util.concurrent.ThreadLocalRandom;
+import PaqueteLectura.*;
 
 public class TP1_E1 {
 
     public static void main(String[] args) {
 
         int aMax=10;
-        int a=1+ThreadLocalRandom.current().nextInt(aMax);
-        int b=ThreadLocalRandom.current().nextInt(a,a*2);
+        int a=1+GeneradorAleatorio.generarInt(aMax);
+        int b=a+GeneradorAleatorio.generarInt(a);
 
         System.out.println("Impresión con for:");
         Imprimir.imprimirConFor(a,b);
