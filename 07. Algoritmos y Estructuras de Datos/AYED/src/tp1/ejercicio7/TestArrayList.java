@@ -100,6 +100,6 @@ public class TestArrayList {
         System.out.println("\nElementos de la lista ordenada 1: " + Metodos.combinarOrdenado(new ArrayList<>(Arrays.asList(1,2,3)), new ArrayList<>(Arrays.asList(4,5,6))));
         System.out.println("Elementos de la lista ordenada 2: " + Metodos.combinarOrdenado(new ArrayList<>(Arrays.asList(4,5,6)), new ArrayList<>(Arrays.asList(1,2,3))));
 
-}
+    }
 
 }

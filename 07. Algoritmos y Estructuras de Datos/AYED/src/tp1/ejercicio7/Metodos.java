@@ -74,38 +74,41 @@ public class Metodos {
 
     public static List<Integer> calcularSucesion(int n) {
         List<Integer> lista=new ArrayList<>();
-        calcular(lista,n);
+        calcularSucesionRec(lista, n);
         return lista;
     }
 
-    private static void calcular(List<Integer> lista, int n) {
+    private static void calcularSucesionRec(List<Integer> lista, int n) {
         lista.add(n);
-        if (n==1)
-            return;
-        if (n%2==0)
-            calcular(lista,n/2);
-        else
-            calcular(lista,3*n+1);
+        if (n==1)   return;
+        if (n%2==0) calcularSucesionRec(lista, n/2);
+        else        calcularSucesionRec(lista, 3*n+1);
     }
 
     public static void invertirArrayList(ArrayList<Integer> lista) {
-        if (lista.size()<=1) 
-            return;
-        Integer first=lista.remove(0);
-        invertirArrayList(lista);
-        lista.add(first);
+        invertirArrayListRec(lista, 0, lista.size()-1);
+    }
+
+    private static void invertirArrayListRec(ArrayList<Integer> lista, int ini, int fin) {
+        if (ini>=fin) return;
+        int aux=lista.get(ini);
+        lista.set(ini, lista.get(fin));
+        lista.set(fin, aux);
+        invertirArrayListRec(lista, ini+1, fin-1);
     }
 
     public static int sumarLinkedList(LinkedList<Integer> lista) {
-        if (lista.isEmpty())
-            return 0;
-        return lista.removeFirst() + sumarLinkedList(lista);
+        return sumarLinkedListRec(lista, lista.size()-1);
+    }
+
+    private static int sumarLinkedListRec(LinkedList<Integer> lista, int indice) {
+        if (indice<0) return 0;
+        return lista.get(indice) + sumarLinkedListRec(lista, indice-1);
     }
 
     public static ArrayList<Integer> combinarOrdenado(ArrayList<Integer> lista1, ArrayList<Integer> lista2) {
         ArrayList<Integer> lista=new ArrayList<>();
-        int i=0;
-        int j=0;
+        int i=0, j=0;
         while ((i<lista1.size()) && (j<lista2.size()))
             if (lista1.get(i)<=lista2.get(j))
                 lista.add(lista1.get(i++));

@@ -2,54 +2,52 @@ package tp1.ejercicio5;
 
 public class Calculadoras {
 
-    private static int[] vector;
-    private static int max=Integer.MIN_VALUE;
-    private static int min=Integer.MAX_VALUE;
-    private static Resultados resultados;
+    private Resultados resultados;
 
-    public static void setVector(int[] vector) {
-        Calculadoras.vector=vector;
+    public Calculadoras() {
+        
     }
 
-    public static int[] getVector() {
-        return vector;
-    }
-
-    public static Resultados getResultados() {
-        return resultados;
-    }
-
-    public static Resultados calculadoraA() {
+    public static Resultados calculadoraA(int[] vector) {
+        int max=Integer.MIN_VALUE;
+        int min=Integer.MAX_VALUE;
         double suma=0;
-        for (int i=0; i<vector.length; i++) {
-            if (vector[i]>max) max=vector[i];
-            if (vector[i]<min) min=vector[i];
-            suma+=vector[i];
+        for (int i: vector) {
+            if (i>max) max=i;
+            if (i<min) min=i;
+            suma+=i;
         }
-        resultados=new Resultados(max, min, suma/vector.length);
-        return resultados;
+        return new Resultados(max, min, suma/vector.length);
     }
 
-    public static void calculadoraB(Resultados resultados) {
+    public static void calculadoraB(int[] vector, Resultados resultados) {
+        int max=Integer.MIN_VALUE;
+        int min=Integer.MAX_VALUE;
         double suma=0;
-        for (int i=0; i<vector.length; i++) {
-            if (vector[i]>max) max=vector[i];
-            if (vector[i]<min) min=vector[i];
-            suma+=vector[i];
+        for (int i: vector) {
+            if (i>max) max=i;
+            if (i<min) min=i;
+            suma+=i;
         }
         resultados.setMax(max);
         resultados.setMin(min);
         resultados.setProm(suma/vector.length);
     }
 
-    public static void calculadoraC() {
+    public void calculadoraC(int[] vector) {
+        int max=Integer.MIN_VALUE;
+        int min=Integer.MAX_VALUE;
         double suma=0;
-        for (int i=0; i<vector.length; i++) {
-            if (vector[i]>max) max=vector[i];
-            if (vector[i]<min) min=vector[i];
-            suma+=vector[i];
+        for (int i: vector) {
+            if (i>max) max=i;
+            if (i<min) min=i;
+            suma+=i;
         }
         resultados=new Resultados(max, min, suma/vector.length);
+    }
+
+    public Resultados getResultados() {
+        return resultados;
     }
 
 }
