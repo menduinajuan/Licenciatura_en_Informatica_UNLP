@@ -23,12 +23,14 @@ public class TP1_E2 {
 
         while (n!=nSalida) {
             System.out.print("Elementos del vector nums: ");
-            vectorNum=Clase.crearVectorMultiplosN(n);
+            vectorNum=Metodos.crearVectorMultiplosN(n);
             for (int i=0; i<n; i++)
                 System.out.print(vectorNum[i] + " ");
             System.out.print("\n\nIntroducir número n: ");
             n=scanner.nextInt();
         }
+
+        scanner.close();
 
     }
 

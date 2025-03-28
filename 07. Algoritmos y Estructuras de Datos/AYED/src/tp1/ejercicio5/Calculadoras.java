@@ -2,7 +2,7 @@ package tp1.ejercicio5;
 
 public class Calculadoras {
 
-    private Resultados resultados;
+    private static Resultados resultados;
 
     public Calculadoras() {
         
@@ -34,7 +34,7 @@ public class Calculadoras {
         resultados.setProm(suma/vector.length);
     }
 
-    public void calculadoraC(int[] vector) {
+    public static void calculadoraC(int[] vector) {
         int max=Integer.MIN_VALUE;
         int min=Integer.MAX_VALUE;
         double suma=0;
@@ -46,7 +46,7 @@ public class Calculadoras {
         resultados=new Resultados(max, min, suma/vector.length);
     }
 
-    public Resultados getResultados() {
+    public static Resultados getResultados() {
         return resultados;
     }
 
