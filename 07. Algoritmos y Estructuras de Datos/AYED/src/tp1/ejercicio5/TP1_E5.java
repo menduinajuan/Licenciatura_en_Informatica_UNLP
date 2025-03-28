@@ -25,7 +25,6 @@ public class TP1_E5 {
 
         for (int i=0; i<dimF; i++)
             vectorNums[i]=1+GeneradorAleatorio.generarInt(numMax);
-        Calculadoras.setVector(vectorNums);
 
         System.out.print("Elementos del vector nums: ");
         for (int i: vectorNums)
@@ -34,17 +33,18 @@ public class TP1_E5 {
         // INCISO (a)
 
         System.out.println();
-        System.out.println("CALCULADORA A: " + Calculadoras.calculadoraA().toString());
+        System.out.println("CALCULADORA A: " + Calculadoras.calculadoraA(vectorNums).toString());
 
-        // INCISO (a)
+        // INCISO (b)
 
-        Calculadoras.calculadoraB(resultados);
+        Calculadoras.calculadoraB(vectorNums, resultados);
         System.out.println("CALCULADORA B: " + resultados.toString());
 
-                // INCISO (a)
-                
-        Calculadoras.calculadoraC();
-        System.out.println("CALCULADORA C: " + Calculadoras.getResultados().toString());
+        // INCISO (c)
+
+        Calculadoras objCalculadoraC=new Calculadoras();
+        objCalculadoraC.calculadoraC(vectorNums);
+        System.out.println("CALCULADORA C: " + objCalculadoraC.getResultados().toString());
 
     }
 
