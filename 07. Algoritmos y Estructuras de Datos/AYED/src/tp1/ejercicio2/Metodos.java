@@ -1,6 +1,6 @@
 package tp1.ejercicio2;
 
-public class Clase {
+public class Metodos {
 
     public static int[] crearVectorMultiplosN(int n) {
         int vector[]=new int[n];

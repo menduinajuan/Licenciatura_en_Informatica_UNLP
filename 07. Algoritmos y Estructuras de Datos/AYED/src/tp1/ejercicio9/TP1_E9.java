@@ -15,13 +15,19 @@ Donde ambos T y U son strings balanceados. Por ejemplo, “{( ) [ ( ) ] }” est
 
 package tp1.ejercicio9;
 
-import PaqueteLectura.*;
+import java.util.*;
 
 public class TP1_E9 {
 
     public static void main(String[] args) {
 
-        
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Introducir string S: ");
+        String S=scanner.nextLine();
+        scanner.close();
+
+        if (TestBalanceo.esBalanceado(S)) System.out.println("El String " + S + " está balanceado");
+        else                              System.out.println("El String " + S + " no está balanceado");
 
     }
 

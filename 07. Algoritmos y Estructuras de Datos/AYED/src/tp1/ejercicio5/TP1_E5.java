@@ -42,9 +42,8 @@ public class TP1_E5 {
 
         // INCISO (c)
 
-        Calculadoras objCalculadoraC=new Calculadoras();
-        objCalculadoraC.calculadoraC(vectorNums);
-        System.out.println("CALCULADORA C: " + objCalculadoraC.getResultados().toString());
+        Calculadoras.calculadoraC(vectorNums);
+        System.out.println("CALCULADORA C: " + Calculadoras.getResultados().toString());
 
     }
 
