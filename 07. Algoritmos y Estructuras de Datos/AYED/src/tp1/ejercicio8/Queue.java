@@ -7,7 +7,7 @@ public class Queue<T> extends Sequence {
     protected List<T> data;
 
     public Queue() {
-        this.data=new ArrayList<T>();
+        data=new ArrayList<T>();
     }
 
     public void enqueue(T dato) {
@@ -35,7 +35,7 @@ public class Queue<T> extends Sequence {
     @Override
     public String toString() {
         String str="[";
-	for(T i: data)
+	for (T i: data)
             str=str+i+", ";
 	str=str.substring(0, str.length()-2)+"]";
 	return str;
