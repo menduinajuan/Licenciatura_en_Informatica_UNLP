@@ -6,11 +6,11 @@ program TP1_E3;
 {$codepage UTF8}
 uses crt;
 const
-
+  
 type
   
 var
-
+  
 begin
   
 end.
