@@ -4,11 +4,8 @@ public class Metodos {
 
     public static int[] crearVectorMultiplosN(int n) {
         int vector[]=new int[n];
-        int num=0;
-        for (int i=0; i<n; i++) {
-            vector[i]=n+num;
-            num+=n;
-        }
+        for (int i=0; i<n; i++)
+            vector[i]=(i+1)*n;
         return vector;
     }
 
