@@ -21,7 +21,7 @@ Para cada resolución, se incluyen los códigos (dado el lenguaje utilizado en l
 - `09. Seminario de Lenguajes (Android+Kotlin)`: Contiene los trabajos prácticos de la materia "Seminario de Lenguajes (Android+Kotlin)".
 - `10. Taller de Lecto-Comprensión y Traducción en Inglés`: Contiene los trabajos prácticos de la materia "Taller de Lecto-Comprensión y Traducción en Inglés".
 - `17. Matemática 3`: Contiene los trabajos prácticos de la materia "Matemática 3".
-- `29. Matemática 4`: Contiene los trabajos prácticos de la materia "Matemática 4".
+- `28. Matemática 4`: Contiene los trabajos prácticos de la materia "Matemática 4".
 
 ## Cómo Contribuir
 
