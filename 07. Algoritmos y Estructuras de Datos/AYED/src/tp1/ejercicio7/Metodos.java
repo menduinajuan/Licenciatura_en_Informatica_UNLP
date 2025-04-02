@@ -32,8 +32,8 @@ public class Metodos {
         lista.add(new Estudiante("Demian", "Panigo", "e2@gmail.com"));
         lista.add(new Estudiante("Matías", "Guaymás", "e3@gmail.com"));
 
-        List<Estudiante> lista2=new LinkedList<>(lista);
-        // List<Estudiante> lista2=new LinkedList<>();
+        List<Estudiante> lista2=new LinkedList(lista);
+        // List<Estudiante> lista2=new LinkedList();
         // lista2.addAll(lista);
 
         System.out.println("\n\nESTUDIANTES DE LA LISTA 1 (original):");
@@ -73,41 +73,41 @@ public class Metodos {
     }
 
     public static List<Integer> calcularSucesion(int n) {
-        List<Integer> lista=new ArrayList<>();
-        calcularSucesionRec(lista, n);
+        List<Integer> lista=new ArrayList();
+        calcularSucesion(lista, n);
         return lista;
     }
 
-    private static void calcularSucesionRec(List<Integer> lista, int n) {
+    private static void calcularSucesion(List<Integer> lista, int n) {
         lista.add(n);
         if (n==1)   return;
-        if (n%2==0) calcularSucesionRec(lista, n/2);
-        else        calcularSucesionRec(lista, 3*n+1);
+        if (n%2==0) calcularSucesion(lista, n/2);
+        else        calcularSucesion(lista, 3*n+1);
     }
 
     public static void invertirArrayList(ArrayList<Integer> lista) {
-        invertirArrayListRec(lista, 0, lista.size()-1);
+        invertirArrayList(lista, 0, lista.size()-1);
     }
 
-    private static void invertirArrayListRec(ArrayList<Integer> lista, int ini, int fin) {
+    private static void invertirArrayList(ArrayList<Integer> lista, int ini, int fin) {
         if (ini>=fin) return;
         int aux=lista.get(ini);
         lista.set(ini, lista.get(fin));
         lista.set(fin, aux);
-        invertirArrayListRec(lista, ini+1, fin-1);
+        invertirArrayList(lista, ini+1, fin-1);
     }
 
     public static int sumarLinkedList(LinkedList<Integer> lista) {
-        return sumarLinkedListRec(lista, lista.size()-1);
+        return sumarLinkedList(lista, lista.size()-1);
     }
 
-    private static int sumarLinkedListRec(LinkedList<Integer> lista, int indice) {
+    private static int sumarLinkedList(LinkedList<Integer> lista, int indice) {
         if (indice<0) return 0;
-        return lista.get(indice) + sumarLinkedListRec(lista, indice-1);
+        return lista.get(indice) + sumarLinkedList(lista, indice-1);
     }
 
     public static ArrayList<Integer> combinarOrdenado(ArrayList<Integer> lista1, ArrayList<Integer> lista2) {
-        ArrayList<Integer> lista=new ArrayList<>();
+        ArrayList<Integer> lista=new ArrayList();
         int i=0, j=0;
         while ((i<lista1.size()) && (j<lista2.size()))
             if (lista1.get(i)<=lista2.get(j))

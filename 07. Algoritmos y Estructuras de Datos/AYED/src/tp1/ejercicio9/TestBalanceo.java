@@ -8,7 +8,7 @@ public class TestBalanceo {
 
         boolean ok=true;
 
-        List<Character> cierre=new LinkedList<>();
+        List<Character> cierre=new LinkedList();
         cierre.add(')');
         cierre.add(']');
         cierre.add('}');
@@ -18,12 +18,12 @@ public class TestBalanceo {
 
         else {
 
-            List<Character> apertura=new LinkedList<>();
+            List<Character> apertura=new LinkedList();
             apertura.add('(');
             apertura.add('[');
             apertura.add('{');
 
-            Stack<Character> pila=new Stack<>();
+            Stack<Character> pila=new Stack();
             Character actual, elemAper;
 
             int i=0;

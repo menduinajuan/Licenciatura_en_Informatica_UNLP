@@ -11,8 +11,6 @@ public class Profesor extends Persona {
         this.facultad = facultad;
     }
 
-
-
     public void setCatedra(String catedra) {
         this.catedra=catedra;
     }

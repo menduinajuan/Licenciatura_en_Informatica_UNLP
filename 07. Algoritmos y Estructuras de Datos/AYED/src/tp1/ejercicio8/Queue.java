@@ -7,7 +7,7 @@ public class Queue<T> extends Sequence {
     protected List<T> data;
 
     public Queue() {
-        data=new ArrayList<T>();
+        data=new LinkedList<T>();
     }
 
     public void enqueue(T dato) {
