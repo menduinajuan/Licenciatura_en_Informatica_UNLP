@@ -35,7 +35,7 @@ public class TestArrayList {
 
         int numSalida=0;
         int numMax=100;
-        ArrayList<Integer> listaNumsAL=new ArrayList();
+        ArrayList<Integer> listaNumsAL=new ArrayList<>();
 
         int num=GeneradorAleatorio.generarInt(numMax);
         while (num!=numSalida) {
@@ -48,7 +48,7 @@ public class TestArrayList {
 
         // INCISO (b)
 
-        LinkedList<Integer> listaNumsLL=new LinkedList(listaNumsAL);
+        LinkedList<Integer> listaNumsLL=new LinkedList<>(listaNumsAL);
         System.out.print("\nElementos de la lista nums LL (impresión 1): ");
         Metodos.imprimirLista1nteger1(listaNumsLL);
 
@@ -63,7 +63,7 @@ public class TestArrayList {
 
         // INCISO (d)
 
-        List<Estudiante> listaEstudiantes=new LinkedList();
+        List<Estudiante> listaEstudiantes=new LinkedList<>();
         Metodos.cargarListaEstudiantes(listaEstudiantes);
 
         // INCISO (e)
@@ -78,7 +78,7 @@ public class TestArrayList {
         // INCISO (f)
 
         System.out.println("\n¿La secuencia almacenada en la lista es capicúa? " + Metodos.esCapicua(listaNumsAL));
-        System.out.println("¿La secuencia almacenada en la lista es capicúa? " + Metodos.esCapicua(new ArrayList(Arrays.asList(1,2,1))));
+        System.out.println("¿La secuencia almacenada en la lista es capicúa? " + Metodos.esCapicua(new ArrayList<>(Arrays.asList(1,2,1))));
 
         // INCISO (g)
 
@@ -97,8 +97,8 @@ public class TestArrayList {
 
         // INCISO (j)
 
-        System.out.println("\nElementos de la lista ordenada 1: " + Metodos.combinarOrdenado(new ArrayList(Arrays.asList(1,2,3)), new ArrayList(Arrays.asList(4,5,6))));
-        System.out.println("Elementos de la lista ordenada 2: " + Metodos.combinarOrdenado(new ArrayList(Arrays.asList(4,5,6)), new ArrayList(Arrays.asList(1,2,3))));
+        System.out.println("\nElementos de la lista ordenada 1: " + Metodos.combinarOrdenado(new ArrayList<>(Arrays.asList(1,2,3)), new ArrayList<>(Arrays.asList(4,5,6))));
+        System.out.println("Elementos de la lista ordenada 2: " + Metodos.combinarOrdenado(new ArrayList<>(Arrays.asList(4,5,6)), new ArrayList<>(Arrays.asList(1,2,3))));
 
     }
 

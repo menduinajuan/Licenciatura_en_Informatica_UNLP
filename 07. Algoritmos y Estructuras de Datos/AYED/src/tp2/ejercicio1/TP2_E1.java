@@ -21,11 +21,11 @@ public class TP2_E1 {
 
     public static void main(String[] args) {
     
-        BinaryTree<Integer> ab=new BinaryTree(40);
-        ab.addLeftChild(new BinaryTree(25));
-        ab.addRightChild(new BinaryTree(78));
-        ab.getLeftChild().addLeftChild(new BinaryTree(10));
-        ab.getLeftChild().addRightChild(new BinaryTree(32));
+        BinaryTree<Integer> ab=new BinaryTree<>(40);
+        ab.addLeftChild(new BinaryTree<>(25));
+        ab.addRightChild(new BinaryTree<>(78));
+        ab.getLeftChild().addLeftChild(new BinaryTree<>(10));
+        ab.getLeftChild().addRightChild(new BinaryTree<>(32));
 
         System.out.print("Impresión Pre-Orden del árbol binario ab: ");
         BinaryTreePrinter.imprimirPreOrden(ab);

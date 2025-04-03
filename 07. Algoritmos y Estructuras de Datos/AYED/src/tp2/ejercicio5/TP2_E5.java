@@ -17,13 +17,13 @@ public class TP2_E5 {
 
         GeneradorAleatorio.iniciar();
 
-        BinaryTree<Integer> ab=new BinaryTree(1);
-        ab.addLeftChild(new BinaryTree(2));
-        ab.addRightChild(new BinaryTree(3));
-        ab.getLeftChild().addLeftChild(new BinaryTree(4));
-        ab.getLeftChild().addRightChild(new BinaryTree(5));
-        ab.getRightChild().addLeftChild(new BinaryTree(6));
-        ab.getRightChild().addRightChild(new BinaryTree(7));
+        BinaryTree<Integer> ab=new BinaryTree<>(1);
+        ab.addLeftChild(new BinaryTree<>(2));
+        ab.addRightChild(new BinaryTree<>(3));
+        ab.getLeftChild().addLeftChild(new BinaryTree<>(4));
+        ab.getLeftChild().addRightChild(new BinaryTree<>(5));
+        ab.getRightChild().addLeftChild(new BinaryTree<>(6));
+        ab.getRightChild().addRightChild(new BinaryTree<>(7));
 
         System.out.print("Impresión Pre-Orden del árbol binario ab: ");
         BinaryTreePrinter.imprimirPreOrden(ab);
