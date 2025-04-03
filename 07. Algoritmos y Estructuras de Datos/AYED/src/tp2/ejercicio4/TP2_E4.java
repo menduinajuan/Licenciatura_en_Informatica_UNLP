@@ -31,7 +31,7 @@ public class TP2_E4 {
         BinaryTreePrinter.imprimirPreOrden(ab);
 
         RedBinariaLlena red=new RedBinariaLlena(ab);
-        System.out.println("\nEl mayor retardo posible del árbol binario abb es de " + red.retardoReenvio() + " segundos");
+        System.out.println("\nEl mayor retardo posible del árbol binario ab es " + red.retardoReenvio() + " segundos");
 
     }
 
