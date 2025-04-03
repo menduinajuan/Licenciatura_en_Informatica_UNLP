@@ -16,14 +16,14 @@ public class TP2_E6 {
 
     public static void main(String[] args) {
 
-        BinaryTree<Integer> ab=new BinaryTree(1);
-        ab.addLeftChild(new BinaryTree(2));
-        ab.addRightChild(new BinaryTree(3));
-        ab.getLeftChild().addRightChild(new BinaryTree(4));
-        ab.getRightChild().addLeftChild(new BinaryTree(5));
-        ab.getRightChild().addRightChild(new BinaryTree(6));
-        ab.getRightChild().getLeftChild().addLeftChild(new BinaryTree(7));
-        ab.getRightChild().getLeftChild().addRightChild(new BinaryTree(8));
+        BinaryTree<Integer> ab=new BinaryTree<>(1);
+        ab.addLeftChild(new BinaryTree<>(2));
+        ab.addRightChild(new BinaryTree<>(3));
+        ab.getLeftChild().addRightChild(new BinaryTree<>(4));
+        ab.getRightChild().addLeftChild(new BinaryTree<>(5));
+        ab.getRightChild().addRightChild(new BinaryTree<>(6));
+        ab.getRightChild().getLeftChild().addLeftChild(new BinaryTree<>(7));
+        ab.getRightChild().getLeftChild().addRightChild(new BinaryTree<>(8));
 
         System.out.print("Impresión Pre-Orden del árbol binario ab: ");
         BinaryTreePrinter.imprimirPreOrden(ab);

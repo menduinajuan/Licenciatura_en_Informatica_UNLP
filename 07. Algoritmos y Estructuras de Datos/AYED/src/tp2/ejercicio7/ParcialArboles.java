@@ -23,9 +23,9 @@ public class ParcialArboles {
 
     private int contarUnicoHijo(BinaryTree<Integer> ab) {
         int cant=0;
+        if ((ab.hasLeftChild() && !ab.hasRightChild()) || (!ab.hasLeftChild() && ab.hasRightChild())) cant++;
         if (ab.hasLeftChild())  cant+=contarUnicoHijo(ab.getLeftChild());
         if (ab.hasRightChild()) cant+=contarUnicoHijo(ab.getRightChild());
-        if ((ab.hasLeftChild() && !ab.hasRightChild()) || (!ab.hasLeftChild() && ab.hasRightChild())) cant++;
         return cant;
     }
 
