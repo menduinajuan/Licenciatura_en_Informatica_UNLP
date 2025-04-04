@@ -1,0 +1,116 @@
+programa TP11_E5
+procesos
+  proceso juntarFloresEsquina (ES flores: numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      flores:=flores+1
+  fin
+  proceso depositarFlores (E flores: numero)
+  comenzar
+    repetir flores
+      depositarFlor
+  fin
+  proceso juntarPapelesEsquina (ES papeles: numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      papeles:=papeles+1
+  fin
+  proceso depositarPapeles (E papeles: numero)
+  comenzar
+    repetir papeles
+      depositarPapel
+  fin
+  proceso recorrerCalle (E cant: numero)
+  variables
+    flores: numero
+  comenzar
+    flores:=0
+    repetir cant-1
+      juntarFloresEsquina(flores)
+      mover
+    juntarFloresEsquina(flores)
+    depositarFlores(flores)
+  fin
+  proceso recorrerAvenida (E cant: numero)
+  variables
+    av, ca, papeles: numero
+  comenzar
+    av:=PosAv
+    ca:=PosCa
+    papeles:=0
+    repetir cant-1
+      juntarPapelesEsquina(papeles)
+      mover
+    juntarPapelesEsquina(papeles)
+    Pos (av,ca)
+    depositarPapeles(papeles)
+  fin
+areas
+  area1a: AreaP(1,75,15,75)
+  area1b: AreaP(1,80,15,80)
+  area2a: AreaP(75,81,75,100)
+  area2b: AreaP(80,81,80,100)
+  area3a: AreaP(71,10,100,10)
+  area3b: AreaP(71,15,100,15)
+  area4a: AreaP(10,1,10,10)
+  area4b: AreaP(15,1,15,10)
+robots
+  robot limpiador1
+  variables
+    av: numero
+  comenzar
+    av:=PosAv
+    derecha
+    recorrerCalle(15)
+    Pos (av,PosCa+5)
+    recorrerCalle(15)
+  fin
+  robot limpiador2
+  variables
+    ca: numero
+  comenzar
+    ca:=PosCa
+    recorrerAvenida(20)
+    Pos (PosAv+5,ca) 
+    recorrerAvenida(20)
+  fin
+  robot limpiador3
+  variables
+    av: numero
+  comenzar
+    av:=PosAv
+    derecha
+    recorrerCalle(30)
+    Pos (av,PosCa+5)
+    recorrerCalle(30)
+  fin
+  robot limpiador4
+  variables
+    ca: numero
+  comenzar
+    ca:=PosCa
+    recorrerAvenida(10)
+    Pos (PosAv+5,ca)
+    recorrerAvenida(10)
+  fin
+variables 
+  robot1: limpiador1
+  robot2: limpiador2
+  robot3: limpiador3
+  robot4: limpiador4
+comenzar
+  AsignarArea(robot1,area1a)
+  AsignarArea(robot1,area1b)
+  AsignarArea(robot2,area2a)
+  AsignarArea(robot2,area2b)
+  AsignarArea(robot3,area3a)
+  AsignarArea(robot3,area3b)
+  AsignarArea(robot4,area4a)
+  AsignarArea(robot4,area4b)
+  Iniciar(robot1,1,75)
+  Iniciar(robot2,75,81)
+  Iniciar(robot3,71,10)
+  Iniciar(robot4,10,1)
+fin

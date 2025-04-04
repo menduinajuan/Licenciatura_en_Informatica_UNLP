@@ -1,0 +1,24 @@
+programa TP3_E6
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  variables
+    flores: numero
+  comenzar
+    flores:=0
+    Pos (1,7)
+    derecha
+    mientras (flores<20)
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        flores:=flores+1
+      si (flores<20)
+        mover
+  fin
+variables
+  R-info: robot1
+comenzar
+  AsignarArea(R-info,ciudad)
+  Iniciar(R-info,1,1)
+fin

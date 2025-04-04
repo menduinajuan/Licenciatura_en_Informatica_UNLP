@@ -1,0 +1,52 @@
+programa TP7_E2
+procesos
+  proceso tomar_flores (ES flores_esq: numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      flores_esq:=flores_esq+1
+  fin
+  proceso trasladar_flores (E flores_esq: numero; ES flores: numero)
+  comenzar
+    Pos (PosAv,PosCa+1)
+    repetir flores_esq
+      depositarFlor
+    Pos (PosAv,PosCa-1)
+    flores:=flores+flores_esq
+  fin
+  proceso recorrer_calle_impar (ES flores: numero)
+  variables
+    tot_flores_esq: numero
+  comenzar
+    repetir 99
+      tot_flores_esq:=0
+      tomar_flores(tot_flores_esq)
+      si (tot_flores_esq>0)
+        trasladar_flores(tot_flores_esq,flores)
+      mover
+    tot_flores_esq:=0
+    tomar_flores(tot_flores_esq)
+    si (tot_flores_esq>0)
+      trasladar_flores(tot_flores_esq,flores)
+  fin
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  variables
+    tot_flores: numero
+  comenzar
+    tot_flores:=0
+    derecha
+    repetir 49
+      recorrer_calle_impar(tot_flores)
+      Pos (1,PosCa+2)
+    recorrer_calle_impar(tot_flores)
+    Informar (tot_flores)
+  fin
+variables
+  R-info: robot1
+comenzar
+  AsignarArea(R-info,ciudad)
+  Iniciar(R-info,1,1)
+fin
