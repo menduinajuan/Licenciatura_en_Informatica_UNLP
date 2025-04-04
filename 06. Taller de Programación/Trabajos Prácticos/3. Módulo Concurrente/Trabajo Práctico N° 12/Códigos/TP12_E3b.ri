@@ -1,0 +1,199 @@
+programa TP12_E3a
+procesos
+  proceso juntarFloresEsquina (ES flores: numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      flores:=flores+1
+  fin
+  proceso juntarPapelesEsquina (ES papeles: numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      papeles:=papeles+1
+  fin
+  proceso juntarFlores (ES flores: numero)
+  comenzar
+    repetir 9
+      juntarFloresEsquina(flores)
+      mover
+    juntarFloresEsquina(flores)
+  fin
+  proceso juntarPapeles (ES papeles: numero)
+  comenzar
+    repetir 9
+      juntarPapelesEsquina(papeles)
+      mover
+    juntarPapelesEsquina(papeles)
+  fin
+areas
+  areaA1: AreaP(1,1,10,1)
+  areaA2: AreaP(11,1,20,1)
+  areaB1: AreaP(1,5,10,5)
+  areaB2: AreaP(11,5,20,5)
+robots
+  robot jugadorA1
+  variables
+    papeles: numero
+  comenzar
+    papeles:=0
+    derecha
+    juntarPapeles(papeles)
+    EnviarMensaje(papeles,robotA2)
+  fin
+  robot jugadorA2
+  variables
+    papeles: numero
+  comenzar
+    RecibirMensaje(papeles,robotA1)
+    derecha
+    juntarPapeles(papeles)
+    Informar ('TotalPapelesEquipoA',papeles)
+  fin
+  robot jugadorB1
+  variables
+    flores: numero
+  comenzar
+    flores:=0
+    derecha
+    juntarFlores(flores)
+    EnviarMensaje(flores,robotB2)
+  fin
+  robot jugadorB2
+  variables
+    flores: numero
+  comenzar
+    RecibirMensaje(flores,robotB1)
+    derecha
+    juntarFlores(flores)
+    Informar ('TotalFloresEquipoB',flores)
+  fin
+variables
+  robotA1: jugadorA1
+  robotA2: jugadorA2
+  robotB1: jugadorB1
+  robotB2: jugadorB2
+comenzar
+  AsignarArea(robotA1,areaA1)
+  AsignarArea(robotA2,areaA2)
+  AsignarArea(robotB1,areaB1)
+  AsignarArea(robotB2,areaB2)
+  Iniciar(robotA1,1,1)
+  Iniciar(robotA2,11,1)
+  Iniciar(robotB1,1,5)
+  Iniciar(robotB2,11,5)
+fin
+
+
+(b) Modificar el ejercicio anterior para que cada equipo repita el recorrido con las siguientes 20 esquinas de sus correspondientes calles.
+
+
+programa TP12_E3b
+procesos
+  proceso juntarFloresEsquina (ES flores: numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      flores:=flores+1
+  fin
+  proceso juntarPapelesEsquina (ES papeles: numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      papeles:=papeles+1
+  fin
+  proceso juntarFlores (ES flores: numero)
+  comenzar
+    repetir 9
+      juntarFloresEsquina(flores)
+      mover
+    juntarFloresEsquina(flores)
+  fin
+  proceso juntarPapeles (ES papeles: numero)
+  comenzar
+    repetir 9
+      juntarPapelesEsquina(papeles)
+      mover
+    juntarPapelesEsquina(papeles)
+  fin
+areas
+  areaA1a: AreaP(1,1,10,1)
+  areaA1b: AreaP(21,1,30,1)
+  areaA2a: AreaP(11,1,20,1)
+  areaA2b: AreaP(31,1,40,1)
+  areaB1a: AreaP(1,5,10,5)
+  areaB1b: AreaP(21,5,30,5)
+  areaB2a: AreaP(11,5,20,5)
+  areaB2b: AreaP(31,5,40,5)
+robots
+  robot jugadorA1
+  variables
+    papeles: numero
+  comenzar
+    papeles:=0
+    derecha
+    juntarPapeles(papeles)
+    EnviarMensaje(papeles,robotA2)
+    Pos (PosAv+11,PosCa)
+    RecibirMensaje(papeles,robotA2)
+    juntarPapeles(papeles)
+    EnviarMensaje(papeles,robotA2)
+  fin
+  robot jugadorA2
+  variables
+    papeles: numero
+  comenzar
+    RecibirMensaje(papeles,robotA1)
+    derecha
+    juntarPapeles(papeles)
+    EnviarMensaje(papeles,robotA1)
+    Pos (PosAv+11,PosCa)
+    RecibirMensaje(papeles,robotA1)
+    juntarPapeles(papeles)
+    Informar ('TotalPapelesEquipoA',papeles)
+  fin
+  robot jugadorB1
+  variables
+    flores: numero
+  comenzar
+    flores:=0
+    derecha
+    juntarFlores(flores)
+    EnviarMensaje(flores,robotB2)
+    Pos (PosAv+11,PosCa)
+    RecibirMensaje(flores,robotB2)
+    juntarFlores(flores)
+    EnviarMensaje(flores,robotB2)
+  fin
+  robot jugadorB2
+  variables
+    flores: numero
+  comenzar
+    RecibirMensaje(flores,robotB1)
+    derecha
+    juntarFlores(flores)
+    EnviarMensaje(flores,robotB1)
+    Pos (PosAv+11,PosCa)
+    RecibirMensaje(flores,robotB1)
+    juntarPapeles(flores)
+    Informar ('TotalPapelesEquipoB',flores)
+  fin
+variables
+  robotA1: jugadorA1
+  robotA2: jugadorA2
+  robotB1: jugadorB1
+  robotB2: jugadorB2
+comenzar
+  AsignarArea(robotA1,areaA1a)
+  AsignarArea(robotA1,areaA1b)
+  AsignarArea(robotA2,areaA2a)
+  AsignarArea(robotA2,areaA2b)
+  AsignarArea(robotB1,areaB1a)
+  AsignarArea(robotB1,areaB1b)
+  AsignarArea(robotB2,areaB2a)
+  AsignarArea(robotB2,areaB2b)
+  Iniciar(robotA1,1,1)
+  Iniciar(robotA2,11,1)
+  Iniciar(robotB1,1,5)
+  Iniciar(robotB2,11,5)
+fin

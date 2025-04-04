@@ -1,0 +1,88 @@
+programa TP7_E3
+procesos
+  proceso contar_flores (ES flores: numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      flores:=flores+1
+  fin
+  proceso contar_papeles (ES papeles: numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      papeles:=papeles+1
+    repetir papeles
+      depositarPapel
+  fin
+  proceso comparar_flores_papeles (E flores: numero; E papeles: numero; ES diferencia: numero)
+  comenzar
+    diferencia:=flores-papeles
+  fin
+  proceso depositar_flores (E flores: numero; E diferencia: numero; ES esquinas: numero; ES termino: boolean)
+  variables
+    conteo: numero
+  comenzar
+    conteo:=0
+    si (diferencia=1)
+      repetir flores
+        depositarFlor
+      esquinas:=esquinas+1
+    si (diferencia>1)
+      repetir (flores-(diferencia-1))
+        depositarFlor
+      esquinas:=esquinas+1
+    si (diferencia<1)
+      repetir (flores+(1-diferencia))
+        si (HayFlorEnLaBolsa)
+          depositarFlor
+          conteo:=conteo+1
+      si (conteo=(flores+(1-diferencia)))
+        esquinas:=esquinas+1
+      sino
+        termino:=V
+  fin
+  proceso recorrer_avenida (ES esquinas: numero; ES termino: boolean)
+  variables
+    tot_flores, tot_papeles, tot_diferencia: numero
+  comenzar
+    mientras ((termino=F) & (PosCa<100))
+      tot_flores:=0
+      tot_papeles:=0
+      tot_diferencia:=0
+      contar_flores(tot_flores)
+      contar_papeles(tot_papeles)
+      comparar_flores_papeles(tot_flores,tot_papeles,tot_diferencia)
+      depositar_flores(tot_flores,tot_diferencia,esquinas,termino)
+      si (termino=F)
+        mover
+    si (PosCa=100)
+      tot_flores:=0
+      tot_papeles:=0
+      tot_diferencia:=0
+      contar_flores(tot_flores)
+      contar_papeles(tot_papeles)
+      comparar_flores_papeles(tot_flores,tot_papeles,tot_diferencia)
+      depositar_flores(tot_flores,tot_diferencia,esquinas,termino)
+  fin
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  variables
+    tot_esquinas: numero
+    tot_termino: boolean
+  comenzar
+    tot_esquinas:=0
+    tot_termino:=F
+    Pos (9,1)
+    recorrer_avenida(tot_esquinas,tot_termino)
+    si (tot_termino=V)
+      Pos (9,1)
+    Informar (tot_esquinas)
+  fin
+variables
+  R-info: robot1
+comenzar
+  AsignarArea(R-info,ciudad)
+  Iniciar(R-info,1,1)
+fin

@@ -1,0 +1,145 @@
+programa TP12_E4
+procesos
+  proceso juntarFloresyPapelesEsquina (ES cant: numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      cant:=cant+1
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      cant:=cant+1
+  fin
+  proceso acceder (ES cant: numero)
+  variables
+    avIni, caIni, av, ca: numero
+  comenzar
+    avIni:=PosAv
+    caIni:=PosCa
+    Random(av,25,75)
+    Random(ca,25,75)
+    Pos (av,ca)
+    juntarFloresyPapelesEsquina(cant)
+    Pos (avIni,caIni)
+  fin
+  proceso obtenerMaximo (E cant1: numero; E cant2: numero; E cant3: numero; E cant4: numero; ES robMax: numero)
+  variables
+    cantMax: numero
+  comenzar
+    robMax:=-1
+    si (cant1>cantMax)
+      cantMax:=cant1
+      robMax:=1
+    si (cant2>cantMax)
+      cantMax:=cant2
+      robMax:=2
+    si (cant3>cantMax)
+      cantMax:=cant3
+      robMax:=3
+    si (cant4>cantMax)
+      cantMax:=cant4
+      robMax:=4
+  fin
+  proceso avisarRobots (E robMax: numero)
+  variables
+    rob: numero
+    gane: boolean
+  comenzar
+    rob:=1
+    repetir 4
+      gane:=F
+      si (rob=robMax)
+        gane:=V
+      si (rob=1)
+        EnviarMensaje(gane,robot1)
+      sino
+        si (rob=2)
+          EnviarMensaje(gane,robot2)
+        sino
+          si (rob=3)
+            EnviarMensaje(gane,robot3)
+          sino
+            EnviarMensaje(gane,robot4)
+      rob:=rob+1
+  fin
+areas
+  areaPC: AreaPC(25,25,75,75)
+  area1: AreaP(25,1,25,1)
+  area2: AreaP(30,1,30,1)
+  area3: AreaP(35,1,35,1)
+  area4: AreaP(40,1,40,1) 
+  areaF: AreaP(1,1,1,1)
+robots
+  robot recolector
+  variables
+    cant: numero
+    ok, gane: boolean
+  comenzar
+    RecibirMensaje(ok,robotF)
+    mientras (ok)
+      RecibirMensaje(cant,robotF)
+      acceder(cant)
+      EnviarMensaje(cant,robotF)
+      RecibirMensaje(ok,robotF)
+    RecibirMensaje(gane,robotF)
+    si (gane)
+      Pos (50,50)
+  fin
+  robot fiscalizador
+  variables
+    rob, robMax, cant1, cant2, cant3, cant4: numero
+    ok: boolean
+  comenzar
+    cant1:=0
+    cant2:=0
+    cant3:=0
+    cant4:=0
+    ok:=V
+    repetir 10
+      Random(rob,1,4)
+      si (rob=1)
+        EnviarMensaje(ok,robot1)
+        EnviarMensaje(cant1,robot1)
+        RecibirMensaje(cant1,robot1)
+      sino
+        si (rob=2)
+          EnviarMensaje(ok,robot2)
+          EnviarMensaje(cant2,robot2)
+          RecibirMensaje(cant2,robot2)
+        sino
+          si (rob=3)
+            EnviarMensaje(ok,robot3)
+            EnviarMensaje(cant3,robot3)
+            RecibirMensaje(cant3,robot3)
+          sino
+            si (rob=4)
+              EnviarMensaje(ok,robot4)
+              EnviarMensaje(cant4,robot4)
+              RecibirMensaje(cant4,robot4)
+    ok:=F
+    EnviarMensaje(ok,robot1)
+    EnviarMensaje(ok,robot2)
+    EnviarMensaje(ok,robot3)
+    EnviarMensaje(ok,robot4)
+    obtenerMaximo(cant1,cant2,cant3,cant4,robMax)
+    avisarRobots(robMax)
+    Informar ('RobotGanador',robMax)
+  fin
+variables
+  robot1, robot2, robot3, robot4: recolector
+  robotF: fiscalizador
+comenzar
+  AsignarArea(robot1,areaPC)
+  AsignarArea(robot1,area1)
+  AsignarArea(robot2, areaPC)
+  AsignarArea(robot2,area2)
+  AsignarArea(robot3,areaPC)
+  AsignarArea(robot3,area3)
+  AsignarArea(robot4,areaPC)
+  AsignarArea(robot4,area4)
+  AsignarArea(robotF,areaF)
+  Iniciar(robot1,25,1)
+  Iniciar(robot2,30,1)
+  Iniciar(robot3,35,1)
+  Iniciar(robot4,40,1)
+  Iniciar(robotF,1,1)
+fin

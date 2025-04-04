@@ -1,0 +1,24 @@
+programa TP4_E1e
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  variables
+    SinFlor: numero
+  comenzar
+    SinFlor:=0
+    Pos (1,20)
+    derecha
+    mientras (HayFlorEnLaEsquina & (PosAv<100))
+      tomarFlor
+      si (~HayFlorEnLaEsquina)
+        SinFlor:=SinFlor+1
+      mover
+    Informar (SinFlor)
+  fin
+variables
+  R-info: robot1
+comenzar
+  AsignarArea(R-info,ciudad)
+  Iniciar(R-info,1,1)
+fin

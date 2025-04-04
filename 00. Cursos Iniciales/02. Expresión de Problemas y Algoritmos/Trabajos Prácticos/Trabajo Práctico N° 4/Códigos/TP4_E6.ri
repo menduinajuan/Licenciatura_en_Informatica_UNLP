@@ -1,0 +1,37 @@
+programa TP4_E6
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  variables
+    flores, papeles, pasos, lados: numero
+  comenzar
+    flores:=0
+    papeles:=0
+    lados:=1
+    mientras ((~ ((flores=3) & (papeles=3))) & (lados<5))
+      pasos:=1
+      lados:=lados+1
+      mientras ((~ ((flores=3) & (papeles=3))) & (pasos<100))
+        flores:=0
+        papeles:=0
+        pasos:=pasos+1
+        mientras (HayFlorEnLaEsquina)
+          tomarFlor
+          flores:=flores+1
+        mientras (HayPapelEnLaEsquina)
+          tomarPapel
+          papeles:=papeles+1
+        si ((flores=3) & (papeles=3))
+          Informar (PosAv,PosCa)
+        sino
+          mover
+      si (~ ((flores=3) & (papeles=3)))
+        derecha
+  fin
+variables
+  R-info: robot1
+comenzar
+  AsignarArea(R-info,ciudad)
+  Iniciar(R-info,1,1)
+fin
