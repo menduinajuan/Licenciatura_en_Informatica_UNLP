@@ -7,10 +7,10 @@ Bienvenido/a al repositorio de las materias de la Licenciatura en Informática d
 Este repositorio contiene las resoluciones de los trabajos prácticos y el material teórico de cada materia de la carrera (Plan 2021).
 Para cada resolución, se incluyen los códigos (dado el lenguaje utilizado en la materia correspondiente) y el informe (en formato .docx y .pdf).
 
-## Estructura del Repositorio (hasta el momento, correr del año 2025)
+## Estructura del Repositorio (hasta el momento, mes de abril de 2025)
 
 - `00. Cursos Iniciales`: Contiene las resoluciones de los trabajos prácticos y el material teórico de los "Cursos Iniciales (COC, EPA y M0)".
-- `01. Conceptos de Algoritmos, Datos y Programas`: Contiene las resoluciones de los trabajos prácticos de la materia "Conceptos de Algoritmos, Datos y Programas".
+- `01. Conceptos de Algoritmos, Datos y Programas`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Conceptos de Algoritmos, Datos y Programas".
 - `02. Matemática 1`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Matemática 1".
 - `03. Organización de Computadoras`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Organización de Computadoras".
 - `04. Arquitectura de Computadoras`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Arquitectura de Computadoras".
