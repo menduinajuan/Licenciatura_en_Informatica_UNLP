@@ -14,7 +14,7 @@ public class Transformacion {
         return ab;
     }
 
-    public BinaryTree <Integer> suma() {
+    public BinaryTree<Integer> suma() {
         suma(ab);
         return ab;
     }
