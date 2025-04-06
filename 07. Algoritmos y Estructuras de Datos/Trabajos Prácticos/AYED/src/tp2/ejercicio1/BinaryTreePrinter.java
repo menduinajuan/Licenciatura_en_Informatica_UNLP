@@ -39,10 +39,8 @@ public class BinaryTreePrinter {
             ab=cola.dequeue();
             if (ab!=null) {
                 System.out.print(ab.getData() + " ");
-                if (ab.hasLeftChild())
-                    cola.enqueue(ab.getLeftChild());
-                if (ab.hasRightChild())
-                    cola.enqueue(ab.getRightChild());
+                if (ab.hasLeftChild())  cola.enqueue(ab.getLeftChild());
+                if (ab.hasRightChild()) cola.enqueue(ab.getRightChild());
             }
             else {
                 System.out.print("- Nivel " + (nivelActual++));

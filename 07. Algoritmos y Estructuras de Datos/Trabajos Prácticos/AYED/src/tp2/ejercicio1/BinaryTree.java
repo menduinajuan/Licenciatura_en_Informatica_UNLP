@@ -108,10 +108,8 @@ public class BinaryTree<T> {
             if (ab!=null) {
                 if ((nivelActual>=n) && (nivelActual<=m))
                     System.out.print(ab.getData() + " ");
-                if (ab.hasLeftChild())
-                    cola.offer(ab.getLeftChild());
-                if (ab.hasRightChild())
-                    cola.offer(ab.getRightChild());
+                if (ab.hasLeftChild())  cola.offer(ab.getLeftChild());
+                if (ab.hasRightChild()) cola.offer(ab.getRightChild());
             }
             else {
                 System.out.print("- Nivel " + (nivelActual++));
@@ -145,10 +143,8 @@ public class BinaryTree<T> {
             if (ab!=null) {
                 if ((nivelActual>=n) && (nivelActual<=m))
                     System.out.print(ab.getData() + " ");
-                if (ab.hasLeftChild())
-                    cola.enqueue(ab.getLeftChild());
-                if (ab.hasRightChild())
-                    cola.enqueue(ab.getRightChild());
+                if (ab.hasLeftChild())  cola.enqueue(ab.getLeftChild());
+                if (ab.hasRightChild()) cola.enqueue(ab.getRightChild());
             }
             else {
                 System.out.print("- Nivel " + (nivelActual++));
