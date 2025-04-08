@@ -15,8 +15,7 @@ uses crt;
 const
   legajo_salida=-1;
   promedio_corte1=6.5;
-  promedio_corte2=8.5;
-  legajo_corte=2500;
+  promedio_corte2=8.5; legajo_corte=2500;
 var
   i: int8;
   legajo: int16;

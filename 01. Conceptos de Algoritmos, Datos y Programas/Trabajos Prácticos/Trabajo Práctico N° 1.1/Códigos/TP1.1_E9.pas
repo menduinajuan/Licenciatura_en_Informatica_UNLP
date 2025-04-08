@@ -10,6 +10,7 @@ program TP1_E9;
 {$codepage UTF8}
 uses crt;
 const
+  oper_suma='+'; oper_resta='-';
   num_salida=0;
 var
   num: int16;
@@ -19,13 +20,13 @@ begin
   randomize;
   textcolor(green); write('Seleccionar operación ("+" o "-"): ');
   textcolor(yellow); readln(operacion);
-  if ((operacion='+') or (operacion='-')) then
+  if ((operacion=oper_suma) or (operacion=oper_resta)) then
   begin
-    num:=num_salida+random(101);
     total:=0;
+    num:=num_salida+random(101);
     while (num<>num_salida) do
     begin
-      if (operacion='+') then
+      if (operacion=oper_suma) then
         total:=total+num
       else
         total:=total-num;
