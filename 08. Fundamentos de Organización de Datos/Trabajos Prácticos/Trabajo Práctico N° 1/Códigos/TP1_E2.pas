@@ -10,38 +10,38 @@ const
   num_corte=1500;
 type
   t_string10=string[10];
-  t_archivo=file of int16;
-procedure procesar_archivo(var archivo: t_archivo; var nums_corte: int16; var prom: real);
+  t_archivo_int=file of int16;
+procedure procesar_archivo_int(var archivo_int: t_archivo_int; var nums_corte: int16; var prom: real);
 var
   num: int16;
   suma: real;
 begin
-  reset(archivo);
+  reset(archivo_int);
   suma:=0;
   textcolor(green); write('El contenido del archivo es: ');
-  while (not eof(archivo)) do
+  while (not eof(archivo_int)) do
   begin
-    read(archivo,num);
+    read(archivo_int,num);
     textcolor(yellow); write(num,' ');
     if (num<num_corte) then
       nums_corte:=nums_corte+1;
     suma:=suma+num;
   end;
-  if (fileSize(archivo)>0) then
-    prom:=suma/fileSize(archivo);
+  if (fileSize(archivo_int)>0) then
+    prom:=suma/fileSize(archivo_int);
   writeln();
-  close(archivo);
+  close(archivo_int);
 end;
 var
-  archivo: t_archivo;
+  archivo_int: t_archivo_int;
   nums_corte: int16;
   prom: real;
   nombre: t_string10;
 begin
-  nombre:='TP1_E1';
+  nombre:='archivo_enteros';
   nums_corte:=0; prom:=0;
-  assign(archivo,nombre);
-  procesar_archivo(archivo,nums_corte,prom);
+  assign(archivo_int,nombre);
+  procesar_archivo_int(archivo_int,nums_corte,prom);
   textcolor(green); write('La cantidad de números menores a '); textcolor(yellow); write(num_corte); textcolor(green); write(' es '); textcolor(red); writeln(nums_corte);
   textcolor(green); write('El promedio de los números ingresados es '); textcolor(red); write(prom:0:2);
 end.
