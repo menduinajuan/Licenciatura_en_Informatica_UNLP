@@ -42,17 +42,17 @@ procedure leer_empleado(var registro_empleado: t_registro_empleado);
 var
   i: int8;
 begin
-  i:=random(10);
+  i:=random(100);
   if (i=0) then
     registro_empleado.apellido:=apellido_salida
   else
-    registro_empleado.apellido:=random_string(5+random(6));
+    registro_empleado.apellido:=random_string(5+random(5));
   if (registro_empleado.apellido<>apellido_salida) then
   begin
     registro_empleado.numero:=1+random(1000);
-    registro_empleado.nombre:=random_string(5+random(6));
+    registro_empleado.nombre:=random_string(5+random(5));
     registro_empleado.edad:=18+random(high(int8)-18);
-    if (i<=5) then
+    if (i<=10) then
       registro_empleado.dni:=0
     else
       registro_empleado.dni:=10000000+random(40000001);
@@ -85,7 +85,7 @@ var
   registro_empleado: t_registro_empleado;
   texto: t_string10;
 begin
-  texto:=random_string(5+random(6));
+  texto:=random_string(5+random(5));
   reset(archivo_empleados);
   textcolor(green); write('Los datos de los empleados con nombre o apellido '); textcolor(yellow); write(texto); textcolor(green); writeln(' son: ');
   while (not eof(archivo_empleados)) do
@@ -101,7 +101,7 @@ var
   registro_empleado: t_registro_empleado;
 begin
   reset(archivo_empleados);
-  textcolor(green); writeln('El contenido del archivo empleados es: ');
+  textcolor(green); writeln('Los empleados del archivo son: ');
   while (not eof(archivo_empleados)) do
   begin
     read(archivo_empleados,registro_empleado);
@@ -155,10 +155,8 @@ begin
 end;
 var
   archivo_empleados: t_archivo_empleados;
-  nombre: t_string20;
 begin
   randomize;
-  nombre:='archivo_empleados';
-  assign(archivo_empleados,nombre);
+  assign(archivo_empleados,'empleados');
   menu_opciones(archivo_empleados);
 end.

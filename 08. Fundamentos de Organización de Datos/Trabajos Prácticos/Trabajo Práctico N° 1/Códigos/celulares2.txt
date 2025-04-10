@@ -1,552 +1,141 @@
-997 981.70 Sony
-58 5 Gama alta
-WTIVU
-850 614.30 Samsung
-19 1 Gama alta
-MMQEDYABUM
-968 302.50 Alcatel
-22 10 Gama media baja
-JTSHTIAH
-465 825.90 Apple
-69 8 Gama baja
-UBTWFWI
-664 477.60 Samsung
-18 3 Gama media alta
-DXTON
-763 643.00 Sony
-99 2 Gama media alta
-XVIUEID
-628 478.10 LG
-52 5 Gama baja
-LZCBEGR
-78 514.20 Sony
-62 4 Gama baja
-FTXBCN
-73 278.80 Alcatel
-57 10 Gama media baja
-CBYBNLYCFF
-773 311.70 LG
-100 8 Gama media alta
-MPBUUCQD
-228 559.70 Nokia
-16 4 Gama alta
-HJEKW
-127 271.20 Lenovo
-59 8 Gama baja
-WEESOLHL
-891 128.90 Huawei
-27 10 Gama alta
-DAUTRYVUS
-451 116.20 Samsung
-76 3 Gama media alta
-MKWNZVKHQ
-227 570.10 Lenovo
-20 8 Gama alta
-AEGOJA
-305 902.90 Lenovo
-11 5 Gama media alta
-FFAGLKKA
-895 553.60 LG
-81 6 Gama baja
-RQPSX
-916 896.60 Huawei
-88 3 Gama baja
-CEMXYM
-828 508.90 Nokia
-63 4 Gama media
-FIGJMDTW
-287 970.60 Lenovo
-63 6 Gama baja
-EAYUZ
-269 564.30 Nokia
-49 4 Gama baja
-XUDCG
-698 263.20 Lenovo
-9 5 Gama alta
-CQUWHK
-406 288.00 Apple
-59 2 Gama media
-TREJY
-291 808.10 Xiaomi
-46 8 Gama media alta
-XZQSM
-216 218.10 Nokia
-35 8 Gama alta
-TAMJHBLMM
-137 330.00 Samsung
-39 6 Gama baja
-TXOAPGBQZT
-830 920.70 Sony
-70 4 Gama media
-BLQUHVEY
-621 282.90 Xiaomi
-59 4 Gama baja
-JYCVENIUN
-188 710.50 Xiaomi
-27 6 Gama media
-ESZIRR
-11 931.90 Motorola
-54 4 Gama baja
-OOSRRDRFE
-855 949.50 Xiaomi
-45 10 Gama media baja
-WYIYWI
-965 124.90 Apple
-53 3 Gama media
-AOWCPUIWM
-880 250.40 Motorola
-6 4 Gama baja
-TXQLHWO
-424 223.90 Xiaomi
-21 1 Gama alta
-KGYCEIXC
-587 317.70 Lenovo
-9 2 Gama media alta
-WZIEF
-143 333.60 Lenovo
-54 9 Gama media baja
-JLCCCXKRO
-779 782.20 Lenovo
-31 7 Gama alta
-YGCBOSPNX
-642 446.90 Xiaomi
-98 6 Gama media alta
-KSSTD
-219 124.60 Motorola
-98 10 Gama media alta
-KHSOLVVST
-492 305.60 Alcatel
-37 8 Gama baja
-INSLBTMCHA
-639 522.30 Sony
-46 7 Gama baja
-OIYGX
-624 750.30 Alcatel
-64 4 Gama alta
-JQOBNP
-632 683.80 Apple
-63 2 Gama baja
-EOCWDDE
-693 356.70 Nokia
-11 8 Gama baja
-YWTQU
-26 688.10 Motorola
-82 4 Gama media
-DYIUYLTZ
-958 108.20 Nokia
-62 1 Gama baja
-KFBKKPN
-737 659.50 Samsung
-54 5 Gama alta
-AZMRWUQ
-868 429.10 Nokia
-91 9 Gama baja
-CCDBNH
-330 636.40 Nokia
-48 5 Gama media
-BYMVUDN
-636 619.50 Sony
-86 5 Gama media baja
-EVHBOVR
-382 532.60 LG
-44 5 Gama alta
-WDPFUCF
-231 796.40 Xiaomi
-25 4 Gama media alta
-VQAGY
-226 841.40 Samsung
-23 7 Gama media
-MFQMGUZ
-591 446.60 Nokia
-17 10 Gama media
-MQBCD
-492 862.10 Alcatel
-67 6 Gama media baja
-KEXWU
-211 590.00 Sony
-37 9 Gama media
-HDJCIWZEXV
-517 784.70 Apple
-3 8 Gama media baja
-HVUCHJFZBJ
-968 394.90 Xiaomi
-19 6 Gama baja
-DGUIKRLYSC
-403 747.20 Samsung
-9 5 Gama media alta
-ESEVNYB
-65 487.50 Alcatel
-92 5 Gama alta
-KYSNOLRGQ
-808 849.80 Sony
-52 8 Gama alta
-XBQEJF
-159 804.00 Lenovo
-29 10 Gama media baja
-CNDVAH
-36 817.10 Motorola
-48 7 Gama media
-RPNQV
-282 859.70 Lenovo
-73 1 Gama media
-CMYOYXULA
-327 606.10 Huawei
-65 3 Gama media alta
-CZCBDWIVO
-505 551.30 Xiaomi
-75 7 Gama media alta
-MSIMMCO
-468 771.30 Lenovo
-44 4 Gama media baja
-TGGLIJKI
-776 222.30 Nokia
-25 4 Gama media baja
-QHZMZOF
-426 482.00 Samsung
-0 5 Gama media baja
-UTHWKUOSCS
-39 186.70 Sony
-75 7 Gama media baja
-GUHGE
-137 254.40 Apple
-61 1 Gama media alta
-ZACFG
-965 659.90 Nokia
-10 8 Gama alta
-RWKYPXX
-699 751.90 Nokia
+694 181.60 Xiaomi
+30 4 Gama baja
+ZOTLZYUNT
+977 762.90 Xiaomi
+56 3 Gama baja
+JAYQLXLO
+726 256.40 Nokia
+43 9 Gama media
+YTKBLO
+830 742.20 Apple
+66 7 Gama alta
+SZGOEO
+119 344.90 Alcatel
+1 7 Gama media baja
+DPYGIHV
+710 260.30 Apple
+32 9 Gama media
+BXOPA
+66 179.40 Nokia
+17 4 Gama media alta
+BHBKF
+986 864.10 Xiaomi
+91 10 Gama baja
+NJXAP
+709 261.60 Motorola
+53 7 Gama media baja
+CFNAMKLO
+413 303.50 Apple
+80 2 Gama media alta
+PFIQKBXZ
+730 782.70 Alcatel
+76 2 Gama media alta
+ZVAEZU
+137 749.60 Motorola
+42 1 Gama media baja
+JJXQVLBO
+341 129.40 Apple
 80 3 Gama alta
-NODIQW
-706 139.80 Huawei
-89 6 Gama alta
-XRNLIKMM
-899 619.20 Lenovo
-76 3 Gama media
-KCIWGARL
-880 137.50 Samsung
-100 7 Gama baja
-OQGTEX
-240 538.00 Alcatel
-51 5 Gama baja
-TMIRQZWDU
-819 377.50 Alcatel
-77 2 Gama media baja
-VWWNK
-181 904.00 Nokia
-8 5 Gama baja
-OSXADGPERP
-996 814.20 Samsung
-17 2 Gama alta
-GZQNPHTO
-788 628.80 Xiaomi
-59 3 Gama media
-UDPFJSGLYF
-999 497.30 Samsung
-84 3 Gama alta
-HFJEADUAG
-740 563.00 Motorola
-65 1 Gama media baja
-TAGLZSVJU
-17 725.30 Motorola
-18 4 Gama alta
-PMEQUZY
-180 553.00 Motorola
-83 7 Gama media
-RDERIL
-84 355.20 Xiaomi
-7 1 Gama alta
-YTEIAH
-326 724.50 LG
-76 7 Gama alta
-DHNLREAVX
-273 160.80 LG
-9 8 Gama media baja
-SCNUODAFX
-601 575.60 LG
-77 7 Gama alta
-ITNJTUYTG
-363 303.90 Apple
-16 6 Gama alta
-JJYPSFQKJC
-108 153.10 Nokia
-31 8 Gama alta
-REKYAUU
-647 667.50 Apple
-87 3 Gama media baja
-LRXFDJT
-692 699.20 Nokia
-93 10 Gama media
-NGAUXDABJM
-900 683.90 Alcatel
-16 7 Gama alta
-OJXIZQH
-759 349.40 Apple
-75 7 Gama baja
-OKMVYGVDP
-37 593.20 Lenovo
-94 2 Gama alta
-TQFSFZLGV
-43 999.60 Nokia
-21 5 Gama alta
-FLEAQSXE
-812 746.40 Lenovo
-83 1 Gama media
-XETTWPIMB
-337 215.80 Sony
-81 9 Gama media baja
-ACUSG
-499 155.00 Nokia
-61 2 Gama baja
-YBNLUMCND
-974 355.00 Nokia
-94 7 Gama media alta
-PNZLWHQ
-58 649.40 Lenovo
-25 3 Gama media alta
-DELKO
-66 431.10 Sony
-62 3 Gama media alta
-XEZKXZVB
-625 767.50 Lenovo
-61 10 Gama media baja
-BLVUCTQ
-503 943.30 Motorola
-43 8 Gama media
-PPNYMBZWOF
-693 477.00 LG
-67 5 Gama alta
-ERRMX
-430 516.60 Apple
-11 10 Gama media
-VFYKR
-165 400.10 LG
-24 10 Gama media baja
-BZFGGUNMS
-422 340.80 Apple
-24 8 Gama media baja
-QGIYUP
-618 682.00 LG
-15 4 Gama media alta
-JFNGQ
-444 707.10 Nokia
-59 5 Gama media baja
-NJEYUOGVC
-917 676.90 Lenovo
-24 5 Gama baja
-RBCDYOZM
-201 722.40 Xiaomi
-25 2 Gama media
-PXKTFIBO
-750 302.10 Motorola
-23 7 Gama alta
-UCOSGAA
-478 690.80 Samsung
-13 10 Gama baja
-LULKX
-501 298.90 Apple
-41 4 Gama media
-QBRNN
-355 975.80 Samsung
-54 1 Gama media alta
-QUIJBH
-87 360.60 Huawei
-51 7 Gama alta
-UOOAAFD
-900 669.60 Motorola
-92 4 Gama media alta
-VAXQGI
-318 549.80 LG
-1 6 Gama media
-HKVKCJTM
-731 811.80 Xiaomi
-97 10 Gama media alta
-KNLKIFFJKJ
-473 730.60 Motorola
-38 5 Gama alta
-ABMYFFMZ
-885 719.50 Xiaomi
-75 3 Gama alta
-WXVXIWVUQM
-439 109.70 Apple
-9 8 Gama baja
-SSAQKVHF
-579 465.50 Xiaomi
-52 9 Gama media
-GXJTPHW
-188 921.20 Xiaomi
-18 4 Gama media alta
-OIBEYU
-496 248.40 LG
-85 2 Gama media alta
-UIJPGR
-843 807.40 Nokia
-81 1 Gama media
-GIFNFU
-651 332.20 LG
-92 3 Gama media
-VLAXYRZO
-179 390.10 Samsung
-83 9 Gama media baja
-DTBHMOE
-888 542.40 Apple
-38 1 Gama media
-NWEWNWPPEJ
-912 847.10 LG
-95 6 Gama media
-CHRDKC
-313 778.30 Motorola
-21 2 Gama media alta
-PWDSV
-235 942.70 Samsung
-14 2 Gama alta
-EQYENWHNOC
-963 566.50 Huawei
-90 7 Gama alta
-IVGTI
-482 247.40 LG
-6 2 Gama baja
-VSXMUQWE
-629 333.50 Apple
-1 4 Gama media alta
-RLAKULYPCA
-6 111.90 Apple
-63 7 Gama alta
-UTSGHB
-864 736.10 Alcatel
-64 7 Gama media baja
-YHASXANGK
-784 286.80 LG
-16 4 Gama baja
-ENRJRYVNJ
-818 308.90 Xiaomi
-31 6 Gama baja
-ZBCAKD
-132 291.30 Motorola
-9 9 Gama alta
-BBXIISWVZA
-606 765.60 Samsung
-46 8 Gama baja
-ZLWMYN
-229 422.90 Lenovo
-60 10 Gama media alta
-NHSNXO
-329 202.30 Samsung
-46 7 Gama alta
-GBUOWYF
-773 751.60 Lenovo
-47 1 Gama media baja
-TZHVV
-906 140.20 Huawei
-19 5 Gama baja
-GNGAS
-390 654.80 Motorola
-64 4 Gama alta
-EBXHFP
-829 710.00 Sony
-99 5 Gama media alta
-AOEQLYYT
-918 177.00 Lenovo
-18 5 Gama media alta
-LWNGFKIXGX
-234 628.30 Lenovo
-52 10 Gama media baja
-JJSPBRJUAV
-325 401.30 Xiaomi
-75 4 Gama media alta
-OATGZSOC
-576 502.40 Alcatel
-70 4 Gama alta
-WAQPUNFCTH
-763 996.60 Motorola
-11 9 Gama media baja
-CJEKQCKIAY
-273 636.60 Alcatel
-24 5 Gama media baja
-GMZUYG
-489 356.30 Alcatel
-100 4 Gama media alta
-MVPZECPBE
-32 590.60 LG
-59 9 Gama media alta
-KUTMZHLYO
-28 363.70 Lenovo
-43 8 Gama baja
-ZIQCT
-969 972.80 Huawei
-72 7 Gama media alta
-DDVHPK
-973 589.80 Motorola
-90 4 Gama baja
-PFQGBP
-718 230.40 Huawei
-14 9 Gama media alta
-HWUXELOSON
-279 836.40 Xiaomi
-85 8 Gama media alta
-PMFGYWZLK
-259 890.80 Apple
-60 3 Gama alta
-SZHFQE
-69 505.40 LG
-22 5 Gama alta
-UUNBRYE
-328 161.10 Nokia
-43 6 Gama alta
-SIQRQT
-400 901.70 Huawei
-100 4 Gama media alta
-CUAPFCSA
-242 379.00 Xiaomi
-18 7 Gama media
-GGGLVO
-386 807.40 Xiaomi
-42 2 Gama media baja
-PCXFDO
-700 195.40 Huawei
-19 1 Gama alta
-NFFFQY
-34 889.20 Motorola
-52 7 Gama media baja
-EHNHMSIY
-806 270.30 Xiaomi
-22 5 Gama baja
-BCNKP
-182 757.60 Huawei
-91 3 Gama media alta
-WOPLPB
-820 490.90 Xiaomi
-9 1 Gama media baja
-KAJPLNPVWJ
-721 356.40 Xiaomi
-22 9 Gama baja
-CMHDKIFTE
-770 259.50 Motorola
-85 4 Gama media baja
-EMKIGBX
-383 823.10 Alcatel
-37 6 Gama baja
-QNCJQVHE
-432 217.20 LG
-36 2 Gama media baja
-FQCDC
-443 237.60 Xiaomi
-31 9 Gama media baja
-UCNABQSQJN
-204 953.00 Nokia
-100 1 Gama media baja
-GVWJYSUVK
-961 800.50 LG
-34 8 Gama media alta
-JPJQERU
-969 990.30 Motorola
-74 6 Gama media alta
-SJXJZRE
-363 662.60 Alcatel
-61 9 Gama media alta
-QHWCNYB
-102 145.10 Xiaomi
-34 2 Gama media
-SZMEATSPWT
-161 449.30 Huawei
-24 2 Gama media baja
-BBCHKDBGRU
+EGGXLJ
+150 282.30 Samsung
+93 6 Gama media alta
+HFHBDBSX
+60 761.00 Sony
+21 4 Gama alta
+YCYUIV
+499 233.30 Samsung
+62 3 Gama media baja
+KDHPC
+983 169.10 Xiaomi
+31 9 Gama media
+YMDUGN
+65 298.00 Huawei
+73 3 Gama media alta
+WRJGNJN
+507 202.00 Sony
+50 6 Gama media
+ORAWXJJS
+83 670.20 Motorola
+33 3 Gama media alta
+ANOXLCZIR
+638 884.60 Samsung
+88 10 Gama media alta
+JZAKJB
+255 610.30 Huawei
+24 2 Gama alta
+BJNGZKELN
+209 216.60 Apple
+20 2 Gama media alta
+FZAVWQ
+273 256.00 Motorola
+39 7 Gama media alta
+FYUMFJ
+487 415.20 LG
+99 4 Gama media alta
+OSFGCNCAO
+366 687.20 Apple
+86 3 Gama media baja
+IARQXA
+981 801.10 LG
+23 3 Gama baja
+RJBLXM
+639 371.60 Motorola
+41 9 Gama media
+ESUNKQH
+475 712.00 Alcatel
+50 3 Gama alta
+LRRVJ
+27 946.80 Sony
+82 4 Gama baja
+PMLRIHW
+149 449.60 Apple
+13 2 Gama media baja
+FLZQTDQTQ
+49 723.60 Nokia
+6 5 Gama media
+QANQGXWSJ
+481 196.40 LG
+86 10 Gama baja
+UWDGHIUU
+368 195.60 Motorola
+45 2 Gama media baja
+XCLTC
+196 418.80 LG
+15 4 Gama alta
+CHXOPF
+836 962.00 Samsung
+79 7 Gama media baja
+VRVPX
+988 952.90 Nokia
+27 10 Gama media alta
+LIVQC
+467 503.90 Alcatel
+89 1 Gama baja
+PEOPG
+586 469.80 Sony
+41 6 Gama baja
+WQPZTBRUS
+732 842.00 Apple
+5 3 Gama alta
+VPDYSYQP
+666 721.30 Xiaomi
+35 10 Gama media alta
+HILYYFZ
+385 946.10 Nokia
+83 1 Gama media baja
+GIZBHTXMZ
+988 907.40 Lenovo
+31 1 Gama media baja
+AIVKCAV
+217 117.60 Huawei
+92 1 Gama baja
+BYBQPTJDL
+876 787.60 Alcatel
+62 6 Gama media alta
+AYRRZLOIY
+284 524.70 Lenovo
+27 3 Gama alta
+OBAKOMT
+775 391.00 Motorola
+47 4 Gama alta
+NWLBUYKB

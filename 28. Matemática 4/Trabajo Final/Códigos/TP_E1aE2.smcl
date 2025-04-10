@@ -1,0 +1,1449 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\29. Matemática 4\Trabajo Práctico\Datos\TP_E1aE2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}26 Sep 2024, 22:17:14
+{txt}
+{com}. *log using "TP_E1aE2.log", replace
+. 
+. 
+. import delimited "players_21", clear
+{res}{txt}(encoding automatically selected: UTF-8)
+{res}{text}(110 vars, 18,944 obs)
+
+{com}. describe
+
+{txt}Contains data
+ Observations:{res}        18,944                  
+{txt}    Variables:{res}           110                  
+{txt}{hline}
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+{hline}
+{p 0 48}{res}{bind:sofifa_id      }{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:player_url     }{txt}{bind: str75   }{bind:{txt}%75s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:short_name     }{txt}{bind: str23   }{bind:{txt}%23s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:long_name      }{txt}{bind: str51   }{bind:{txt}%51s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:player_positi~s}{txt}{bind: str12   }{bind:{txt}%12s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:overall        }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:potential      }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:value_eur      }{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:wage_eur       }{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:age            }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:dob            }{txt}{bind: str10   }{bind:{txt}%10s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:height_cm      }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:weight_kg      }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:club_team_id   }{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:club_name      }{txt}{bind: str45   }{bind:{txt}%45s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:league_name    }{txt}{bind: str37   }{bind:{txt}%37s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:league_level   }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:club_position  }{txt}{bind: str3    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:club_jersey_n~r}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:club_loaned_f~m}{txt}{bind: str28   }{bind:{txt}%28s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:club_joined    }{txt}{bind: str10   }{bind:{txt}%10s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:club_contract~l}{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:nationality_id }{txt}{bind: int     }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:nationality_n~e}{txt}{bind: str24   }{bind:{txt}%24s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:nation_team_id }{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:nation_position}{txt}{bind: str3    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:nation_jersey~r}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:preferred_foot }{txt}{bind: str5    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:weak_foot      }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:skill_moves    }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:international~n}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:work_rate      }{txt}{bind: str13   }{bind:{txt}%13s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:body_type      }{txt}{bind: str16   }{bind:{txt}%16s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:real_face      }{txt}{bind: str3    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:release_claus~r}{txt}{bind: long    }{bind:{txt}%12.0g    }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:player_tags    }{txt}{bind: strL    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:player_traits  }{txt}{bind: strL    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:pace           }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:shooting       }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:passing        }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:dribbling      }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:defending      }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:physic         }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:attacking_cro~g}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:attacking_fin~g}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:attacking_hea~y}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:attacking_sho~g}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:attacking_vol~s}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:skill_dribbling}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:skill_curve    }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:skill_fk_accu~y}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:skill_long_pa~g}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:skill_ball_co~l}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:movement_acce~n}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:movement_spri~d}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:movement_agil~y}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:movement_reac~s}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:movement_bala~e}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:power_shot_po~r}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:power_jumping  }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:power_stamina  }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:power_strength }{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:power_long_sh~s}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:mentality_agg~n}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:mentality_int~s}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:mentality_pos~g}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:mentality_vis~n}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:mentality_pen~s}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:mentality_com~e}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:defending_mar~s}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:defending_sta~e}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:defending_sli~e}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:goalkeeping_d~g}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:goalkeeping_h~g}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:goalkeeping_k~g}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:goalkeeping_p~g}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:goalkeeping_r~s}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:goalkeeping_s~d}{txt}{bind: byte    }{bind:{txt}%8.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:ls             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:st             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:rs             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:lw             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:lf             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:cf             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:rf             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:rw             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:lam            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:cam            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:ram            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:lm             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:lcm            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:cm             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:rcm            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:rm             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:lwb            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:ldm            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:cdm            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:rdm            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:rwb            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:lb             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:lcb            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:cb             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:rcb            }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:rb             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:gk             }{txt}{bind: str4    }{bind:{txt}%9s       }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:player_face_url}{txt}{bind: str49   }{bind:{txt}%49s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:club_logo_url  }{txt}{bind: str42   }{bind:{txt}%42s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:club_flag_url  }{txt}{bind: str39   }{bind:{txt}%39s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:nation_logo_url}{txt}{bind: str42   }{bind:{txt}%42s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:nation_flag_url}{txt}{bind: str39   }{bind:{txt}%39s      }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{txt}{hline}
+Sorted by: 
+{res}     Note: Dataset has changed since last saved.
+{txt}
+{com}. keep if (value_eur!=.)
+{txt}(237 observations deleted)
+
+{com}. 
+. 
+. *##############################################################################*
+. ******************* PARTE 1: PREDICCIÓN DEL VALOR DE MERCADO *******************
+. *##############################################################################*
+. 
+. 
+. *INCISOS (i)-(ii)*
+. 
+. local vars="age height_cm pace shooting passing dribbling defending physic attacking_crossing attacking_finishing attacking_heading_accuracy attacking_short_passing attacking_volleys skill_dribbling skill_curve skill_fk_accuracy skill_long_passing skill_ball_control movement_acceleration movement_sprint_speed movement_agility movement_reactions movement_balance power_shot_power power_jumping power_stamina power_strength power_long_shots mentality_aggression mentality_interceptions mentality_positioning mentality_vision mentality_penalties mentality_composure defending_marking_awareness defending_standing_tackle defending_sliding_tackle goalkeeping_diving goalkeeping_handling goalkeeping_kicking goalkeeping_positioning goalkeeping_reflexes"
+{txt}
+{com}. 
+. local rows: word count `vars'
+{txt}
+{com}. 
+. matrix define   regs = J(`rows',5,.)
+{txt}
+{com}. matrix colnames regs = "coef" "se" "t" "p-value" "r2"
+{txt}
+{com}. 
+. local i=1
+{txt}
+{com}. local max_r2=-1
+{txt}
+{com}. local max_index=0
+{txt}
+{com}. local max_var=""
+{txt}
+{com}. 
+. foreach var of local vars {c -(}
+{txt}  2{com}.         regress value_eur `var', robust
+{txt}  3{com}.         test `var'
+{txt}  4{com}.         matrix regs[`i',1]=e(b)[1,1]
+{txt}  5{com}.         matrix regs[`i',2]=sqrt(e(V)[1,1])
+{txt}  6{com}.         matrix regs[`i',3]=e(b)[1,1]/e(V)[1,1]
+{txt}  7{com}.         matrix regs[`i',4]=r(p)
+{txt}  8{com}.         matrix regs[`i',5]=e(r2)
+{txt}  9{com}.         if (e(r2)>`max_r2') {c -(}
+{txt} 10{com}.         local max_r2=e(r2)
+{txt} 11{com}.         local max_index=`i'
+{txt} 12{com}.         local max_var="`var'"
+{txt} 13{com}.     {c )-}
+{txt} 14{com}.         local i=`i'+1
+{txt} 15{com}. {c )-}
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}    61.35
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0021
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}   value_eur{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}age {c |}{col 14}{res}{space 2}  75346.3{col 26}{space 2} 9619.829{col 37}{space 1}    7.83{col 46}{space 3}0.000{col 54}{space 4} 56490.56{col 67}{space 3} 94202.04
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  1006044{col 26}{space 2} 238639.9{col 37}{space 1}    4.22{col 46}{space 3}0.000{col 54}{space 4} 538288.4{col 67}{space 3}  1473800
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} age = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}   61.35
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}     0.26
+                                                {txt}Prob > F          = {res}    0.6080
+                                                {txt}R-squared         = {res}    0.0000
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}   value_eur{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}height_cm {c |}{col 14}{res}{space 2} 4321.189{col 26}{space 2} 8423.323{col 37}{space 1}    0.51{col 46}{space 3}0.608{col 54}{space 4}-12189.29{col 67}{space 3} 20831.67
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  2119322{col 26}{space 2}  1525043{col 37}{space 1}    1.39{col 46}{space 3}0.165{col 54}{space 4}-869901.5{col 67}{space 3}  5108545
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} height_cm = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}    0.26
+{txt}{col 13}Prob > F ={res}    0.6080
+
+{txt}Linear regression                               Number of obs     = {res}    16,654
+                                                {txt}F(1, 16652)       =  {res}   357.31
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0370
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}   value_eur{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}pace {c |}{col 14}{res}{space 2} 137003.9{col 26}{space 2} 7247.822{col 37}{space 1}   18.90{col 46}{space 3}0.000{col 54}{space 4} 122797.4{col 67}{space 3} 151210.4
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -6276243{col 26}{space 2} 452559.3{col 37}{space 1}  -13.87{col 46}{space 3}0.000{col 54}{space 4} -7163308{col 67}{space 3} -5389179
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} pace = 0{p_end}
+
+{txt}       F(  1, 16652) ={res}  357.31
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    16,654
+                                                {txt}F(1, 16652)       =  {res}   572.75
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0883
+                                                {txt}Root MSE          =    {res} 7.5e+06
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}   value_eur{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}shooting {c |}{col 14}{res}{space 2}   165688{col 26}{space 2}   6923.2{col 37}{space 1}   23.93{col 46}{space 3}0.000{col 54}{space 4} 152117.8{col 67}{space 3} 179258.3
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -5658801{col 26}{space 2} 319748.2{col 37}{space 1}  -17.70{col 46}{space 3}0.000{col 54}{space 4} -6285541{col 67}{space 3} -5032060
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} shooting = 0{p_end}
+
+{txt}       F(  1, 16652) ={res}  572.75
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    16,654
+                                                {txt}F(1, 16652)       =  {res}   878.27
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.1669
+                                                {txt}Root MSE          =    {res} 7.1e+06
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}   value_eur{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}passing {c |}{col 14}{res}{space 2} 309966.4{col 26}{space 2} 10459.25{col 37}{space 1}   29.64{col 46}{space 3}0.000{col 54}{space 4} 289465.2{col 67}{space 3} 330467.7
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.47e+07{col 26}{space 2} 551939.2{col 37}{space 1}  -26.63{col 46}{space 3}0.000{col 54}{space 4}-1.58e+07{col 67}{space 3}-1.36e+07
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} passing = 0{p_end}
+
+{txt}       F(  1, 16652) ={res}  878.27
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    16,654
+                                                {txt}F(1, 16652)       =  {res}   816.76
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.1587
+                                                {txt}Root MSE          =    {res} 7.2e+06
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}   value_eur{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}dribbling {c |}{col 14}{res}{space 2} 309369.9{col 26}{space 2}  10825.1{col 37}{space 1}   28.58{col 46}{space 3}0.000{col 54}{space 4} 288151.5{col 67}{space 3} 330588.3
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.63e+07{col 26}{space 2} 632602.2{col 37}{space 1}  -25.80{col 46}{space 3}0.000{col 54}{space 4}-1.76e+07{col 67}{space 3}-1.51e+07
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} dribbling = 0{p_end}
+
+{txt}       F(  1, 16652) ={res}  816.76
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    16,654
+                                                {txt}F(1, 16652)       =  {res}   261.03
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0227
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}   value_eur{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}defending {c |}{col 14}{res}{space 2} 71678.84{col 26}{space 2} 4436.565{col 37}{space 1}   16.16{col 46}{space 3}0.000{col 54}{space 4}  62982.7{col 67}{space 3} 80374.98
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-678436.7{col 26}{space 2} 215234.7{col 37}{space 1}   -3.15{col 46}{space 3}0.002{col 54}{space 4} -1100320{col 67}{space 3}-256553.9
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} defending = 0{p_end}
+
+{txt}       F(  1, 16652) ={res}  261.03
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    16,654
+                                                {txt}F(1, 16652)       =  {res}   559.61
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0461
+                                                {txt}Root MSE          =    {res} 7.6e+06
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}   value_eur{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}physic {c |}{col 14}{res}{space 2} 171956.4{col 26}{space 2} 7269.037{col 37}{space 1}   23.66{col 46}{space 3}0.000{col 54}{space 4} 157708.3{col 67}{space 3} 186204.5
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -8082472{col 26}{space 2} 430127.1{col 37}{space 1}  -18.79{col 46}{space 3}0.000{col 54}{space 4} -8925567{col 67}{space 3} -7239377
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} physic = 0{p_end}
+
+{txt}       F(  1, 16652) ={res}  559.61
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   484.23
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0533
+                                                {txt}Root MSE          =    {res} 7.5e+06
+
+{txt}{hline 19}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 20}{c |}{col 32}    Robust
+{col 1}         value_eur{col 20}{c |} Coefficient{col 32}  std. err.{col 44}      t{col 52}   P>|t|{col 60}     [95% con{col 73}f. interval]
+{hline 19}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+attacking_crossing {c |}{col 20}{res}{space 2} 98495.58{col 32}{space 2}     4476{col 43}{space 1}   22.01{col 52}{space 3}0.000{col 60}{space 4} 89722.21{col 73}{space 3} 107268.9
+{txt}{space 13}_cons {c |}{col 20}{res}{space 2} -1980490{col 32}{space 2} 195966.2{col 43}{space 1}  -10.11{col 52}{space 3}0.000{col 60}{space 4} -2364602{col 73}{space 3} -1596379
+{txt}{hline 19}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} attacking_crossing = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  484.23
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   381.04
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0456
+                                                {txt}Root MSE          =    {res} 7.6e+06
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}          value_eur{col 21}{c |} Coefficient{col 33}  std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+attacking_finishing {c |}{col 21}{res}{space 2} 84454.94{col 33}{space 2} 4326.537{col 44}{space 1}   19.52{col 53}{space 3}0.000{col 61}{space 4} 75974.53{col 74}{space 3} 92935.34
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}-963745.2{col 33}{space 2} 171332.2{col 44}{space 1}   -5.63{col 53}{space 3}0.000{col 61}{space 4} -1299572{col 74}{space 3}-627918.5
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} attacking_finishing = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  381.04
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   287.49
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0250
+                                                {txt}Root MSE          =    {res} 7.6e+06
+
+{txt}{hline 27}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 28}{c |}{col 40}    Robust
+{col 1}                 value_eur{col 28}{c |} Coefficient{col 40}  std. err.{col 52}      t{col 60}   P>|t|{col 68}     [95% con{col 81}f. interval]
+{hline 27}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+attacking_heading_accuracy {c |}{col 28}{res}{space 2} 70821.11{col 40}{space 2} 4176.871{col 51}{space 1}   16.96{col 60}{space 3}0.000{col 68}{space 4} 62634.06{col 81}{space 3} 79008.16
+{txt}{space 21}_cons {c |}{col 28}{res}{space 2}-769888.6{col 40}{space 2} 200447.2{col 51}{space 1}   -3.84{col 60}{space 3}0.000{col 68}{space 4} -1162783{col 81}{space 3}-376993.8
+{txt}{hline 27}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} attacking_heading_accuracy = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  287.49
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   715.99
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0859
+                                                {txt}Root MSE          =    {res} 7.4e+06
+
+{txt}{hline 24}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 25}{c |}{col 37}    Robust
+{col 1}              value_eur{col 25}{c |} Coefficient{col 37}  std. err.{col 49}      t{col 57}   P>|t|{col 65}     [95% con{col 78}f. interval]
+{hline 24}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+attacking_short_passing {c |}{col 25}{res}{space 2} 155889.3{col 37}{space 2} 5825.889{col 48}{space 1}   26.76{col 57}{space 3}0.000{col 65}{space 4} 144470.1{col 78}{space 3} 167308.6
+{txt}{space 18}_cons {c |}{col 25}{res}{space 2} -6245282{col 37}{space 2} 307088.9{col 48}{space 1}  -20.34{col 57}{space 3}0.000{col 65}{space 4} -6847204{col 78}{space 3} -5643360
+{txt}{hline 24}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} attacking_short_passing = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  715.99
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   413.80
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0566
+                                                {txt}Root MSE          =    {res} 7.5e+06
+
+{txt}{hline 18}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 19}{c |}{col 31}    Robust
+{col 1}        value_eur{col 19}{c |} Coefficient{col 31}  std. err.{col 43}      t{col 51}   P>|t|{col 59}     [95% con{col 72}f. interval]
+{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+attacking_volleys {c |}{col 19}{res}{space 2} 104430.7{col 31}{space 2} 5133.748{col 42}{space 1}   20.34{col 51}{space 3}0.000{col 59}{space 4} 94368.08{col 72}{space 3} 114493.3
+{txt}{space 12}_cons {c |}{col 19}{res}{space 2} -1550645{col 31}{space 2} 191219.8{col 42}{space 1}   -8.11{col 51}{space 3}0.000{col 59}{space 4} -1925453{col 72}{space 3} -1175837
+{txt}{hline 18}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} attacking_volleys = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  413.80
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   516.48
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0578
+                                                {txt}Root MSE          =    {res} 7.5e+06
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 17}{c |}{col 29}    Robust
+{col 1}      value_eur{col 17}{c |} Coefficient{col 29}  std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+skill_dribbling {c |}{col 17}{res}{space 2} 99124.83{col 29}{space 2} 4361.714{col 40}{space 1}   22.73{col 49}{space 3}0.000{col 57}{space 4} 90575.47{col 70}{space 3} 107674.2
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2} -2602687{col 29}{space 2} 214765.8{col 40}{space 1}  -12.12{col 49}{space 3}0.000{col 57}{space 4} -3023648{col 70}{space 3} -2181727
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} skill_dribbling = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  516.48
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   520.30
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0661
+                                                {txt}Root MSE          =    {res} 7.5e+06
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}   value_eur{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}skill_curve {c |}{col 14}{res}{space 2} 109335.6{col 26}{space 2} 4793.309{col 37}{space 1}   22.81{col 46}{space 3}0.000{col 54}{space 4} 99940.29{col 67}{space 3} 118730.9
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -2253411{col 26}{space 2} 196332.4{col 37}{space 1}  -11.48{col 46}{space 3}0.000{col 54}{space 4} -2638241{col 67}{space 3} -1868582
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} skill_curve = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  520.30
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   402.41
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0473
+                                                {txt}Root MSE          =    {res} 7.6e+06
+
+{txt}{hline 18}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 19}{c |}{col 31}    Robust
+{col 1}        value_eur{col 19}{c |} Coefficient{col 31}  std. err.{col 43}      t{col 51}   P>|t|{col 59}     [95% con{col 72}f. interval]
+{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+skill_fk_accuracy {c |}{col 19}{res}{space 2} 97778.96{col 31}{space 2} 4874.305{col 42}{space 1}   20.06{col 51}{space 3}0.000{col 59}{space 4} 88224.88{col 72}{space 3}   107333
+{txt}{space 12}_cons {c |}{col 19}{res}{space 2} -1233960{col 31}{space 2} 180354.2{col 42}{space 1}   -6.84{col 51}{space 3}0.000{col 59}{space 4} -1587470{col 72}{space 3}-880449.2
+{txt}{hline 18}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} skill_fk_accuracy = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  402.41
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   694.55
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0756
+                                                {txt}Root MSE          =    {res} 7.4e+06
+
+{txt}{hline 19}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 20}{c |}{col 32}    Robust
+{col 1}         value_eur{col 20}{c |} Coefficient{col 32}  std. err.{col 44}      t{col 52}   P>|t|{col 60}     [95% con{col 73}f. interval]
+{hline 19}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+skill_long_passing {c |}{col 20}{res}{space 2} 140124.5{col 32}{space 2} 5316.965{col 43}{space 1}   26.35{col 52}{space 3}0.000{col 60}{space 4} 129702.8{col 73}{space 3} 150546.2
+{txt}{space 13}_cons {c |}{col 20}{res}{space 2} -4469488{col 32}{space 2} 243751.9{col 43}{space 1}  -18.34{col 52}{space 3}0.000{col 60}{space 4} -4947264{col 73}{space 3} -3991712
+{txt}{hline 19}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} skill_long_passing = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  694.55
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   579.98
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0715
+                                                {txt}Root MSE          =    {res} 7.5e+06
+
+{txt}{hline 19}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 20}{c |}{col 32}    Robust
+{col 1}         value_eur{col 20}{c |} Coefficient{col 32}  std. err.{col 44}      t{col 52}   P>|t|{col 60}     [95% con{col 73}f. interval]
+{hline 19}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+skill_ball_control {c |}{col 20}{res}{space 2} 124872.2{col 32}{space 2} 5185.127{col 43}{space 1}   24.08{col 52}{space 3}0.000{col 60}{space 4} 114708.9{col 73}{space 3} 135035.5
+{txt}{space 13}_cons {c |}{col 20}{res}{space 2} -4398201{col 32}{space 2} 273322.8{col 43}{space 1}  -16.09{col 52}{space 3}0.000{col 60}{space 4} -4933938{col 73}{space 3} -3862463
+{txt}{hline 19}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} skill_ball_control = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  579.98
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   368.28
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0271
+                                                {txt}Root MSE          =    {res} 7.6e+06
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 23}{c |}{col 35}    Robust
+{col 1}            value_eur{col 23}{c |} Coefficient{col 35}  std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+movement_acceleration {c |}{col 23}{res}{space 2} 85425.74{col 35}{space 2} 4451.431{col 46}{space 1}   19.19{col 55}{space 3}0.000{col 63}{space 4} 76700.54{col 76}{space 3} 94150.95
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2} -2590326{col 35}{space 2} 257218.1{col 46}{space 1}  -10.07{col 55}{space 3}0.000{col 63}{space 4} -3094497{col 76}{space 3} -2086155
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} movement_acceleration = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  368.28
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   408.21
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0286
+                                                {txt}Root MSE          =    {res} 7.6e+06
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 23}{c |}{col 35}    Robust
+{col 1}            value_eur{col 23}{c |} Coefficient{col 35}  std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+movement_sprint_speed {c |}{col 23}{res}{space 2} 89197.46{col 35}{space 2} 4414.812{col 46}{space 1}   20.20{col 55}{space 3}0.000{col 63}{space 4} 80544.03{col 76}{space 3}  97850.9
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2} -2836670{col 35}{space 2} 252250.8{col 46}{space 1}  -11.25{col 55}{space 3}0.000{col 63}{space 4} -3331104{col 76}{space 3} -2342235
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} movement_sprint_speed = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  408.21
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   409.11
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0324
+                                                {txt}Root MSE          =    {res} 7.6e+06
+
+{txt}{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}       value_eur{col 18}{c |} Coefficient{col 30}  std. err.{col 42}      t{col 50}   P>|t|{col 58}     [95% con{col 71}f. interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+movement_agility {c |}{col 18}{res}{space 2}  95314.7{col 30}{space 2} 4712.357{col 41}{space 1}   20.23{col 50}{space 3}0.000{col 58}{space 4} 86078.05{col 71}{space 3} 104551.3
+{txt}{space 11}_cons {c |}{col 18}{res}{space 2} -3135315{col 30}{space 2} 267380.3{col 41}{space 1}  -11.73{col 50}{space 3}0.000{col 58}{space 4} -3659404{col 71}{space 3} -2611225
+{txt}{hline 17}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} movement_agility = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  409.11
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}  1045.86
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.2448
+                                                {txt}Root MSE          =    {res} 6.7e+06
+
+{txt}{hline 19}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 20}{c |}{col 32}    Robust
+{col 1}         value_eur{col 20}{c |} Coefficient{col 32}  std. err.{col 44}      t{col 52}   P>|t|{col 60}     [95% con{col 73}f. interval]
+{hline 19}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+movement_reactions {c |}{col 20}{res}{space 2} 420416.3{col 32}{space 2} 12999.98{col 43}{space 1}   32.34{col 52}{space 3}0.000{col 60}{space 4} 394935.2{col 73}{space 3} 445897.5
+{txt}{space 13}_cons {c |}{col 20}{res}{space 2}-2.30e+07{col 32}{space 2} 759341.1{col 43}{space 1}  -30.26{col 52}{space 3}0.000{col 60}{space 4}-2.45e+07{col 73}{space 3}-2.15e+07
+{txt}{hline 19}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} movement_reactions = 0{p_end}
+
+{txt}       F(  1, 18705) ={res} 1045.86
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   191.28
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0145
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}       value_eur{col 18}{c |} Coefficient{col 30}  std. err.{col 42}      t{col 50}   P>|t|{col 58}     [95% con{col 71}f. interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+movement_balance {c |}{col 18}{res}{space 2} 66310.34{col 30}{space 2} 4794.527{col 41}{space 1}   13.83{col 50}{space 3}0.000{col 58}{space 4} 56912.63{col 71}{space 3} 75708.05
+{txt}{space 11}_cons {c |}{col 18}{res}{space 2} -1336689{col 30}{space 2} 284937.7{col 41}{space 1}   -4.69{col 50}{space 3}0.000{col 58}{space 4} -1895192{col 71}{space 3}  -778185
+{txt}{hline 17}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} movement_balance = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  191.28
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   823.93
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0940
+                                                {txt}Root MSE          =    {res} 7.4e+06
+
+{txt}{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}       value_eur{col 18}{c |} Coefficient{col 30}  std. err.{col 42}      t{col 50}   P>|t|{col 58}     [95% con{col 71}f. interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+power_shot_power {c |}{col 18}{res}{space 2}   178101{col 30}{space 2} 6204.718{col 41}{space 1}   28.70{col 50}{space 3}0.000{col 58}{space 4} 165939.2{col 71}{space 3} 190262.9
+{txt}{space 11}_cons {c |}{col 18}{res}{space 2} -7378046{col 30}{space 2} 316361.5{col 41}{space 1}  -23.32{col 50}{space 3}0.000{col 58}{space 4} -7998144{col 71}{space 3} -6757949
+{txt}{hline 17}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} power_shot_power = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  823.93
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   218.43
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0145
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 14}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 15}{c |}{col 27}    Robust
+{col 1}    value_eur{col 15}{c |} Coefficient{col 27}  std. err.{col 39}      t{col 47}   P>|t|{col 55}     [95% con{col 68}f. interval]
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+power_jumping {c |}{col 15}{res}{space 2} 78373.39{col 27}{space 2} 5302.842{col 38}{space 1}   14.78{col 47}{space 3}0.000{col 55}{space 4} 67979.34{col 68}{space 3} 88767.44
+{txt}{space 8}_cons {c |}{col 15}{res}{space 2} -2159928{col 27}{space 2} 322995.1{col 38}{space 1}   -6.69{col 47}{space 3}0.000{col 55}{space 4} -2793028{col 68}{space 3} -1526828
+{txt}{hline 14}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} power_jumping = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  218.43
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   515.39
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0407
+                                                {txt}Root MSE          =    {res} 7.6e+06
+
+{txt}{hline 14}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 15}{c |}{col 27}    Robust
+{col 1}    value_eur{col 15}{c |} Coefficient{col 27}  std. err.{col 39}      t{col 47}   P>|t|{col 55}     [95% con{col 68}f. interval]
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+power_stamina {c |}{col 15}{res}{space 2} 98495.63{col 27}{space 2} 4338.573{col 38}{space 1}   22.70{col 47}{space 3}0.000{col 55}{space 4} 89991.63{col 68}{space 3} 106999.6
+{txt}{space 8}_cons {c |}{col 15}{res}{space 2} -3260730{col 27}{space 2} 241217.1{col 38}{space 1}  -13.52{col 47}{space 3}0.000{col 55}{space 4} -3733538{col 68}{space 3} -2787923
+{txt}{hline 14}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} power_stamina = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  515.39
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   268.50
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0150
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 15}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 16}{c |}{col 28}    Robust
+{col 1}     value_eur{col 16}{c |} Coefficient{col 28}  std. err.{col 40}      t{col 48}   P>|t|{col 56}     [95% con{col 69}f. interval]
+{hline 15}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+power_strength {c |}{col 16}{res}{space 2} 75984.35{col 28}{space 2} 4637.138{col 39}{space 1}   16.39{col 48}{space 3}0.000{col 56}{space 4} 66895.13{col 69}{space 3} 85073.56
+{txt}{space 9}_cons {c |}{col 16}{res}{space 2} -2015053{col 28}{space 2} 277023.4{col 39}{space 1}   -7.27{col 48}{space 3}0.000{col 56}{space 4} -2558044{col 69}{space 3} -1472062
+{txt}{hline 15}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} power_strength = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  268.50
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   488.66
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0547
+                                                {txt}Root MSE          =    {res} 7.5e+06
+
+{txt}{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}       value_eur{col 18}{c |} Coefficient{col 30}  std. err.{col 42}      t{col 50}   P>|t|{col 58}     [95% con{col 71}f. interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+power_long_shots {c |}{col 18}{res}{space 2} 93863.64{col 30}{space 2} 4246.152{col 41}{space 1}   22.11{col 50}{space 3}0.000{col 58}{space 4} 85540.79{col 71}{space 3} 102186.5
+{txt}{space 11}_cons {c |}{col 18}{res}{space 2} -1482955{col 30}{space 2} 170794.7{col 41}{space 1}   -8.68{col 50}{space 3}0.000{col 58}{space 4} -1817728{col 71}{space 3} -1148182
+{txt}{hline 17}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} power_long_shots = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  488.66
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   453.24
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0308
+                                                {txt}Root MSE          =    {res} 7.6e+06
+
+{txt}{hline 21}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 22}{c |}{col 34}    Robust
+{col 1}           value_eur{col 22}{c |} Coefficient{col 34}  std. err.{col 46}      t{col 54}   P>|t|{col 62}     [95% con{col 75}f. interval]
+{hline 21}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+mentality_aggression {c |}{col 22}{res}{space 2} 79127.05{col 34}{space 2} 3716.726{col 45}{space 1}   21.29{col 54}{space 3}0.000{col 62}{space 4} 71841.93{col 75}{space 3} 86412.17
+{txt}{space 15}_cons {c |}{col 22}{res}{space 2} -1484130{col 34}{space 2} 186671.1{col 45}{space 1}   -7.95{col 54}{space 3}0.000{col 62}{space 4} -1850022{col 75}{space 3} -1118238
+{txt}{hline 21}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} mentality_aggression = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  453.24
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   267.79
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0193
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 24}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 25}{c |}{col 37}    Robust
+{col 1}              value_eur{col 25}{c |} Coefficient{col 37}  std. err.{col 49}      t{col 57}   P>|t|{col 65}     [95% con{col 78}f. interval]
+{hline 24}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+mentality_interceptions {c |}{col 25}{res}{space 2} 51846.68{col 37}{space 2} 3168.287{col 48}{space 1}   16.36{col 57}{space 3}0.000{col 65}{space 4} 45636.55{col 78}{space 3} 58056.81
+{txt}{space 18}_cons {c |}{col 25}{res}{space 2} 507305.5{col 37}{space 2} 139367.1{col 48}{space 1}    3.64{col 57}{space 3}0.000{col 65}{space 4} 234133.5{col 78}{space 3} 780477.6
+{txt}{hline 24}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} mentality_interceptions = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  267.79
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   421.06
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0507
+                                                {txt}Root MSE          =    {res} 7.5e+06
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 23}{c |}{col 35}    Robust
+{col 1}            value_eur{col 23}{c |} Coefficient{col 35}  std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+mentality_positioning {c |}{col 23}{res}{space 2} 89688.16{col 35}{space 2}  4370.81{col 46}{space 1}   20.52{col 55}{space 3}0.000{col 63}{space 4} 81120.97{col 76}{space 3} 98255.34
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2} -1603090{col 35}{space 2} 193356.1{col 46}{space 1}   -8.29{col 55}{space 3}0.000{col 63}{space 4} -1982086{col 76}{space 3} -1224095
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} mentality_positioning = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  421.06
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   739.84
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.1061
+                                                {txt}Root MSE          =    {res} 7.3e+06
+
+{txt}{hline 17}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 18}{c |}{col 30}    Robust
+{col 1}       value_eur{col 18}{c |} Coefficient{col 30}  std. err.{col 42}      t{col 50}   P>|t|{col 58}     [95% con{col 71}f. interval]
+{hline 17}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+mentality_vision {c |}{col 18}{res}{space 2} 184016.9{col 30}{space 2} 6765.315{col 41}{space 1}   27.20{col 50}{space 3}0.000{col 58}{space 4} 170756.3{col 71}{space 3} 197277.5
+{txt}{space 11}_cons {c |}{col 18}{res}{space 2} -6997481{col 30}{space 2} 323297.6{col 41}{space 1}  -21.64{col 50}{space 3}0.000{col 58}{space 4} -7631173{col 71}{space 3} -6363788
+{txt}{hline 17}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} mentality_vision = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  739.84
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   330.12
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0372
+                                                {txt}Root MSE          =    {res} 7.6e+06
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}          value_eur{col 21}{c |} Coefficient{col 33}  std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+mentality_penalties {c |}{col 21}{res}{space 2} 95359.16{col 33}{space 2} 5248.426{col 44}{space 1}   18.17{col 53}{space 3}0.000{col 61}{space 4} 85071.77{col 74}{space 3} 105646.6
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} -1675818{col 33}{space 2} 227349.2{col 44}{space 1}   -7.37{col 53}{space 3}0.000{col 61}{space 4} -2121443{col 74}{space 3} -1230193
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} mentality_penalties = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  330.12
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   942.88
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.1556
+                                                {txt}Root MSE          =    {res} 7.1e+06
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}          value_eur{col 21}{c |} Coefficient{col 33}  std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+mentality_composure {c |}{col 21}{res}{space 2} 252428.4{col 33}{space 2} 8220.701{col 44}{space 1}   30.71{col 53}{space 3}0.000{col 61}{space 4} 236315.1{col 74}{space 3} 268541.7
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}-1.17e+07{col 33}{space 2} 433920.2{col 44}{space 1}  -27.01{col 53}{space 3}0.000{col 61}{space 4}-1.26e+07{col 74}{space 3}-1.09e+07
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} mentality_composure = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  942.88
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   286.38
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0203
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 28}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 29}{c |}{col 41}    Robust
+{col 1}                  value_eur{col 29}{c |} Coefficient{col 41}  std. err.{col 53}      t{col 61}   P>|t|{col 69}     [95% con{col 82}f. interval]
+{hline 28}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+defending_marking_awareness {c |}{col 29}{res}{space 2}  54744.7{col 41}{space 2} 3234.957{col 52}{space 1}   16.92{col 61}{space 3}0.000{col 69}{space 4} 48403.89{col 82}{space 3} 61085.51
+{txt}{space 22}_cons {c |}{col 29}{res}{space 2} 360550.4{col 41}{space 2} 142134.8{col 52}{space 1}    2.54{col 61}{space 3}0.011{col 69}{space 4} 81953.27{col 82}{space 3} 639147.6
+{txt}{hline 28}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} defending_marking_awareness = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  286.38
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   191.64
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0138
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 26}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 27}{c |}{col 39}    Robust
+{col 1}                value_eur{col 27}{c |} Coefficient{col 39}  std. err.{col 51}      t{col 59}   P>|t|{col 67}     [95% con{col 80}f. interval]
+{hline 26}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+defending_standing_tackle {c |}{col 27}{res}{space 2} 42502.58{col 39}{space 2}  3070.27{col 50}{space 1}   13.84{col 59}{space 3}0.000{col 67}{space 4} 36484.57{col 80}{space 3} 48520.59
+{txt}{space 20}_cons {c |}{col 27}{res}{space 2}   881270{col 39}{space 2} 143638.9{col 50}{space 1}    6.14{col 59}{space 3}0.000{col 67}{space 4} 599724.8{col 80}{space 3}  1162815
+{txt}{hline 26}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} defending_standing_tackle = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  191.64
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}   135.84
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0100
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 26}{c |}{col 38}    Robust
+{col 1}               value_eur{col 26}{c |} Coefficient{col 38}  std. err.{col 50}      t{col 58}   P>|t|{col 66}     [95% con{col 79}f. interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+defending_sliding_tackle {c |}{col 26}{res}{space 2} 36977.25{col 38}{space 2} 3172.607{col 49}{space 1}   11.66{col 58}{space 3}0.000{col 66}{space 4} 30758.65{col 79}{space 3} 43195.85
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2}  1219265{col 38}{space 2}   146450{col 49}{space 1}    8.33{col 58}{space 3}0.000{col 66}{space 4}   932210{col 79}{space 3}  1506321
+{txt}{hline 25}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} defending_sliding_tackle = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}  135.84
+{txt}{col 13}Prob > F ={res}    0.0000
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}     1.83
+                                                {txt}Prob > F          = {res}    0.1767
+                                                {txt}R-squared         = {res}    0.0002
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 19}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 20}{c |}{col 32}    Robust
+{col 1}         value_eur{col 20}{c |} Coefficient{col 32}  std. err.{col 44}      t{col 52}   P>|t|{col 60}     [95% con{col 73}f. interval]
+{hline 19}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+goalkeeping_diving {c |}{col 20}{res}{space 2}-5412.283{col 32}{space 2} 4006.312{col 43}{space 1}   -1.35{col 52}{space 3}0.177{col 60}{space 4}-13265.02{col 73}{space 3} 2440.452
+{txt}{space 13}_cons {c |}{col 20}{res}{space 2}  2991156{col 32}{space 2} 84861.81{col 43}{space 1}   35.25{col 52}{space 3}0.000{col 60}{space 4}  2824819{col 73}{space 3}  3157493
+{txt}{hline 19}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} goalkeeping_diving = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}    1.83
+{txt}{col 13}Prob > F ={res}    0.1767
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}     1.48
+                                                {txt}Prob > F          = {res}    0.2234
+                                                {txt}R-squared         = {res}    0.0001
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 21}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 22}{c |}{col 34}    Robust
+{col 1}           value_eur{col 22}{c |} Coefficient{col 34}  std. err.{col 46}      t{col 54}   P>|t|{col 62}     [95% con{col 75}f. interval]
+{hline 21}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+goalkeeping_handling {c |}{col 22}{res}{space 2}-5222.057{col 34}{space 2} 4288.586{col 45}{space 1}   -1.22{col 54}{space 3}0.223{col 62}{space 4}-13628.07{col 75}{space 3}  3183.96
+{txt}{space 15}_cons {c |}{col 22}{res}{space 2}  2986975{col 34}{space 2} 87696.43{col 45}{space 1}   34.06{col 54}{space 3}0.000{col 62}{space 4}  2815082{col 75}{space 3}  3158868
+{txt}{hline 21}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} goalkeeping_handling = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}    1.48
+{txt}{col 13}Prob > F ={res}    0.2234
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}     1.94
+                                                {txt}Prob > F          = {res}    0.1635
+                                                {txt}R-squared         = {res}    0.0002
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 21}{c |}{col 33}    Robust
+{col 1}          value_eur{col 21}{c |} Coefficient{col 33}  std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+goalkeeping_kicking {c |}{col 21}{res}{space 2}-5924.339{col 33}{space 2} 4251.542{col 44}{space 1}   -1.39{col 53}{space 3}0.163{col 61}{space 4}-14257.75{col 74}{space 3} 2409.071
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}  2997547{col 33}{space 2} 86814.87{col 44}{space 1}   34.53{col 53}{space 3}0.000{col 61}{space 4}  2827381{col 74}{space 3}  3167712
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} goalkeeping_kicking = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}    1.94
+{txt}{col 13}Prob > F ={res}    0.1635
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}     1.35
+                                                {txt}Prob > F          = {res}    0.2448
+                                                {txt}R-squared         = {res}    0.0001
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 24}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 25}{c |}{col 37}    Robust
+{col 1}              value_eur{col 25}{c |} Coefficient{col 37}  std. err.{col 49}      t{col 57}   P>|t|{col 65}     [95% con{col 78}f. interval]
+{hline 24}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+goalkeeping_positioning {c |}{col 25}{res}{space 2} -4963.29{col 37}{space 2} 4267.553{col 48}{space 1}   -1.16{col 57}{space 3}0.245{col 65}{space 4}-13328.08{col 78}{space 3} 3401.502
+{txt}{space 18}_cons {c |}{col 25}{res}{space 2}  2982702{col 37}{space 2}  87167.5{col 48}{space 1}   34.22{col 57}{space 3}0.000{col 65}{space 4}  2811845{col 78}{space 3}  3153558
+{txt}{hline 24}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} goalkeeping_positioning = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}    1.35
+{txt}{col 13}Prob > F ={res}    0.2448
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}     1.28
+                                                {txt}Prob > F          = {res}    0.2583
+                                                {txt}R-squared         = {res}    0.0001
+                                                {txt}Root MSE          =    {res} 7.7e+06
+
+{txt}{hline 21}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 22}{c |}{col 34}    Robust
+{col 1}           value_eur{col 22}{c |} Coefficient{col 34}  std. err.{col 46}      t{col 54}   P>|t|{col 62}     [95% con{col 75}f. interval]
+{hline 21}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+goalkeeping_reflexes {c |}{col 22}{res}{space 2}-4495.956{col 34}{space 2} 3977.076{col 45}{space 1}   -1.13{col 54}{space 3}0.258{col 62}{space 4}-12291.39{col 75}{space 3} 3299.474
+{txt}{space 15}_cons {c |}{col 22}{res}{space 2}  2976616{col 34}{space 2} 84606.02{col 45}{space 1}   35.18{col 54}{space 3}0.000{col 62}{space 4}  2810781{col 75}{space 3}  3142452
+{txt}{hline 21}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{p 0 7}{space 1}{text:( 1)}{space 1} goalkeeping_reflexes = 0{p_end}
+
+{txt}       F(  1, 18705) ={res}    1.28
+{txt}{col 13}Prob > F ={res}    0.2583
+{txt}
+{com}. 
+. matrix list regs
+{res}
+{txt}regs[42,5]
+           coef          se           t     p-value          r2
+ r1 {res}  75346.298   9619.8292   .00081419   5.041e-15   .00205904
+{txt} r2 {res}  4321.1889   8423.3227    .0000609   .60795536   .00001448
+{txt} r3 {res}  137003.92   7247.8223   .00260806   7.238e-79    .0370333
+{txt} r4 {res}  165688.05   6923.2001   .00345683   1.77e-124   .08828774
+{txt} r5 {res}  309966.44   10459.254   .00283343   3.86e-188   .16689369
+{txt} r6 {res}   309369.9   10825.104   .00264006   2.05e-175   .15873091
+{txt} r7 {res}  71678.844   4436.5653   .00364164   2.840e-58   .02266465
+{txt} r8 {res}  171956.41   7269.0369   .00325435   1.03e-121   .04605781
+{txt} r9 {res}  98495.576   4476.0005   .00491628   5.66e-106   .05325144
+{txt}r10 {res}   84454.94   4326.5368   .00451174   5.066e-84   .04561967
+{txt}r11 {res}   70821.11   4176.8708   .00405939   5.267e-64   .02502326
+{txt}r12 {res}  155889.32    5825.889   .00459295   8.09e-155    .0858812
+{txt}r13 {res}  104430.69   5133.7479   .00396241   5.271e-91   .05659465
+{txt}r14 {res}  99124.829   4361.7137   .00521036   8.31e-113   .05776843
+{txt}r15 {res}  109335.61   4793.3087   .00475873   1.29e-113   .06612595
+{txt}r16 {res}  97778.961   4874.3054   .00411547   1.407e-88   .04726137
+{txt}r17 {res}  140124.51    5316.965   .00495663   2.53e-150   .07564445
+{txt}r18 {res}  124872.22   5185.1273   .00464459   3.15e-126   .07152435
+{txt}r19 {res}  85425.743   4451.4306   .00431111   2.679e-81   .02707417
+{txt}r20 {res}  89197.464   4414.8124   .00457644   8.175e-90   .02860943
+{txt}r21 {res}  95314.701    4712.357   .00429224   5.242e-90   .03235535
+{txt}r22 {res}   420416.3   12999.984   .00248768   2.63e-223   .24476476
+{txt}r23 {res}  66310.338   4794.5274   .00288463   2.729e-43   .01452532
+{txt}r24 {res}  178101.05   6204.7184   .00462618   2.33e-177   .09401691
+{txt}r25 {res}  78373.388    5302.842   .00278709   3.761e-49   .01447437
+{txt}r26 {res}  98495.626   4338.5728   .00523267   1.41e-112   .04071186
+{txt}r27 {res}  75984.346   4637.1377   .00353366   6.293e-60   .01504105
+{txt}r28 {res}  93863.635   4246.1524   .00520602   6.52e-107   .05470123
+{txt}r29 {res}  79127.046   3716.7258   .00572801   2.146e-99   .03084539
+{txt}r30 {res}  51846.678   3168.2871   .00516502   8.957e-60   .01926179
+{txt}r31 {res}  89688.158   4370.8102   .00469474   1.496e-92   .05065124
+{txt}r32 {res}  184016.91   6765.3146   .00402052   8.25e-160   .10614979
+{txt}r33 {res}  95359.162   5248.4256   .00346182   3.859e-73   .03716268
+{txt}r34 {res}  252428.39   8220.7012   .00373526   4.71e-202   .15559216
+{txt}r35 {res}  54744.702   3234.9567   .00523125   9.104e-64   .02027093
+{txt}r36 {res}  42502.578   3070.2699   .00450881   2.286e-43   .01377156
+{txt}r37 {res}  36977.247   3172.6073   .00367369   2.771e-31   .00998652
+{txt}r38 {res} -5412.2827   4006.3115   -.0003372    .1767313    .0001505
+{txt}r39 {res} -5222.0568   4288.5856  -.00028393   .22336699   .00012859
+{txt}r40 {res} -5924.3385   4251.5423  -.00032775    .1634984   .00015927
+{txt}r41 {res} -4963.2897   4267.5531  -.00027253   .24483241   .00011854
+{txt}r42 {res}  -4495.956   3977.0761  -.00028425    .2582937   .00010744
+{reset}
+{com}. display as text "El valor máximo de R^2 es " as result `max_r2'
+{res}{txt}El valor máximo de R^2 es {res}.24476476
+{txt}
+{com}. display as text "Corresponde a la regresión número " as result `max_index'
+{res}{txt}Corresponde a la regresión número {res}22
+{txt}
+{com}. display as text "Corresponde a la variable " as result "`max_var'"
+{res}{txt}Corresponde a la variable {res}movement_reactions
+{txt}
+{com}. 
+. regress value_eur `max_var', robust
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}  1045.86
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.2448
+                                                {txt}Root MSE          =    {res} 6.7e+06
+
+{txt}{hline 19}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 20}{c |}{col 32}    Robust
+{col 1}         value_eur{col 20}{c |} Coefficient{col 32}  std. err.{col 44}      t{col 52}   P>|t|{col 60}     [95% con{col 73}f. interval]
+{hline 19}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+movement_reactions {c |}{col 20}{res}{space 2} 420416.3{col 32}{space 2} 12999.98{col 43}{space 1}   32.34{col 52}{space 3}0.000{col 60}{space 4} 394935.2{col 73}{space 3} 445897.5
+{txt}{space 13}_cons {c |}{col 20}{res}{space 2}-2.30e+07{col 32}{space 2} 759341.1{col 43}{space 1}  -30.26{col 52}{space 3}0.000{col 60}{space 4}-2.45e+07{col 73}{space 3}-2.15e+07
+{txt}{hline 19}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. display as text "Beta = " as result e(b)[1,1]
+{res}{txt}Beta = {res}420416.3
+{txt}
+{com}. display as text "R^2 = " as result e(r2)
+{res}{txt}R^2 = {res}.24476476
+{txt}
+{com}. if (e(b)[1,1]>0) display as text "r = " as result sqrt(e(r2))
+{res}{txt}r = {res}.49473706
+{txt}
+{com}. if (e(b)[1,1]<0) display as text "r = " as result -sqrt(e(r2))
+{txt}
+{com}. pwcorr value_eur `max_var'
+
+             {txt}{c |} value_~r moveme~s
+{hline 13}{c +}{hline 18}
+   value_eur {c |} {res}  1.0000 
+{txt}movement_r~s {c |} {res}  0.4947   1.0000 
+{txt}
+{com}. 
+. generate ln_value_eur=ln(value_eur)
+{txt}
+{com}. generate ln_`max_var'=ln(`max_var')
+{txt}
+{com}. regress ln_value_eur ln_`max_var', robust
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res} 11510.99
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.5304
+                                                {txt}Root MSE          =    {res} .85487
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 23}{c |}{col 35}    Robust
+{col 1}         ln_value_eur{col 23}{c |} Coefficient{col 35}  std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+ln_movement_reactions {c |}{col 23}{res}{space 2} 5.887088{col 35}{space 2} .0548712{col 46}{space 1}  107.29{col 55}{space 3}0.000{col 63}{space 4} 5.779536{col 76}{space 3} 5.994641
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-10.30905{col 35}{space 2}    .2248{col 46}{space 1}  -45.86{col 55}{space 3}0.000{col 63}{space 4}-10.74968{col 76}{space 3}-9.868422
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. display as text "Beta = " as result e(b)[1,1]
+{res}{txt}Beta = {res}5.8870883
+{txt}
+{com}. display as text "R^2 = " as result e(r2)
+{res}{txt}R^2 = {res}.53036651
+{txt}
+{com}. if (e(b)[1,1]>0) display as text "r = " as result sqrt(e(r2))
+{res}{txt}r = {res}.72826267
+{txt}
+{com}. if (e(b)[1,1]<0) display as text "r = " as result -sqrt(e(r2))
+{txt}
+{com}. pwcorr value_eur ln_`max_var'
+
+             {txt}{c |} value_~r ln_mov~s
+{hline 13}{c +}{hline 18}
+   value_eur {c |} {res}  1.0000 
+{txt}ln_movemen~s {c |} {res}  0.4397   1.0000 
+{txt}
+{com}. 
+. *INCISO (iii)*
+. 
+. regress value_eur `max_var', robust
+
+{txt}Linear regression                               Number of obs     = {res}    18,707
+                                                {txt}F(1, 18705)       =  {res}  1045.86
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.2448
+                                                {txt}Root MSE          =    {res} 6.7e+06
+
+{txt}{hline 19}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 20}{c |}{col 32}    Robust
+{col 1}         value_eur{col 20}{c |} Coefficient{col 32}  std. err.{col 44}      t{col 52}   P>|t|{col 60}     [95% con{col 73}f. interval]
+{hline 19}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+movement_reactions {c |}{col 20}{res}{space 2} 420416.3{col 32}{space 2} 12999.98{col 43}{space 1}   32.34{col 52}{space 3}0.000{col 60}{space 4} 394935.2{col 73}{space 3} 445897.5
+{txt}{space 13}_cons {c |}{col 20}{res}{space 2}-2.30e+07{col 32}{space 2} 759341.1{col 43}{space 1}  -30.26{col 52}{space 3}0.000{col 60}{space 4}-2.45e+07{col 73}{space 3}-2.15e+07
+{txt}{hline 19}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. predict resid, residuals
+{txt}
+{com}. 
+. local N=e(N)
+{txt}
+{com}. local df=`N'-2
+{txt}
+{com}. local conf=0.95
+{txt}
+{com}. local alpha=1-`conf'
+{txt}
+{com}. local t=invttail(`df',`alpha'/2)
+{txt}
+{com}. 
+. summarize `max_var'
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+movement_r~s {c |}{res}     18,707    61.55947    9.112712         24         95
+{txt}
+{com}. local x_mean=r(mean)
+{txt}
+{com}. local Sxx=(`N'-1)*r(sd)^2
+{txt}
+{com}. local b0=_b[_cons]
+{txt}
+{com}. local b1=_b[`max_var']
+{txt}
+{com}. local x=`x_mean'
+{txt}
+{com}. local y=`b0'+`b1'*`x'
+{txt}
+{com}. 
+. generate resid2=resid^2
+{txt}
+{com}. summarize resid2
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 6}resid2 {c |}{res}     18,707    4.53e+13    4.56e+14   2.10e+07   2.88e+16
+{txt}
+{com}. local sigma2_est=r(sum)/`df'
+{txt}
+{com}. 
+. generate ip_inf=`y'-`t'*sqrt(`sigma2_est'*(1+1/`N'+(`x'-`x_mean')^2/`Sxx'))
+{txt}
+{com}. generate ip_sup=`y'+`t'*sqrt(`sigma2_est'*(1+1/`N'+(`x'-`x_mean')^2/`Sxx'))
+{txt}
+{com}. 
+. generate ic_inf=`y'-`t'*sqrt(`sigma2_est'*(1/`N'+(`x'-`x_mean')^2/`Sxx'))
+{txt}
+{com}. generate ic_sup=`y'+`t'*sqrt(`sigma2_est'*(1/`N'+(`x'-`x_mean')^2/`Sxx'))
+{txt}
+{com}. 
+. generate n_ip=0
+{txt}
+{com}. replace n_ip=1 if (value_eur<ip_inf | value_eur>ip_sup)
+{txt}(666 real changes made)
+
+{com}. 
+. generate n_ic=0
+{txt}
+{com}. replace n_ic=1 if (value_eur<ic_inf | value_eur>ic_sup)
+{txt}(18,592 real changes made)
+
+{com}. 
+. summarize n_ip
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}n_ip {c |}{res}     18,707    .0356016    .1852998          0          1
+{txt}
+{com}. display as text "La proporción de veces que el valor de mercado supera la incertidumbre de predicción es " as result r(mean)
+{res}{txt}La proporción de veces que el valor de mercado supera la incertidumbre de predicción es {res}.03560165
+{txt}
+{com}. 
+. summarize n_ic
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}n_ic {c |}{res}     18,707    .9938526    .0781663          0          1
+{txt}
+{com}. display as text "La proporción de veces que el valor de mercado supera la incertidumbre de estimación es " as result r(mean)
+{res}{txt}La proporción de veces que el valor de mercado supera la incertidumbre de estimación es {res}.99385257
+{txt}
+{com}. 
+. 
+. *##############################################################################*
+. ************* PARTE 2: ECUACIÓN DE PREDICCIÓN DEL VALOR DE MERCADO *************
+. *##############################################################################*
+. 
+. 
+. *INCISO (i)*
+. 
+. regress value_eur `vars', robust
+
+{txt}Linear regression                               Number of obs     = {res}    16,654
+                                                {txt}F(42, 16611)      =  {res}    41.32
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.3467
+                                                {txt}Root MSE          =    {res} 6.3e+06
+
+{txt}{hline 28}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 29}{c |}{col 41}    Robust
+{col 1}                  value_eur{col 29}{c |} Coefficient{col 41}  std. err.{col 53}      t{col 61}   P>|t|{col 69}     [95% con{col 82}f. interval]
+{hline 28}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 24}age {c |}{col 29}{res}{space 2}-401562.4{col 41}{space 2} 18313.21{col 52}{space 1}  -21.93{col 61}{space 3}0.000{col 69}{space 4}-437458.2{col 82}{space 3}-365666.6
+{txt}{space 18}height_cm {c |}{col 29}{res}{space 2} 68606.26{col 41}{space 2} 12284.32{col 52}{space 1}    5.58{col 61}{space 3}0.000{col 69}{space 4} 44527.67{col 82}{space 3} 92684.85
+{txt}{space 23}pace {c |}{col 29}{res}{space 2}-71818.65{col 41}{space 2} 162653.2{col 52}{space 1}   -0.44{col 61}{space 3}0.659{col 69}{space 4}-390636.3{col 82}{space 3}   246999
+{txt}{space 19}shooting {c |}{col 29}{res}{space 2} 25176.86{col 41}{space 2} 141085.6{col 52}{space 1}    0.18{col 61}{space 3}0.858{col 69}{space 4}  -251366{col 82}{space 3} 301719.8
+{txt}{space 20}passing {c |}{col 29}{res}{space 2}   260432{col 41}{space 2} 156132.6{col 52}{space 1}    1.67{col 61}{space 3}0.095{col 69}{space 4}-45604.67{col 82}{space 3} 566468.7
+{txt}{space 18}dribbling {c |}{col 29}{res}{space 2}-160449.9{col 41}{space 2} 141644.7{col 52}{space 1}   -1.13{col 61}{space 3}0.257{col 69}{space 4}-438088.5{col 82}{space 3} 117188.8
+{txt}{space 18}defending {c |}{col 29}{res}{space 2} 75991.24{col 41}{space 2} 160308.9{col 52}{space 1}    0.47{col 61}{space 3}0.635{col 69}{space 4}-238231.3{col 82}{space 3} 390213.8
+{txt}{space 21}physic {c |}{col 29}{res}{space 2} 173970.8{col 41}{space 2}   166331{col 52}{space 1}    1.05{col 61}{space 3}0.296{col 69}{space 4}-152055.7{col 82}{space 3} 499997.3
+{txt}{space 9}attacking_crossing {c |}{col 29}{res}{space 2}-44254.15{col 41}{space 2} 32716.57{col 52}{space 1}   -1.35{col 61}{space 3}0.176{col 69}{space 4}-108382.1{col 82}{space 3} 19873.82
+{txt}{space 8}attacking_finishing {c |}{col 29}{res}{space 2} 20798.94{col 41}{space 2} 63796.18{col 52}{space 1}    0.33{col 61}{space 3}0.744{col 69}{space 4}-104248.4{col 82}{space 3} 145846.3
+{txt}{space 1}attacking_heading_accuracy {c |}{col 29}{res}{space 2} 31827.41{col 41}{space 2} 18243.34{col 52}{space 1}    1.74{col 61}{space 3}0.081{col 69}{space 4}-3931.484{col 82}{space 3} 67586.29
+{txt}{space 4}attacking_short_passing {c |}{col 29}{res}{space 2}-49785.96{col 41}{space 2} 56740.08{col 52}{space 1}   -0.88{col 61}{space 3}0.380{col 69}{space 4}-161002.6{col 82}{space 3} 61430.65
+{txt}{space 10}attacking_volleys {c |}{col 29}{res}{space 2} 28552.83{col 41}{space 2} 9993.563{col 52}{space 1}    2.86{col 61}{space 3}0.004{col 69}{space 4} 8964.382{col 82}{space 3} 48141.29
+{txt}{space 12}skill_dribbling {c |}{col 29}{res}{space 2} 65612.16{col 41}{space 2} 72131.19{col 52}{space 1}    0.91{col 61}{space 3}0.363{col 69}{space 4}-75772.67{col 82}{space 3}   206997
+{txt}{space 16}skill_curve {c |}{col 29}{res}{space 2} 6145.396{col 41}{space 2} 9849.451{col 52}{space 1}    0.62{col 61}{space 3}0.533{col 69}{space 4}-13160.58{col 82}{space 3} 25451.37
+{txt}{space 10}skill_fk_accuracy {c |}{col 29}{res}{space 2}-14525.38{col 41}{space 2} 10690.53{col 52}{space 1}   -1.36{col 61}{space 3}0.174{col 69}{space 4}-35479.96{col 82}{space 3} 6429.205
+{txt}{space 9}skill_long_passing {c |}{col 29}{res}{space 2}-55690.27{col 41}{space 2}    24381{col 52}{space 1}   -2.28{col 61}{space 3}0.022{col 69}{space 4}-103479.6{col 82}{space 3}-7900.905
+{txt}{space 9}skill_ball_control {c |}{col 29}{res}{space 2} 128420.6{col 41}{space 2} 43454.27{col 52}{space 1}    2.96{col 61}{space 3}0.003{col 69}{space 4} 43245.58{col 82}{space 3} 213595.6
+{txt}{space 6}movement_acceleration {c |}{col 29}{res}{space 2} 74589.02{col 41}{space 2} 73157.05{col 52}{space 1}    1.02{col 61}{space 3}0.308{col 69}{space 4}-68806.61{col 82}{space 3} 217984.6
+{txt}{space 6}movement_sprint_speed {c |}{col 29}{res}{space 2} 83638.45{col 41}{space 2} 90469.28{col 52}{space 1}    0.92{col 61}{space 3}0.355{col 69}{space 4}-93691.01{col 82}{space 3} 260967.9
+{txt}{space 11}movement_agility {c |}{col 29}{res}{space 2}-37451.62{col 41}{space 2} 15297.21{col 52}{space 1}   -2.45{col 61}{space 3}0.014{col 69}{space 4}-67435.78{col 82}{space 3}-7467.456
+{txt}{space 9}movement_reactions {c |}{col 29}{res}{space 2} 340049.4{col 41}{space 2} 17361.26{col 52}{space 1}   19.59{col 61}{space 3}0.000{col 69}{space 4} 306019.4{col 82}{space 3} 374079.3
+{txt}{space 11}movement_balance {c |}{col 29}{res}{space 2} 56522.92{col 41}{space 2} 10283.42{col 52}{space 1}    5.50{col 61}{space 3}0.000{col 69}{space 4} 36366.32{col 82}{space 3} 76679.51
+{txt}{space 11}power_shot_power {c |}{col 29}{res}{space 2}-21582.75{col 41}{space 2} 29641.27{col 52}{space 1}   -0.73{col 61}{space 3}0.467{col 69}{space 4}-79682.81{col 82}{space 3}  36517.3
+{txt}{space 14}power_jumping {c |}{col 29}{res}{space 2}-8640.068{col 41}{space 2} 10113.96{col 52}{space 1}   -0.85{col 61}{space 3}0.393{col 69}{space 4} -28464.5{col 82}{space 3} 11184.37
+{txt}{space 14}power_stamina {c |}{col 29}{res}{space 2}-46640.09{col 41}{space 2} 41530.44{col 52}{space 1}   -1.12{col 61}{space 3}0.261{col 69}{space 4}-128044.2{col 82}{space 3} 34764.02
+{txt}{space 13}power_strength {c |}{col 29}{res}{space 2}-70216.94{col 41}{space 2}  83301.5{col 52}{space 1}   -0.84{col 61}{space 3}0.399{col 69}{space 4}-233496.8{col 82}{space 3}  93062.9
+{txt}{space 11}power_long_shots {c |}{col 29}{res}{space 2}-49942.87{col 41}{space 2} 28762.32{col 52}{space 1}   -1.74{col 61}{space 3}0.083{col 69}{space 4}-106320.1{col 82}{space 3} 6434.342
+{txt}{space 7}mentality_aggression {c |}{col 29}{res}{space 2}-52193.63{col 41}{space 2} 33941.78{col 52}{space 1}   -1.54{col 61}{space 3}0.124{col 69}{space 4}-118723.1{col 82}{space 3} 14335.89
+{txt}{space 4}mentality_interceptions {c |}{col 29}{res}{space 2}-22177.65{col 41}{space 2} 32803.92{col 52}{space 1}   -0.68{col 61}{space 3}0.499{col 69}{space 4}-86476.83{col 82}{space 3} 42121.53
+{txt}{space 6}mentality_positioning {c |}{col 29}{res}{space 2}-21689.39{col 41}{space 2} 9304.737{col 52}{space 1}   -2.33{col 61}{space 3}0.020{col 69}{space 4}-39927.67{col 82}{space 3} -3451.11
+{txt}{space 11}mentality_vision {c |}{col 29}{res}{space 2}-18808.27{col 41}{space 2} 31867.05{col 52}{space 1}   -0.59{col 61}{space 3}0.555{col 69}{space 4}-81271.08{col 82}{space 3} 43654.55
+{txt}{space 8}mentality_penalties {c |}{col 29}{res}{space 2}  3925.47{col 41}{space 2} 11823.33{col 52}{space 1}    0.33{col 61}{space 3}0.740{col 69}{space 4}-19249.51{col 82}{space 3} 27100.45
+{txt}{space 8}mentality_composure {c |}{col 29}{res}{space 2} 97434.81{col 41}{space 2} 6789.912{col 52}{space 1}   14.35{col 61}{space 3}0.000{col 69}{space 4} 84125.86{col 82}{space 3} 110743.8
+{txt}defending_marking_awareness {c |}{col 29}{res}{space 2}-7852.276{col 41}{space 2} 49452.45{col 52}{space 1}   -0.16{col 61}{space 3}0.874{col 69}{space 4}-104784.4{col 82}{space 3}  89079.8
+{txt}{space 2}defending_standing_tackle {c |}{col 29}{res}{space 2} 4628.344{col 41}{space 2} 50950.66{col 52}{space 1}    0.09{col 61}{space 3}0.928{col 69}{space 4}-95240.39{col 82}{space 3} 104497.1
+{txt}{space 3}defending_sliding_tackle {c |}{col 29}{res}{space 2}-7201.992{col 41}{space 2} 20577.78{col 52}{space 1}   -0.35{col 61}{space 3}0.726{col 69}{space 4}-47536.63{col 82}{space 3} 33132.65
+{txt}{space 9}goalkeeping_diving {c |}{col 29}{res}{space 2}-12401.26{col 41}{space 2} 15889.49{col 52}{space 1}   -0.78{col 61}{space 3}0.435{col 69}{space 4}-43546.36{col 82}{space 3} 18743.84
+{txt}{space 7}goalkeeping_handling {c |}{col 29}{res}{space 2}-30114.84{col 41}{space 2} 15896.82{col 52}{space 1}   -1.89{col 61}{space 3}0.058{col 69}{space 4} -61274.3{col 82}{space 3} 1044.617
+{txt}{space 8}goalkeeping_kicking {c |}{col 29}{res}{space 2} 2639.234{col 41}{space 2} 16366.88{col 52}{space 1}    0.16{col 61}{space 3}0.872{col 69}{space 4}-29441.59{col 82}{space 3} 34720.06
+{txt}{space 4}goalkeeping_positioning {c |}{col 29}{res}{space 2}-24784.22{col 41}{space 2} 16182.06{col 52}{space 1}   -1.53{col 61}{space 3}0.126{col 69}{space 4}-56502.78{col 82}{space 3} 6934.333
+{txt}{space 7}goalkeeping_reflexes {c |}{col 29}{res}{space 2} 3689.173{col 41}{space 2} 15994.84{col 52}{space 1}    0.23{col 61}{space 3}0.818{col 69}{space 4}-27662.42{col 82}{space 3} 35040.77
+{txt}{space 22}_cons {c |}{col 29}{res}{space 2}-4.25e+07{col 41}{space 2}  2705425{col 52}{space 1}  -15.70{col 61}{space 3}0.000{col 69}{space 4}-4.78e+07{col 82}{space 3}-3.72e+07
+{txt}{hline 28}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. drop ln_`max_var'
+{txt}
+{com}. foreach var of local vars {c -(}
+{txt}  2{com}.         generate ln_`var'=ln(`var')
+{txt}  3{com}. {c )-}
+{txt}(2,053 missing values generated)
+(2,053 missing values generated)
+(2,053 missing values generated)
+(2,053 missing values generated)
+(2,053 missing values generated)
+(2,053 missing values generated)
+
+{com}. 
+. local ln_vars="ln_age ln_height_cm ln_pace ln_shooting ln_passing ln_dribbling ln_defending ln_physic ln_attacking_crossing ln_attacking_finishing ln_attacking_heading_accuracy ln_attacking_short_passing ln_attacking_volleys ln_skill_dribbling ln_skill_curve ln_skill_fk_accuracy ln_skill_long_passing ln_skill_ball_control ln_movement_acceleration ln_movement_sprint_speed ln_movement_agility ln_movement_reactions ln_movement_balance ln_power_shot_power ln_power_jumping ln_power_stamina ln_power_strength ln_power_long_shots ln_mentality_aggression ln_mentality_interceptions ln_mentality_positioning ln_mentality_vision ln_mentality_penalties ln_mentality_composure ln_defending_marking_awareness ln_defending_standing_tackle ln_defending_sliding_tackle ln_goalkeeping_diving ln_goalkeeping_handling ln_goalkeeping_kicking ln_goalkeeping_positioning ln_goalkeeping_reflexes"
+{txt}
+{com}. 
+. local num_vars: word count `ln_vars'
+{txt}
+{com}. 
+. regress ln_value_eur `ln_vars', robust
+
+{txt}Linear regression                               Number of obs     = {res}    16,654
+                                                {txt}F(42, 16611)      =  {res}   964.67
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.8018
+                                                {txt}Root MSE          =    {res} .54207
+
+{txt}{hline 31}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 32}{c |}{col 44}    Robust
+{col 1}                  ln_value_eur{col 32}{c |} Coefficient{col 44}  std. err.{col 56}      t{col 64}   P>|t|{col 72}     [95% con{col 85}f. interval]
+{hline 31}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 24}ln_age {c |}{col 32}{res}{space 2}-2.361012{col 44}{space 2} .0346135{col 55}{space 1}  -68.21{col 64}{space 3}0.000{col 72}{space 4}-2.428858{col 85}{space 3}-2.293166
+{txt}{space 18}ln_height_cm {c |}{col 32}{res}{space 2} .6131998{col 44}{space 2} .2066801{col 55}{space 1}    2.97{col 64}{space 3}0.003{col 72}{space 4} .2080848{col 85}{space 3} 1.018315
+{txt}{space 23}ln_pace {c |}{col 32}{res}{space 2}-1.851138{col 44}{space 2} 1.177367{col 55}{space 1}   -1.57{col 64}{space 3}0.116{col 72}{space 4}-4.158902{col 85}{space 3} .4566263
+{txt}{space 19}ln_shooting {c |}{col 32}{res}{space 2} .6669645{col 44}{space 2} .7074923{col 55}{space 1}    0.94{col 64}{space 3}0.346{col 72}{space 4}-.7197959{col 85}{space 3} 2.053725
+{txt}{space 20}ln_passing {c |}{col 32}{res}{space 2} 2.675911{col 44}{space 2} .8664785{col 55}{space 1}    3.09{col 64}{space 3}0.002{col 72}{space 4} .9775209{col 85}{space 3} 4.374302
+{txt}{space 18}ln_dribbling {c |}{col 32}{res}{space 2} 5.118618{col 44}{space 2} 1.686567{col 55}{space 1}    3.03{col 64}{space 3}0.002{col 72}{space 4} 1.812766{col 85}{space 3}  8.42447
+{txt}{space 18}ln_defending {c |}{col 32}{res}{space 2}-.4759095{col 44}{space 2} .4125548{col 55}{space 1}   -1.15{col 64}{space 3}0.249{col 72}{space 4}-1.284561{col 85}{space 3} .3327419
+{txt}{space 21}ln_physic {c |}{col 32}{res}{space 2} 4.981496{col 44}{space 2}  .409657{col 55}{space 1}   12.16{col 64}{space 3}0.000{col 72}{space 4} 4.178525{col 85}{space 3} 5.784468
+{txt}{space 9}ln_attacking_crossing {c |}{col 32}{res}{space 2}-.1806801{col 44}{space 2} .1537784{col 55}{space 1}   -1.17{col 64}{space 3}0.240{col 72}{space 4}-.4821023{col 85}{space 3}  .120742
+{txt}{space 8}ln_attacking_finishing {c |}{col 32}{res}{space 2}-.2138668{col 44}{space 2} .2819648{col 55}{space 1}   -0.76{col 64}{space 3}0.448{col 72}{space 4}-.7665479{col 85}{space 3} .3388143
+{txt}{space 1}ln_attacking_heading_accuracy {c |}{col 32}{res}{space 2}  .701418{col 44}{space 2} .0680086{col 55}{space 1}   10.31{col 64}{space 3}0.000{col 72}{space 4} .5681139{col 85}{space 3}  .834722
+{txt}{space 4}ln_attacking_short_passing {c |}{col 32}{res}{space 2}-.0804688{col 44}{space 2} .3577953{col 55}{space 1}   -0.22{col 64}{space 3}0.822{col 72}{space 4}-.7817858{col 85}{space 3} .6208482
+{txt}{space 10}ln_attacking_volleys {c |}{col 32}{res}{space 2} .0193944{col 44}{space 2} .0370641{col 55}{space 1}    0.52{col 64}{space 3}0.601{col 72}{space 4}-.0532551{col 85}{space 3} .0920439
+{txt}{space 12}ln_skill_dribbling {c |}{col 32}{res}{space 2}-2.004697{col 44}{space 2} .7598425{col 55}{space 1}   -2.64{col 64}{space 3}0.008{col 72}{space 4} -3.49407{col 85}{space 3}-.5153247
+{txt}{space 16}ln_skill_curve {c |}{col 32}{res}{space 2} -.095379{col 44}{space 2} .0436937{col 55}{space 1}   -2.18{col 64}{space 3}0.029{col 72}{space 4}-.1810232{col 85}{space 3}-.0097347
+{txt}{space 10}ln_skill_fk_accuracy {c |}{col 32}{res}{space 2}-.0914871{col 44}{space 2}  .041727{col 55}{space 1}   -2.19{col 64}{space 3}0.028{col 72}{space 4}-.1732764{col 85}{space 3}-.0096977
+{txt}{space 9}ln_skill_long_passing {c |}{col 32}{res}{space 2}-.5986136{col 44}{space 2} .1139055{col 55}{space 1}   -5.26{col 64}{space 3}0.000{col 72}{space 4}-.8218805{col 85}{space 3}-.3753466
+{txt}{space 9}ln_skill_ball_control {c |}{col 32}{res}{space 2} .0627132{col 44}{space 2}  .575088{col 55}{space 1}    0.11{col 64}{space 3}0.913{col 72}{space 4}-1.064521{col 85}{space 3} 1.189947
+{txt}{space 6}ln_movement_acceleration {c |}{col 32}{res}{space 2} 1.418654{col 44}{space 2} .5330678{col 55}{space 1}    2.66{col 64}{space 3}0.008{col 72}{space 4} .3737845{col 85}{space 3} 2.463524
+{txt}{space 6}ln_movement_sprint_speed {c |}{col 32}{res}{space 2} 1.604871{col 44}{space 2} .6437256{col 55}{space 1}    2.49{col 64}{space 3}0.013{col 72}{space 4} .3431004{col 85}{space 3} 2.866642
+{txt}{space 11}ln_movement_agility {c |}{col 32}{res}{space 2}-.8066354{col 44}{space 2} .1744892{col 55}{space 1}   -4.62{col 64}{space 3}0.000{col 72}{space 4}-1.148653{col 85}{space 3}-.4646179
+{txt}{space 9}ln_movement_reactions {c |}{col 32}{res}{space 2} 3.283156{col 44}{space 2} .1259557{col 55}{space 1}   26.07{col 64}{space 3}0.000{col 72}{space 4} 3.036269{col 85}{space 3} 3.530042
+{txt}{space 11}ln_movement_balance {c |}{col 32}{res}{space 2}-.3226021{col 44}{space 2} .0835942{col 55}{space 1}   -3.86{col 64}{space 3}0.000{col 72}{space 4}-.4864556{col 85}{space 3}-.1587486
+{txt}{space 11}ln_power_shot_power {c |}{col 32}{res}{space 2} .0987171{col 44}{space 2} .1730951{col 55}{space 1}    0.57{col 64}{space 3}0.568{col 72}{space 4}-.2405677{col 85}{space 3} .4380019
+{txt}{space 14}ln_power_jumping {c |}{col 32}{res}{space 2}-.2587978{col 44}{space 2} .0331741{col 55}{space 1}   -7.80{col 64}{space 3}0.000{col 72}{space 4}-.3238226{col 85}{space 3} -.193773
+{txt}{space 14}ln_power_stamina {c |}{col 32}{res}{space 2}-.7759571{col 44}{space 2} .1067204{col 55}{space 1}   -7.27{col 64}{space 3}0.000{col 72}{space 4}-.9851405{col 85}{space 3}-.5667737
+{txt}{space 13}ln_power_strength {c |}{col 32}{res}{space 2}-2.186762{col 44}{space 2} .1991683{col 55}{space 1}  -10.98{col 64}{space 3}0.000{col 72}{space 4}-2.577153{col 85}{space 3}-1.796371
+{txt}{space 11}ln_power_long_shots {c |}{col 32}{res}{space 2} -.454553{col 44}{space 2} .1419253{col 55}{space 1}   -3.20{col 64}{space 3}0.001{col 72}{space 4}-.7327418{col 85}{space 3}-.1763641
+{txt}{space 7}ln_mentality_aggression {c |}{col 32}{res}{space 2}-.8423128{col 44}{space 2} .0744053{col 55}{space 1}  -11.32{col 64}{space 3}0.000{col 72}{space 4}-.9881552{col 85}{space 3}-.6964704
+{txt}{space 4}ln_mentality_interceptions {c |}{col 32}{res}{space 2} -.017247{col 44}{space 2} .0768126{col 55}{space 1}   -0.22{col 64}{space 3}0.822{col 72}{space 4}-.1678079{col 85}{space 3} .1333139
+{txt}{space 6}ln_mentality_positioning {c |}{col 32}{res}{space 2}-.4409349{col 44}{space 2} .0508895{col 55}{space 1}   -8.66{col 64}{space 3}0.000{col 72}{space 4}-.5406837{col 85}{space 3}-.3411862
+{txt}{space 11}ln_mentality_vision {c |}{col 32}{res}{space 2}-.7585432{col 44}{space 2} .1500682{col 55}{space 1}   -5.05{col 64}{space 3}0.000{col 72}{space 4}-1.052693{col 85}{space 3}-.4643936
+{txt}{space 8}ln_mentality_penalties {c |}{col 32}{res}{space 2} .1285966{col 44}{space 2} .0465895{col 55}{space 1}    2.76{col 64}{space 3}0.006{col 72}{space 4} .0372763{col 85}{space 3} .2199169
+{txt}{space 8}ln_mentality_composure {c |}{col 32}{res}{space 2} 1.472157{col 44}{space 2} .0442008{col 55}{space 1}   33.31{col 64}{space 3}0.000{col 72}{space 4} 1.385519{col 85}{space 3} 1.558795
+{txt}ln_defending_marking_awareness {c |}{col 32}{res}{space 2} .2932968{col 44}{space 2} .1236894{col 55}{space 1}    2.37{col 64}{space 3}0.018{col 72}{space 4} .0508523{col 85}{space 3} .5357413
+{txt}{space 2}ln_defending_standing_tackle {c |}{col 32}{res}{space 2} .2848335{col 44}{space 2} .1148652{col 55}{space 1}    2.48{col 64}{space 3}0.013{col 72}{space 4} .0596853{col 85}{space 3} .5099816
+{txt}{space 3}ln_defending_sliding_tackle {c |}{col 32}{res}{space 2} .0007524{col 44}{space 2} .0451511{col 55}{space 1}    0.02{col 64}{space 3}0.987{col 72}{space 4}-.0877485{col 85}{space 3} .0892533
+{txt}{space 9}ln_goalkeeping_diving {c |}{col 32}{res}{space 2}-.0092254{col 44}{space 2} .0137007{col 55}{space 1}   -0.67{col 64}{space 3}0.501{col 72}{space 4}-.0360803{col 85}{space 3} .0176295
+{txt}{space 7}ln_goalkeeping_handling {c |}{col 32}{res}{space 2}-.0181163{col 44}{space 2} .0137115{col 55}{space 1}   -1.32{col 64}{space 3}0.186{col 72}{space 4}-.0449922{col 85}{space 3} .0087596
+{txt}{space 8}ln_goalkeeping_kicking {c |}{col 32}{res}{space 2}-.0249623{col 44}{space 2} .0136387{col 55}{space 1}   -1.83{col 64}{space 3}0.067{col 72}{space 4}-.0516956{col 85}{space 3} .0017711
+{txt}{space 4}ln_goalkeeping_positioning {c |}{col 32}{res}{space 2}-.0138784{col 44}{space 2} .0138342{col 55}{space 1}   -1.00{col 64}{space 3}0.316{col 72}{space 4} -.040995{col 85}{space 3} .0132381
+{txt}{space 7}ln_goalkeeping_reflexes {c |}{col 32}{res}{space 2}-.0292647{col 44}{space 2} .0136434{col 55}{space 1}   -2.14{col 64}{space 3}0.032{col 72}{space 4}-.0560071{col 85}{space 3}-.0025222
+{txt}{space 25}_cons {c |}{col 32}{res}{space 2} -24.1813{col 44}{space 2} 1.247051{col 55}{space 1}  -19.39{col 64}{space 3}0.000{col 72}{space 4}-26.62566{col 85}{space 3}-21.73695
+{txt}{hline 31}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. local N=e(N)
+{txt}
+{com}. matrix define betas=e(b)
+{txt}
+{com}. 
+. *INCISOS (ii)-(iii)*
+. 
+. keep if (e(sample))
+{txt}(2,053 observations deleted)
+
+{com}. 
+. local alpha=0.001
+{txt}
+{com}. local max_iterations=1000
+{txt}
+{com}. local tolerance=0.000000015
+{txt}
+{com}. local crit=1
+{txt}
+{com}. scalar costo_prev=0
+{txt}
+{com}. 
+. scalar beta0=betas[1,`num_vars'+1]*1.25
+{txt}
+{com}. forvalues i=1(1)`num_vars' {c -(}
+{txt}  2{com}.         scalar beta`i'=betas[1,`i']*1.25
+{txt}  3{com}. {c )-}
+{txt}
+{com}. 
+. quietly forvalues i=1(1)`max_iterations' {c -(}
+{res}1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36  
+
+{err}Convergencia alcanzada en la iteración 36 {res}(abs(costo-costo_prev) = 1.479e-08) 
+
+{txt}Beta constante = {res}-30.226624
+{txt}Beta ln_age = {res}-2.9512459
+{txt}Beta ln_height_cm = {res}.7665278
+{txt}Beta ln_pace = {res}-2.313898
+{txt}Beta ln_shooting = {res}.83373031
+{txt}Beta ln_passing = {res}3.3449138
+{txt}Beta ln_dribbling = {res}6.3982976
+{txt}Beta ln_defending = {res}-.59486701
+{txt}Beta ln_physic = {res}6.2268934
+{txt}Beta ln_attacking_crossing = {res}-.22582586
+{txt}Beta ln_attacking_finishing = {res}-.26730861
+{txt}Beta ln_attacking_heading_accuracy = {res}.8767957
+{txt}Beta ln_attacking_short_passing = {res}-.10056134
+{txt}Beta ln_attacking_volleys = {res}.02426748
+{txt}Beta ln_skill_dribbling = {res}-2.5058466
+{txt}Beta ln_skill_curve = {res}-.11919894
+{txt}Beta ln_skill_fk_accuracy = {res}-.11433399
+{txt}Beta ln_skill_long_passing = {res}-.74824228
+{txt}Beta ln_skill_ball_control = {res}.07841642
+{txt}Beta ln_movement_acceleration = {res}1.7733426
+{txt}Beta ln_movement_sprint_speed = {res}2.0061132
+{txt}Beta ln_movement_agility = {res}-1.0082696
+{txt}Beta ln_movement_reactions = {res}4.1039694
+{txt}Beta ln_movement_balance = {res}-.40322777
+{txt}Beta ln_power_shot_power = {res}.12342073
+{txt}Beta ln_power_jumping = {res}-.32347419
+{txt}Beta ln_power_stamina = {res}-.96992298
+{txt}Beta ln_power_strength = {res}-2.733429
+{txt}Beta ln_power_long_shots = {res}-.56816638
+{txt}Beta ln_mentality_aggression = {res}-1.0528703
+{txt}Beta ln_mentality_interceptions = {res}-.02153861
+{txt}Beta ln_mentality_positioning = {res}-.55114388
+{txt}Beta ln_mentality_vision = {res}-.94815406
+{txt}Beta ln_mentality_penalties = {res}.16076934
+{txt}Beta ln_mentality_composure = {res}1.8402215
+{txt}Beta ln_defending_marking_awareness = {res}.36663998
+{txt}Beta ln_defending_standing_tackle = {res}.35606126
+{txt}Beta ln_defending_sliding_tackle = {res}.00095788
+{txt}Beta ln_goalkeeping_diving = {res}-.01152199
+{txt}Beta ln_goalkeeping_handling = {res}-.02263228
+{txt}Beta ln_goalkeeping_kicking = {res}-.03118805
+{txt}Beta ln_goalkeeping_positioning = {res}-.01733363
+{txt}Beta ln_goalkeeping_reflexes = {res}-.03656946
+{txt}
+{com}. 
+. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\29. Matemática 4\Trabajo Práctico\Datos\TP_E1aE2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}26 Sep 2024, 22:17:21
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

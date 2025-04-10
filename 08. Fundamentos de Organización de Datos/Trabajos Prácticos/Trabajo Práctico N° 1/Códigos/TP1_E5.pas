@@ -54,7 +54,7 @@ begin
     registro_celular.codigo:=1+random(1000);
   if (registro_celular.codigo<>codigo_salida) then
   begin
-    registro_celular.nombre:=random_string(5+random(6));
+    registro_celular.nombre:=random_string(5+random(5));
     registro_celular.descripcion:=vector_descripciones[1+random(5)];
     registro_celular.marca:=vector_marcas[1+random(10)];
     registro_celular.precio:=100+random(9001)/10;
@@ -159,7 +159,7 @@ begin
   end;
   close(archivo_celulares);
   close(archivo_txt);
-  textcolor(green); write('Se ha exportado el archivo creado en el inciso (a) a un archivo de texto denominado '); textcolor(yellow); writeln('"celulares2.txt"');
+  textcolor(green); write('Se ha exportado el archivo creado en el inciso (a) a un archivo de texto denominado '); textcolor(yellow); write('"celulares2.txt"'); textcolor(green); writeln(' con todos los celulares del mismo');
 end;
 procedure leer_opcion(var opcion: int8);
 begin
@@ -194,12 +194,10 @@ end;
 var
   archivo_celulares: t_archivo_celulares;
   archivo_carga: text;
-  nombre: t_string10;
 begin
   randomize;
-  nombre:='celulares2';
-  assign(archivo_celulares,nombre);
   assign(archivo_carga,'celulares1.txt');
   cargar_archivo_carga(archivo_carga);
+  assign(archivo_celulares,'celulares2.txt');
   menu_opciones(archivo_celulares,archivo_carga);
 end.
