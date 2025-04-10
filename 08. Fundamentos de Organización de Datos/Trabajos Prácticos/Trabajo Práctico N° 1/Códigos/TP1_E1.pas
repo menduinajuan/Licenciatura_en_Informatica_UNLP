@@ -10,39 +10,36 @@ uses crt;
 const
   num_salida=30000;
 type
-  t_string20=string[20];
-  t_archivo_int=file of int16;
+  t_archivo_enteros=file of int16;
 procedure leer_numero(var num: int16);
 var
   i: int8;
 begin
-  i:=random(10);
+  i:=random(100);
   if (i=0) then
     num:=num_salida
   else
     num:=random(high(int16));
 end;
-procedure cargar_archivo_int(var archivo_int: t_archivo_int);
+procedure cargar_archivo_enteros(var archivo_enteros: t_archivo_enteros);
 var
   num: int16;
 begin
-  rewrite(archivo_int);
+  rewrite(archivo_enteros);
   textcolor(green); write('Los números ingresados son: ');
   leer_numero(num);
   while (num<>num_salida) do
   begin
     textcolor(yellow); write(num,' ');
-    write(archivo_int,num);
+    write(archivo_enteros,num);
     leer_numero(num);
   end;
-  close(archivo_int);
+  close(archivo_enteros);
 end;
 var
-  archivo_int: t_archivo_int;
-  nombre: t_string20;
+  archivo_enteros: t_archivo_enteros;
 begin
   randomize;
-  nombre:='archivo_enteros';
-  assign(archivo_int,nombre);
-  cargar_archivo_int(archivo_int);
+  assign(archivo_enteros,'enteros');
+  cargar_archivo_enteros(archivo_enteros);
 end.

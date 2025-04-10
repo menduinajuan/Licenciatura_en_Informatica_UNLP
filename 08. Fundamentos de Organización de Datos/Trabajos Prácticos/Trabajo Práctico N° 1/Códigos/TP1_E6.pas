@@ -48,7 +48,7 @@ begin
     registro_celular.codigo:=1+random(1000);
   if (registro_celular.codigo<>codigo_salida) then
   begin
-    registro_celular.nombre:=random_string(5+random(6));
+    registro_celular.nombre:=random_string(5+random(5));
     registro_celular.descripcion:=vector_descripciones[1+random(5)];
     registro_celular.marca:=vector_marcas[1+random(10)];
     registro_celular.precio:=100+random(9001)/10;
@@ -153,7 +153,21 @@ begin
   end;
   close(archivo_celulares);
   close(archivo_txt);
-  textcolor(green); write('Se ha exportado el archivo creado en el inciso (a) a un archivo de texto denominado '); textcolor(yellow); writeln('"celulares2.txt"');
+  textcolor(green); write('Se ha exportado el archivo creado en el inciso (a) a un archivo de texto denominado '); textcolor(yellow); write('"celulares2.txt"'); textcolor(green); writeln(' con todos los celulares del mismo');
+end;
+function control_unicidad(var archivo_celulares: t_archivo_celulares; codigo: int16): boolean;
+var
+  registro_celular: t_registro_celular;
+  ok: boolean;
+begin
+  ok:=false;
+  while ((not eof(archivo_celulares)) and (ok=false)) do
+  begin
+    read(archivo_celulares,registro_celular);
+    if (registro_celular.codigo=codigo) then
+      ok:=true;
+  end;
+  control_unicidad:=ok;
 end;
 procedure agregar_celular(var archivo_celulares: t_archivo_celulares);
 var
@@ -162,12 +176,15 @@ var
 begin
   celulares:=0;
   reset(archivo_celulares);
-  seek(archivo_celulares,filesize(archivo_celulares));
   leer_celular(registro_celular);
   while (registro_celular.codigo<>codigo_salida) do
   begin
-    write(archivo_celulares,registro_celular);
-    celulares:=celulares+1;
+    if (control_unicidad(archivo_celulares,registro_celular.codigo)=false) then
+    begin
+      seek(archivo_celulares,filesize(archivo_celulares));
+      write(archivo_celulares,registro_celular);
+      celulares:=celulares+1;
+    end;
     leer_celular(registro_celular);
   end;
   close(archivo_celulares);
@@ -265,12 +282,10 @@ end;
 var
   archivo_celulares: t_archivo_celulares;
   archivo_carga: text;
-  nombre: t_string10;
 begin
   randomize;
-  nombre:='celulares2';
-  assign(archivo_celulares,nombre);
   assign(archivo_carga,'celulares1.txt');
   cargar_archivo_carga(archivo_carga);
+  assign(archivo_celulares,'celulares2');
   menu_opciones(archivo_celulares,archivo_carga);
 end.

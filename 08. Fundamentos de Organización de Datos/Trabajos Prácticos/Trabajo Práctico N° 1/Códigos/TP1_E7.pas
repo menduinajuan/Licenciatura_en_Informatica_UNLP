@@ -35,19 +35,22 @@ begin
     string_aux:=string_aux+chr(ord('A')+random(26));
   random_string:=string_aux;
 end;
-procedure leer_novela(var registro_novela: t_registro_novela);
+procedure leer_novela(var registro_novela: t_registro_novela; ok: boolean);
 var
   i: int8;
 begin
-  i:=random(100);
-  if (i=0) then
-    registro_novela.codigo:=codigo_salida
-  else
-    registro_novela.codigo:=1+random(1000);
+  if (ok=true) then
+  begin
+    i:=random(100);
+    if (i=0) then
+      registro_novela.codigo:=codigo_salida
+    else
+      registro_novela.codigo:=1+random(1000);
+  end;
   if (registro_novela.codigo<>codigo_salida) then
   begin
-    registro_novela.nombre:=random_string(5+random(16));
-    registro_novela.genero:=random_string(5+random(16));
+    registro_novela.nombre:=random_string(5+random(15));
+    registro_novela.genero:=random_string(5+random(15));
     registro_novela.precio:=100+random(9001)/10;
   end;
 end;
@@ -56,15 +59,15 @@ var
   registro_novela: t_registro_novela;
 begin
   rewrite(archivo_carga);
-  leer_novela(registro_novela);
+  leer_novela(registro_novela,true);
   while (registro_novela.codigo<>codigo_salida) do
   begin
     with registro_novela do
     begin
-      writeln(archivo_carga,codigo,' ',precio,' ',genero);
+      writeln(archivo_carga,codigo,' ',precio:0:2,' ',genero);
       writeln(archivo_carga,nombre);
     end;
-    leer_novela(registro_novela);
+    leer_novela(registro_novela,true);
   end;
   close(archivo_carga);
 end;
@@ -78,8 +81,7 @@ begin
   begin
     with registro_novela do
     begin
-      readln(archivo_carga,codigo,precio,genero);
-      genero:=trim(genero);
+      readln(archivo_carga,codigo,precio,genero); genero:=trim(genero);
       readln(archivo_carga,nombre);
     end;
     write(archivo_novelas,registro_novela);
@@ -88,6 +90,20 @@ begin
   close(archivo_carga);
   textcolor(green); writeln('El archivo binario de novelas fue creado y cargado con éxito');
 end;
+function control_unicidad(var archivo_novelas: t_archivo_novelas; codigo: int16): boolean;
+var
+  registro_novela: t_registro_novela;
+  ok: boolean;
+begin
+  ok:=false;
+  while ((not eof(archivo_novelas)) and (ok=false)) do
+  begin
+    read(archivo_novelas,registro_novela);
+    if (registro_novela.codigo=codigo) then
+      ok:=true;
+  end;
+  control_unicidad:=ok;
+end;
 procedure agregar_novela(var archivo_novelas: t_archivo_novelas);
 var
   registro_novela: t_registro_novela;
@@ -95,13 +111,16 @@ var
 begin
   novelas:=0;
   reset(archivo_novelas);
-  seek(archivo_novelas,filesize(archivo_novelas));
-  leer_novela(registro_novela);
+  leer_novela(registro_novela,true);
   while (registro_novela.codigo<>codigo_salida) do
   begin
-    write(archivo_novelas,registro_novela);
-    novelas:=novelas+1;
-    leer_novela(registro_novela);
+    if (control_unicidad(archivo_novelas,registro_novela.codigo)=false) then
+    begin
+      seek(archivo_novelas,filesize(archivo_novelas));
+      write(archivo_novelas,registro_novela);
+      novelas:=novelas+1;
+    end;
+    leer_novela(registro_novela,true);
   end;
   close(archivo_novelas);
   textcolor(green); write('Se han agregado '); textcolor(yellow); write(novelas); textcolor(green); writeln(' novelas al final del archivo');
@@ -120,20 +139,42 @@ begin
     read(archivo_novelas,registro_novela);
     if (registro_novela.codigo=codigo) then
     begin
-      seek(archivo_celulares,filepos(archivo_novelas)-1);
+      leer_novela(registro_novela,false);
+      seek(archivo_novelas,filepos(archivo_novelas)-1);
       write(archivo_novelas,registro_novela);
       ok:=true;
     end;
   end;
-  close(archivo_celulares);
+  close(archivo_novelas);
   if (ok=true) then
   begin
-    textcolor(green); write('Se ha modificado la novela con código '); textcolor(yellow); writeln(codigo);
+    textcolor(green); write('Se ha modificado la novela con código '); textcolor(yellow); write(codigo); textcolor(green); writeln(' en el archivo');
   end
   else
   begin
-    textcolor(green); write('No se ha encontrado el celular con código '); textcolor(yellow); write(codigo); textcolor(green); writeln(' en el archivo');
+    textcolor(green); write('No se ha encontrado la novela con código '); textcolor(yellow); write(codigo); textcolor(green); writeln(' en el archivo');
   end;
+end;
+procedure exportar_archivo_txt(var archivo_novelas: t_archivo_novelas);
+var
+  registro_novela: t_registro_novela;
+  archivo_txt: text;
+begin
+  reset(archivo_novelas);
+  assign(archivo_txt,'novelas2.txt');
+  rewrite(archivo_txt);
+  while (not eof(archivo_novelas)) do
+  begin
+    read(archivo_novelas,registro_novela);
+    with registro_novela do
+    begin
+      writeln(archivo_txt,codigo,' ',precio:0:2,' ',genero);
+      writeln(archivo_txt,nombre);
+    end;
+  end;
+  close(archivo_novelas);
+  close(archivo_txt);
+  textcolor(green); write('Se ha exportado el archivo creado en el inciso (a) a un archivo de texto denominado '); textcolor(yellow); write('"novelas2.txt"'); textcolor(green); writeln(' con todas las novelas del mismo');
 end;
 procedure leer_opcion(var opcion: int8);
 begin
@@ -168,12 +209,10 @@ end;
 var
   archivo_novelas: t_archivo_novelas;
   archivo_carga: text;
-  nombre: t_string20;
 begin
   randomize;
-  nombre:='novelas2';
-  assign(archivo_novelas,nombre);
-  assign(archivo_carga,'novelas.txt');
+  assign(archivo_carga,'novelas1.txt');
   cargar_archivo_carga(archivo_carga);
+  assign(archivo_novelas,'novelas2');
   menu_opciones(archivo_novelas,archivo_carga);
 end.
