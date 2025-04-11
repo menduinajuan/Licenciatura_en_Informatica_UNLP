@@ -1,9 +1,9 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\29. Matemática 4\Trabajo Práctico\Datos\TP_E1aE2.smcl
+       {txt}log:  {res}G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\28. Matemática 4\Trabajo Final\Códigos\TP_E1aE2.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}26 Sep 2024, 22:17:14
+ {txt}opened on:  {res}10 Apr 2025, 16:33:51
 {txt}
 {com}. *log using "TP_E1aE2.log", replace
 . 
@@ -1441,9 +1441,9 @@ movement_r~s {c |}{res}     18,707    61.55947    9.112712         24         95
 . 
 . log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\29. Matemática 4\Trabajo Práctico\Datos\TP_E1aE2.smcl
+       {txt}log:  {res}G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\28. Matemática 4\Trabajo Final\Códigos\TP_E1aE2.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}26 Sep 2024, 22:17:21
+ {txt}closed on:  {res}10 Apr 2025, 16:34:02
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
