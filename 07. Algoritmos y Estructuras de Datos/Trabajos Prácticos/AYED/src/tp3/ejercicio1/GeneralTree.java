@@ -76,20 +76,23 @@ public class GeneralTree<T> {
     }
 
     private int nivelHelper(T dato) {
-        int nivel=0; int sizeActual;
+        int nivel=0;
         GeneralTree<T> ag;
         Queue<GeneralTree<T>> cola=new Queue<>();
         cola.enqueue(this);
+        cola.enqueue(null);
         while (!cola.isEmpty()) {
-            sizeActual=cola.size();
-            for (int i=0; i<sizeActual; i++) {
-                ag=cola.dequeue();
+            ag=cola.dequeue();
+            if (ag!=null) {
                 if (ag.getData().equals(dato))
                     return nivel;
                 for (GeneralTree<T> child: ag.getChildren())
                     cola.enqueue(child);
             }
-            nivel++;
+            else if (!cola.isEmpty()) {
+                nivel++;
+                cola.enqueue(null);
+            }
         }
         return -1;
     }
