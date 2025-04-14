@@ -1,12 +1,14 @@
 /*TRABAJO PRÁCTICO N° 6*/
 /*EJERCICIO 3*/
-/*Escribir un programa que defina una matriz de enteros de tamaño 5x5. Inicializar la matriz con números aleatorios entre 0 y 30.
+/*
+Escribir un programa que defina una matriz de enteros de tamaño 5x5. Inicializar la matriz con números aleatorios entre 0 y 30.
 Luego, realizar las siguientes operaciones:
 •	Mostrar el contenido de la matriz en consola.
 •	Calcular e informar la suma de los elementos de la fila 1.
 •	Generar un vector de 5 posiciones donde cada posición j contiene la suma de los elementos de la columna j de la matriz. Luego, imprimir el vector.
 •	Leer un valor entero e indicar si se encuentra o no en la matriz. En caso de encontrarse, indicar su ubicación (fila y columna), en caso contrario imprimir “No se encontró el elemento”.
-NOTA: Se dispone de un esqueleto para este programa en Ej03Matrices.java.*/
+NOTA: Se dispone de un esqueleto para este programa en Ej03Matrices.java.
+*/
 
 package tp6;
 

@@ -3,8 +3,7 @@
 /*
 Crear una clase Java llamada Transformacion que tenga como variable de instancia un árbol binario de números enteros y un método de instancia suma(): BinaryTree<Integer>,
 el cual devuelve el árbol en el que se reemplazó el valor de cada nodo por la suma de todos los elementos presentes en su subárbol izquierdo y derecho.
-Asumir que los valores de los subárboles vacíos son ceros.
-Por ejemplo:
+Asumir que los valores de los subárboles vacíos son ceros. Por ejemplo:
 ¿La solución recorre una única vez cada subárbol? En el caso que no, ¿se puede mejorar para que sí lo haga?
 */
 

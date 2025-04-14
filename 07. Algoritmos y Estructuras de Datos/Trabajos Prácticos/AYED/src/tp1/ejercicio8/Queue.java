@@ -4,10 +4,10 @@ import java.util.*;
 
 public class Queue<T> extends Sequence {
 
-    protected List<T> data;
+    protected List<T> data=new LinkedList<>();
 
     public Queue() {
-        data=new LinkedList<T>();
+        
     }
 
     public void enqueue(T dato) {

@@ -1,8 +1,10 @@
 /*TRABAJO PRÁCTICO N° 7*/
 /*EJERCICIO 4*/
-/*Sobre un nuevo programa, modificar el ejercicio anterior para considerar que:
+/*
+Sobre un nuevo programa, modificar el ejercicio anterior para considerar que:
 (a) Durante el proceso de inscripción, se pida a cada persona sus datos (nombre, DNI, edad) y el día en que se quiere presentar al casting. La persona debe ser inscripta en ese día en el siguiente turno disponible. En caso de no existir un turno en ese día, informar la situación. La inscripción finaliza al llegar una persona con nombre “ZZZ” o al cubrirse los 40 cupos de casting.
-(b) Una vez finalizada la inscripción, informar para cada día: la cantidad de inscriptos al casting ese día y el nombre de la persona a entrevistar en cada turno asignado.*/
+(b) Una vez finalizada la inscripción, informar para cada día: la cantidad de inscriptos al casting ese día y el nombre de la persona a entrevistar en cada turno asignado.
+*/
 
 package tp7;
 

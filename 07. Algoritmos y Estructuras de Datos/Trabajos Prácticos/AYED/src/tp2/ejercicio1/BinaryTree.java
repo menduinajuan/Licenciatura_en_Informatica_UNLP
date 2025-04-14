@@ -1,7 +1,6 @@
 package tp2.ejercicio1;
 
-import java.util.*;
-//import tp1.ejercicio8.Queue;
+import tp1.ejercicio8.Queue;
 
 public class BinaryTree<T> {
 
@@ -10,7 +9,7 @@ public class BinaryTree<T> {
     private BinaryTree<T> rightChild; 
 
     public BinaryTree() {
-        super();
+        
     }
 
     public BinaryTree(T data) {
@@ -25,12 +24,10 @@ public class BinaryTree<T> {
         this.data=data;
     }
 
-    // Preguntar antes de invocar si hasLeftChild()
     public BinaryTree<T> getLeftChild() {
         return leftChild;
     }
 
-    // Preguntar antes de invocar si hasRightChild()
     public BinaryTree<T> getRightChild() {
         return this.rightChild;
     }
@@ -73,14 +70,12 @@ public class BinaryTree<T> {
     }
 
     public int contarHojas() {
+        if ((this==null) || (this.isEmpty())) return -1;
+        if (this.isLeaf())                    return 1;
         int leftC=0, rightC=0;
-        if (this.isEmpty())     return 0;
-        else if (this.isLeaf()) return 1;
-        else {
-            if (this.hasLeftChild())  leftC=this.getLeftChild().contarHojas();
-            if (this.hasRightChild()) rightC=this.getRightChild().contarHojas();
-            return leftC+rightC;
-        }
+        if (this.hasLeftChild())  leftC=this.getLeftChild().contarHojas();
+        if (this.hasRightChild()) rightC=this.getRightChild().contarHojas();
+        return leftC+rightC;
     }
 
     public BinaryTree<T> espejo(){
@@ -92,10 +87,41 @@ public class BinaryTree<T> {
 
     public void entreNiveles(int n, int m) {
 
-        if ((this.isEmpty()) || (n<0) || (m<n)) {
-            System.out.println("Niveles inválidos");
+        if ((this==null) || (this.isEmpty()) || (n<0) || (m<n))
             return;
+
+        int nivelActual=0;
+        BinaryTree<T> ab;
+        Queue<BinaryTree<T>> cola=new Queue<>();
+        cola.enqueue(this);
+        cola.enqueue(null);
+
+        while ((!cola.isEmpty()) && (nivelActual<=m)) {
+            ab=cola.dequeue();
+            if (ab!=null) {
+                if ((nivelActual>=n) && (nivelActual<=m))
+                    System.out.print(ab.getData() + " ");
+                if (ab.hasLeftChild())  cola.enqueue(ab.getLeftChild());
+                if (ab.hasRightChild()) cola.enqueue(ab.getRightChild());
+            }
+            else {
+                System.out.print("- Nivel " + (nivelActual++));
+                if ((!cola.isEmpty()) && (nivelActual<=m)) {
+                    System.out.println();
+                    cola.enqueue(null);
+                }
+            }
         }
+
+        System.out.println();
+
+    }
+
+    /*
+    public void entreNiveles(int n, int m) {
+
+        if ((this==null) || (this.isEmpty()) || (n<0) || (m<n))
+            return;
 
         BinaryTree<T> ab=null;
         Queue<BinaryTree<T>> cola=new LinkedList<>();
@@ -116,41 +142,6 @@ public class BinaryTree<T> {
                 if ((!cola.isEmpty()) && (nivelActual<=m)) {
                     System.out.println();
                     cola.offer(null);
-                }
-            }
-        }
-
-        System.out.println();
-
-    }
-
-    /*
-    public void entreNiveles(int n, int m) {
-
-        if ((this.isEmpty()) || (n<0) || (m<n)) {
-            System.out.println("Niveles inválidos");
-            return;
-        }
-
-        BinaryTree<T> ab=null;
-        Queue<BinaryTree<T>> cola=new Queue<>();
-        cola.enqueue(this);
-        cola.enqueue(null);
-        int nivelActual=0;
-
-        while ((!cola.isEmpty()) && (nivelActual<=m)) {
-            ab=cola.dequeue();
-            if (ab!=null) {
-                if ((nivelActual>=n) && (nivelActual<=m))
-                    System.out.print(ab.getData() + " ");
-                if (ab.hasLeftChild())  cola.enqueue(ab.getLeftChild());
-                if (ab.hasRightChild()) cola.enqueue(ab.getRightChild());
-            }
-            else {
-                System.out.print("- Nivel " + (nivelActual++));
-                if ((!cola.isEmpty()) && (nivelActual<=m)) {
-                    System.out.println();
-                    cola.enqueue(null);
                 }
             }
         }

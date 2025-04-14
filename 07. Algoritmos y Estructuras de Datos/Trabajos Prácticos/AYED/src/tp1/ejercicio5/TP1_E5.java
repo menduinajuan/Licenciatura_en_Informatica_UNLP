@@ -30,17 +30,11 @@ public class TP1_E5 {
         for (int i: vectorNums)
             System.out.print(i + " ");
 
-        // INCISO (a)
-
         System.out.println();
         System.out.println("CALCULADORA A: " + Calculadoras.calculadoraA(vectorNums).toString());
 
-        // INCISO (b)
-
         Calculadoras.calculadoraB(vectorNums, resultados);
         System.out.println("CALCULADORA B: " + resultados.toString());
-
-        // INCISO (c)
 
         Calculadoras.calculadoraC(vectorNums);
         System.out.println("CALCULADORA C: " + Calculadoras.getResultados().toString());

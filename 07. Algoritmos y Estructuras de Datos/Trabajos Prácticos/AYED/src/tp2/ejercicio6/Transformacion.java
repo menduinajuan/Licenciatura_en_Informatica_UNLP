@@ -15,7 +15,7 @@ public class Transformacion {
     }
 
     public BinaryTree<Integer> suma() {
-        suma(ab);
+        if ((ab!=null) && (!ab.isEmpty())) suma(ab);
         return ab;
     }
 

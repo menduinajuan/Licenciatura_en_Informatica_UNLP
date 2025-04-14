@@ -6,14 +6,16 @@ public class Imprimir {
         for (int i=a; i<=b; i++)
             System.out.println(i);
     }
+
     public static void imprimirConWhile(int a, int b) {
         while (a<=b)
             System.out.println(a++);
     }
+
     public static void imprimirConRecursion(int a, int b) {
         if (a<=b) {
             System.out.println(a);
-            imprimirConRecursion(++a,b);
+            imprimirConRecursion(++a, b);
         }
     }
 

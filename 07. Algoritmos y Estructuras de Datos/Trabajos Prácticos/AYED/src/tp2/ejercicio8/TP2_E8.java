@@ -37,6 +37,7 @@ public class TP2_E8 {
 
         BinaryTree<Integer> ab3=new BinaryTree<>();
         BinaryTree<Integer> ab4=new BinaryTree<>(1);
+        BinaryTree<Integer> ab5=null;
 
         System.out.print("Impresión Pre-Orden del árbol binario ab: ");
         BinaryTreePrinter.imprimirPreOrden(ab);
@@ -52,6 +53,9 @@ public class TP2_E8 {
         System.out.println("¿El árbol binario ab3 es prefijo del árbol binario ab3?: " + abParcial.esPrefijo(ab3, ab3));
         System.out.println("¿El árbol binario ab4 es prefijo del árbol binario ab3?: " + abParcial.esPrefijo(ab4, ab3));
         System.out.println("¿El árbol binario ab3 es prefijo del árbol binario ab4?: " + abParcial.esPrefijo(ab3, ab4));
+        System.out.println("¿El árbol binario ab4 es prefijo del árbol binario ab5?: " + abParcial.esPrefijo(ab4, ab5));
+        System.out.println("¿El árbol binario ab5 es prefijo del árbol binario ab4?: " + abParcial.esPrefijo(ab5, ab4));
+        System.out.println("¿El árbol binario ab5 es prefijo del árbol binario ab5?: " + abParcial.esPrefijo(ab5, ab5));
 
     }
 

@@ -5,7 +5,7 @@
 (b) De igual manera, incluir la clase Círculo a la jerarquía de figuras.
 (c) Añadir, a la representación String, el valor del perímetro. Pensar: ¿qué método toString se debe modificar: el de cada subclase o el de Figura?
 (d) Añadir el método despintar que establece los colores de la figura a línea “negra” y relleno “blanco”. Pensar: ¿dónde se debe definir el método: en cada subclase o en Figura?
-(e) Realizar un programa que instancie un triángulo y un círculo. Mostrar, en consola, la representación String de cada uno. Probar el funcionamiento del método despintar.
+(e) Realizar un programa que instancie un triángulo y un círculo. Mostrar en consola la representación String de cada uno. Probar el funcionamiento del método despintar.
 */
 
 package tp9;

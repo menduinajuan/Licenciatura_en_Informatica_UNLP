@@ -6,7 +6,7 @@ public class ParcialArboles {
 
     public BinaryTree<SumDif> sumAndDif(BinaryTree<Integer> arbol) {
         BinaryTree<SumDif> abSaD=new BinaryTree<>();
-        if (!arbol.isEmpty()) sumAndDif(arbol, abSaD, 0, 0);
+        if ((arbol!=null) && (!arbol.isEmpty())) sumAndDif(arbol, abSaD, 0, 0);
         return abSaD;
     }
 

@@ -1,10 +1,12 @@
 /*TRABAJO PRÁCTICO N° 6*/
 /*EJERCICIO 2*/
-/*Escribir un programa que lea las alturas de los 15 jugadores de un equipo de básquet y las almacene en un vector.
+/*
+Escribir un programa que lea las alturas de los 15 jugadores de un equipo de básquet y las almacene en un vector.
 Luego, informar:
 •	La altura promedio.
 •	La cantidad de jugadores con altura por encima del promedio.
-NOTA: Se dispone de un esqueleto para este programa en Ej02Jugadores.java.*/
+NOTA: Se dispone de un esqueleto para este programa en Ej02Jugadores.java.
+*/
 
 package tp6;
 
