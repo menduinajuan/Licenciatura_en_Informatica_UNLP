@@ -9,11 +9,27 @@ Por ejemplo, para el siguiente árbol, la lista a retornar sería: 12, 17, 6, 1 
 
 package tp3.ejercicio7;
 
+import tp3.ejercicio1.GeneralTree;
+
 public class TP3_E7 {
 
     public static void main(String[] args) {
 
-        
+        GeneralTree<Integer> ag=new GeneralTree<>(12);
+        ag.addChild(new GeneralTree<>(17));
+        ag.addChild(new GeneralTree<>(9));
+        ag.addChild(new GeneralTree<>(15));
+        ag.getChildren().get(0).addChild(new GeneralTree<>(10));
+        ag.getChildren().get(0).addChild(new GeneralTree<>(6));
+        ag.getChildren().get(1).addChild(new GeneralTree<>(8));
+        ag.getChildren().get(2).addChild(new GeneralTree<>(14));
+        ag.getChildren().get(2).addChild(new GeneralTree<>(18));
+        ag.getChildren().get(0).getChildren().get(1).addChild(new GeneralTree<>(1));
+        ag.getChildren().get(2).getChildren().get(0).addChild(new GeneralTree<>(16));
+        ag.getChildren().get(2).getChildren().get(0).addChild(new GeneralTree<>(7)); 
+
+        Caminos agCaminos=new Caminos(ag);
+        System.out.println("El camino a la hoja más lejana es " + agCaminos.caminoAHojaMasLejana());
 
     }
 

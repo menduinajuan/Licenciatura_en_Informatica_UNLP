@@ -5,8 +5,7 @@ import tp2.ejercicio1.*;
 public class ParcialArboles {
 
     public boolean esPrefijo(BinaryTree<Integer> arbol1, BinaryTree<Integer> arbol2){
-        if (arbol1==null)                         return false;
-        if (arbol2==null)                         return false;
+        if ((arbol1==null) || (arbol2==null)) return false;
         if (arbol1.isEmpty() || arbol2.isEmpty()) return arbol1.isEmpty() && arbol2.isEmpty();
         return esPrefijoRec(arbol1, arbol2);
     }

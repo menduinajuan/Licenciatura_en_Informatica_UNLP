@@ -14,11 +14,34 @@ Extendiendo el ejemplo en el siguiente gráfico, al llamar al método minimoCaud
 
 package tp3.ejercicio6;
 
+import PaqueteLectura.*;
+import tp3.ejercicio1.GeneralTree;
+
 public class TP3_E6 {
 
     public static void main(String[] args) {
 
-        
+        GeneradorAleatorio.iniciar();
+
+        GeneralTree<Character> ag=new GeneralTree<>('A');
+        ag.addChild(new GeneralTree<>('B'));
+        ag.addChild(new GeneralTree<>('C'));
+        ag.addChild(new GeneralTree<>('D'));
+        ag.addChild(new GeneralTree<>('E'));
+        ag.getChildren().get(1).addChild(new GeneralTree<>('F'));
+        ag.getChildren().get(1).addChild(new GeneralTree<>('G'));
+        ag.getChildren().get(2).addChild(new GeneralTree<>('H'));
+        ag.getChildren().get(2).addChild(new GeneralTree<>('I'));
+        ag.getChildren().get(2).addChild(new GeneralTree<>('J'));
+        ag.getChildren().get(2).addChild(new GeneralTree<>('K'));
+        ag.getChildren().get(2).addChild(new GeneralTree<>('P'));
+        ag.getChildren().get(1).getChildren().get(1).addChild(new GeneralTree<>('L'));
+        ag.getChildren().get(2).getChildren().get(2).addChild(new GeneralTree<>('M'));
+        ag.getChildren().get(2).getChildren().get(2).addChild(new GeneralTree<>('N'));
+
+        RedDeAguaPotable agRed=new RedDeAguaPotable(ag);
+        double caudalTotal=100+GeneradorAleatorio.generarDouble(901);
+        System.out.println("El caudal mínimo que recibe una casa dado un caudal total de " + String.format("%.2f", caudalTotal) + " es " + String.format("%.2f", agRed.minimoCaudal(caudalTotal)));
 
     }
 

@@ -24,7 +24,7 @@ public class Circulo extends Figura {
 
     @Override
     public double calcularArea() {
-        return Math.PI*Math.pow(getRadio(),2);
+        return Math.PI*Math.pow(getRadio(), 2);
     }
 
     @Override
