@@ -198,6 +198,6 @@ begin
   randomize;
   assign(archivo_carga,'celulares1.txt');
   cargar_archivo_carga(archivo_carga);
-  assign(archivo_celulares,'celulares2.txt');
+  assign(archivo_celulares,'celulares2');
   menu_opciones(archivo_celulares,archivo_carga);
 end.

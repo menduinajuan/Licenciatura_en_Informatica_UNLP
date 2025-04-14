@@ -45,7 +45,7 @@ public class Circulo {
     }
 
     public double calcularArea() {
-        return Math.PI*Math.pow(radio,2);
+        return Math.PI*Math.pow(radio, 2);
     }
 
     @Override

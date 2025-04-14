@@ -26,8 +26,7 @@ public class TP1_E9 {
         String S=scanner.nextLine();
         scanner.close();
 
-        if (TestBalanceo.esBalanceado(S)) System.out.println("El String " + S + " está balanceado");
-        else                              System.out.println("El String " + S + " no está balanceado");
+        System.out.println("¿El String " + S + " está balanceado?: " + TestBalanceo.esBalanceado(S));
 
     }
 

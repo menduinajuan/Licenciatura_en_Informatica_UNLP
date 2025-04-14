@@ -77,8 +77,8 @@ public class TestArrayList {
 
         // INCISO (f)
 
-        System.out.println("\n¿La secuencia almacenada en la lista es capicúa? " + Metodos.esCapicua(listaNumsAL));
-        System.out.println("¿La secuencia almacenada en la lista es capicúa? " + Metodos.esCapicua(new ArrayList<>(Arrays.asList(1,2,1))));
+        System.out.println("\n¿La secuencia almacenada en la lista es capicúa?: " + Metodos.esCapicua(listaNumsAL));
+        System.out.println("¿La secuencia almacenada en la lista es capicúa?: " + Metodos.esCapicua(new ArrayList<>(Arrays.asList(1,2,1))));
 
         // INCISO (g)
 
