@@ -16,9 +16,9 @@ De cada subsidio, se conoce: el monto pedido, el motivo y si fue otorgado o no.
 •	void agregarSubsidio(Subsidio unSubsidio);
         // agregar un subsidio al investigador.
 •	double dineroTotalOtorgado();
-        //devolver el monto total otorgado en subsidios del proyecto (tener en cuenta todos los subsidios otorgados de todos los investigadores).
+        // devolver el monto total otorgado en subsidios del proyecto (tener en cuenta todos los subsidios otorgados de todos los investigadores).
 •	void otorgarTodos(String nombre_completo);
-        //otorgar todos los subsidios no-otorgados del investigador llamado nombre_completo.
+        // otorgar todos los subsidios no-otorgados del investigador llamado nombre_completo.
 •	String toString();
         // devolver un string con: nombre del proyecto, código, nombre del director, el total de dinero otorgado del proyecto y la siguiente información de cada investigador: nombre, categoría, especialidad y el total de dinero de sus subsidios otorgados.
 (c) Escribir un programa que instancie un proyecto con tres investigadores. Agregar dos subsidios a cada investigador y otorgar los subsidios de uno de ellos. Luego, imprimir todos los datos del proyecto en pantalla.

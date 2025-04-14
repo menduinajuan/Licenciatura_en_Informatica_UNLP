@@ -1,6 +1,7 @@
 /*TRABAJO PRÁCTICO N° 9*/
 /*EJERCICIO 6*/
-/*El Servicio Meteorológico Nacional necesita un sistema que permita registrar, para una determinada estación meteorológica, la temperatura promedio mensual de N años consecutivos a partir de un año A dado.
+/*
+El Servicio Meteorológico Nacional necesita un sistema que permita registrar, para una determinada estación meteorológica, la temperatura promedio mensual de N años consecutivos a partir de un año A dado.
 Además, necesita dos versiones del sistema: una que permita reportar el promedio histórico por años y otra que permita reportar el promedio histórico por meses.
 Esto se detalla más adelante. De la estación, interesa conocer: nombre, y latitud y longitud donde se encuentra.
 Implementar las clases, constructores y métodos que se considere necesarios para:
@@ -13,7 +14,8 @@ Implementar las clases, constructores y métodos que se considere necesarios par
 •	La versión del sistema que reporta por meses deberá calcular el promedio para cada mes (el promedio del mes M se calcula con los datos de todos los años en ese mes).
 Nota: Suponer que ya están registradas las temperaturas de todos los meses y años. Utilizar el carácter \n para concatenar un salto de línea.
 (f) Realizar un programa principal que cree un Sistema con reporte anual para 3 años consecutivos a partir del 2021, para la estación La Plata (latitud -34.921 y longitud -57.955). Cargar todas las temperaturas (para todos los meses y años). Informar los promedios anuales y el mes y año en que se registró la mayor temperatura. Luego, crear un Sistema con informe mensual para 4 años a partir de 2020, para la estación Mar del Plata (latitud -38.002 y longitud -57.556). Cargar todas las temperaturas (para todos los meses y años). Informar los promedios mensuales y el mes y año en que se registró la mayor temperatura.
-NOTA: Prestar atención de no violar el encapsulamiento al resolver el ejercicio.*/
+NOTA: Prestar atención de no violar el encapsulamiento al resolver el ejercicio.
+*/
 
 package tp9;
 

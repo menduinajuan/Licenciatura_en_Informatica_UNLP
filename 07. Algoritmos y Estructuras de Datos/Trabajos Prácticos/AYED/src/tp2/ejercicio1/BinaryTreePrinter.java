@@ -24,16 +24,14 @@ public class BinaryTreePrinter {
 
     public static<T> void imprimirPorNiveles(BinaryTree<T> arbol) {
 
-        if (arbol.isEmpty()) {
-            System.out.println("Árbol vacío");
+        if ((arbol==null) || (arbol.isEmpty()))
             return;
-        }
 
-        BinaryTree<T> ab=null;
+        int nivelActual=0;
+        BinaryTree<T> ab;
         Queue<BinaryTree<T>> cola=new Queue<>();
         cola.enqueue(arbol);
         cola.enqueue(null);
-        int nivelActual=0;
 
         while (!cola.isEmpty()) {
             ab=cola.dequeue();

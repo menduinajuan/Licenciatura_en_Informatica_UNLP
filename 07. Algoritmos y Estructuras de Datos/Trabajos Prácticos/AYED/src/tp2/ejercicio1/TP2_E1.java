@@ -3,14 +3,11 @@
 /*
 Considerar la siguiente especificación de la clase Java BinaryTree (con la representación hijo izquierdo e hijo derecho).
 •	El constructor BinaryTree(T data) inicializa un árbol con el dato pasado como parámetro y ambos hijos nulos.
-•	Los métodos getLeftChild():BinaryTree<T> y getRightChild():BinaryTree<T> retornan
-•	los hijos izquierdo y derecho, respectivamente, del árbol. Si no tiene el hijo, tira error.
-•	El método addLeftChild(BinaryTree<T> child) y addRightChild(BinaryTree<T> child)
-•	agrega un hijo como hijo izquierdo o derecho del árbol.
+•	Los métodos getLeftChild():BinaryTree<T> y getRightChild():BinaryTree<T> retornan los hijos izquierdo y derecho, respectivamente, del árbol. Si no tiene el hijo, tira error.
+•	El método addLeftChild(BinaryTree<T> child) y addRightChild(BinaryTree<T> child) agrega un hijo como hijo izquierdo o derecho del árbol.
 •	El método removeLeftChild() y removeRightChild() eliminan el hijo correspondiente.
 •	El método isEmpty() indica si el árbol está vacío y el método isLeaf() indica si no tiene hijos.
-•	El método hasLeftChild() y hasRightChild() devuelve un booleano indicando si tiene
-•	dicho hijo el árbol receptor del mensaje.
+•	El método hasLeftChild() y hasRightChild() devuelve un booleano indicando si tiene dicho hijo el árbol receptor del mensaje.
 Analizar la implementación en JAVA de la clase BinaryTree brindada por la cátedra.
 */
 

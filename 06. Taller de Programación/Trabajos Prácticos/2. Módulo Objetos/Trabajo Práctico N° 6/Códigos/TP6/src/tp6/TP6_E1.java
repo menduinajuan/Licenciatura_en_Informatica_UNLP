@@ -1,8 +1,10 @@
 /*TRABAJO PRÁCTICO N° 6*/
 /*EJERCICIO 1*/
-/*Analizar el programa Ej01Tabla2.java, que carga un vector que representa la tabla del 2.
+/*
+Analizar el programa Ej01Tabla2.java, que carga un vector que representa la tabla del 2.
 Luego, escribir las instrucciones necesarias para generar enteros aleatorios hasta obtener el número 11.
-Para cada número, mostrar el resultado de multiplicarlo por 2 (accediendo al vector).*/
+Para cada número, mostrar el resultado de multiplicarlo por 2 (accediendo al vector).
+*/
 
 package tp6;
 

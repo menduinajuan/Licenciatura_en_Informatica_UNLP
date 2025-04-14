@@ -11,7 +11,7 @@ public class RedBinariaLlena {
     }
 
     public int retardoReenvio() {
-        return !ab.isEmpty() ? retardoReenvio(ab) : 0;
+        return (ab!=null && !ab.isEmpty()) ? retardoReenvio(ab) : -1;
     }
 
     private int retardoReenvio(BinaryTree<Integer> ab) {

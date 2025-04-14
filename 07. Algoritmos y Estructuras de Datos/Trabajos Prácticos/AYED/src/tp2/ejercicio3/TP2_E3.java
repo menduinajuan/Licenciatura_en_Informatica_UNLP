@@ -10,7 +10,6 @@ Implementar, en dicha clase, un método denominado numerosPares() que devuelve, 
 
 package tp2.ejercicio3;
 
-import java.util.*;
 import tp2.ejercicio1.*;
 
 public class TP2_E3 {
@@ -27,18 +26,15 @@ public class TP2_E3 {
 
         System.out.print("Impresión Pre-Orden del árbol binario ab: ");
         BinaryTreePrinter.imprimirPreOrden(ab);
-        List<Integer> listaPre=abContador.numerosParesPre();
-        System.out.println("\nImpresión Pre-Orden de los nodos pares del árbol ab: " + listaPre);
+        System.out.println("\nImpresión Pre-Orden de los nodos pares del árbol ab: " + abContador.numerosParesPre());
 
-        System.out.print("Impresión In-Orden del árbol binario ab: ");
+        System.out.print("\nImpresión In-Orden del árbol binario ab: ");
         BinaryTreePrinter.imprimirInOrden(ab);
-        List<Integer> listaIn=abContador.numerosParesIn();
-        System.out.println("\nImpresión In-Orden de los nodos pares del árbol ab: " + listaIn);
+        System.out.println("\nImpresión In-Orden de los nodos pares del árbol ab: " + abContador.numerosParesIn());
 
-        System.out.print("Impresión Post-Orden del árbol binario ab: ");
+        System.out.print("\nImpresión Post-Orden del árbol binario ab: ");
         BinaryTreePrinter.imprimirPostOrden(ab);
-        List<Integer> listaPost=abContador.numerosParesPost();
-        System.out.println("\nImpresión Post-Orden de los nodos pares del árbol ab: " + listaPost);
+        System.out.println("\nImpresión Post-Orden de los nodos pares del árbol ab: " + abContador.numerosParesPost());
 
     }
 

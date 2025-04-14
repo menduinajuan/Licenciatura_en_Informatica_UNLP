@@ -9,7 +9,7 @@ Proveer métodos para:
 •	Calcular el perímetro y devolverlo (método calcularPerimetro).
 •	Calcular el área y devolverla (método calcularArea).
 NOTA: Calcular el área con la fórmula Área= √(s(s-a)(s-b)(s-c)), donde a, b y c son lados y s= (a+b+c)/2. La función raíz cuadrada es Math.sqrt(#).
-(b) Realizar un programa que instancie un triángulo, le cargue información leída desde teclado e informe, en consola, el perímetro y el área.
+(b) Realizar un programa que instancie un triángulo, le cargue información leída desde teclado e informe en consola el perímetro y el área.
 */
 
 package tp8;

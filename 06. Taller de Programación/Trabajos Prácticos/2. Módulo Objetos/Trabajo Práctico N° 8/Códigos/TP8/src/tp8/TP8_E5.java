@@ -5,8 +5,7 @@
 •	Devolver/modificar el valor de cada uno de sus atributos (métodos get y set).
 •	Calcular el perímetro y devolverlo (método calcularPerimetro).
 •	Calcular el área y devolverla (método calcularArea).
-NOTA: la constante PI es Math.PI.
-(b) Realizar un programa que instancie un círculo, le cargue información leída de teclado e informe, en consola, el perímetro y el área.
+(b) Realizar un programa que instancie un círculo, le cargue información leída de teclado e informe en consola el perímetro y el área.
 NOTA: La constante PI es Math.PI.
 */
 

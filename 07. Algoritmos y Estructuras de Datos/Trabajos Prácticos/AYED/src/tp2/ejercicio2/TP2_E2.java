@@ -26,7 +26,7 @@ public class TP2_E2 {
 
         System.out.println("Cantidad de hojas de árbol binario ab: " + ab.contarHojas());
 
-        System.out.print("Impresión Pre-Orden del árbol binario ab: ");
+        System.out.print("\nImpresión Pre-Orden del árbol binario ab: ");
         BinaryTreePrinter.imprimirPreOrden(ab);
         BinaryTree<Integer> abEspejo=ab.espejo();
         System.out.print("\nImpresión Pre-Orden del árbol binario abEspejo: ");        
@@ -34,7 +34,7 @@ public class TP2_E2 {
 
         int n=GeneradorAleatorio.generarInt(3);
         int m=n+GeneradorAleatorio.generarInt(3-n);
-        System.out.println("\nImpresión Entre Niveles [" + n + ", " + m + "]" + " del árbol binario ab:");
+        System.out.println("\n\nImpresión Entre Niveles [" + n + ", " + m + "]" + " del árbol binario ab:");
         ab.entreNiveles(n, m);
 
     }

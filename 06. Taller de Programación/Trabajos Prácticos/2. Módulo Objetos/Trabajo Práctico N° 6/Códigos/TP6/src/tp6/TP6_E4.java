@@ -1,9 +1,11 @@
 /*TRABAJO PRÁCTICO N° 6*/
 /*EJERCICIO 4*/
-/*Un edificio de oficinas está conformado por 8 pisos (1..8) y 4 oficinas por piso (1..4).
+/*
+Un edificio de oficinas está conformado por 8 pisos (1..8) y 4 oficinas por piso (1..4).
 Realizar un programa que permita informar la cantidad de personas que concurrieron a cada oficina de cada piso.
 Para esto, simular la llegada de personas al edificio de la siguiente manera: a cada persona, se le pide el nro. de piso y nro. de oficina a la cual quiere concurrir.
-La llegada de personas finaliza al indicar un nro. de piso 9. Al finalizar la llegada de personas, informar lo pedido.*/
+La llegada de personas finaliza al indicar un nro. de piso 9. Al finalizar la llegada de personas, informar lo pedido.
+*/
 
 package tp6;
 
