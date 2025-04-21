@@ -16,9 +16,9 @@ public class ParcialArboles {
                 int min=Integer.MAX_VALUE;
                 for (GeneralTree<Integer> child: ag.getChildren()) {
                     cola.enqueue(child);
-                    min=Math.min(min, child.getData());
+                    if (child.getData()!=null) min=Math.min(min, child.getData());
                 }
-                if ((!ag.isLeaf()) && (ag.getData()!=min)) ok=false;
+                if ((!ag.isLeaf()) && ((ag.getData()==null) || (ag.getData()!=min))) ok=false;
             }
         }
         return ok;

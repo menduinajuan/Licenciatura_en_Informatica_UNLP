@@ -11,7 +11,8 @@ public class ParcialArboles {
     }
 
     private void sumAndDif(BinaryTree<Integer> arbol, BinaryTree<SumDif> abSaD, int suma, int padre) {
-        int num=arbol.getData();
+        int num=0;
+        if (arbol.getData()!=null) num=arbol.getData();
         abSaD.setData(new SumDif(num+suma, num-padre));
         if (arbol.hasLeftChild()) {
             abSaD.addLeftChild(new BinaryTree<>());

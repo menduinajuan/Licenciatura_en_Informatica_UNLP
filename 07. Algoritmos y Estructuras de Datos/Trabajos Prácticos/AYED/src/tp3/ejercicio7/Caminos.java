@@ -19,13 +19,15 @@ public class Caminos {
 
     private void caminoAHojaMasLejana(GeneralTree<Integer> nodo, List<Integer> caminoActual, List<Integer> caminoMasLargo) {
         caminoActual.add(nodo.getData());
-        if (!nodo.isLeaf())
-            for (GeneralTree<Integer> child: nodo.getChildren())
-                caminoAHojaMasLejana(child, caminoActual, caminoMasLargo);
-        else if (caminoActual.size()>caminoMasLargo.size()) {
+        if (nodo.isLeaf()) {
+            if (caminoActual.size()>caminoMasLargo.size()) {
                 caminoMasLargo.clear();
                 caminoMasLargo.addAll(caminoActual);
+            }
         }
+        else
+            for (GeneralTree<Integer> child: nodo.getChildren())
+                caminoAHojaMasLejana(child, caminoActual, caminoMasLargo);
         caminoActual.remove(caminoActual.size()-1);
     }
 

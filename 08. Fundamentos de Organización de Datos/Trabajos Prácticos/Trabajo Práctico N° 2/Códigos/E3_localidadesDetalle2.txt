@@ -1,0 +1,6 @@
+3 150 300 Catamarca
+4 200 400 Catamarca
+7 350 700 Chubut
+8 400 800 Chubut
+11 550 1100 Corrientes
+12 600 1200 Corrientes

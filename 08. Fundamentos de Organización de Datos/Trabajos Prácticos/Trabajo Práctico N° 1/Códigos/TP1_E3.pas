@@ -19,7 +19,6 @@ const
   opcion_salida=0;
 type
   t_string10=string[10];
-  t_string20=string[20];
   t_registro_empleado=record
     numero: int16;
     apellido: t_string10;
@@ -139,7 +138,7 @@ var
   opcion: int8;
 begin
   leer_opcion(opcion);
-  while(opcion<>opcion_salida) do
+  while (opcion<>opcion_salida) do
   begin
     case opcion of
       1: cargar_archivo_empleados(archivo_empleados);
@@ -157,6 +156,6 @@ var
   archivo_empleados: t_archivo_empleados;
 begin
   randomize;
-  assign(archivo_empleados,'empleados');
+  assign(archivo_empleados,'E3_empleados');
   menu_opciones(archivo_empleados);
 end.

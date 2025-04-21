@@ -22,9 +22,9 @@ public class TP2_E9 {
         ab.addRightChild(new BinaryTree<>(30));
         ab.getLeftChild().addLeftChild(new BinaryTree<>(-5));
         ab.getLeftChild().addRightChild(new BinaryTree<>(10));
-        ab.getLeftChild().getRightChild().addLeftChild(new BinaryTree<>(1));
         ab.getRightChild().addLeftChild(new BinaryTree<>(50));
         ab.getRightChild().addRightChild(new BinaryTree<>(-9));
+        ab.getLeftChild().getRightChild().addLeftChild(new BinaryTree<>(1));
         ab.getRightChild().getLeftChild().addRightChild(new BinaryTree<>(4));
         ab.getRightChild().getLeftChild().getRightChild().addRightChild(new BinaryTree<>(6));
 

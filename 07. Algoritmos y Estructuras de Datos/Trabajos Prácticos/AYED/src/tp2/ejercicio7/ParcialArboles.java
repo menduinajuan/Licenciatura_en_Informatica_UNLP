@@ -15,7 +15,7 @@ public class ParcialArboles {
     }
 
     private BinaryTree<Integer> buscarNodo(BinaryTree<Integer> ab, BinaryTree<Integer> nodo, int num) {
-        if (ab.getData()==num) return ab;
+        if ((ab.getData()!=null) && (ab.getData()==num)) return ab;
         if (ab.hasLeftChild())                        nodo=buscarNodo(ab.getLeftChild(), nodo, num);
         if ((ab.hasRightChild()) && (nodo.isEmpty())) nodo=buscarNodo(ab.getRightChild(), nodo, num);
         return nodo;
