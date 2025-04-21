@@ -1,0 +1,12 @@
+1 1 0 0 0 0 Cepa1
+La Plata
+1 2 0 0 0 0 Cepa2
+La Plata
+2 1 0 0 0 0 Cepa1
+Berisso
+2 2 0 0 0 0 Cepa2
+Berisso
+3 1 0 0 0 0 Cepa1
+Ensenada
+3 2 0 0 0 0 Cepa2
+Ensenada

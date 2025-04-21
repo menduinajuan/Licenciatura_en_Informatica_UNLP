@@ -20,17 +20,17 @@ public class Transformacion {
     }
 
     private int suma(BinaryTree<Integer> ab) {
-        int sum=0;
+        int actual=0;
+        if (ab.getData()!=null) actual=ab.getData();
         if (ab.isLeaf()) {
-            sum=ab.getData();
             ab.setData(0);
-            return sum;
+            return actual;
         }
-        if (ab.hasLeftChild())  sum+=suma(ab.getLeftChild());
-        if (ab.hasRightChild()) sum+=suma(ab.getRightChild());
-        int actual=ab.getData();
-        ab.setData(sum);
-        return actual+sum;
+        int suma=0;
+        if (ab.hasLeftChild())  suma+=suma(ab.getLeftChild());
+        if (ab.hasRightChild()) suma+=suma(ab.getRightChild());
+        ab.setData(suma);
+        return actual+suma;
     }
 
 }

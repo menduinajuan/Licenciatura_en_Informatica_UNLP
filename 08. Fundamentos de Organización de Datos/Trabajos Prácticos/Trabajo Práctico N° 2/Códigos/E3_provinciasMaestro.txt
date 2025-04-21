@@ -1,0 +1,23 @@
+0 0 Buenos Aires
+0 0 Catamarca
+0 0 Chaco
+0 0 Chubut
+0 0 Cordoba
+0 0 Corrientes
+0 0 Entre Rios
+0 0 Formosa
+0 0 Jujuy
+0 0 La Pampa
+0 0 La Rioja
+0 0 Mendoza
+0 0 Misiones
+0 0 Neuquen
+0 0 Rio Negro
+0 0 Salta
+0 0 San Juan
+0 0 San Luis
+0 0 Santa Cruz
+0 0 Santa Fe
+0 0 Santiago del Estero
+0 0 Tierra del Fuego, Antartida e Islas del Atlantico Sur
+0 0 Tucuman

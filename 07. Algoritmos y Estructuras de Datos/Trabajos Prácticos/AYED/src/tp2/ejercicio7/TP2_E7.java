@@ -22,10 +22,10 @@ public class TP2_E7 {
         ab.addRightChild(new BinaryTree<>(-5));
         ab.getLeftChild().addLeftChild(new BinaryTree<>(23));
         ab.getLeftChild().addRightChild(new BinaryTree<>(6));
+        ab.getRightChild().addLeftChild(new BinaryTree<>(19));
         ab.getLeftChild().getLeftChild().addLeftChild(new BinaryTree<>(-3));
         ab.getLeftChild().getRightChild().addLeftChild(new BinaryTree<>(55));
         ab.getLeftChild().getRightChild().addRightChild(new BinaryTree<>(11));
-        ab.getRightChild().addLeftChild(new BinaryTree<>(19));
         ab.getRightChild().getLeftChild().addRightChild(new BinaryTree<>(4));
         ab.getRightChild().getLeftChild().getRightChild().addLeftChild(new BinaryTree<>(18));
 

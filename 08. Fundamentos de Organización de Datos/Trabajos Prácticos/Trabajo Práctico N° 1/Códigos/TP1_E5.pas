@@ -19,19 +19,18 @@ const
   codigo_salida=0;
   opcion_salida=0;
 type
-  t_string10=string[10];
   t_string20=string[20];
   t_registro_celular=record
     codigo: int16;
-    nombre: t_string10;
+    nombre: t_string20;
     descripcion: t_string20;
-    marca: t_string10;
+    marca: t_string20;
     precio: real;
     stock_minimo: int16;
     stock_disponible: int16;
   end;
   t_archivo_celulares=file of t_registro_celular;
-function random_string(length: int8): t_string10;
+function random_string(length: int8): t_string20;
 var
   i: int8;
   string_aux: string;
@@ -43,7 +42,7 @@ begin
 end;
 procedure leer_celular(var registro_celular: t_registro_celular);
 var
-  vector_marcas: array[1..10] of t_string10=('Alcatel', 'Apple', 'Huawei', 'Lenovo', 'LG', 'Motorola', 'Nokia', 'Samsung', 'Sony', 'Xiaomi');
+  vector_marcas: array[1..10] of t_string20=('Alcatel', 'Apple', 'Huawei', 'Lenovo', 'LG', 'Motorola', 'Nokia', 'Samsung', 'Sony', 'Xiaomi');
   vector_descripciones: array[1..5] of t_string20=('Gama baja', 'Gama media baja', 'Gama media', 'Gama media alta', 'Gama alta');
   i: int8;
 begin
@@ -145,8 +144,7 @@ var
   archivo_txt: text;
 begin
   reset(archivo_celulares);
-  assign(archivo_txt,'celulares2.txt');
-  rewrite(archivo_txt);
+  assign(archivo_txt,'E5_celulares2.txt'); rewrite(archivo_txt);
   while (not eof(archivo_celulares)) do
   begin
     read(archivo_celulares,registro_celular);
@@ -177,7 +175,7 @@ var
   opcion: int8;
 begin
   leer_opcion(opcion);
-  while(opcion<>opcion_salida) do
+  while (opcion<>opcion_salida) do
   begin
     case opcion of
       1: cargar_archivo_celulares(archivo_celulares,archivo_carga);
@@ -196,8 +194,8 @@ var
   archivo_carga: text;
 begin
   randomize;
-  assign(archivo_carga,'celulares1.txt');
+  assign(archivo_carga,'E5_celulares1.txt');
+  assign(archivo_celulares,'E5_celulares2');
   cargar_archivo_carga(archivo_carga);
-  assign(archivo_celulares,'celulares2');
   menu_opciones(archivo_celulares,archivo_carga);
 end.

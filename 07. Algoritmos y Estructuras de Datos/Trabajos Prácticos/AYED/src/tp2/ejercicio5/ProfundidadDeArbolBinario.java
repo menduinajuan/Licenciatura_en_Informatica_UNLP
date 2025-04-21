@@ -15,7 +15,10 @@ public class ProfundidadDeArbolBinario {
     }
 
     private int sumaElementosProfundidad(int p, BinaryTree<Integer> ab, int nivelActual) {
-        if (p==nivelActual) return ab.getData();
+        if (p==nivelActual) {
+            if (ab.getData()!=null) return ab.getData();
+            return 0;
+        }
         int suma=0;
         if (ab.hasLeftChild())  suma+=sumaElementosProfundidad(p, ab.getLeftChild(), nivelActual+1);
         if (ab.hasRightChild()) suma+=sumaElementosProfundidad(p, ab.getRightChild(), nivelActual+1);

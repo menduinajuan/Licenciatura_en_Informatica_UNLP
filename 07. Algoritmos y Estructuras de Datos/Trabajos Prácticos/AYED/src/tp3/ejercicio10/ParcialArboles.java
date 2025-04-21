@@ -7,29 +7,29 @@ public class ParcialArboles {
 
     public static List<Integer> resolver(GeneralTree<Integer> arbol) {
         List<Integer> lista=new LinkedList<>();
-        if ((arbol!=null) && (!arbol.isEmpty())) {
-            Maximo sumaMax=new Maximo(-1);
-            resolver(arbol, new LinkedList<>(), lista, 0, sumaMax, 0);
-        }
+        if ((arbol!=null) && (!arbol.isEmpty())) resolver(arbol, new LinkedList<>(), lista, 0, new Maximo(-1), 0);
         return lista;
     }
 
     private static void resolver(GeneralTree<Integer> arbol, List<Integer> caminoActual, List<Integer> caminoMax, int sumaActual, Maximo sumaMax, int nivel) {
-        int dato=arbol.getData();
-        boolean ok=(dato==1);
+        int num=0;
+        if (arbol.getData()!=null) num=arbol.getData();
+        boolean ok=(num==1);
         if (ok) {
-            sumaActual+=dato*nivel;
-            caminoActual.add(dato);
+            sumaActual+=num*nivel;
+            caminoActual.add(num);
         }
-        if (!arbol.isLeaf())
+        if (arbol.isLeaf()) {
+            if (sumaActual>sumaMax.getMax()) {
+                sumaMax.setMax(sumaActual);
+                sumaActual=0;
+                caminoMax.clear();
+                caminoMax.addAll(caminoActual);
+            }
+        }
+        else
             for (GeneralTree<Integer> child: arbol.getChildren())
                 resolver(child, caminoActual, caminoMax, sumaActual, sumaMax, nivel+1);
-        else if (sumaActual>sumaMax.getMax()) {
-            sumaMax.setMax(sumaActual);
-            sumaActual=0;
-            caminoMax.clear();
-            caminoMax.addAll(caminoActual);
-        }
         if (ok) caminoActual.remove(caminoActual.size()-1);
     }
 

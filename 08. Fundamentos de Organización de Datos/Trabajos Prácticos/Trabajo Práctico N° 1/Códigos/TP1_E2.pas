@@ -37,7 +37,7 @@ var
   prom: real;
 begin
   nums_corte:=0; prom:=0;
-  assign(archivo_enteros,'enteros');
+  assign(archivo_enteros,'E1_enteros');
   procesar_archivo_enteros(archivo_enteros,nums_corte,prom);
   textcolor(green); write('La cantidad de números menores a '); textcolor(yellow); write(num_corte); textcolor(green); write(' es '); textcolor(red); writeln(nums_corte);
   textcolor(green); write('El promedio de los números ingresados es '); textcolor(red); write(prom:0:2);

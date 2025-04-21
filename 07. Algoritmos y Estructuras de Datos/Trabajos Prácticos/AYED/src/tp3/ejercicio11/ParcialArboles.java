@@ -20,13 +20,12 @@ public class ParcialArboles {
             nodosActual=cola.size();
             if (nodosActual!=nodosAnterior+1)
                 return false;
-            else {
+            else
                 for (int i=0; i<nodosActual; i++) {
                     ag=cola.dequeue();
                     for (GeneralTree<Integer> child: ag.getChildren())
                         cola.enqueue(child);
                 }
-            }
             nodosAnterior=nodosActual;
         }
         return true;

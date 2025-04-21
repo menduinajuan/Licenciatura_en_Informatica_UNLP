@@ -40,6 +40,6 @@ var
   archivo_enteros: t_archivo_enteros;
 begin
   randomize;
-  assign(archivo_enteros,'enteros');
+  assign(archivo_enteros,'E1_enteros');
   cargar_archivo_enteros(archivo_enteros);
 end.

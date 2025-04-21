@@ -161,8 +161,7 @@ var
   archivo_txt: text;
 begin
   reset(archivo_novelas);
-  assign(archivo_txt,'novelas2.txt');
-  rewrite(archivo_txt);
+  assign(archivo_txt,'E7_novelas2.txt'); rewrite(archivo_txt);
   while (not eof(archivo_novelas)) do
   begin
     read(archivo_novelas,registro_novela);
@@ -192,7 +191,7 @@ var
   opcion: int8;
 begin
   leer_opcion(opcion);
-  while(opcion<>opcion_salida) do
+  while (opcion<>opcion_salida) do
   begin
     case opcion of
       1: cargar_archivo_novelas(archivo_novelas,archivo_carga);
@@ -211,8 +210,8 @@ var
   archivo_carga: text;
 begin
   randomize;
-  assign(archivo_carga,'novelas1.txt');
+  assign(archivo_carga,'E7_novelas1.txt');
+  assign(archivo_novelas,'E7_novelas2');
   cargar_archivo_carga(archivo_carga);
-  assign(archivo_novelas,'novelas2');
   menu_opciones(archivo_novelas,archivo_carga);
 end.

@@ -1,7 +1,7 @@
 /*TRABAJO PRÁCTICO N° 2*/
 /*EJERCICIO 4*/
 /*
-Una red binaria es una red que posee una topología de árbol binario lleno. Por ejemplo:
+Una red binaria es una red que posee una topología de árbol binario lleno.
 Los nodos que conforman una red binaria llena tienen la particularidad de que todos ellos conocen cuál es su retardo de reenvío.
 El retardo de reenvío se define como el período comprendido entre que un nodo recibe un mensaje y lo reenvía a sus dos hijos.
 La tarea es calcular el mayor retardo posible, en el camino que realiza un mensaje desde la raíz hasta llegar a las hojas en una red binaria llena.
