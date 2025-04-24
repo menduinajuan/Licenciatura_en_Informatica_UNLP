@@ -13,27 +13,27 @@ uses crt, sysutils;
 const
   codigo_salida=999;
 type
-  t_string10=string[10];
+  t_string20=string[20];
   t_registro_empleado=record
     codigo: int16;
-    nombre: t_string10;
+    nombre: t_string20;
     comision: real;
   end;
   t_archivo_empleados=file of t_registro_empleado;
-procedure cargar_archivo_detalle(var archivo_detalle: t_archivo_empleados; var archivo_carga: text);
+procedure cargar_archivo_detalle(var archivo_detalle: t_archivo_empleados; var archivo_carga_detalle: text);
 var
   registro_empleado: t_registro_empleado;
 begin
   rewrite(archivo_detalle);
-  reset(archivo_carga);
-  while (not eof(archivo_carga)) do
+  reset(archivo_carga_detalle);
+  while (not eof(archivo_carga_detalle)) do
     with registro_empleado do
     begin
-      readln(archivo_carga,codigo,comision,nombre); nombre:=trim(nombre);
+      readln(archivo_carga_detalle,codigo,comision,nombre); nombre:=trim(nombre);
       write(archivo_detalle,registro_empleado);
     end;
   close(archivo_detalle);
-  close(archivo_carga);
+  close(archivo_carga_detalle);
 end;
 procedure imprimir_registro_empleado(registro_empleado: t_registro_empleado);
 begin
@@ -85,11 +85,11 @@ begin
 end;
 var
   archivo_detalle, archivo_maestro: t_archivo_empleados;
-  archivo_carga: text;
+  archivo_carga_detalle: text;
 begin
   writeln(); textcolor(red); writeln('IMPRESIÓN ARCHIVO DETALLE:'); writeln();
-  assign(archivo_detalle,'E1_empleadosDetalle'); assign(archivo_carga,'E1_empleadosDetalle.txt');
-  cargar_archivo_detalle(archivo_detalle,archivo_carga);
+  assign(archivo_detalle,'E1_empleadosDetalle'); assign(archivo_carga_detalle,'E1_empleadosDetalle.txt');
+  cargar_archivo_detalle(archivo_detalle,archivo_carga_detalle);
   imprimir_archivo_empleados(archivo_detalle);
   writeln(); textcolor(red); writeln('IMPRESIÓN ARCHIVO MAESTRO:'); writeln();
   assign(archivo_maestro,'E1_empleadosMaestro');

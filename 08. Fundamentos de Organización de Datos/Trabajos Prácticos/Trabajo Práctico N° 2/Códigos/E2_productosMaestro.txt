@@ -1,3 +1,3 @@
-1 100 10 2 Empanada
-2 200 20 4 Pizza
-3 300 30 6 Hamburguesa
+1 100.00 10 2 Empanada
+2 200.00 20 4 Pizza
+3 300.00 30 6 Hamburguesa

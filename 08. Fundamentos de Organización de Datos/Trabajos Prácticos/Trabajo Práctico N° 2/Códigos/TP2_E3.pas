@@ -26,35 +26,35 @@ type
   end;
   t_archivo_maestro=file of t_registro_provincia;
   t_archivo_detalle=file of t_registro_localidad;
-procedure cargar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_carga: text);
+procedure cargar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_carga_maestro: text);
 var
   registro_provincia: t_registro_provincia;
 begin
   rewrite(archivo_maestro);
-  reset(archivo_carga);
-  while (not eof(archivo_carga)) do
+  reset(archivo_carga_maestro);
+  while (not eof(archivo_carga_maestro)) do
     with registro_provincia do
     begin
-      readln(archivo_carga,alfabetizados,encuestados,nombre); nombre:=trim(nombre);
+      readln(archivo_carga_maestro,alfabetizados,encuestados,nombre); nombre:=trim(nombre);
       write(archivo_maestro,registro_provincia);
     end;
   close(archivo_maestro);
-  close(archivo_carga);
+  close(archivo_carga_maestro);
 end;
-procedure cargar_archivo_detalle(var archivo_detalle: t_archivo_detalle; var archivo_carga: text);
+procedure cargar_archivo_detalle(var archivo_detalle: t_archivo_detalle; var archivo_carga_detalle: text);
 var
   registro_localidad: t_registro_localidad;
 begin
   rewrite(archivo_detalle);
-  reset(archivo_carga);
-  while (not eof(archivo_carga)) do
+  reset(archivo_carga_detalle);
+  while (not eof(archivo_carga_detalle)) do
     with registro_localidad do
     begin
-      readln(archivo_carga,codigo,alfabetizados,encuestados,nombre); nombre:=trim(nombre);
+      readln(archivo_carga_detalle,codigo,alfabetizados,encuestados,nombre); nombre:=trim(nombre);
       write(archivo_detalle,registro_localidad);
     end;
   close(archivo_detalle);
-  close(archivo_carga);
+  close(archivo_carga_detalle);
 end;
 procedure imprimir_registro_provincia(registro_provincia: t_registro_provincia);
 begin

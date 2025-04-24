@@ -1,6 +1,6 @@
-1 100 Juan
-1 200 Juan
-1 300 Juan
-2 400 Ignacio
-2 500 Ignacio
-3 600 Menduina
+1 100.00 Juan
+1 200.00 Juan
+1 300.00 Juan
+2 400.00 Ignacio
+2 500.00 Ignacio
+3 600.00 Menduina

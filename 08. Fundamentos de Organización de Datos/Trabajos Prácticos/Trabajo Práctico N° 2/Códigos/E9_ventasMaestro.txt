@@ -1,0 +1,24 @@
+1 2024 1 1 100.00 Juan
+Menduina
+1 2024 2 1 200.00 Juan
+Menduina
+1 2024 3 1 300.00 Juan
+Menduina
+1 2025 1 1 100.00 Juan
+Menduina
+1 2025 2 1 200.00 Juan
+Menduina
+1 2025 3 1 300.00 Juan
+Menduina
+2 2024 4 1 100.00 Demian
+Panigo
+2 2024 5 1 200.00 Demian
+Panigo
+2 2025 4 1 100.00 Demian
+Panigo
+2 2025 5 1 200.00 Demian
+Panigo
+3 2024 6 1 100.00 Matias
+Guaymas
+3 2025 6 1 100.00 Matias
+Guaymas

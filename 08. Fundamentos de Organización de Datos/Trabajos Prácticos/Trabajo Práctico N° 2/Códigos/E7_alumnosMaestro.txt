@@ -1,0 +1,6 @@
+1 0 0 Menduina
+Juan
+2 0 0 Panigo
+Demian
+3 0 0 Guaymas
+Matias
