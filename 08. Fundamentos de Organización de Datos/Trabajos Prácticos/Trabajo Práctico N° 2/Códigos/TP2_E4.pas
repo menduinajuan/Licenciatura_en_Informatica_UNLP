@@ -35,36 +35,36 @@ type
   t_vector_ventas=array[t_detalle] of t_registro_venta;
   t_vector_detalles=array[t_detalle] of t_archivo_detalle;
   t_vector_carga_detalles=array[t_detalle] of text;
-procedure cargar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_carga: text);
+procedure cargar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_carga_maestro: text);
 var
   registro_producto: t_registro_producto;
 begin
   rewrite(archivo_maestro);
-  reset(archivo_carga);
-  while (not eof(archivo_carga)) do
+  reset(archivo_carga_maestro);
+  while (not eof(archivo_carga_maestro)) do
     with registro_producto do
     begin
-      readln(archivo_carga,codigo,stock_disponible,stock_minimo,precio,nombre); nombre:=trim(nombre);
-      readln(archivo_carga,descripcion); descripcion:=trim(descripcion);
+      readln(archivo_carga_maestro,codigo,stock_disponible,stock_minimo,precio,nombre); nombre:=trim(nombre);
+      readln(archivo_carga_maestro,descripcion); descripcion:=trim(descripcion);
       write(archivo_maestro,registro_producto);
     end;
   close(archivo_maestro);
-  close(archivo_carga);
+  close(archivo_carga_maestro);
 end;
-procedure cargar_archivo_detalle(var archivo_detalle: t_archivo_detalle; var archivo_carga: text);
+procedure cargar_archivo_detalle(var archivo_detalle: t_archivo_detalle; var archivo_carga_detalle: text);
 var
   registro_venta: t_registro_venta;
 begin
   rewrite(archivo_detalle);
-  reset(archivo_carga);
-  while (not eof(archivo_carga)) do
+  reset(archivo_carga_detalle);
+  while (not eof(archivo_carga_detalle)) do
     with registro_venta do
     begin
-      readln(archivo_carga,codigo,cantidad_vendida);
+      readln(archivo_carga_detalle,codigo,cantidad_vendida);
       write(archivo_detalle,registro_venta);
     end;
   close(archivo_detalle);
-  close(archivo_carga);
+  close(archivo_carga_detalle);
 end;
 procedure imprimir_registro_producto(registro_producto: t_registro_producto);
 begin
@@ -144,8 +144,8 @@ end;
 procedure actualizar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var vector_detalles: t_vector_detalles);
 var
   registro_producto: t_registro_producto;
-  vector_ventas: t_vector_ventas;
   min: t_registro_venta;
+  vector_ventas: t_vector_ventas;
   i: t_detalle;
 begin
   reset(archivo_maestro);

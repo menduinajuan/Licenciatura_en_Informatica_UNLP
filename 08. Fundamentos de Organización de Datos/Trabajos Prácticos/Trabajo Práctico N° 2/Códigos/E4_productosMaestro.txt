@@ -1,6 +1,6 @@
-1 10 2 100 Empanada
+1 10 2 100.00 Empanada
 Regular
-2 20 4 200 Pizza
+2 20 4 200.00 Pizza
 Bueno
-3 30 6 300 Hamburguesa
+3 30 6 300.00 Hamburguesa
 Muy bueno

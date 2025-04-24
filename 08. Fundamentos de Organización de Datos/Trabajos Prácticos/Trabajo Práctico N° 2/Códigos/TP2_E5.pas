@@ -27,20 +27,20 @@ type
   t_vector_sesiones=array[t_detalle] of t_registro_sesion;
   t_vector_detalles=array[t_detalle] of t_archivo_sesiones;
   t_vector_carga_detalles=array[t_detalle] of text;
-procedure cargar_archivo_detalle(var archivo_detalle: t_archivo_sesiones; var archivo_carga: text);
+procedure cargar_archivo_detalle(var archivo_detalle: t_archivo_sesiones; var archivo_carga_detalle: text);
 var
   registro_sesion: t_registro_sesion;
 begin
   rewrite(archivo_detalle);
-  reset(archivo_carga);
-  while (not eof(archivo_carga)) do
+  reset(archivo_carga_detalle);
+  while (not eof(archivo_carga_detalle)) do
     with registro_sesion do
     begin
-      readln(archivo_carga,codigo,tiempo,fecha); fecha:=trim(fecha);
+      readln(archivo_carga_detalle,codigo,tiempo,fecha); fecha:=trim(fecha);
       write(archivo_detalle,registro_sesion);
     end;
   close(archivo_detalle);
-  close(archivo_carga);
+  close(archivo_carga_detalle);
 end;
 procedure imprimir_registro_sesion(registro_sesion: t_registro_sesion);
 begin
@@ -83,9 +83,8 @@ begin
 end;
 procedure cargar_archivo_maestro(var archivo_maestro: t_archivo_sesiones; var vector_detalles: t_vector_detalles);
 var
-  registro_sesion: t_registro_sesion;
+  registro_sesion, min: t_registro_sesion;
   vector_sesiones: t_vector_sesiones;
-  min: t_registro_sesion;
   i: t_detalle;
 begin
   rewrite(archivo_maestro);

@@ -44,36 +44,36 @@ type
   t_vector_localidades=array[t_detalle] of t_registro_localidad2;
   t_vector_detalles=array[t_detalle] of t_archivo_detalle;
   t_vector_carga_detalles=array[t_detalle] of text;
-procedure cargar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_carga: text);
+procedure cargar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_carga_maestro: text);
 var
   registro_localidad: t_registro_localidad1;
 begin
   rewrite(archivo_maestro);
-  reset(archivo_carga);
-  while (not eof(archivo_carga)) do
+  reset(archivo_carga_maestro);
+  while (not eof(archivo_carga_maestro)) do
     with registro_localidad do
     begin
-      readln(archivo_carga,codigo,codigo_cepa,casos_activos,casos_nuevos,casos_recuperados,casos_fallecidos,nombre_cepa); nombre_cepa:=trim(nombre_cepa);
-      readln(archivo_carga,nombre); nombre:=trim(nombre);
+      readln(archivo_carga_maestro,codigo,codigo_cepa,casos_activos,casos_nuevos,casos_recuperados,casos_fallecidos,nombre_cepa); nombre_cepa:=trim(nombre_cepa);
+      readln(archivo_carga_maestro,nombre); nombre:=trim(nombre);
       write(archivo_maestro,registro_localidad);
     end;
   close(archivo_maestro);
-  close(archivo_carga);
+  close(archivo_carga_maestro);
 end;
-procedure cargar_archivo_detalle(var archivo_detalle: t_archivo_detalle; var archivo_carga: text);
+procedure cargar_archivo_detalle(var archivo_detalle: t_archivo_detalle; var archivo_carga_detalle: text);
 var
   registro_localidad: t_registro_localidad2;
 begin
   rewrite(archivo_detalle);
-  reset(archivo_carga);
-  while (not eof(archivo_carga)) do
+  reset(archivo_carga_detalle);
+  while (not eof(archivo_carga_detalle)) do
     with registro_localidad do
     begin
-      readln(archivo_carga,codigo,codigo_cepa,casos_activos,casos_nuevos,casos_recuperados,casos_fallecidos);
+      readln(archivo_carga_detalle,codigo,codigo_cepa,casos_activos,casos_nuevos,casos_recuperados,casos_fallecidos);
       write(archivo_detalle,registro_localidad);
     end;
   close(archivo_detalle);
-  close(archivo_carga);
+  close(archivo_carga_detalle);
 end;
 procedure imprimir_registro_localidad1(registro_localidad: t_registro_localidad1);
 begin
@@ -143,8 +143,8 @@ end;
 procedure actualizar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var vector_detalles: t_vector_detalles);
 var
   registro_localidad: t_registro_localidad1;
-  vector_localidades: t_vector_localidades;
   min: t_registro_localidad2;
+  vector_localidades: t_vector_localidades;
   i: t_detalle;
   casos_activos_localidad, localidades_corte: int16;
 begin
