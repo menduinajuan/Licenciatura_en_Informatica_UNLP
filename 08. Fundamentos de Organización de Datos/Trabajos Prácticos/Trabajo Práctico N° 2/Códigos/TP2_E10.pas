@@ -11,77 +11,77 @@ uses crt, sysutils;
 const
   provincia_salida=999;
 type
-  t_registro_votos=record
+  t_registro_mesa=record
     provincia: int16;
     localidad: int16;
     mesa: int16;
     votos: int32;
   end;
-  t_archivo_maestro=file of t_registro_votos;
+  t_archivo_maestro=file of t_registro_mesa;
 procedure cargar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_carga_maestro: text);
 var
-  registro_votos: t_registro_votos;
+  registro_mesa: t_registro_mesa;
 begin
   rewrite(archivo_maestro);
   reset(archivo_carga_maestro);
   while (not eof(archivo_carga_maestro)) do
-    with registro_votos do
+    with registro_mesa do
     begin
       readln(archivo_carga_maestro,provincia,localidad,mesa,votos);
-      write(archivo_maestro,registro_votos);
+      write(archivo_maestro,registro_mesa);
     end;
   close(archivo_maestro);
   close(archivo_carga_maestro);
 end;
-procedure imprimir_registro_votos(registro_votos: t_registro_votos);
+procedure imprimir_registro_mesa(registro_mesa: t_registro_mesa);
 begin
-  textcolor(green); write('Código de provincia: '); textcolor(yellow); write(registro_votos.provincia);
-  textcolor(green); write('; Código de localidad: '); textcolor(yellow); write(registro_votos.localidad);
-  textcolor(green); write('; Número de mesa: '); textcolor(yellow); write(registro_votos.mesa);
-  textcolor(green); write('; Cantidad de votos: '); textcolor(yellow); writeln(registro_votos.votos);
+  textcolor(green); write('Código de provincia: '); textcolor(yellow); write(registro_mesa.provincia);
+  textcolor(green); write('; Código de localidad: '); textcolor(yellow); write(registro_mesa.localidad);
+  textcolor(green); write('; Número de mesa: '); textcolor(yellow); write(registro_mesa.mesa);
+  textcolor(green); write('; Votos: '); textcolor(yellow); writeln(registro_mesa.votos);
 end;
 procedure imprimir_archivo_maestro(var archivo_maestro: t_archivo_maestro);
 var
-  registro_votos: t_registro_votos;
+  registro_mesa: t_registro_mesa;
 begin
   reset(archivo_maestro);
   while (not eof(archivo_maestro)) do
   begin
-    read(archivo_maestro,registro_votos);
-    imprimir_registro_votos(registro_votos);
+    read(archivo_maestro,registro_mesa);
+    imprimir_registro_mesa(registro_mesa);
   end;
   close(archivo_maestro);
 end;
-procedure leer_votos(var archivo_maestro: t_archivo_maestro; var registro_votos: t_registro_votos);
+procedure leer_votos(var archivo_maestro: t_archivo_maestro; var registro_mesa: t_registro_mesa);
 begin
   if (not eof(archivo_maestro)) then
-    read(archivo_maestro,registro_votos)
+    read(archivo_maestro,registro_mesa)
   else
-    registro_votos.provincia:=provincia_salida;
+    registro_mesa.provincia:=provincia_salida;
 end;
 procedure procesar_archivo_maestro(var archivo_maestro: t_archivo_maestro);
 var
-  registro_votos: t_registro_votos;
+  registro_mesa: t_registro_mesa;
   provincia, localidad: int16;
   votos_total, votos_provincia, votos_localidad: int32;
 begin
   votos_total:=0;
   reset(archivo_maestro);
-  leer_votos(archivo_maestro,registro_votos);
-  while (registro_votos.provincia<>provincia_salida) do
+  leer_votos(archivo_maestro,registro_mesa);
+  while (registro_mesa.provincia<>provincia_salida) do
   begin
-    provincia:=registro_votos.provincia;
+    provincia:=registro_mesa.provincia;
     votos_provincia:=0;
     textcolor(green); write('Código de Provincia: '); textcolor(yellow); writeln(provincia);
     textcolor(green); writeln('Código de Localidad          Total de Votos');
-    while (registro_votos.provincia=provincia) do
+    while (registro_mesa.provincia=provincia) do
     begin
-      localidad:=registro_votos.localidad;
+      localidad:=registro_mesa.localidad;
       votos_localidad:=0;
-      while ((registro_votos.provincia=provincia) and (registro_votos.localidad=localidad)) do
+      while ((registro_mesa.provincia=provincia) and (registro_mesa.localidad=localidad)) do
       begin
-        votos_localidad:=votos_localidad+registro_votos.votos;
-        leer_votos(archivo_maestro,registro_votos);
+        votos_localidad:=votos_localidad+registro_mesa.votos;
+        leer_votos(archivo_maestro,registro_mesa);
       end;
       textcolor(yellow); write(localidad); textcolor(green); write('                            '); textcolor(red); writeln(votos_localidad);
       votos_provincia:=votos_provincia+votos_localidad;
@@ -97,7 +97,7 @@ var
   archivo_carga_maestro: text;
 begin
   writeln(); textcolor(red); writeln('IMPRESIÓN ARCHIVO MAESTRO:'); writeln();
-  assign(archivo_maestro,'E10_votosMaestro'); assign(archivo_carga_maestro,'E10_votosMaestro.txt');
+  assign(archivo_maestro,'E10_mesasMaestro'); assign(archivo_carga_maestro,'E10_mesasMaestro.txt');
   cargar_archivo_maestro(archivo_maestro,archivo_carga_maestro);
   imprimir_archivo_maestro(archivo_maestro);
   writeln(); textcolor(red); writeln('PROCESAMIENTO ARCHIVO MAESTRO:'); writeln();
