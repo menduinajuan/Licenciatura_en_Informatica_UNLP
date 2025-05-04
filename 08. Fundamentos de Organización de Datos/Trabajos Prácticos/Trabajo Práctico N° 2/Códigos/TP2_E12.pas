@@ -17,13 +17,17 @@ program TP2_E12;
 uses crt;
 const
   usuario_salida=999;
+  dia_ini=1; dia_fin=31;
+  mes_ini=1; mes_fin=12;
   anio_ini=2020; anio_fin=2025;
 type
+  t_dia=dia_ini..dia_fin;
+  t_mes=mes_ini..mes_fin;
   t_anio=anio_ini..anio_fin;
   t_registro_fecha=record
-    anio: int16;
-    mes: int8;
-    dia: int8;
+    anio: t_anio;
+    mes: t_mes;
+    dia: t_dia;
   end;
   t_registro_usuario=record
     fecha: t_registro_fecha;

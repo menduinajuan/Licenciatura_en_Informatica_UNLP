@@ -54,7 +54,7 @@ begin
     with registro_localidad do
     begin
       readln(archivo_carga_maestro,codigo,codigo_cepa,casos_activos,casos_nuevos,casos_recuperados,casos_fallecidos,nombre_cepa); nombre_cepa:=trim(nombre_cepa);
-      readln(archivo_carga_maestro,nombre); nombre:=trim(nombre);
+      readln(archivo_carga_maestro,nombre);
       write(archivo_maestro,registro_localidad);
     end;
   close(archivo_maestro);
@@ -185,6 +185,7 @@ begin
   for i:= 1 to detalles_total do
     close(vector_detalles[i]);
   textcolor(green); write('La cantidad de localidades con más de '); textcolor(yellow); write(casos_activos_corte); textcolor(green); write(' casos activos es: '); textcolor(red); writeln(localidades_corte);
+  writeln();
 end;
 var
   vector_detalles: t_vector_detalles;

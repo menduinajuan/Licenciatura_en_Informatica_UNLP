@@ -39,7 +39,7 @@ procedure imprimir_registro_empleado(registro_empleado: t_registro_empleado);
 begin
   textcolor(green); write('Código: '); textcolor(yellow); write(registro_empleado.codigo);
   textcolor(green); write('; Nombre: '); textcolor(yellow); write(registro_empleado.nombre);
-  textcolor(green); write('; Comisión: '); textcolor(yellow); writeln(registro_empleado.comision:0:2);
+  textcolor(green); write('; Comisión: $'); textcolor(yellow); writeln(registro_empleado.comision:0:2);
 end;
 procedure imprimir_archivo_empleados(var archivo_empleados: t_archivo_empleados);
 var

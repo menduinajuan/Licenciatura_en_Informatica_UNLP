@@ -65,7 +65,7 @@ begin
     with registro_alumno do
     begin
       readln(archivo_carga_maestro,codigo,cursadas_aprobadas,finales_aprobados,apellido); apellido:=trim(apellido);
-      readln(archivo_carga_maestro,nombre); nombre:=trim(nombre);
+      readln(archivo_carga_maestro,nombre);
       write(archivo_maestro,registro_alumno);
     end;
   close(archivo_maestro);
