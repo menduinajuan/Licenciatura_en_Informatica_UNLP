@@ -7,7 +7,7 @@ Nota: La información está ordenada por código de provincia y código de local
 
 program TP2_E10;
 {$codepage UTF8}
-uses crt, sysutils;
+uses crt;
 const
   provincia_salida=999;
 type

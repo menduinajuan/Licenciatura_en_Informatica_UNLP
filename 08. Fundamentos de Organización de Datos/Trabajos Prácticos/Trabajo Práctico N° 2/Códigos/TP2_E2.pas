@@ -69,7 +69,7 @@ procedure imprimir_registro_producto(registro_producto: t_registro_producto);
 begin
   textcolor(green); write('Código: '); textcolor(yellow); write(registro_producto.codigo);
   textcolor(green); write('; Nombre: '); textcolor(yellow); write(registro_producto.nombre);
-  textcolor(green); write('; Precio: '); textcolor(yellow); write(registro_producto.precio:0:2);
+  textcolor(green); write('; Precio: $'); textcolor(yellow); write(registro_producto.precio:0:2);
   textcolor(green); write('; Stock actual: '); textcolor(yellow); write(registro_producto.stock_actual);
   textcolor(green); write('; Stock mínimo: '); textcolor(yellow); writeln(registro_producto.stock_minimo);
 end;

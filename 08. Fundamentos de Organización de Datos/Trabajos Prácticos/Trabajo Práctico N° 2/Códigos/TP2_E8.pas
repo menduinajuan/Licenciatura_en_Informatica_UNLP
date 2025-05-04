@@ -169,6 +169,7 @@ begin
   close(archivo_maestro);
   for i:= 1 to detalles_total do
     close(vector_detalles[i]);
+  writeln();
 end;
 var
   vector_detalles: t_vector_detalles;

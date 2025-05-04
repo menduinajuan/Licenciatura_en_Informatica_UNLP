@@ -43,7 +43,7 @@ var
 begin
   for i:= categoria_ini to categoria_fin do
   begin
-    textcolor(green); write('El valor de la hora de la categoría ',i,' es '); textcolor(yellow); writeln(vector_horas[i]:0:2);
+    textcolor(green); write('El valor de la hora de la categoría ',i,' es $'); textcolor(yellow); writeln(vector_horas[i]:0:2);
   end;
 end;
 procedure cargar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_carga_maestro: text);

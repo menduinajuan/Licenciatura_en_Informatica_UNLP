@@ -11,18 +11,24 @@ program TP2_E9;
 {$codepage UTF8}
 uses crt, sysutils;
 const
-  codigo_salida=999;  
+  codigo_salida=999;
+  dia_ini=1; dia_fin=31;
+  mes_ini=1; mes_fin=12;
+  anio_ini=2000; anio_fin=2025;
 type
   t_string20=string[20];
+  t_dia=dia_ini..dia_fin;
+  t_mes=mes_ini..mes_fin;
+  t_anio=anio_ini..anio_fin;
   t_registro_cliente=record
     codigo: int16;
     nombre: t_string20;
     apellido: t_string20;
   end;
   t_registro_fecha=record
-    anio: int16;
-    mes: int8;
-    dia: int8;
+    anio: t_anio;
+    mes: t_mes;
+    dia: t_dia;
   end;
   t_registro_venta=record
     cliente: t_registro_cliente;
@@ -40,7 +46,7 @@ begin
     with registro_venta do
     begin
       readln(archivo_carga_maestro,cliente.codigo,fecha.anio,fecha.mes,fecha.dia,monto,cliente.nombre); cliente.nombre:=trim(cliente.nombre);
-      readln(archivo_carga_maestro,cliente.apellido); cliente.apellido:=trim(cliente.apellido);
+      readln(archivo_carga_maestro,cliente.apellido);
       write(archivo_maestro,registro_venta);
     end;
   close(archivo_maestro);
@@ -62,7 +68,7 @@ procedure imprimir_registro_venta(registro_venta: t_registro_venta);
 begin
   imprimir_registro_cliente(registro_venta.cliente);
   imprimir_registro_fecha(registro_venta.fecha);
-  textcolor(green); write('; Monto: '); textcolor(yellow); writeln(registro_venta.monto:0:2);
+  textcolor(green); write('; Monto: $'); textcolor(yellow); writeln(registro_venta.monto:0:2);
 end;
 procedure imprimir_archivo_maestro(var archivo_maestro: t_archivo_maestro);
 var

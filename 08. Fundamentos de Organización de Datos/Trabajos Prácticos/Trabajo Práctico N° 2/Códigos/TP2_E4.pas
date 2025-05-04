@@ -45,7 +45,7 @@ begin
     with registro_producto do
     begin
       readln(archivo_carga_maestro,codigo,stock_disponible,stock_minimo,precio,nombre); nombre:=trim(nombre);
-      readln(archivo_carga_maestro,descripcion); descripcion:=trim(descripcion);
+      readln(archivo_carga_maestro,descripcion);
       write(archivo_maestro,registro_producto);
     end;
   close(archivo_maestro);
@@ -73,7 +73,7 @@ begin
   textcolor(green); write('; Descripción: '); textcolor(yellow); write(registro_producto.descripcion);
   textcolor(green); write('; Stock disponible: '); textcolor(yellow); write(registro_producto.stock_disponible);
   textcolor(green); write('; Stock mínimo: '); textcolor(yellow); write(registro_producto.stock_minimo);
-  textcolor(green); write('; Precio: '); textcolor(yellow); writeln(registro_producto.precio:0:2);
+  textcolor(green); write('; Precio: $'); textcolor(yellow); writeln(registro_producto.precio:0:2);
 end;
 procedure imprimir_archivo_maestro(var archivo_maestro: t_archivo_maestro);
 var
