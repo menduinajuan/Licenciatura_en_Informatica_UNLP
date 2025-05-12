@@ -17,10 +17,9 @@ public class Navidad {
 
     private boolean esAbetoNavidenio(GeneralTree<Integer> ag) {
         int nodos=0;
-        for (GeneralTree<Integer> child: ag.getChildren()) {
+        for (GeneralTree<Integer> child: ag.getChildren())
             if (child.isLeaf()) nodos++;
             else if (!esAbetoNavidenio(child)) return false;
-        }
         return nodos>=3;
     }
 
