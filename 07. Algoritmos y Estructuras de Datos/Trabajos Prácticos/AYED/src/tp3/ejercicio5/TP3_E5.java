@@ -17,19 +17,18 @@ public class TP3_E5 {
 
         GeneradorAleatorio.iniciar();
 
+        int k=3;
         int num=1;
         GeneralTree<Integer> ag=new GeneralTree<>(num++);
-        ag.addChild(new GeneralTree<>(num++));
-        ag.addChild(new GeneralTree<>(num++));
-        ag.addChild(new GeneralTree<>(num++));
+        for (int i=0; i<k; i++)
+            ag.addChild(new GeneralTree<>(num++));
         for (GeneralTree<Integer> child: ag.getChildren()) {
-            child.addChild(new GeneralTree<>(num++));
-            child.addChild(new GeneralTree<>(num++));
-            child.addChild(new GeneralTree<>(num++));
+            for (int i=0; i<k; i++)
+                child.addChild(new GeneralTree<>(num++));
         }
 
         int a=1+GeneradorAleatorio.generarInt(num-1);
-        int b=a+GeneradorAleatorio.generarInt(num-a);
+        int b=1+GeneradorAleatorio.generarInt(num-1);
         System.out.println("¿El nodo " + a + " es ancestro del nodo " + b + "?: " + ag.esAncestro(a, b));
 
     }

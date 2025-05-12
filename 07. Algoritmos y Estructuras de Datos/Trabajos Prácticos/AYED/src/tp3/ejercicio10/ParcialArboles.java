@@ -7,7 +7,7 @@ public class ParcialArboles {
 
     public static List<Integer> resolver(GeneralTree<Integer> arbol) {
         List<Integer> lista=new LinkedList<>();
-        if ((arbol!=null) && (!arbol.isEmpty())) resolver(arbol, new LinkedList<>(), lista, 0, new Maximo(-1), 0);
+        if ((arbol!=null) && (!arbol.isEmpty())) resolver(arbol, new LinkedList<>(), lista, 0, new Maximo(Integer.MIN_VALUE), 0);
         return lista;
     }
 

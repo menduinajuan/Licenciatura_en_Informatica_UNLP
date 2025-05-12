@@ -195,7 +195,7 @@ public class GeneralTree<T> {
         cola.enqueue(this);
         while ((!cola.isEmpty()) && (!ok)) {
             ag=cola.dequeue();
-            if (ag.getData().equals(b) && (!ok)) return false;
+            if (ag.getData().equals(b)) return false;
             if (ag.getData().equals(a)) {
                 ok=true;
                 nodo=ag;

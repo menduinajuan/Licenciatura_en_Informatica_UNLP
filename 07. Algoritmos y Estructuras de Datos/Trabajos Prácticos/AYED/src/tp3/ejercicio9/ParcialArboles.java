@@ -7,13 +7,14 @@ public class ParcialArboles {
 
     public static boolean esDeSeleccion(GeneralTree<Integer> arbol) {
         boolean ok=true;
+        int min;
         GeneralTree<Integer> ag;
         Queue<GeneralTree<Integer>> cola=new Queue<>();
         if (!arbol.isEmpty()) {
             cola.enqueue(arbol);
             while ((!cola.isEmpty()) && (ok)) {
                 ag=cola.dequeue();
-                int min=Integer.MAX_VALUE;
+                min=Integer.MAX_VALUE;
                 for (GeneralTree<Integer> child: ag.getChildren()) {
                     cola.enqueue(child);
                     if (child.getData()!=null) min=Math.min(min, child.getData());
