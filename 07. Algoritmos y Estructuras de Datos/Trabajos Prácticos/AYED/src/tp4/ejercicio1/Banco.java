@@ -8,8 +8,8 @@ public class Banco {
     static final int CANTIDAD_CONSULTAS=CANTIDAD_CUENTAS;
 
     public static void procesarMovimientos(Integer[] cuentas, Consulta[] consultas) {
-        Consulta c;
         long tiempoInicio=System.currentTimeMillis();
+        Consulta c;
         for (int i=0; i<consultas.length; i++) {
             c=consultas[i];
             for (int j=c.getDesde(); j<=c.getHasta(); j++)
@@ -20,8 +20,8 @@ public class Banco {
     }
 
     public static void procesarMovimientosOptimizado(Integer[] cuentas, Consulta[] consultas) {
-        Consulta c;
         long tiempoInicio=System.currentTimeMillis();
+        Consulta c;
         Integer[] aux=new Integer[CANTIDAD_CUENTAS+1];
         Arrays.fill(aux, 0);
         for (int i=0; i<consultas.length; i++) {

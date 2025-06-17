@@ -13,6 +13,16 @@ import tp5.ejercicio3.Mapa;
 
 public class TP5_E7 {
 
+    public static void solicitarGC() {
+        System.gc();
+        try {
+            Thread.sleep(100);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
 
         Graph<String> ciudades=new AdjListGraph<>();
@@ -35,9 +45,22 @@ public class TP5_E7 {
         ciudades.connect(v6, v7, 9);
 
         Mapa mapa=new Mapa(ciudades);
+        long tiempoInicio, tiempoFin;
+
+        tiempoInicio=System.nanoTime();
         System.out.println("Lista caminoMasCortoV1: " + mapa.caminoMasCortoV1("La Plata", "Hudson"));
+        tiempoFin=System.nanoTime();
+        System.out.println("Tiempo caminoMasCortoV1: " + ((float)(tiempoFin-tiempoInicio)/1e6) + " milisegundos\n");
+
+        tiempoInicio=System.nanoTime();
         System.out.println("Lista caminoMasCortoV2: " + mapa.caminoMasCortoV2("La Plata", "Hudson"));
+        tiempoFin=System.nanoTime();
+        System.out.println("Tiempo caminoMasCortoV2: " + ((float)(tiempoFin-tiempoInicio)/1e6) + " milisegundos\n");
+
+        tiempoInicio=System.nanoTime();
         System.out.println("Lista caminoMasCortoV3: " + mapa.caminoMasCortoV3("La Plata", "Hudson"));
+        tiempoFin=System.nanoTime();
+        System.out.println("Tiempo caminoMasCortoV3: " + ((float)(tiempoFin-tiempoInicio)/1e6) + " milisegundos");
 
     }
 
