@@ -65,8 +65,8 @@ var
   registro_empleado_detalle, registro_empleado_maestro: t_registro_empleado;
   comision_total: real;
 begin
-  reset(archivo_detalle);
   rewrite(archivo_maestro);
+  reset(archivo_detalle);
   leer_empleado(archivo_detalle,registro_empleado_detalle);
   while (registro_empleado_detalle.codigo<>codigo_salida) do
   begin
@@ -80,8 +80,8 @@ begin
     registro_empleado_maestro.comision:=comision_total;
     write(archivo_maestro,registro_empleado_maestro);
   end;
-  close(archivo_detalle);
   close(archivo_maestro);
+  close(archivo_detalle);
 end;
 var
   archivo_detalle, archivo_maestro: t_archivo_empleados;

@@ -34,7 +34,7 @@ type
   t_registro_localidad2=record
     codigo: int16;
     codigo_cepa: int16;
-    casos_activos: int16;
+    casos_activos: int32;
     casos_nuevos: int16;
     casos_recuperados: int16;
     casos_fallecidos: int16;
@@ -119,7 +119,7 @@ begin
   end;
   close(archivo_detalle);
 end;
-procedure leer_localidad(var archivo_detalle: t_archivo_detalle; var registro_localidad: t_registro_localidad2);
+procedure leer_localidad_detalle(var archivo_detalle: t_archivo_detalle; var registro_localidad: t_registro_localidad2);
 begin
   if (not eof(archivo_detalle)) then
     read(archivo_detalle,registro_localidad)
@@ -138,7 +138,19 @@ begin
       pos:=i;
     end;
   if (min.codigo<codigo_salida) then
-    leer_localidad(vector_detalles[pos],vector_localidades[pos]);
+    leer_localidad_detalle(vector_detalles[pos],vector_localidades[pos]);
+end;
+procedure actualizar_localidades_corte(casos_activos_localidad: int32; var localidades_corte: int16);
+begin
+  if (casos_activos_localidad>casos_activos_corte) then
+    localidades_corte:=localidades_corte+1;
+end;
+procedure leer_localidad_maestro(var archivo_maestro: t_archivo_maestro; var registro_localidad: t_registro_localidad1);
+begin
+  if (not eof(archivo_maestro)) then
+    read(archivo_maestro,registro_localidad)
+  else
+    registro_localidad.codigo:=codigo_salida;
 end;
 procedure actualizar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var vector_detalles: t_vector_detalles);
 var
@@ -146,14 +158,15 @@ var
   min: t_registro_localidad2;
   vector_localidades: t_vector_localidades;
   i: t_detalle;
-  casos_activos_localidad, localidades_corte: int16;
+  localidades_corte, codigo: int16;
+  casos_activos_localidad: int32;
 begin
   localidades_corte:=0;
   reset(archivo_maestro);
   for i:= 1 to detalles_total do
   begin
     reset(vector_detalles[i]);
-    leer_localidad(vector_detalles[i],vector_localidades[i]);
+    leer_localidad_detalle(vector_detalles[i],vector_localidades[i]);
   end;
   minimo(vector_detalles,vector_localidades,min);
   while (min.codigo<>codigo_salida) do
@@ -161,7 +174,16 @@ begin
     casos_activos_localidad:=0;
     read(archivo_maestro,registro_localidad);
     while (registro_localidad.codigo<>min.codigo) do
-      read(archivo_maestro,registro_localidad);
+    begin
+      codigo:=registro_localidad.codigo;
+      while (registro_localidad.codigo=codigo) do
+      begin
+        casos_activos_localidad:=casos_activos_localidad+registro_localidad.casos_activos;
+        read(archivo_maestro,registro_localidad);
+      end;
+      actualizar_localidades_corte(casos_activos_localidad,localidades_corte);
+      casos_activos_localidad:=0;
+    end;
     while (registro_localidad.codigo=min.codigo) do
     begin
       while (registro_localidad.codigo_cepa<>min.codigo_cepa) do
@@ -172,19 +194,31 @@ begin
         registro_localidad.casos_recuperados:=registro_localidad.casos_recuperados+min.casos_recuperados;
         registro_localidad.casos_activos:=min.casos_activos;
         registro_localidad.casos_nuevos:=min.casos_nuevos;
-        casos_activos_localidad:=casos_activos_localidad+min.casos_activos;
         minimo(vector_detalles,vector_localidades,min);
       end;
       seek(archivo_maestro,filepos(archivo_maestro)-1);
       write(archivo_maestro,registro_localidad);
+      casos_activos_localidad:=casos_activos_localidad+registro_localidad.casos_activos;
     end;
-    if (casos_activos_localidad>casos_activos_corte) then
-      localidades_corte:=localidades_corte+1;
+    actualizar_localidades_corte(casos_activos_localidad,localidades_corte);
+  end;
+  casos_activos_localidad:=0;
+  leer_localidad_maestro(archivo_maestro,registro_localidad);
+  while (registro_localidad.codigo<>codigo_salida) do
+  begin
+    codigo:=registro_localidad.codigo;
+    while (registro_localidad.codigo=codigo) do
+    begin
+      casos_activos_localidad:=casos_activos_localidad+registro_localidad.casos_activos;
+      leer_localidad_maestro(archivo_maestro,registro_localidad);
+    end;
+    actualizar_localidades_corte(casos_activos_localidad,localidades_corte);
+    casos_activos_localidad:=0;
   end;
   close(archivo_maestro);
   for i:= 1 to detalles_total do
     close(vector_detalles[i]);
-  textcolor(green); write('La cantidad de localidades con más de '); textcolor(yellow); write(casos_activos_corte); textcolor(green); write(' casos activos es: '); textcolor(red); writeln(localidades_corte);
+  textcolor(green); write('La cantidad de localidades con más de '); textcolor(yellow); write(casos_activos_corte); textcolor(green); write(' casos activos es '); textcolor(red); writeln(localidades_corte);
   writeln();
 end;
 var

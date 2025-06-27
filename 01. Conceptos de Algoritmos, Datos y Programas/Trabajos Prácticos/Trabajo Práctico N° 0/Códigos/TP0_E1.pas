@@ -1,7 +1,7 @@
 {TRABAJO PRÁCTICO N° 0}
 {EJERCICIO 1}
 {Implementar un programa que lea por teclado dos números enteros e imprima en pantalla los valores leídos en orden inverso.
-Por ejemplo, si se ingresan los números 4 y 8, debe mostrar el mensaje: Se ingresaron los valores 8 y 4.}
+Por ejemplo, si se ingresan los números 4 y 8, debe mostrar el mensaje: "Se ingresaron los valores 8 y 4".}
 
 program TP0_E1;
 {$codepage UTF8}

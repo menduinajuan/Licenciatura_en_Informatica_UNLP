@@ -1,0 +1,48 @@
+1 1 1 100 2025-01-01
+Localidad1
+Municipio1
+Hospital1
+1 1 2 200 2025-01-01
+Localidad1
+Municipio1
+Hospital2
+1 2 1 300 2025-01-01
+Localidad1
+Municipio2
+Hospital1
+1 2 2 400 2025-01-01
+Localidad1
+Municipio2
+Hospital2
+2 3 1 500 2025-01-01
+Localidad2
+Municipio3
+Hospital1
+2 3 2 600 2025-01-01
+Localidad2
+Municipio3
+Hospital2
+2 4 1 700 2025-01-01
+Localidad2
+Municipio4
+Hospital1
+2 4 2 800 2025-01-01
+Localidad2
+Municipio4
+Hospital2
+3 5 1 900 2025-01-01
+Localidad3
+Municipio5
+Hospital1
+3 5 2 1000 2025-01-01
+Localidad3
+Municipio5
+Hospital2
+3 6 1 1100 2025-01-01
+Localidad3
+Municipio6
+Hospital1
+3 6 2 1200 2025-01-01
+Localidad3
+Municipio6
+Hospital2

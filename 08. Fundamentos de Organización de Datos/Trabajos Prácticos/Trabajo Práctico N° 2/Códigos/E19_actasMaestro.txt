@@ -1,0 +1,22 @@
+ACTA 1
+Nro. partida nacimiento: 1
+Nombre: AAA
+Apellido: BBB
+Dirección: Calle 1, Nro. 1, Piso 1, Depto. 1, Ciudad La Plata
+Matrícula médico: 1
+Madre: Nombre CCC, Apellido DDD, DNI 10
+Padre: Nombre EEE, Apellido BBB, DNI 11
+Falleció: Sí
+Matrícula médico deceso: 1
+Deceso: Fecha 2025-01-01, Hora 00:00, Lugar City Bell
+
+ACTA 2
+Nro. partida nacimiento: 2
+Nombre: GGG
+Apellido: HHH
+Dirección: Calle 2, Nro. 2, Piso 2, Depto. 2, Ciudad La Plata
+Matrícula médico: 2
+Madre: Nombre III, Apellido JJJ, DNI 20
+Padre: Nombre KKK, Apellido HHH, DNI 21
+Falleció: No
+
