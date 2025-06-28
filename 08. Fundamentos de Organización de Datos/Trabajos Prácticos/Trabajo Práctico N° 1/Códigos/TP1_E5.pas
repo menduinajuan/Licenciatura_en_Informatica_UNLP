@@ -53,7 +53,7 @@ begin
     registro_celular.codigo:=1+random(1000);
   if (registro_celular.codigo<>codigo_salida) then
   begin
-    registro_celular.nombre:=random_string(5+random(5));
+    registro_celular.nombre:=random_string(5+random(6));
     registro_celular.descripcion:=vector_descripciones[1+random(5)];
     registro_celular.marca:=vector_marcas[1+random(10)];
     registro_celular.precio:=100+random(9001)/10;

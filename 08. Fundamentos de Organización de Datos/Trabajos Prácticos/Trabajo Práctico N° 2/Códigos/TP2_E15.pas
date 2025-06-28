@@ -5,8 +5,7 @@ La ONG cuenta con un archivo maestro conteniendo información como se indica a c
 Mensualmente, reciben detalles de las diferentes provincias indicando avances en las obras de ayuda en la edificación y equipamientos de viviendas en cada provincia.
 La información de los detalles es la siguiente: código provincia, código localidad, #viviendas con luz, #viviendas construidas, #viviendas con agua, #viviendas con gas, #entrega sanitarios.
 Se debe realizar el procedimiento que permita actualizar el maestro con los detalles recibidos, se reciben 10 detalles.
-Todos los archivos están ordenados por código de provincia y código de localidad.
-Para la actualización del archivo maestro, se debe proceder de la siguiente manera:
+Todos los archivos están ordenados por código de provincia y código de localidad. Para la actualización del archivo maestro, se debe proceder de la siguiente manera:
 •	Al valor de viviendas sin luz se le resta el valor recibido en el detalle.
 •	Ídem para viviendas sin agua, sin gas y sin sanitarios.
 •	A las viviendas de chapa se le resta el valor recibido de viviendas construidas.

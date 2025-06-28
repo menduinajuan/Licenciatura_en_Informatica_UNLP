@@ -1,3 +1,6 @@
+0 0 AAA
+BBB
+CCC
 1 0 Goku
 Juan
 Menduina
@@ -7,3 +10,6 @@ Panigo
 3 0 Gohan
 Matias
 Guaymas
+4 0 DDD
+EEE
+FFF

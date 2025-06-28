@@ -111,6 +111,10 @@ begin
   else
     registro_usuario.usuario:=usuario_salida;
 end;
+procedure imprimir_texto(registro_maestro: t_registro_usuario1);
+begin
+  textcolor(green); write('Número de Usuario: '); textcolor(yellow); write(registro_maestro.usuario); textcolor(green); write(' .......... Cantidad de Mensajes Enviados: '); textcolor(red); writeln(registro_maestro.mails);
+end;
 procedure actualizar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_detalle: t_archivo_detalle);
 var
   registro_maestro: t_registro_usuario1;
@@ -123,15 +127,23 @@ begin
   begin
     read(archivo_maestro,registro_maestro);
     while (registro_maestro.usuario<>registro_detalle.usuario) do
+    begin
+      imprimir_texto(registro_maestro);
       read(archivo_maestro,registro_maestro);
+    end;
     while (registro_maestro.usuario=registro_detalle.usuario) do
     begin
       registro_maestro.mails:=registro_maestro.mails+1;
       leer_usuario(archivo_detalle,registro_detalle);
     end;
-    textcolor(green); write('Número de usuario: '); textcolor(yellow); write(registro_maestro.usuario); textcolor(green); write(' .......... Cantidad de Mensajes Enviados: '); textcolor(red); writeln(registro_maestro.mails);
     seek(archivo_maestro,filepos(archivo_maestro)-1);
     write(archivo_maestro,registro_maestro);
+    imprimir_texto(registro_maestro);
+  end;
+  while (not eof(archivo_maestro)) do
+  begin
+    read(archivo_maestro,registro_maestro);
+    imprimir_texto(registro_maestro);
   end;
   close(archivo_maestro);
   close(archivo_detalle);

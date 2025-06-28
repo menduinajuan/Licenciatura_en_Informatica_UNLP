@@ -1,9 +1,3 @@
-998 366.80 Motorola
-0 8 Gama media baja
-PAFWIM
-560 459.40 Alcatel
-0 2 Gama media baja
-NKJGFAJW
-349 494.60 Huawei
-0 7 Gama media alta
-BXUWBSRD
+605 844.40 Huawei
+0 4 Gama media alta
+ETFHPVOJVD

@@ -1,14 +1,2 @@
-Número: 743; Apellido: MMXSUHYM; Nombre: XEYDXSJ; Edad: 44; DNI: 0
-Número: 251; Apellido: CBNFNV; Nombre: HFFWV; Edad: 118; DNI: 0
-Número: 579; Apellido: AWNJBABJ; Nombre: JKVUHLNMQ; Edad: 64; DNI: 0
-Número: 1; Apellido: QMFYBALLV; Nombre: XEBRXRTFF; Edad: 97; DNI: 0
-Número: 340; Apellido: XXRJGGNU; Nombre: IQNIAGWKS; Edad: 114; DNI: 0
-Número: 280; Apellido: TXVYE; Nombre: FRMRPRY; Edad: 57; DNI: 0
-Número: 624; Apellido: KECATQ; Nombre: NIXCDGVVK; Edad: 99; DNI: 0
-Número: 484; Apellido: SLGBY; Nombre: ZYYLIM; Edad: 85; DNI: 0
-Número: 490; Apellido: TCOCJAA; Nombre: XPVPG; Edad: 93; DNI: 0
-Número: 297; Apellido: RTWCP; Nombre: OUJUUFZ; Edad: 118; DNI: 0
-Número: 676; Apellido: SVFEWPUV; Nombre: VGEINEJ; Edad: 124; DNI: 0
-Número: 467; Apellido: KPBACKE; Nombre: YHVFZJVN; Edad: 68; DNI: 0
-Número: 661; Apellido: OAXJOMW; Nombre: WZCOVO; Edad: 76; DNI: 0
-Número: 146; Apellido: DBDGE; Nombre: QJVICEIP; Edad: 67; DNI: 0
+Número: 171; Apellido: ITZYCEE; Nombre: WVQVJJHI; Edad: 93; DNI: 0
+Número: 267; Apellido: ELMSQSQU; Nombre: DYFRVPJGN; Edad: 70; DNI: 0
