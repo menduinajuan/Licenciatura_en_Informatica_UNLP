@@ -199,7 +199,7 @@ begin
       3: modificar_novela(archivo_novelas);
       4: exportar_archivo_txt(archivo_novelas);
     else
-        textcolor(green); writeln('La opción ingresada no corresponde a ninguna de las mostradas en el menú de opciones');
+        textcolor(green); writeln('La opción ingresada no corresponde a ninguna del menú de opciones');
     end;
     writeln();
     leer_opcion(opcion);

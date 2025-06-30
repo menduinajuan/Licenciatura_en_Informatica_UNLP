@@ -14,7 +14,7 @@ type
   t_registro_mesa=record
     provincia: int16;
     localidad: int16;
-    mesa: int16;
+    numero: int16;
     votos: int32;
   end;
   t_archivo_maestro=file of t_registro_mesa;
@@ -27,7 +27,7 @@ begin
   while (not eof(archivo_carga_maestro)) do
     with registro_mesa do
     begin
-      readln(archivo_carga_maestro,provincia,localidad,mesa,votos);
+      readln(archivo_carga_maestro,provincia,localidad,numero,votos);
       write(archivo_maestro,registro_mesa);
     end;
   close(archivo_maestro);
@@ -37,7 +37,7 @@ procedure imprimir_registro_mesa(registro_mesa: t_registro_mesa);
 begin
   textcolor(green); write('Código de provincia: '); textcolor(yellow); write(registro_mesa.provincia);
   textcolor(green); write('; Código de localidad: '); textcolor(yellow); write(registro_mesa.localidad);
-  textcolor(green); write('; Número de mesa: '); textcolor(yellow); write(registro_mesa.mesa);
+  textcolor(green); write('; Número de mesa: '); textcolor(yellow); write(registro_mesa.numero);
   textcolor(green); write('; Votos: '); textcolor(yellow); writeln(registro_mesa.votos);
 end;
 procedure imprimir_archivo_maestro(var archivo_maestro: t_archivo_maestro);
@@ -62,8 +62,7 @@ end;
 procedure procesar_archivo_maestro(var archivo_maestro: t_archivo_maestro);
 var
   registro_mesa: t_registro_mesa;
-  provincia, localidad: int16;
-  votos_total, votos_provincia, votos_localidad: int32;
+  provincia, localidad, votos_total, votos_provincia, votos_localidad: int16;
 begin
   votos_total:=0;
   reset(archivo_maestro);

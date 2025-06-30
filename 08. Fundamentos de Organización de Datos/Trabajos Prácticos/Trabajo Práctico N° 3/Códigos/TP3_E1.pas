@@ -88,6 +88,7 @@ begin
     if ((registro_empleado.nombre=texto) or (registro_empleado.apellido=texto)) then
       imprimir_registro_empleado(registro_empleado);
   end;
+  textcolor(green); write('Tamaño del archivo empleados: '); textcolor(yellow); writeln(filesize(archivo_empleados));
   close(archivo_empleados);
 end;
 procedure imprimir2_archivo_empleados(var archivo_empleados: t_archivo_empleados);

@@ -146,7 +146,7 @@ begin
       3: imprimir2_archivo_empleados(archivo_empleados);
       4: imprimir3_archivo_empleados(archivo_empleados);
     else
-        textcolor(green); writeln('La opción ingresada no corresponde a ninguna de las mostradas en el menú de opciones');
+        textcolor(green); writeln('La opción ingresada no corresponde a ninguna del menú de opciones');
     end;
     writeln();
     leer_opcion(opcion);

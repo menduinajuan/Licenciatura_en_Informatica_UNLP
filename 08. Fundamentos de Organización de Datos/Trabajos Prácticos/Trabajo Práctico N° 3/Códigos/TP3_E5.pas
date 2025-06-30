@@ -69,6 +69,7 @@ begin
     if (registro_flor.codigo>codigo_cabecera) then
       imprimir_registro_flor(registro_flor);
   end;
+  textcolor(green); write('Tamaño del archivo flores: '); textcolor(yellow); writeln(filesize(archivo_flores));
   close(archivo_flores);
 end;
 procedure agregar_flor(var archivo_flores: t_archivo_flores; nombre: t_string45; codigo: int16);
@@ -94,7 +95,7 @@ begin
     write(archivo_flores,cabecera);
   end;
   close(archivo_flores);
-  textcolor(green); write('Se ha realizado el alta de la flor '); textcolor(yellow); write(nombre); textcolor(green); write(' con código '); textcolor(yellow); writeln(codigo);
+  textcolor(green); write('Se ha realizado el alta de la flor '); textcolor(yellow); write(nombre); textcolor(green); write(' con código '); textcolor(yellow); write(codigo); textcolor(green); writeln(' en el archivo');
   writeln();
 end;
 procedure eliminar_flor(var archivo_flores: t_archivo_flores; flor: t_registro_flor);
@@ -121,11 +122,11 @@ begin
   close(archivo_flores);
   if (ok=true) then
   begin
-    textcolor(green); write('Se ha realizado la baja de la flor '); textcolor(yellow); write(flor.nombre); textcolor(green); write(' con código '); textcolor(yellow); writeln(flor.codigo);
+    textcolor(green); write('Se ha realizado la baja de la flor '); textcolor(yellow); write(flor.nombre); textcolor(green); write(' con código '); textcolor(yellow); write(flor.codigo); textcolor(green); writeln(' en el archivo');
   end
   else
   begin
-    textcolor(green); write('No se ha encontrado la flor '); textcolor(yellow); write(flor.nombre); textcolor(green); write(' con código '); textcolor(yellow); writeln(flor.codigo);
+    textcolor(green); write('No se ha encontrado la flor '); textcolor(yellow); write(flor.nombre); textcolor(green); write(' con código '); textcolor(yellow); write(flor.codigo); textcolor(green); writeln(' en el archivo');
   end;
   writeln();
 end;

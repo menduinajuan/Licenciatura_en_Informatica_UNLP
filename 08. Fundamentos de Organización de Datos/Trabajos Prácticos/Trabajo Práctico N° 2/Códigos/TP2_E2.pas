@@ -191,7 +191,7 @@ begin
       4: actualizar_archivo_maestro(archivo_maestro,archivo_detalle);
       5: exportar_archivo_txt(archivo_maestro);
     else
-        textcolor(green); writeln('La opción ingresada no corresponde a ninguna de las mostradas en el menú de opciones');
+        textcolor(green); writeln('La opción ingresada no corresponde a ninguna del menú de opciones');
     end;
     writeln();
     leer_opcion(opcion);

@@ -45,7 +45,7 @@ begin
   begin
     registro_asistente.apellido:=random_string(5+random(5));
     registro_asistente.nombre:=random_string(5+random(5));
-    registro_asistente.email:=random_string(5+random(5))+'@gmail.com';
+    registro_asistente.email:=random_string(5+random(6))+'@gmail.com';
     registro_asistente.telefono:=1000000000+random(1000000001);
     registro_asistente.dni:=10000000+random(40000001);
   end;
@@ -82,6 +82,7 @@ begin
     read(archivo_asistentes,registro_asistente);
     imprimir_registro_asistente(registro_asistente);
   end;
+  textcolor(green); write('Tamaño del archivo asistentes: '); textcolor(yellow); writeln(filesize(archivo_asistentes));
   close(archivo_asistentes);
 end;
 procedure eliminar_archivo_asistentes(var archivo_asistentes: t_archivo_asistentes);

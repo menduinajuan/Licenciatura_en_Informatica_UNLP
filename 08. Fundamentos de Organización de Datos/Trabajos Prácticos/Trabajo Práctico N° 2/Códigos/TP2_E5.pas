@@ -46,7 +46,7 @@ procedure imprimir_registro_sesion(registro_sesion: t_registro_sesion);
 begin
   textcolor(green); write('Código de usuario: '); textcolor(yellow); write(registro_sesion.codigo);
   textcolor(green); write('; Fecha: '); textcolor(yellow); write(registro_sesion.fecha);
-  textcolor(green); write('; Tiempo de sesión: '); textcolor(yellow); writeln(registro_sesion.tiempo);
+  textcolor(green); write('; Tiempo: '); textcolor(yellow); writeln(registro_sesion.tiempo);
 end;
 procedure imprimir_archivo_sesiones(var archivo_sesiones: t_archivo_sesiones);
 var
