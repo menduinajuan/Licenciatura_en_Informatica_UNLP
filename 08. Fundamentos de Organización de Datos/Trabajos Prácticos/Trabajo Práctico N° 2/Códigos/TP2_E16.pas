@@ -190,8 +190,8 @@ begin
   close(archivo_maestro);
   for i:= 1 to detalles_total do
     close(vector_detalles[i]);
-  textcolor(green); write('La fecha y semanario que tuvo más ventas fueron '); textcolor(red); write(fecha_max); textcolor(green); write(' y '); textcolor(red); write(codigo_max); textcolor(green); write(', respectivamente, con un total de '); textcolor(red); write(ventas_max); textcolor(green); writeln(' ventas');
-  textcolor(green); write('La fecha y semanario que tuvo menos ventas fueron '); textcolor(red); write(fecha_min); textcolor(green); write(' y '); textcolor(red); write(codigo_min); textcolor(green); write(', respectivamente, con un total de '); textcolor(red); write(ventas_min); textcolor(green); writeln(' ventas');
+  textcolor(green); write('El semanario que tuvo más ventas fue el '); textcolor(red); write(codigo_max); textcolor(green); write(' de la fecha '); textcolor(red); write(fecha_max); textcolor(green); write(', con un total de '); textcolor(red); write(ventas_max); textcolor(green); writeln(' ventas');
+  textcolor(green); write('El semanario que tuvo menos ventas fue el '); textcolor(red); write(codigo_min); textcolor(green); write(' de la fecha '); textcolor(red); write(fecha_min); textcolor(green); write(', con un total de '); textcolor(red); write(ventas_min); textcolor(green); writeln(' ventas');
   writeln();
 end;
 var

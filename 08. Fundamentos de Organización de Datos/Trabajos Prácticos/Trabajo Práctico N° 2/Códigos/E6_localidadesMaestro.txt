@@ -1,20 +1,24 @@
-0 1 50 0 0 0 Cepa1
+0 1 25 0 0 0 Cepa1
 City Bell
-0 2 50 0 0 0 Cepa2
+0 2 26 0 0 0 Cepa2
 City Bell
 1 1 0 0 0 0 Cepa1
 La Plata
-1 2 0 0 0 0 Cepa2
+1 2 15 0 0 0 Cepa2
 La Plata
-2 1 0 0 0 0 Cepa1
+1 3 0 0 0 0 Cepa3
+La Plata
+1 4 16 0 0 0 Cepa4
+La Plata
+2 1 25 0 0 0 Cepa1
 Berisso
-2 2 0 0 0 0 Cepa2
+2 2 26 0 0 0 Cepa2
 Berisso
 3 1 0 0 0 0 Cepa1
 Ensenada
 3 2 0 0 0 0 Cepa2
 Ensenada
-4 1 50 0 0 0 Cepa1
-Gonnet
-4 2 50 0 0 0 Cepa2
-Gonnet
+3 3 0 0 0 0 Cepa3
+Ensenada
+3 4 0 0 0 0 Cepa4
+Ensenada

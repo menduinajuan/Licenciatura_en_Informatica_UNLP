@@ -115,6 +115,20 @@ procedure imprimir_texto(registro_maestro: t_registro_usuario1);
 begin
   textcolor(green); write('Número de Usuario: '); textcolor(yellow); write(registro_maestro.usuario); textcolor(green); write(' .......... Cantidad de Mensajes Enviados: '); textcolor(red); writeln(registro_maestro.mails);
 end;
+procedure exportar_archivo_txt(var archivo_maestro: t_archivo_maestro);
+var
+  registro_usuario: t_registro_usuario1;
+  archivo_txt: text;
+begin
+  reset(archivo_maestro);
+  assign(archivo_txt,'E13_usuarios.txt'); rewrite(archivo_txt);
+  while (not eof(archivo_maestro)) do
+  begin
+    read(archivo_maestro,registro_usuario);
+    writeln(archivo_txt,registro_usuario.usuario,' ',registro_usuario.mails);
+  end;
+  close(archivo_txt);
+end;
 procedure actualizar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_detalle: t_archivo_detalle);
 var
   registro_maestro: t_registro_usuario1;
@@ -145,24 +159,10 @@ begin
     read(archivo_maestro,registro_maestro);
     imprimir_texto(registro_maestro);
   end;
+  exportar_archivo_txt(archivo_maestro);
   close(archivo_maestro);
   close(archivo_detalle);
   writeln();
-end;
-procedure exportar_archivo_txt(var archivo_maestro: t_archivo_maestro);
-var
-  registro_usuario: t_registro_usuario1;
-  archivo_txt: text;
-begin
-  reset(archivo_maestro);
-  assign(archivo_txt,'E13_usuarios.txt'); rewrite(archivo_txt);
-  while (not eof(archivo_maestro)) do
-  begin
-    read(archivo_maestro,registro_usuario);
-    writeln(archivo_txt,registro_usuario.usuario,' ',registro_usuario.mails);
-  end;
-  close(archivo_maestro);
-  close(archivo_txt);
 end;
 var
   archivo_maestro: t_archivo_maestro;
@@ -180,5 +180,4 @@ begin
   writeln(); textcolor(red); writeln('IMRESIÓN ARCHIVO MAESTRO ACTUALIZADO:'); writeln();
   actualizar_archivo_maestro(archivo_maestro,archivo_detalle);
   imprimir_archivo_maestro(archivo_maestro);
-  exportar_archivo_txt(archivo_maestro);
 end.

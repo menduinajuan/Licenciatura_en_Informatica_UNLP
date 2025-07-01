@@ -16,7 +16,7 @@ program TP2_E12;
 {$codepage UTF8}
 uses crt;
 const
-  usuario_salida=999;
+  anio_salida=999;
   dia_ini=1; dia_fin=31;
   mes_ini=1; mes_fin=12;
   anio_ini=2020; anio_fin=2025;
@@ -25,7 +25,7 @@ type
   t_mes=mes_ini..mes_fin;
   t_anio=anio_ini..anio_fin;
   t_registro_fecha=record
-    anio: t_anio;
+    anio: int16;
     mes: t_mes;
     dia: t_dia;
   end;
@@ -74,12 +74,12 @@ begin
   end;
   close(archivo_maestro);
 end;
-procedure leer_acceso(var archivo_maestro: t_archivo_maestro; var registro_usuario: t_registro_usuario);
+procedure leer_usuario(var archivo_maestro: t_archivo_maestro; var registro_usuario: t_registro_usuario);
 begin
   if (not eof(archivo_maestro)) then
     read(archivo_maestro,registro_usuario)
   else
-    registro_usuario.usuario:=usuario_salida;
+    registro_usuario.fecha.anio:=anio_salida;
 end;
 procedure procesar_archivo_maestro(var archivo_maestro: t_archivo_maestro; anio: t_anio);
 var
@@ -88,10 +88,10 @@ var
   tiempo_anio, tiempo_mes, tiempo_dia, tiempo_usuario: real;
 begin
   reset(archivo_maestro);
-  leer_acceso(archivo_maestro,registro_usuario);
-  while ((registro_usuario.usuario<>usuario_salida) and (registro_usuario.fecha.anio<>anio)) do
-    leer_acceso(archivo_maestro,registro_usuario);
-  if (registro_usuario.usuario<>usuario_salida) then
+  leer_usuario(archivo_maestro,registro_usuario);
+  while ((registro_usuario.fecha.anio<>anio) and (registro_usuario.fecha.anio<>anio_salida)) do
+    leer_usuario(archivo_maestro,registro_usuario);
+  if (registro_usuario.fecha.anio<>anio_salida) then
   begin
     tiempo_anio:=0;
     textcolor(green); write('Año: '); textcolor(yellow); writeln(anio); writeln();
@@ -113,7 +113,7 @@ begin
           while ((registro_usuario.fecha.anio=anio) and (registro_usuario.fecha.mes=mes) and (registro_usuario.fecha.dia=dia) and (registro_usuario.usuario=usuario)) do
           begin
             tiempo_usuario:=tiempo_usuario+registro_usuario.tiempo;
-            leer_acceso(archivo_maestro,registro_usuario);
+            leer_usuario(archivo_maestro,registro_usuario);
           end;
           textcolor(green); write('      '); textcolor(yellow); write(usuario); textcolor(green); write('                  '); textcolor(red); writeln(tiempo_usuario:0:2);
           tiempo_dia:=tiempo_dia+tiempo_usuario;

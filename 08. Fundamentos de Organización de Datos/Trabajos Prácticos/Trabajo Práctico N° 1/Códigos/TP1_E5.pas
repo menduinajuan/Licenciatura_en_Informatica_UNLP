@@ -56,7 +56,7 @@ begin
     registro_celular.nombre:=random_string(5+random(6));
     registro_celular.descripcion:=vector_descripciones[1+random(5)];
     registro_celular.marca:=vector_marcas[1+random(10)];
-    registro_celular.precio:=100+random(9001)/10;
+    registro_celular.precio:=1+random(100);
     registro_celular.stock_minimo:=1+random(10);
     registro_celular.stock_disponible:=random(101);
   end;

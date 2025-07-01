@@ -16,14 +16,14 @@ const
   mes_ini=1; mes_fin=12;
   anio_ini=2000; anio_fin=2025;
 type
-  t_string20=string[20];
+  t_string10=string[10];
   t_dia=dia_ini..dia_fin;
   t_mes=mes_ini..mes_fin;
   t_anio=anio_ini..anio_fin;
   t_registro_cliente=record
     codigo: int16;
-    nombre: t_string20;
-    apellido: t_string20;
+    nombre: t_string10;
+    apellido: t_string10;
   end;
   t_registro_fecha=record
     anio: t_anio;

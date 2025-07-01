@@ -7,7 +7,7 @@ Se debe realizar el procedimiento que recibe los 30 detalles y actualiza el stoc
 La información que se recibe en los detalles es: código de producto y cantidad vendida.
 Además, se deberá informar en un archivo de texto: nombre de producto, descripción, stock disponible y precio de aquellos productos que tengan stock disponible por debajo del stock mínimo.
 Pensar alternativas sobre realizar el informe en el mismo procedimiento de actualización o realizarlo en un procedimiento separado (analizar ventajas/desventajas en cada caso).
-Nota: Todos los archivos se encuentran ordenados por código de productos. En cada detalle, puede venir 0 o N registros de un determinado producto.}
+Nota: Todos los archivos se encuentran ordenados por código de producto. En cada detalle, puede venir 0 o N registros de un determinado producto.}
 
 program TP2_E4;
 {$codepage UTF8}

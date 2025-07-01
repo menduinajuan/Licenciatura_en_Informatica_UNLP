@@ -1,6 +1,0 @@
-1 50 100 Buenos Aires
-2 100 200 Buenos Aires
-5 250 500 Chaco
-6 300 600 Chaco
-9 450 900 Cordoba
-10 500 1000 Cordoba

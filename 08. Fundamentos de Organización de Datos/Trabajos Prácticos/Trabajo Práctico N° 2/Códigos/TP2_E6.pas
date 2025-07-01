@@ -160,6 +160,7 @@ var
   i: t_detalle;
   localidades_corte, codigo: int16;
   casos_activos_localidad: int32;
+  ok: boolean;
 begin
   localidades_corte:=0;
   reset(archivo_maestro);
@@ -184,10 +185,16 @@ begin
       actualizar_localidades_corte(casos_activos_localidad,localidades_corte);
       casos_activos_localidad:=0;
     end;
+    ok:=true;
     while (registro_localidad.codigo=min.codigo) do
     begin
       while (registro_localidad.codigo_cepa<>min.codigo_cepa) do
+      begin
+        if (ok=true) then
+          casos_activos_localidad:=casos_activos_localidad+registro_localidad.casos_activos;
         read(archivo_maestro,registro_localidad);
+        ok:=true;
+      end;
       while ((registro_localidad.codigo=min.codigo) and (registro_localidad.codigo_cepa=min.codigo_cepa)) do
       begin
         registro_localidad.casos_fallecidos:=registro_localidad.casos_fallecidos+min.casos_fallecidos;
@@ -199,6 +206,18 @@ begin
       seek(archivo_maestro,filepos(archivo_maestro)-1);
       write(archivo_maestro,registro_localidad);
       casos_activos_localidad:=casos_activos_localidad+registro_localidad.casos_activos;
+      ok:=false;
+      if (registro_localidad.codigo<>min.codigo) then
+      begin
+        codigo:=registro_localidad.codigo;
+        leer_localidad_maestro(archivo_maestro,registro_localidad);
+        while (registro_localidad.codigo=codigo) do
+        begin
+          casos_activos_localidad:=casos_activos_localidad+registro_localidad.casos_activos;
+          leer_localidad_maestro(archivo_maestro,registro_localidad);
+        end;
+        seek(archivo_maestro,filepos(archivo_maestro)-1);
+      end;
     end;
     actualizar_localidades_corte(casos_activos_localidad,localidades_corte);
   end;

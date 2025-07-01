@@ -13,22 +13,22 @@ const
   nombre_salida='ZZZ';
 type
   t_string50=string[50];
-  t_registro_provincia=record
+  t_registro_provincia1=record
     nombre: t_string50;
     alfabetizados: int16;
     encuestados: int16;
   end;
-  t_registro_localidad=record
+  t_registro_provincia2=record
     nombre: t_string50;
-    codigo: int16;
+    codigo_localidad: int16;
     alfabetizados: int16;
     encuestados: int16;
   end;
-  t_archivo_maestro=file of t_registro_provincia;
-  t_archivo_detalle=file of t_registro_localidad;
+  t_archivo_maestro=file of t_registro_provincia1;
+  t_archivo_detalle=file of t_registro_provincia2;
 procedure cargar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_carga_maestro: text);
 var
-  registro_provincia: t_registro_provincia;
+  registro_provincia: t_registro_provincia1;
 begin
   rewrite(archivo_maestro);
   reset(archivo_carga_maestro);
@@ -43,86 +43,86 @@ begin
 end;
 procedure cargar_archivo_detalle(var archivo_detalle: t_archivo_detalle; var archivo_carga_detalle: text);
 var
-  registro_localidad: t_registro_localidad;
+  registro_provincia: t_registro_provincia2;
 begin
   rewrite(archivo_detalle);
   reset(archivo_carga_detalle);
   while (not eof(archivo_carga_detalle)) do
-    with registro_localidad do
+    with registro_provincia do
     begin
-      readln(archivo_carga_detalle,codigo,alfabetizados,encuestados,nombre); nombre:=trim(nombre);
-      write(archivo_detalle,registro_localidad);
+      readln(archivo_carga_detalle,codigo_localidad,alfabetizados,encuestados,nombre); nombre:=trim(nombre);
+      write(archivo_detalle,registro_provincia);
     end;
   close(archivo_detalle);
   close(archivo_carga_detalle);
 end;
-procedure imprimir_registro_provincia(registro_provincia: t_registro_provincia);
+procedure imprimir_registro_provincia1(registro_provincia: t_registro_provincia1);
 begin
-  textcolor(green); write('Provincia: '); textcolor(yellow); write(registro_provincia.nombre);
+  textcolor(green); write('Nombre: '); textcolor(yellow); write(registro_provincia.nombre);
   textcolor(green); write('; Alfabetizados: '); textcolor(yellow); write(registro_provincia.alfabetizados);
   textcolor(green); write('; Encuestados: '); textcolor(yellow); writeln(registro_provincia.encuestados);
 end;
 procedure imprimir_archivo_maestro(var archivo_maestro: t_archivo_maestro);
 var
-  registro_provincia: t_registro_provincia;
+  registro_provincia: t_registro_provincia1;
 begin
   reset(archivo_maestro);
   while (not eof(archivo_maestro)) do
   begin
     read(archivo_maestro,registro_provincia);
-    imprimir_registro_provincia(registro_provincia);
+    imprimir_registro_provincia1(registro_provincia);
   end;
   close(archivo_maestro);
 end;
-procedure imprimir_registro_localidad(registro_localidad: t_registro_localidad);
+procedure imprimir_registro_provincia2(registro_provincia: t_registro_provincia2);
 begin
-  textcolor(green); write('Provincia: '); textcolor(yellow); write(registro_localidad.nombre);
-  textcolor(green); write('; Código de localidad: '); textcolor(yellow); write(registro_localidad.codigo);
-  textcolor(green); write('; Alfabetizados: '); textcolor(yellow); write(registro_localidad.alfabetizados);
-  textcolor(green); write('; Encuestados: '); textcolor(yellow); writeln(registro_localidad.encuestados);
+  textcolor(green); write('Nombre: '); textcolor(yellow); write(registro_provincia.nombre);
+  textcolor(green); write('; Código de localidad: '); textcolor(yellow); write(registro_provincia.codigo_localidad);
+  textcolor(green); write('; Alfabetizados: '); textcolor(yellow); write(registro_provincia.alfabetizados);
+  textcolor(green); write('; Encuestados: '); textcolor(yellow); writeln(registro_provincia.encuestados);
 end;
 procedure imprimir_archivo_detalle(var archivo_detalle: t_archivo_detalle);
 var
-  registro_localidad: t_registro_localidad;
+  registro_provincia: t_registro_provincia2;
 begin
   reset(archivo_detalle);
   while (not eof(archivo_detalle)) do
   begin
-    read(archivo_detalle,registro_localidad);
-    imprimir_registro_localidad(registro_localidad);
+    read(archivo_detalle,registro_provincia);
+    imprimir_registro_provincia2(registro_provincia);
   end;
   close(archivo_detalle);
 end;
-procedure leer_localidad(var archivo_detalle: t_archivo_detalle; var registro_localidad: t_registro_localidad);
+procedure leer_provincia(var archivo_detalle: t_archivo_detalle; var registro_provincia: t_registro_provincia2);
 begin
   if (not eof(archivo_detalle)) then
-    read(archivo_detalle,registro_localidad)
+    read(archivo_detalle,registro_provincia)
   else
-    registro_localidad.nombre:=nombre_salida;
+    registro_provincia.nombre:=nombre_salida;
 end;
-procedure minimo(var archivo_detalle1, archivo_detalle2: t_archivo_detalle; var registro_localidad1, registro_localidad2, min: t_registro_localidad);
+procedure minimo(var archivo_detalle1, archivo_detalle2: t_archivo_detalle; var registro_provincia1, registro_provincia2, min: t_registro_provincia2);
 begin
-  if (registro_localidad1.nombre<=registro_localidad2.nombre) then
+  if (registro_provincia1.nombre<=registro_provincia2.nombre) then
   begin
-    min:=registro_localidad1;
-    leer_localidad(archivo_detalle1,registro_localidad1);
+    min:=registro_provincia1;
+    leer_provincia(archivo_detalle1,registro_provincia1);
   end
   else
   begin
-    min:=registro_localidad2;
-    leer_localidad(archivo_detalle2,registro_localidad2);
+    min:=registro_provincia2;
+    leer_provincia(archivo_detalle2,registro_provincia2);
   end;
 end;
 procedure actualizar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var archivo_detalle1, archivo_detalle2: t_archivo_detalle);
 var
-  registro_provincia: t_registro_provincia;
-  registro_localidad1, registro_localidad2, min: t_registro_localidad;
+  registro_provincia: t_registro_provincia1;
+  registro_provincia1, registro_provincia2, min: t_registro_provincia2;
 begin
   reset(archivo_maestro);
   reset(archivo_detalle1); reset(archivo_detalle2);
-  leer_localidad(archivo_detalle1,registro_localidad1);
-  leer_localidad(archivo_detalle2,registro_localidad2);
-  minimo(archivo_detalle1,archivo_detalle2,registro_localidad1,registro_localidad2,min);
+  leer_provincia(archivo_detalle1,registro_provincia1);
+  leer_provincia(archivo_detalle2,registro_provincia2);
+  minimo(archivo_detalle1,archivo_detalle2,registro_provincia1,registro_provincia2,min);
   while (min.nombre<>nombre_salida) do
   begin
     read(archivo_maestro,registro_provincia);
@@ -132,7 +132,7 @@ begin
     begin
       registro_provincia.alfabetizados:=registro_provincia.alfabetizados+min.alfabetizados;
       registro_provincia.encuestados:=registro_provincia.encuestados+min.encuestados;
-      minimo(archivo_detalle1,archivo_detalle2,registro_localidad1,registro_localidad2,min);
+      minimo(archivo_detalle1,archivo_detalle2,registro_provincia1,registro_provincia2,min);
     end;
     seek(archivo_maestro,filepos(archivo_maestro)-1);
     write(archivo_maestro,registro_provincia);
@@ -150,11 +150,11 @@ begin
   cargar_archivo_maestro(archivo_maestro,archivo_carga_maestro);
   imprimir_archivo_maestro(archivo_maestro);
   writeln(); textcolor(red); writeln('IMPRESIÓN ARCHIVO DETALLE 1:'); writeln();
-  assign(archivo_detalle1,'E3_localidadesDetalle1'); assign(archivo_carga_detalle1,'E3_localidadesDetalle1.txt');
+  assign(archivo_detalle1,'E3_provinciasDetalle1'); assign(archivo_carga_detalle1,'E3_provinciasDetalle1.txt');
   cargar_archivo_detalle(archivo_detalle1,archivo_carga_detalle1);
   imprimir_archivo_detalle(archivo_detalle1);
   writeln(); textcolor(red); writeln('IMPRESIÓN ARCHIVO DETALLE 2:'); writeln();
-  assign(archivo_detalle2,'E3_localidadesDetalle2'); assign(archivo_carga_detalle2,'E3_localidadesDetalle2.txt');
+  assign(archivo_detalle2,'E3_provinciasDetalle2'); assign(archivo_carga_detalle2,'E3_provinciasDetalle2.txt');
   cargar_archivo_detalle(archivo_detalle2,archivo_carga_detalle2);
   imprimir_archivo_detalle(archivo_detalle2);
   writeln(); textcolor(red); writeln('IMPRESIÓN ARCHIVO MAESTRO ACTUALIZADO:'); writeln();

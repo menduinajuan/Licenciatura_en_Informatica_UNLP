@@ -52,7 +52,7 @@ begin
   end;
   close(archivo_maestro);
 end;
-procedure leer_votos(var archivo_maestro: t_archivo_maestro; var registro_mesa: t_registro_mesa);
+procedure leer_mesa(var archivo_maestro: t_archivo_maestro; var registro_mesa: t_registro_mesa);
 begin
   if (not eof(archivo_maestro)) then
     read(archivo_maestro,registro_mesa)
@@ -66,7 +66,7 @@ var
 begin
   votos_total:=0;
   reset(archivo_maestro);
-  leer_votos(archivo_maestro,registro_mesa);
+  leer_mesa(archivo_maestro,registro_mesa);
   while (registro_mesa.provincia<>provincia_salida) do
   begin
     provincia:=registro_mesa.provincia;
@@ -80,7 +80,7 @@ begin
       while ((registro_mesa.provincia=provincia) and (registro_mesa.localidad=localidad)) do
       begin
         votos_localidad:=votos_localidad+registro_mesa.votos;
-        leer_votos(archivo_maestro,registro_mesa);
+        leer_mesa(archivo_maestro,registro_mesa);
       end;
       textcolor(yellow); write(localidad); textcolor(green); write('                            '); textcolor(red); writeln(votos_localidad);
       votos_provincia:=votos_provincia+votos_localidad;

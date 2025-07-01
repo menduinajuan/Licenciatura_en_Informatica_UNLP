@@ -159,7 +159,6 @@ var
   localidades_corte: int16;
   ok: boolean;
 begin
-  ok:=true;
   localidades_corte:=0;
   reset(archivo_maestro);
   for i:= 1 to detalles_total do
@@ -176,6 +175,7 @@ begin
       actualizar_localidades_corte(registro_provincia.viviendas_de_chapa,localidades_corte);
       read(archivo_maestro,registro_provincia);
     end;
+    ok:=true;
     while (registro_provincia.codigo=min.codigo) do
     begin
       while (registro_provincia.codigo_localidad<>min.codigo_localidad) do

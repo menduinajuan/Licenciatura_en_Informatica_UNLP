@@ -26,8 +26,8 @@ begin
       nums_corte:=nums_corte+1;
     suma:=suma+num;
   end;
-  if (fileSize(archivo_enteros)>0) then
-    prom:=suma/fileSize(archivo_enteros);
+  if (filesize(archivo_enteros)>0) then
+    prom:=suma/filesize(archivo_enteros);
   writeln();
   close(archivo_enteros);
 end;
