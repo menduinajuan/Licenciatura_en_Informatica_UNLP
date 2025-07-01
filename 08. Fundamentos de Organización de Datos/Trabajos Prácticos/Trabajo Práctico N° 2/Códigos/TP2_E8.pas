@@ -102,7 +102,7 @@ begin
   end;
   close(archivo_detalle);
 end;
-procedure leer_provincia(var archivo_detalle: t_archivo_detalle; var registro_provincia: t_registro_provincia2);
+procedure leer_provincia_detalle(var archivo_detalle: t_archivo_detalle; var registro_provincia: t_registro_provincia2);
 begin
   if (not eof(archivo_detalle)) then
     read(archivo_detalle,registro_provincia)
@@ -121,7 +121,7 @@ begin
       pos:=i;
     end;
   if (min.codigo<codigo_salida) then
-    leer_provincia(vector_detalles[pos],vector_provincias[pos]);
+    leer_provincia_detalle(vector_detalles[pos],vector_provincias[pos]);
 end;
 procedure imprimir_texto(registro_provincia: t_registro_provincia1);
 begin
@@ -130,7 +130,7 @@ begin
     textcolor(green); write('El nombre y el código de esta provincia donde la cantidad total de yerba consumida supera los '); textcolor(yellow); write(kilos_corte); textcolor(green); write(' kilos son '); textcolor(red); write(registro_provincia.nombre); textcolor(green); write(' y '); textcolor(red); write(registro_provincia.codigo); textcolor(green); write(', respectivamente, mientras que el promedio consumido de yerba por habitante es '); textcolor(red); writeln(registro_provincia.kilos/registro_provincia.habitantes:0:2);
   end;
 end;
-procedure actualizar_archivo_maestro(var archivo_maestro: t_archivo_maestro; var vector_detalles: t_vector_detalles);
+procedure actualizar1_archivo_maestro(var archivo_maestro: t_archivo_maestro; var vector_detalles: t_vector_detalles);
 var
   registro_provincia: t_registro_provincia1;
   min: t_registro_provincia2;
@@ -141,7 +141,7 @@ begin
   for i:= 1 to detalles_total do
   begin
     reset(vector_detalles[i]);
-    leer_provincia(vector_detalles[i],vector_provincias[i]);
+    leer_provincia_detalle(vector_detalles[i],vector_provincias[i]);
   end;
   minimo(vector_detalles,vector_provincias,min);
   while (min.codigo<>codigo_salida) do
@@ -171,6 +171,51 @@ begin
     close(vector_detalles[i]);
   writeln();
 end;
+procedure leer_provincia_maestro(var archivo_maestro: t_archivo_maestro; var registro_provincia: t_registro_provincia1);
+begin
+  if (not eof(archivo_maestro)) then
+    read(archivo_maestro,registro_provincia)
+  else
+    registro_provincia.codigo:=codigo_salida;
+end;
+procedure actualizar2_archivo_maestro(var archivo_maestro: t_archivo_maestro; var vector_detalles: t_vector_detalles);
+var
+  registro_provincia: t_registro_provincia1;
+  min: t_registro_provincia2;
+  vector_provincias: t_vector_provincias;
+  i: t_detalle;
+  ok: boolean;
+begin
+  reset(archivo_maestro);
+  for i:= 1 to detalles_total do
+  begin
+    reset(vector_detalles[i]);
+    leer_provincia_detalle(vector_detalles[i],vector_provincias[i]);
+  end;
+  minimo(vector_detalles,vector_provincias,min);
+  leer_provincia_maestro(archivo_maestro,registro_provincia);
+  while (registro_provincia.codigo<>codigo_salida) do
+  begin
+    ok:=false;
+    while (registro_provincia.codigo=min.codigo) do
+    begin
+      ok:=true;
+      registro_provincia.kilos:=registro_provincia.kilos+min.kilos;
+      minimo(vector_detalles,vector_provincias,min);
+    end;
+    if (ok=true) then
+    begin
+      seek(archivo_maestro,filepos(archivo_maestro)-1);
+      write(archivo_maestro,registro_provincia);
+    end;
+    imprimir_texto(registro_provincia);
+    leer_provincia_maestro(archivo_maestro,registro_provincia);
+  end;
+  close(archivo_maestro);
+  for i:= 1 to detalles_total do
+    close(vector_detalles[i]);
+  writeln();
+end;
 var
   vector_detalles: t_vector_detalles;
   vector_carga_detalles: t_vector_carga_detalles;
@@ -190,6 +235,7 @@ begin
     imprimir_archivo_detalle(vector_detalles[i]);
   end;
   writeln(); textcolor(red); writeln('IMPRESIÓN ARCHIVO MAESTRO ACTUALIZADO:'); writeln();
-  actualizar_archivo_maestro(archivo_maestro,vector_detalles);
+  //actualizar1_archivo_maestro(archivo_maestro,vector_detalles);
+  actualizar2_archivo_maestro(archivo_maestro,vector_detalles);
   imprimir_archivo_maestro(archivo_maestro);
 end.

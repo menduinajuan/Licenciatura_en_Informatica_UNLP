@@ -22,3 +22,7 @@ Ensenada
 Ensenada
 3 4 0 0 0 0 Cepa4
 Ensenada
+4 1 25 0 0 0 Cepa1
+Gonnet
+4 2 26 0 0 0 Cepa2
+Gonnet

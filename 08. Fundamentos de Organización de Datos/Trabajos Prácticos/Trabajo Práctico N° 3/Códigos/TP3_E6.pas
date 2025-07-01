@@ -144,7 +144,7 @@ begin
     if (registro_prenda.codigo=codigo) then
     begin
       seek(archivo_maestro,filepos(archivo_maestro)-1);
-      registro_prenda.stock:=-stock_baja;
+      registro_prenda.stock:=stock_baja;
       write(archivo_maestro,registro_prenda);
     end;
   end;
