@@ -247,7 +247,7 @@ var
   min: t_registro_localidad2;
   vector_localidades: t_vector_localidades;
   i: t_detalle;
-  localidades_corte, codigo: int16;
+  localidad, localidades_corte: int16;
   casos_activos_localidad: int32;
   ok: boolean;
 begin
@@ -262,9 +262,9 @@ begin
   leer_localidad_maestro(archivo_maestro,registro_localidad);
   while (registro_localidad.codigo<>codigo_salida_maestro) do
   begin
-    codigo:=registro_localidad.codigo;
+    localidad:=registro_localidad.codigo;
     casos_activos_localidad:=0;
-    while (registro_localidad.codigo=codigo) do
+    while (registro_localidad.codigo=localidad) do
     begin
       ok:=false;
       while ((registro_localidad.codigo=min.codigo) and (registro_localidad.codigo_cepa=min.codigo_cepa)) do

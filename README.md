@@ -25,7 +25,7 @@ Para cada resolución, se incluyen los códigos (dado el lenguaje utilizado en l
 
 ## Cómo Contribuir
 
-1. Darle Star (estrella) al repositorio.
+1. Darle estrella (Star) al repositorio.
 2. Seguirme en GitHub/GitLab.
 3. Hacer un fork del repositorio.
 
