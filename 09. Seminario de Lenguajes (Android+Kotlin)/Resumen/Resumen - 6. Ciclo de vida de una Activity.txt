@@ -1,0 +1,26 @@
+### Resumen de "Ciclo de vida de una Activity"
+
+*   **Concepto:** Una `Activity` pasa por diferentes estados a lo largo de su existencia. El sistema operativo notifica estos cambios a través de una serie de métodos de *callback* que podemos sobrescribir para ejecutar código en momentos clave.
+
+*   **Estados Principales:**
+    *   **Created:** La actividad se está creando.
+    *   **Resumed (Running):** La actividad está en primer plano y tiene el foco del usuario. Es totalmente visible e interactiva.
+    *   **Paused:** La actividad está parcialmente visible, pero otra actividad (posiblemente semitransparente o una llamada entrante) tiene el foco. La actividad en pausa sigue "viva".
+    *   **Stopped:** La actividad está completamente oculta por otra actividad. Sigue "viva" en memoria, pero no está visible.
+    *   **Destroyed:** La actividad ha sido eliminada de la memoria, ya sea porque el usuario la cerró (con el botón "Atrás") o porque el sistema necesitó liberar recursos.
+
+*   **Callbacks del Ciclo de Vida:**
+    *   `onCreate()`: Se llama una sola vez, cuando la actividad se crea por primera vez. Aquí se realiza la inicialización fundamental: inflar la UI, inicializar variables, etc.
+    *   `onStart()`: Se llama cuando la actividad está a punto de volverse visible para el usuario.
+    *   `onResume()`: Se llama cuando la actividad está a punto de empezar a interactuar con el usuario. Es el lugar ideal para iniciar animaciones o acceder a recursos exclusivos como la cámara.
+    *   `onPause()`: Se llama cuando la actividad pierde el foco. Es el lugar para detener tareas que consumen CPU, guardar datos no persistentes y liberar recursos exclusivos. Debe ser muy rápido.
+    *   `onStop()`: Se llama cuando la actividad ya no es visible. Aquí se pueden detener tareas más pesadas.
+    *   `onRestart()`: Se llama cuando una actividad que estaba en estado `Stopped` está a punto de volver a iniciarse.
+    *   `onDestroy()`: Se llama justo antes de que la actividad sea destruida. Es la última oportunidad para limpiar todos los recursos.
+
+*   **Pérdida y Recuperación de Estado (Destrucción-Creación):**
+    *   **El Problema:** Cuando ocurre un cambio de configuración (como rotar la pantalla o cambiar el idioma del dispositivo), el sistema **destruye y vuelve a crear** la `Activity` para recargar los recursos adecuados. Esto provoca que se pierdan los datos de estado almacenados en variables de instancia (como un contador en un `TextView`).
+    *   **La Solución:** Para guardar el estado transitorio de la UI a través de este proceso, se utilizan dos callbacks adicionales:
+        *   `onSaveInstanceState(outState: Bundle)`: El sistema llama a este método antes de destruir la actividad, dándonos la oportunidad de guardar datos (como el valor de un contador) en un objeto `Bundle`.
+        *   `onRestoreInstanceState(savedInstanceState: Bundle)` o `onCreate(savedInstanceState: Bundle)`: Después de que la actividad se vuelve a crear, podemos recuperar los datos guardados del `Bundle` en cualquiera de estos dos métodos para restaurar el estado de la UI.
+    *   **Importante:** `onSaveInstanceState` **no** se llama cuando el usuario cierra la app explícitamente (ej. con el botón "Atrás"), ya que no se espera que el estado se guarde. Su propósito es manejar la recreación inesperada de la `Activity`. Para guardar datos de forma permanente (persistente), se deben usar otras técnicas como `SharedPreferences` o bases de datos, generalmente en el método `onPause()`.

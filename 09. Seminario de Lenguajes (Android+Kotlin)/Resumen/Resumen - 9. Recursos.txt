@@ -1,0 +1,29 @@
+### Resumen de "Recursos"
+
+*   **Concepto Central:** En Android, es una práctica fundamental externalizar los recursos de la aplicación (como textos, imágenes, colores, estilos y layouts) separándolos del código fuente. Esto permite mantener y modificar la apariencia y el contenido de la app de forma independiente a su lógica.
+
+*   **Ubicación:** Todos los recursos se organizan en subdirectorios dentro de la carpeta `res/` del proyecto.
+
+*   **Ventaja Principal (Adaptabilidad):** La principal ventaja de este sistema es que permite proporcionar **recursos alternativos** para diferentes configuraciones de dispositivo. Android selecciona automáticamente el recurso más adecuado en tiempo de ejecución. Esto se logra mediante **calificadores (qualifiers)** en los nombres de los directorios.
+    *   **Ejemplos de calificadores:**
+        *   **Idioma:** `values-es/` para textos en español, `values-fr/` para francés.
+        *   **Tamaño de pantalla:** `layout-large/` para tablets.
+        *   **Orientación:** `layout-land/` para la vista en horizontal.
+        *   **Densidad de píxeles:** `drawable-hdpi/`, `drawable-xhdpi/` para imágenes de diferente resolución.
+        *   **Versión de API:** `values-v21/` para aplicar recursos solo en Android 5.0 y superior.
+
+*   **Tipos de Recursos Comunes:**
+    *   **Strings (`res/values/strings.xml`):** Para todos los textos de la UI. Esencial para la traducción (internacionalización).
+    *   **Colors (`res/values/colors.xml`):** Para definir valores de color hexadecimales y reutilizarlos en toda la app.
+    *   **Dimensions (`res/values/dimens.xml`):** Para definir medidas (márgenes, paddings, tamaños de texto) y mantener la consistencia.
+    *   **Drawables (`res/drawable/`):** Para gráficos e imágenes. Pueden ser imágenes de mapa de bits (PNG, JPG), gráficos vectoriales (VectorDrawable) o formas definidas en XML (Shape Drawable).
+    *   **Mipmap (`res/mipmap/`):** Directorio específico para los íconos de la aplicación en diferentes densidades.
+    *   **Layouts (`res/layout/`):** Archivos XML que definen la estructura de la interfaz de usuario.
+
+*   **Acceso a los Recursos:**
+    *   **Desde XML:** Se utiliza la sintaxis `@`. Por ejemplo: `@string/app_name`, `@color/colorPrimary`, `@drawable/my_icon`.
+    *   **Desde el código (Kotlin/Java):** Se utiliza la clase `R` generada automáticamente. Por ejemplo: `R.string.app_name`, `R.color.colorPrimary`, `R.drawable.my_icon`.
+
+*   **Estilos y Temas (`res/values/styles.xml` o `themes.xml`):**
+    *   **Estilo (Style):** Es una colección de atributos de apariencia (color, tamaño, fuente, etc.) que se pueden aplicar a una `View`. Funciona de manera similar a las hojas de estilo CSS.
+    *   **Tema (Theme):** Es un estilo que se aplica a toda una `Activity` o a la aplicación completa desde el `AndroidManifest.xml`. Define la apariencia por defecto de todos los componentes.

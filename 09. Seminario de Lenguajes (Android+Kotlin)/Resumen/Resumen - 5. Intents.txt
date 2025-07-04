@@ -1,0 +1,31 @@
+### Resumen de "Intents"
+
+*   **¿Qué es un Intent?:** Un `Intent` es un objeto de mensajería que se puede usar para solicitar una acción a otro componente de una aplicación. Es el mecanismo principal de comunicación entre los componentes de Android (Activities, Services, Broadcast Receivers).
+
+*   **Usos Principales de los Intents:**
+    1.  **Iniciar una Activity:** Es el uso más común. Permite navegar de una pantalla (Activity) a otra.
+    2.  **Iniciar un Service:** Para iniciar una operación en segundo plano sin interfaz de usuario.
+    3.  **Entregar un Broadcast:** Para enviar un mensaje a todo el sistema, al que cualquier aplicación con un `BroadcastReceiver` adecuado puede reaccionar.
+
+*   **Tipos de Intents:**
+    *   **Intents Explícitos:** Especifican el componente exacto que debe recibir el intent (por su nombre de clase). Se usan principalmente para la navegación y comunicación *dentro* de tu propia aplicación, ya que conoces las clases de tus Activities.
+        *   **Ejemplo:** `val intent = Intent(this, DetalleActivity::class.java)`
+
+    *   **Intents Implícitos:** No especifican un componente. En su lugar, declaran una acción general que se debe realizar. El sistema Android busca qué aplicación(es) pueden manejar esa acción y presenta al usuario las opciones si hay más de una.
+        *   **Ejemplo:** Para abrir una página web, se usa la acción `ACTION_VIEW` y se pasa la URL. El sistema abrirá el navegador web por defecto.
+        *   **Ejemplo:** Para compartir contenido, se usa la acción `ACTION_SEND`. El sistema mostrará todas las apps que pueden compartir (email, redes sociales, etc.).
+
+*   **Estructura de un Intent:**
+    *   **Acción (Action):** La acción a realizar (ej. `ACTION_VIEW`, `ACTION_EDIT`, `ACTION_DIAL`).
+    *   **Datos (Data):** La URI de los datos sobre los que se actuará (ej. una URL, un número de teléfono, un contacto).
+    *   **Extras:** Un `Bundle` (conjunto de pares clave-valor) para pasar información adicional entre componentes. Es la forma más común de pasar datos de una `Activity` a otra.
+        *   Para añadir datos: `intent.putExtra("clave", "valor")`
+        *   Para leer datos en la `Activity` receptora: `intent.getStringExtra("clave")`
+
+*   **Resolución de Intents y `Intent-Filter`:**
+    *   Para que un componente pueda responder a un `Intent` implícito, debe declarar un `<intent-filter>` en el archivo `AndroidManifest.xml`.
+    *   Este filtro especifica los tipos de `actions`, `data` y `categories` que el componente está preparado para recibir.
+
+*   **Iniciar una Activity para obtener un resultado:**
+    *   Se puede iniciar una `Activity` y esperar a que devuelva un resultado a la `Activity` original.
+    *   Esto es útil, por ejemplo, para que el usuario seleccione un contacto o tome una foto y la app principal reciba esa información. Se utilizan las APIs de `ActivityResultLauncher`.

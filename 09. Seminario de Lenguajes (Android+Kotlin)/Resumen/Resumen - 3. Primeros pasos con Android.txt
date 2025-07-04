@@ -1,0 +1,30 @@
+### Resumen de "Primeros pasos con Android"
+
+*   **Configuración del SDK:**
+    *   El **SDK Manager** en Android Studio se usa para instalar y administrar las diferentes versiones de la API de Android (SDK Platforms).
+    *   No es necesario instalar las APIs de todas las versiones antiguas para las que quieras dar soporte.
+    *   Se recomienda instalar la "plataforma" y las "fuentes" (Sources) del nivel de API con el que se compilará la aplicación.
+    *   Opcionalmente, se pueden instalar las **Google APIs** para usar servicios de Google (Maps, etc.) y las imágenes del sistema (System Images) para emular diferentes dispositivos y versiones de Android.
+
+*   **Creación de un nuevo proyecto:**
+    *   El proceso comienza seleccionando una plantilla, como **"Empty Views Activity"**.
+    *   Se debe configurar el nombre de la aplicación, el nombre del paquete (un identificador único), la ubicación, el lenguaje (se recomienda **Kotlin**) y el **Minimum SDK** (la versión de Android más antigua que soportará la app).
+    *   Android Studio ofrece una ayuda (`help me choose`) para decidir el SDK mínimo, mostrando el porcentaje de dispositivos que se alcanzarán.
+
+*   **Interfaz de Android Studio (IDE):**
+    *   Se presenta la interfaz principal, incluyendo la barra de herramientas, la barra de navegación, la ventana del editor y la barra de estado.
+
+*   **Ejecución de la aplicación:**
+    *   Se utiliza el **AVD (Android Virtual Device) Manager** para crear y gestionar emuladores.
+    *   Una vez configurado un emulador, se puede ejecutar la aplicación directamente desde Android Studio con el botón "Run" (o Mayus + F10).
+
+*   **El archivo `AndroidManifest.xml`:**
+    *   Es un archivo **esencial** en toda aplicación de Android.
+    *   Define la estructura y metadatos de la aplicación para el sistema operativo.
+    *   Contiene:
+        *   El **identificador único** de la aplicación (package name).
+        *   El **ícono**, **título** y **tema** de la aplicación.
+        *   La declaración de los **componentes** de la aplicación (como Activities).
+        *   La definición de la actividad principal que se lanzará al iniciar la app.
+        *   La solicitud de **permisos** que la aplicación necesita (ej. acceso a Internet).
+    *   Se menciona la evolución del modelo de permisos: antes de Android 6 se aceptaban todos al instalar, y a partir de Android 6 se solicitan en tiempo de ejecución.

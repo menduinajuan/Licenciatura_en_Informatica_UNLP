@@ -1,0 +1,37 @@
+### Resumen de "Almacenamiento de datos"
+
+*   **Opciones de Almacenamiento en Android:** Android ofrece varias opciones para almacenar datos, cada una adecuada para diferentes tipos de información y necesidades de persistencia.
+
+*   **1. Almacenamiento Interno (Internal Storage):**
+    *   **Concepto:** Almacena datos privados de la aplicación directamente en la memoria interna del dispositivo.
+    *   **Privacidad:** Los archivos guardados aquí son privados para la aplicación que los creó y no son accesibles por otras aplicaciones ni por el usuario directamente (a menos que el dispositivo esté rooteado).
+    *   **Persistencia:** Los datos persisten incluso si la aplicación se cierra, pero se eliminan automáticamente cuando la aplicación es desinstalada.
+    *   **Uso:** Ideal para datos sensibles o que no deben ser compartidos.
+    *   **Métodos:** `openFileOutput()` y `openFileInput()` para escribir y leer archivos.
+
+*   **2. Almacenamiento Externo (External Storage):**
+    *   **Concepto:** Almacena datos en un almacenamiento compartido, como una tarjeta SD o una partición de almacenamiento interno accesible públicamente.
+    *   **Accesibilidad:** Los datos son accesibles por otras aplicaciones y por el usuario.
+    *   **Persistencia:** Los datos persisten incluso si la aplicación se desinstala.
+    *   **Permisos:** Requiere permisos de lectura (`READ_EXTERNAL_STORAGE`) y/o escritura (`WRITE_EXTERNAL_STORAGE`) en el `AndroidManifest.xml` y en tiempo de ejecución.
+    *   **Uso:** Para archivos que deben ser compartidos o que son grandes (fotos, videos).
+    *   **Consideraciones:** Se debe verificar la disponibilidad del almacenamiento externo antes de usarlo.
+
+*   **3. SharedPreferences:**
+    *   **Concepto:** Almacena colecciones de pares clave-valor de datos primitivos (booleanos, flotantes, enteros, largos, cadenas).
+    *   **Uso:** Ideal para guardar pequeñas cantidades de datos, como preferencias de usuario, configuraciones de la aplicación o el estado de la UI.
+    *   **Privacidad:** Los datos son privados para la aplicación.
+    *   **Métodos:** Se obtiene una instancia de `SharedPreferences` (generalmente con `getSharedPreferences()` o `getDefaultSharedPreferences()`), se usa un `Editor` para escribir datos (`put...()`) y se aplica (`apply()`) o se confirma (`commit()`) el cambio. Para leer, se usan los métodos `get...()`.
+
+*   **4. Bases de Datos SQLite:**
+    *   **Concepto:** Android incluye soporte para bases de datos SQLite, una base de datos relacional ligera y embebida.
+    *   **Uso:** Ideal para almacenar datos estructurados y complejos que requieren consultas y relaciones.
+    *   **Persistencia:** Los datos persisten y son privados para la aplicación.
+    *   **`SQLiteOpenHelper`:** Es una clase de ayuda que facilita la creación y actualización de la base de datos. Se encarga de abrir la base de datos, crear las tablas si no existen y gestionar las actualizaciones de esquema.
+    *   **Operaciones CRUD:** Se utilizan métodos como `insert()`, `query()`, `update()`, `delete()` en un objeto `SQLiteDatabase` para interactuar con la base de datos.
+
+*   **5. Content Providers:**
+    *   **Concepto:** Proporcionan una interfaz estandarizada para acceder a datos almacenados en una aplicación. Permiten que otras aplicaciones accedan a los datos de tu aplicación de forma segura y controlada.
+    *   **Uso:** Principalmente para compartir datos entre aplicaciones o para acceder a datos del sistema (contactos, calendario, etc.).
+    *   **URI:** Los datos se identifican mediante URIs (Uniform Resource Identifiers).
+    *   **Métodos:** Implementan los métodos `query()`, `insert()`, `update()`, `delete()` para manejar las operaciones de datos.

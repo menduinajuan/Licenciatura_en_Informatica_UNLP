@@ -1,9 +1,9 @@
 {TRABAJO PRÁCTICO N° 6}
 {EJERCICIO 9}
 {Utilizando el programa del Ejercicio 1, realizar los siguientes módulos:
-(a) EstaOrdenada: recibe la lista como parámetro y retorna true si la misma se encuentra ordenada o false en caso contrario.
-(b) Eliminar: recibe como parámetros la lista y un valor entero, y elimina dicho valor de la lista (si existe). Nota: La lista podría no estar ordenada.
-(c) Sublista: recibe como parámetros la lista y dos valores enteros A y B, y retorna una nueva lista con todos los elementos de la lista mayores que A y menores que B.
+(a) EstaOrdenada: Recibe la lista como parámetro y retorna true si la misma se encuentra ordenada o false en caso contrario.
+(b) Eliminar: Recibe como parámetros la lista y un valor entero, y elimina dicho valor de la lista (si existe). Nota: La lista podría no estar ordenada.
+(c) Sublista: Recibe como parámetros la lista y dos valores enteros A y B, y retorna una nueva lista con todos los elementos de la lista mayores que A y menores que B.
 (d) Modificar el módulo Sublista del inciso anterior, suponiendo que la lista se encuentra ordenada de manera ascendente.
 (e) Modificar el módulo Sublista del inciso anterior, suponiendo que la lista se encuentra ordenada de manera descendente.}
 

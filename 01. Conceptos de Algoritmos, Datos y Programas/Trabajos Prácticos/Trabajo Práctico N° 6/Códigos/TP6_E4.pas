@@ -1,9 +1,9 @@
 {TRABAJO PRÁCTICO N° 6}
 {EJERCICIO 4}
 {Utilizando el programa del Ejercicio 1, realizar los siguientes módulos:
-(a) Máximo: recibe la lista como parámetro y retorna el elemento de valor máximo.
-(b) Mínimo: recibe la lista como parámetro y retorna el elemento de valor mínimo.
-(c) Múltiplos: recibe como parámetros la lista L y un valor entero A, y retorna la cantidad de elementos de la lista que son múltiplos de A.}
+(a) Máximo: Recibe la lista como parámetro y retorna el elemento de valor máximo.
+(b) Mínimo: Recibe la lista como parámetro y retorna el elemento de valor mínimo.
+(c) Múltiplos: Recibe como parámetros la lista L y un valor entero A, y retorna la cantidad de elementos de la lista que son múltiplos de A.}
 
 program TP6_E4;
 {$codepage UTF8}
