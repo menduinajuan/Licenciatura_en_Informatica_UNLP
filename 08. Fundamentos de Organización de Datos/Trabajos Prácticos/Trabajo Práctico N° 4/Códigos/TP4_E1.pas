@@ -17,8 +17,8 @@ type
     anio_ingreso: int16;
   end;
   t_registro_nodo=record
-    cantidad_datos: int16;
-    datos: array[0..M-1] of t_registro_alumno;
+    cantidad_claves: int16;
+    claves: array[0..M-1] of t_registro_alumno;
     hijos: array[0..M] of int16;
   end;
   t_archivo_datos=file of t_registro_nodo;

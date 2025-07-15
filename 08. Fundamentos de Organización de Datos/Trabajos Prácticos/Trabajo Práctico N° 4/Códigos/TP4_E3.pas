@@ -19,11 +19,12 @@ type
   end;
   t_lista=^t_registro_nodo;
   t_registro_nodo=record
+    es_hoja: boolean;
     cantidad_claves: int16;
     claves: array[0..M-1] of int32;
-    enlaces: array[0..M-1] of int16;
-    hijos: array[0..M] of int16;
-    sig: t_lista;
+    enlaces: array[0..M-1] of int16; // si es_hoja=true
+    hijos: array[0..M] of int16; // si es_hoja=false
+    sig: t_lista; // sig: int16; // si es_hoja=true
   end;
   t_archivo_datos=file of t_registro_alumno;
   t_archivo_indice=file of t_registro_nodo;
