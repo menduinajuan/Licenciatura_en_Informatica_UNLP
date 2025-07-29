@@ -6,6 +6,8 @@
 program TP2_E2;
 {$codepage UTF8}
 uses crt;
+const
+  num_salida=100;
 procedure digParesImpares(num: integer; var par, impar: integer);
 var
   dig: integer;
@@ -21,7 +23,7 @@ begin
   end;
 end;
 var
-  vector_nums: array[1..3] of integer=(250, 35, 100);
+  vector_nums: array[1..3] of integer=(250, 35, num_salida);
   dato, par, impar, pos: integer;
 begin
   par:=0;
@@ -31,6 +33,6 @@ begin
     pos:=pos+1;
     dato:=vector_nums[pos];
     digParesImpares(dato,par,impar);
-  until (dato=100);
+  until (dato=num_salida);
   textcolor(green); write('Pares: '); textcolor(red); write(par); textcolor(green); write(' e Impares: '); textcolor(red); write(impar);
 end.
