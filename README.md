@@ -7,7 +7,7 @@ Bienvenido/a al repositorio de las materias de la Licenciatura en Informática d
 Este repositorio contiene las resoluciones de los trabajos prácticos y el material teórico de cada materia de la carrera (Plan 2021).
 Para cada resolución, se incluyen los códigos (dado el lenguaje utilizado en la materia correspondiente) y el informe (en formato .docx y .pdf).
 
-## Estructura del Repositorio (hasta el momento, mes de julio de 2025)
+## Estructura del Repositorio (hasta el momento, mes de agosto de 2025)
 
 - `00. Cursos Iniciales`: Contiene las resoluciones de los trabajos prácticos y el material teórico de los "Cursos Iniciales (COC, EPA y M0)".
 - `01. Conceptos de Algoritmos, Datos y Programas`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Conceptos de Algoritmos, Datos y Programas".
@@ -20,6 +20,10 @@ Para cada resolución, se incluyen los códigos (dado el lenguaje utilizado en l
 - `08. Fundamentos de Organización de Datos`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Fundamentos de Organización de Datos".
 - `09. Seminario de Lenguajes (Android+Kotlin)`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Seminario de Lenguajes (Android+Kotlin)".
 - `10. Taller de Lecto-Comprensión y Traducción en Inglés`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Taller de Lecto-Comprensión y Traducción en Inglés".
+- `11. Diseño de Bases de Datos`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Diseño de Bases de Datos".
+- `12. Ingeniería de Software 1`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Ingeniería de Software 1".
+- `13. Introducción a los Sistemas Operativos`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Introducción a los Sistemas Operativos".
+- `14. Orientación a Objetos 1`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Orientación a Objetos 1".
 - `17. Matemática 3`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Matemática 3".
 - `28. Matemática 4`: Contiene las resoluciones de los trabajos prácticos y el material teórico de la materia "Matemática 4".
 
