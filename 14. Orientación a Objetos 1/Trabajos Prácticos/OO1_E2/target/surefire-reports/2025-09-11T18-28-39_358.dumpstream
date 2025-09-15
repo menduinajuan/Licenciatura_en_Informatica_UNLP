@@ -1,0 +1,4 @@
+# Created at 2025-09-11T18:28:40.164
+Boot Manifest-JAR contains absolute paths in classpath 'G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\14. Orientación a Objetos 1\Trabajos Prácticos\OO1_E2\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
