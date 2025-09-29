@@ -28,11 +28,11 @@ public class Presupuesto {
     }
     
     public void agregarItem(Item item) {
-        this.items.add(item);
+        this.getItems().add(item);
     }
 
     public double calcularTotal() {
-        return this.items.stream().mapToDouble(Item::costo).sum();
+        return this.getItems().stream().mapToDouble(Item::costo).sum();
     }
 
 }

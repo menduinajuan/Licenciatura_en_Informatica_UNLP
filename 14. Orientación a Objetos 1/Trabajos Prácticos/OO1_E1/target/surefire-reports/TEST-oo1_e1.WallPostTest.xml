@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="oo1_e1.WallPostTest" time="0.216" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="oo1_e1.WallPostTest" time="0.106" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,8 +15,9 @@
     <property name="user.country" value="AR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\juanc\AppData\Local\Temp\surefire10438258362178531489\surefirebooter8961784381661848123.jar C:\Users\juanc\AppData\Local\Temp\surefire10438258362178531489 2025-09-11T18-59-12_490-jvmRun1 surefire8048518162928277421tmp surefire_02773930654407566706tmp"/>
+    <property name="sun.java.command" value="C:\Users\juanc\AppData\Local\Temp\surefire16686878142711967949\surefirebooter6051580858160294812.jar C:\Users\juanc\AppData\Local\Temp\surefire16686878142711967949 2025-09-25T18-53-52_021-jvmRun1 surefire15955839313808913100tmp surefire_07708637576181153286tmp"/>
     <property name="jdk.debug" value="release"/>
+    <property name="test" value="oo1_e1.**.*Test"/>
     <property name="surefire.test.class.path" value="G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\14. Orientación a Objetos 1\Trabajos Prácticos\OO1_E1\target\test-classes;G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\14. Orientación a Objetos 1\Trabajos Prácticos\OO1_E1\target\classes;C:\Users\juanc\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.2\junit-jupiter-engine-5.7.2.jar;C:\Users\juanc\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\juanc\.m2\repository\org\junit\platform\junit-platform-engine\1.7.2\junit-platform-engine-1.7.2.jar;C:\Users\juanc\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\juanc\.m2\repository\org\junit\platform\junit-platform-commons\1.7.2\junit-platform-commons-1.7.2.jar;C:\Users\juanc\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.2\junit-jupiter-api-5.7.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\juanc"/>
@@ -30,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\juanc\AppData\Local\Temp\surefire10438258362178531489\surefirebooter8961784381661848123.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\juanc\AppData\Local\Temp\surefire16686878142711967949\surefirebooter6051580858160294812.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="15.0.2+7-27"/>
@@ -49,17 +50,17 @@
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\FPC\3.2.2\bin\i386-Win32;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\MATLAB\R2024b\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\PowerShell\7\;C:\Program Files\dotnet\;C:\Users\juanc\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\juanc\AppData\Local\Programs\Python\Python312\;C:\Users\juanc\AppData\Local\Microsoft\WindowsApps;C:\Users\juanc\AppData\Local\GitHubDesktop\bin;C:\Users\juanc\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\juanc\AppData\Local\Programs\Julia-1.9.0-rc1\bin;C:\Users\juanc\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\juanc\AppData\Roaming\npm;C:\Users\juanc\AppData\Local\Programs\Ollama;C:\Users\juanc\AppData\Local\Programs\AIShell;C:\Users\juanc\.dotnet\tools;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\FPC\3.2.2\bin\i386-Win32;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\MATLAB\R2024b\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Program Files\PowerShell\7\;C:\Users\juanc\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\juanc\AppData\Local\Programs\Python\Python312\;C:\Users\juanc\AppData\Local\Microsoft\WindowsApps;C:\Users\juanc\AppData\Local\GitHubDesktop\bin;C:\Users\juanc\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\juanc\AppData\Local\Programs\Julia-1.9.0-rc1\bin;C:\Users\juanc\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\juanc\AppData\Roaming\npm;C:\Users\juanc\AppData\Local\Programs\Ollama;C:\Users\juanc\AppData\Local\Programs\AIShell;C:\Users\juanc\.dotnet\tools;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="testLike" classname="oo1_e1.WallPostTest" time="0.114"/>
-  <testcase name="testText" classname="oo1_e1.WallPostTest" time="0.007"/>
-  <testcase name="testToggleFeatured" classname="oo1_e1.WallPostTest" time="0.007"/>
+  <testcase name="testLike" classname="oo1_e1.WallPostTest" time="0.049"/>
+  <testcase name="testText" classname="oo1_e1.WallPostTest" time="0.005"/>
+  <testcase name="testToggleFeatured" classname="oo1_e1.WallPostTest" time="0.003"/>
   <testcase name="testFeatured" classname="oo1_e1.WallPostTest" time="0.001"/>
-  <testcase name="testDislike" classname="oo1_e1.WallPostTest" time="0.001"/>
-  <testcase name="testConstructor" classname="oo1_e1.WallPostTest" time="0.004"/>
+  <testcase name="testDislike" classname="oo1_e1.WallPostTest" time="0.002"/>
+  <testcase name="testConstructor" classname="oo1_e1.WallPostTest" time="0.001"/>
 </testsuite>

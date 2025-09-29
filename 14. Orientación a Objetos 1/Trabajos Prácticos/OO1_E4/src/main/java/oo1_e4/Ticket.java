@@ -43,4 +43,12 @@ public class Ticket {
         return this.getPrecioTotal()*0.21;
     }
 
+    @Override
+    public String toString() {
+        return "Fecha: " + this.getFecha().toString() + "\n" +
+               "Cantidad de Productos: " + this.getCantidadDeProductos() + "\n" +
+               "Peso Total: " + this.getPesoTotal() + " kg.\n" + 
+               "Precio Total: $" + String.format("%.2f", this.getPrecioTotal());
+    }
+
 }

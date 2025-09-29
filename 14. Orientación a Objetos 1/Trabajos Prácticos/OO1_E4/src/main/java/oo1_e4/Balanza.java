@@ -7,7 +7,7 @@ public class Balanza {
     private List<Producto> productos;
 
     public Balanza() {
-        this.ponerEnCero();
+        this.productos=new ArrayList<>();
     }
 
     public int getCantidadDeProductos() {
@@ -27,11 +27,11 @@ public class Balanza {
     }
 
     public void ponerEnCero() {
-        this.productos=new ArrayList<>();
+        this.productos.clear();
     }
 
     public void agregarProducto(Producto producto) {
-        this.productos.add(producto);
+        this.getProductos().add(producto);
     }
 
     public Ticket emitirTicket() {
