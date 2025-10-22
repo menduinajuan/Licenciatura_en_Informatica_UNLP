@@ -1,0 +1,13 @@
+#Ejemplo 2
+RECURSO "R1"
+RECURSO "R2"
+RECURSO "R3"
+
+TAREA "1" INICIO=0
+[CPU,3] [1,2] [CPU,2]
+
+TAREA "2" INICIO=1
+[CPU,2] [2,2] [CPU,2]
+
+TAREA "3"  INICIO=2
+[CPU,2] [3,3] [CPU,1]
