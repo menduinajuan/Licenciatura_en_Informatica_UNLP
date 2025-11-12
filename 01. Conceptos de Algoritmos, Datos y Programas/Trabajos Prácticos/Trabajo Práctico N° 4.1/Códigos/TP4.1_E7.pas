@@ -1,9 +1,9 @@
 {TRABAJO PRÁCTICO N° 4.1}
 {EJERCICIO 7}
 {Realizar un programa que lea números enteros desde teclado hasta que se ingrese el valor -1 (que no debe procesarse) e informe:
-•	la cantidad de ocurrencias de cada dígito procesado.
-•	el dígito más leído.
-•	los dígitos que no tuvieron ocurrencias.
+•	La cantidad de ocurrencias de cada dígito procesado.
+•	El dígito más leído.
+•	Los dígitos que no tuvieron ocurrencias.
 Por ejemplo, si la secuencia que se lee es: 63 34 99 94 96 -1, el programa deberá informar:
 -	Número 3: 2 veces
 -	Número 4: 2 veces

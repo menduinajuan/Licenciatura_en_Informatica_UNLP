@@ -2,8 +2,8 @@
 {EJERCICIO 14}
 {Realizar un programa modularizado que lea 10 pares de números (X, Y) e informe, para cada par de números, la suma y el producto de todos los números entre X e Y.
 Por ejemplo, dado el par (3, 6), debe informar:
-“La suma es 18” (obtenido de calcular 3+4+5+6).
-“El producto es 360” (obtenido de calcular 3*4*5*6).}
+• “La suma es 18” (obtenido de calcular 3+4+5+6).
+• “El producto es 360” (obtenido de calcular 3*4*5*6).}
 
 program TP2_E14;
 {$codepage UTF8}

@@ -11,8 +11,7 @@ De los autos, se conoce nombre del dueño y patente.
 (c) Implementar métodos para:
 •	Dado un auto A, un número de piso X y un número de plaza Y, registrar al auto en el estacionamiento en el lugar X,Y. Suponga que X, Y son válidos (es decir, están en rango 1..N y 1..M, respectivamente) y que el lugar está desocupado.
 •	Dada una patente, obtener un String que contenga el número de piso y plaza donde está dicho auto en el estacionamiento. En caso de no encontrarse, retornar el mensaje “Auto Inexistente”.
-•	Obtener un String con la representación del estacionamiento.
-Ejemplo: “Piso 1 Plaza 1: libre; Piso 1 Plaza 2: representación del auto; …;  Piso 2 Plaza 1: libre; …”
+•	Obtener un String con la representación del estacionamiento. Ejemplo: “Piso 1 Plaza 1: libre; Piso 1 Plaza 2: representación del auto; …;  Piso 2 Plaza 1: libre; …”
 •	Dado un número de plaza Y, obtener la cantidad de autos ubicados en dicha plaza (teniendo en cuenta todos los pisos).
 (d) Realizar un programa que instancie un estacionamiento con 3 pisos y 3 plazas por piso. Registrar 6 autos en el estacionamiento en distintos lugares. Mostrar la representación String del estacionamiento en consola. Mostrar la cantidad de autos ubicados en la plaza 1. Leer una patente por teclado e informar si dicho auto se encuentra en el estacionamiento o no. En caso de encontrarse, la información a imprimir es el piso y plaza que ocupa.
 */

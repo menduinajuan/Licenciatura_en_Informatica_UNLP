@@ -5,12 +5,12 @@
     (i) Generar las clases necesarias. Para cada una, proveer métodos getters/setters adecuados.
     (ii) Implementar los constructores necesarios para iniciar: los clientes a partir de nombre, DNI, edad; el hotel para N habitaciones, cada una desocupada y con costo aleatorio entre 2000 y 8000.
     (iii) Implementar, en las clases que corresponda, todos los métodos necesarios para:
-    •	Ingresar un cliente C en la habitación número X. Asumir que X es válido (es decir, está en el rango 1..N) y que la habitación está libre.
-    •	Aumentar el precio de todas las habitaciones en un monto recibido.
-    •	Obtener la representación String del hotel, siguiendo el formato:
-    {Habitación 1: costo, libre u ocupada, información del cliente si está ocupada},
-    …
-    {Habitación N: costo, libre u ocupada, información del cliente si está ocupada}.
+    •       Ingresar un cliente C en la habitación número X. Asumir que X es válido (es decir, está en el rango 1..N) y que la habitación está libre.
+    •       Aumentar el precio de todas las habitaciones en un monto recibido.
+    •       Obtener la representación String del hotel, siguiendo el formato:
+            {Habitación 1: costo, libre u ocupada, información del cliente si está ocupada},
+            …
+            {Habitación N: costo, libre u ocupada, información del cliente si está ocupada}.
 (b) Realizar un programa que instancie un hotel, ingrese clientes en distintas habitaciones, muestre el hotel, aumente el precio de las habitaciones y vuelva a mostrar el hotel.
 NOTAS: Reusar la clase Persona. Para cada método solicitado, pensar a qué clase debe delegar la responsabilidad de la operación.
 */

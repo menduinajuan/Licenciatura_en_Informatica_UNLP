@@ -12,7 +12,7 @@ Implementar las clases, constructores y métodos que se considere necesarios par
 (e) Devolver un String con el nombre de la estación, su latitud y longitud y los promedios mensuales o anuales según corresponda:
 •	La versión del sistema que reporta por años deberá calcular el promedio para cada año (el promedio del año X se calcula con los datos mensuales de ese año).
 •	La versión del sistema que reporta por meses deberá calcular el promedio para cada mes (el promedio del mes M se calcula con los datos de todos los años en ese mes).
-Nota: Suponer que ya están registradas las temperaturas de todos los meses y años. Utilizar el carácter \n para concatenar un salto de línea.
+NOTA: Suponer que ya están registradas las temperaturas de todos los meses y años. Utilizar el carácter \n para concatenar un salto de línea.
 (f) Realizar un programa principal que cree un Sistema con reporte anual para 3 años consecutivos a partir del 2021, para la estación La Plata (latitud -34.921 y longitud -57.955). Cargar todas las temperaturas (para todos los meses y años). Informar los promedios anuales y el mes y año en que se registró la mayor temperatura. Luego, crear un Sistema con informe mensual para 4 años a partir de 2020, para la estación Mar del Plata (latitud -38.002 y longitud -57.556). Cargar todas las temperaturas (para todos los meses y años). Informar los promedios mensuales y el mes y año en que se registró la mayor temperatura.
 NOTA: Prestar atención de no violar el encapsulamiento al resolver el ejercicio.
 */
