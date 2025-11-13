@@ -23,7 +23,6 @@ fi
 # Algoritmo
 case $opcion in
     -a)
-        # Agregar cadena al final del nombre
         for archivo in "$directorio"/*; do
             if [ -f "$archivo" ]; then
                 nombre=$(basename "$archivo")
@@ -33,7 +32,6 @@ case $opcion in
         echo "Archivos renombrados agregando '$cadena' al final"
         ;;
     -b)
-        # Agregar cadena al comienzo del nombre
         for archivo in "$directorio"/*; do
             if [ -f "$archivo" ]; then
                 nombre=$(basename "$archivo")

@@ -3,9 +3,9 @@
 # Uso: ./Ejercicio12a.sh <num1> <num2>
 
 # Solicitud de números al usuario
-echo "Introducir primer número:"
+echo -n "Introducir primer número: "
 read num1
-echo "Introducir segundo número:"
+echo -n "Introducir segundo número: "
 read num2
 
 # Operaciones aritméticas
@@ -25,8 +25,8 @@ fi
 # Resultados
 echo "------------------------------"
 echo "RESULTADOS:"
-echo "  La suma es: $suma"
-echo "  La resta es: $resta"
-echo "  La multiplicación es: $multiplicacion"
-echo "  El mayor es: $mayor"
+echo " - La suma es: $suma"
+echo " - La resta es: $resta"
+echo " - La multiplicación es: $multiplicacion"
+echo " - El mayor es: $mayor"
 echo "------------------------------"

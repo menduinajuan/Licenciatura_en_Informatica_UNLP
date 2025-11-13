@@ -30,8 +30,8 @@ fi
 # Resultados
 echo "------------------------------"
 echo "RESULTADOS:"
-echo "  La suma es: $suma"
-echo "  La resta es: $resta"
-echo "  La multiplicación es: $multiplicacion"
-echo "  El mayor es: $mayor"
+echo " - La suma es: $suma"
+echo " - La resta es: $resta"
+echo " - La multiplicación es: $multiplicacion"
+echo " - El mayor es: $mayor"
 echo "------------------------------"
