@@ -1,6 +1,6 @@
 {TRABAJO PRÁCTICO N° 1.2}
 {EJERCICIO 4c}
-{Modificar el ejercicio anterior para que, en vez de leer 1000 números, la lectura finalice al leer el número 0, el cual no debe procesarse.}
+{Modificar el ejercicio anterior para que, en vez de leer 1.000 números, la lectura finalice al leer el número 0, el cual no debe procesarse.}
 
 program TP1_E4c;
 {$codepage UTF8}

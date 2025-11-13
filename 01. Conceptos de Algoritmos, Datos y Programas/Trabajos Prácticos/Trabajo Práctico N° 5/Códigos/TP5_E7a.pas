@@ -1,6 +1,6 @@
 {TRABAJO PRÁCTICO N° 5}
 {EJERCICIO 7a}
-{Se desea almacenar en memoria una secuencia de 2500 nombres de ciudades, cada nombre podrá tener una longitud máxima de 50 caracteres.
+{Se desea almacenar en memoria una secuencia de 2.500 nombres de ciudades, cada nombre podrá tener una longitud máxima de 50 caracteres.
 (a) Definir una estructura de datos estática que permita guardar la información leída. Calcular el tamaño de memoria que requiere la estructura.}
 
 program TP5_E7a;

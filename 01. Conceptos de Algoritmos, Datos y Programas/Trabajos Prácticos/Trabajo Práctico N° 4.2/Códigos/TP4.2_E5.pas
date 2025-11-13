@@ -1,7 +1,7 @@
 {TRABAJO PRÁCTICO N° 4.2}
 {EJERCICIO 5}
 {La empresa Amazon Web Services (AWS) dispone de la información de sus 500 clientes monotributistas más grandes del país.
-De cada cliente, conoce la fecha de firma del contrato con AWS, la categoría del monotributo (entre la A y la F), el código de la ciudad donde se encuentran las oficinas (entre 1 y 2400) y el monto mensual acordado en el contrato.
+De cada cliente, conoce la fecha de firma del contrato con AWS, la categoría del monotributo (entre la A y la F), el código de la ciudad donde se encuentran las oficinas (entre 1 y 2.400) y el monto mensual acordado en el contrato.
 La información se ingresa ordenada por fecha de firma de contrato (los más antiguos primero, los más recientes últimos).
 Realizar un programa que lea y almacene la información de los clientes en una estructura de tipo vector.
 Una vez almacenados los datos, procesar dicha estructura para obtener:

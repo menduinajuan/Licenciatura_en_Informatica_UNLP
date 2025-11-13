@@ -2,8 +2,8 @@
 {EJERCICIO 14}
 {El repositorio de código fuente más grande en la actualidad, GitHub, desea estimar el monto invertido en los proyectos que aloja.
 Para ello, dispone de una tabla con información de los desarrolladores que participan en un proyecto de software, junto al valor promedio que se paga por hora de trabajo:
-Realizar un programa que procese la información de los desarrolladores que participaron en los 1000 proyectos de software más activos durante el año 2017.
-De cada participante, se conoce su país de residencia, código de proyecto (1 a 1000), el nombre del proyecto en el que participó, el rol que cumplió en dicho proyecto (1 a 5) y la cantidad de horas trabajadas.
+Realizar un programa que procese la información de los desarrolladores que participaron en los 1.000 proyectos de software más activos durante el año 2017.
+De cada participante, se conoce su país de residencia, código de proyecto (1 a 1.000), el nombre del proyecto en el que participó, el rol que cumplió en dicho proyecto (1 a 5) y la cantidad de horas trabajadas.
 La lectura finaliza al ingresar el código de proyecto -1, que no debe procesarse.
 Al finalizar la lectura, el programa debe informar:
 •	El monto total invertido en desarrolladores con residencia en Argentina.

@@ -10,7 +10,7 @@ Al finalizar la lectura, el programa debe informar:
 •	Volumen de los dos mayores tanques vendidos.
 •	Volumen promedio de todos los tanques cilíndricos vendidos.
 •	Volumen promedio de todos los tanques rectangulares vendidos.
-•	Cantidad de tanques cuyo alto sea menor a 1.40 metros.
+•	Cantidad de tanques cuyo alto sea menor a 1,40 metros.
 •	Cantidad de tanques cuyo volumen sea menor a 800 metros cúbicos.}
 
 program TP6_E17c;

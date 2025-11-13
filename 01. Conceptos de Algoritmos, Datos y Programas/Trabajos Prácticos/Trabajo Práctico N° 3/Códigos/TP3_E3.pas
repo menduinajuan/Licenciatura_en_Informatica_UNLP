@@ -1,6 +1,6 @@
 {TRABAJO PRÁCTICO N° 3}
 {EJERCICIO 3}
-{El Ministerio de Educación desea realizar un relevamiento de las 2400 escuelas primarias de la provincia de Bs. As.,
+{El Ministerio de Educación desea realizar un relevamiento de las 2.400 escuelas primarias de la provincia de Bs. As.,
 con el objetivo de evaluar si se cumple la proporción de alumnos por docente calculada por la UNESCO para el año 2015 (1 docente cada 23.435 alumnos).
 Para ello, se cuenta con información de: CUE (código único de establecimiento), nombre del establecimiento, cantidad de docentes, cantidad de alumnos, localidad.
 Se pide implementar un programa que procese la información y determine:

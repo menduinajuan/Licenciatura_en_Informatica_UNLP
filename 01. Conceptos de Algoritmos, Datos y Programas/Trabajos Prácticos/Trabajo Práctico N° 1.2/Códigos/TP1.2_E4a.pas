@@ -1,6 +1,6 @@
 {TRABAJO PRÁCTICO N° 1.2}
 {EJERCICIO 4a}
-{Realizar un programa que lea 1000 números enteros desde teclado. Informar en pantalla cuáles son los dos números mínimos leídos.}
+{Realizar un programa que lea 1.000 números enteros desde teclado. Informar en pantalla cuáles son los dos números mínimos leídos.}
 
 program TP1_E4a;
 {$codepage UTF8}

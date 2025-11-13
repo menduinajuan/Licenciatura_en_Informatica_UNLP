@@ -3,7 +3,7 @@
 {Implementar un programa que procese la información de los alumnos de la Facultad de Informática.
 (a) Implementar un módulo que lea y retorne, en una estructura adecuada, la información de todos los alumnos.
 De cada alumno, se lee su apellido, número de alumno, año de ingreso, cantidad de materias aprobadas (a lo sumo, 36) y nota obtenida (sin contar los aplazos) en cada una de las materias aprobadas.
-La lectura finaliza cuando se ingresa el número de alumno 11111, el cual debe procesarse.
+La lectura finaliza cuando se ingresa el número de alumno 11.111, el cual debe procesarse.
 (b) Implementar un módulo que reciba la estructura generada en el inciso (a) y retorne número de alumno y promedio de cada alumno.}
 
 program TP0_E1ab;

@@ -1,7 +1,7 @@
 {TRABAJO PRÁCTICO N° 6}
 {EJERCICIO 13}
 {El Portal de Revistas de la UNLP está estudiando el uso de sus sistemas de edición electrónica por parte de los usuarios.
-Para ello, se dispone de información sobre los 3600 usuarios que utilizan el portal.
+Para ello, se dispone de información sobre los 3.600 usuarios que utilizan el portal.
 De cada usuario, se conoce su nombre, su email, su rol (1. Editor; 2. Autor; 3. Revisor; 4. Lector), revista en la que participa y cantidad de días desde el último acceso.
 •	Imprimir el nombre de usuario y la cantidad de días desde el último acceso de todos los usuarios de la revista Económica.
 El listado debe ordenarse a partir de la cantidad de días desde el último acceso (orden ascendente).

@@ -1,6 +1,6 @@
 {TRABAJO PRÁCTICO N° 4.2}
 {EJERCICIO 4}
-{Una cátedra dispone de información de sus alumnos (a lo sumo, 1000).
+{Una cátedra dispone de información de sus alumnos (a lo sumo, 1.000).
 De cada alumno, se conoce número de alumno, apellido y nombre y cantidad de asistencias a clase.
 Dicha información se encuentra ordenada por número de alumno de manera ascendente.
 Se pide:

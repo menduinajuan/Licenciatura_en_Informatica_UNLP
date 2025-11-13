@@ -3,7 +3,7 @@
 /*
 (a) Un hotel posee N habitaciones. De cada habitación, se conoce costo por noche, si está ocupada y, en caso de estarlo, guarda el cliente que la reservó (nombre, DNI y edad).
     (i) Generar las clases necesarias. Para cada una, proveer métodos getters/setters adecuados.
-    (ii) Implementar los constructores necesarios para iniciar: los clientes a partir de nombre, DNI, edad; el hotel para N habitaciones, cada una desocupada y con costo aleatorio entre 2000 y 8000.
+    (ii) Implementar los constructores necesarios para iniciar: los clientes a partir de nombre, DNI, edad; el hotel para N habitaciones, cada una desocupada y con costo aleatorio entre 2.000 y 8.000.
     (iii) Implementar, en las clases que corresponda, todos los métodos necesarios para:
     •       Ingresar un cliente C en la habitación número X. Asumir que X es válido (es decir, está en el rango 1..N) y que la habitación está libre.
     •       Aumentar el precio de todas las habitaciones en un monto recibido.
@@ -12,7 +12,7 @@
             …
             {Habitación N: costo, libre u ocupada, información del cliente si está ocupada}.
 (b) Realizar un programa que instancie un hotel, ingrese clientes en distintas habitaciones, muestre el hotel, aumente el precio de las habitaciones y vuelva a mostrar el hotel.
-NOTAS: Reusar la clase Persona. Para cada método solicitado, pensar a qué clase debe delegar la responsabilidad de la operación.
+NOTA: Reusar la clase Persona. Para cada método solicitado, pensar a qué clase debe delegar la responsabilidad de la operación.
 */
 
 package tp8;

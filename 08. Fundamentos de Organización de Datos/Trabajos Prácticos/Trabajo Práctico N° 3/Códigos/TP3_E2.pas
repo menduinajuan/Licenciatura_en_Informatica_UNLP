@@ -2,7 +2,7 @@
 {EJERCICIO 2}
 {Definir un programa que genere un archivo con registros de longitud fija conteniendo información de asistentes a un congreso a partir de la información obtenida por teclado.
 Se deberá almacenar la siguiente información: nro. de asistente, apellido y nombre, email, teléfono y DNI.
-Implementar un procedimiento que, a partir del archivo de datos generado, elimine, de forma lógica, todos los asistentes con nro. de asistente inferior a 1000.
+Implementar un procedimiento que, a partir del archivo de datos generado, elimine, de forma lógica, todos los asistentes con nro. de asistente inferior a 1.000.
 Para ello, se podrá utilizar algún carácter especial situándolo delante de algún campo String a elección. Ejemplo: “@Saldaño”.}
 
 program TP3_E2;

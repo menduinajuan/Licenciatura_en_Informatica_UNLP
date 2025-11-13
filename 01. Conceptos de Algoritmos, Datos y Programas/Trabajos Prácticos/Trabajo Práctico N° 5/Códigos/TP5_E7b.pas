@@ -1,6 +1,6 @@
 {TRABAJO PRÁCTICO N° 5}
 {EJERCICIO 7b}
-{Se desea almacenar en memoria una secuencia de 2500 nombres de ciudades, cada nombre podrá tener una longitud máxima de 50 caracteres.
+{Se desea almacenar en memoria una secuencia de 2.500 nombres de ciudades, cada nombre podrá tener una longitud máxima de 50 caracteres.
 (b) Dado que un compilador de Pascal típico no permite manejar estructuras de datos estáticas que superen los 64 KB,
 pensar en utilizar un vector de Punteros a palabras, como se indica en la siguiente estructura.
 Type

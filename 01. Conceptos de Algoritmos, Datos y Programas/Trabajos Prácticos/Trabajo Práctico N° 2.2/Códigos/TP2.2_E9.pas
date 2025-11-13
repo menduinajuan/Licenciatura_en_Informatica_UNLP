@@ -1,7 +1,7 @@
 {TRABAJO PRÁCTICO N° 2.2}
 {EJERCICIO 9}
 {Realizar un programa modularizado que lea información de alumnos de una facultad. Para cada alumno, se lee: número de inscripción, apellido y nombre.
-La lectura finaliza cuando se ingresa el alumno con número de inscripción 1200, que debe procesarse.
+La lectura finaliza cuando se ingresa el alumno con número de inscripción 1.200, que debe procesarse.
 Se pide calcular e informar:
 •	Apellido de los dos alumnos con número de inscripción más chico.
 •	Nombre de los dos alumnos con número de inscripción más grande.
