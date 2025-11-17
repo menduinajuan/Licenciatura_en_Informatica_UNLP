@@ -4,9 +4,9 @@
 
 # Selección de opción por parte del usuario
 echo "Seleccionar una opción:"
-echo "1) Listar"
-echo "2) DondeEstoy"
-echo "3) QuienEsta"
+echo "1. Listar"
+echo "2. DondeEstoy"
+echo "3. QuienEsta"
 read -p "Opción: " opcion
 
 # Algoritmo

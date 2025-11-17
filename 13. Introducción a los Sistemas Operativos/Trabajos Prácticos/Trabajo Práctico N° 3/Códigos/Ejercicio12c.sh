@@ -4,7 +4,7 @@
 
 # Control de cantidad de parámetros
 if [ $# -ne 3 ]; then
-    echo "Error: Se deben ingresar, exactamente, 3 parámetros"
+    echo "Error: Se deben pasar, exactamente, 3 parámetros"
     echo "Uso: $0 <operación> <num1> <num2>"
     echo "Operaciones válidas: + - * %"
     exit 1
@@ -21,7 +21,7 @@ if ! [[ $num1 =~ ^-?[0-9]+$ && $num2 =~ ^-?[0-9]+$ ]]; then
     exit 1
 fi
 
-# Calculadora
+# Algoritmo
 case $operacion in
     "+")
         resultado=$((num1 + num2))
@@ -44,4 +44,6 @@ case $operacion in
         exit 1
         ;;
 esac
+
+# Resultado
 echo "Resultado: $resultado"

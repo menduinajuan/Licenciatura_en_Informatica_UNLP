@@ -38,8 +38,8 @@ case "$1" in
         ;;
     *)
         echo "Uso: $0 [-b n | -l | -i]"
-        echo " -b n : Retorna el elemento de la posición n del arreglo"
+        echo " -b n : Retorna el elemento de la posición n del arreglo si el mismmo existe"
         echo " -l   : Retorna la longitud del arreglo"
-        echo " -i   : Imprime todos los elementos del arreglo"
+        echo " -i   : Imprime todos los elementos del arreglo en pantalla"
         ;;
 esac

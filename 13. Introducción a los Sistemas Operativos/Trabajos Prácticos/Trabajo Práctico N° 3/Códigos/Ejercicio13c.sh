@@ -4,7 +4,7 @@
 
 # Control de cantidad de parámetros
 if [ $# -ne 1 ]; then
-    echo "Error: Se debe ingresar, exactamente, 1 parámetro"
+    echo "Error: Se debe pasar, exactamente, 1 parámetro"
     echo "Uso: $0 <nombre_archivo>"
     exit 1
 fi

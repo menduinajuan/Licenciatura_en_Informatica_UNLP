@@ -4,7 +4,7 @@
 
 # Control de cantidad de parámetros
 if [ $# -lt 1 ]; then
-    echo "Error: Se debe ingresar, al menos, 1 parámetro"
+    echo "Error: Se debe pasar, al menos, 1 parámetro"
     echo "Uso: $0 <ruta1> <ruta2> ..."
     exit 1
 fi

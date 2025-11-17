@@ -4,13 +4,13 @@
 
 # FUNCIONES
 
-# Inicializar: Crea un arreglo llamado array vacío
+# inicializar: Crea un arreglo llamado array vacío
 inicializar() {
     array=()
     echo "Arreglo llamado 'array' creado vacío"
 }
 
-# Agregar_elem: Agrega al final del arreglo el parámetro recibido
+# agregar_elem: Agrega al final del arreglo el parámetro recibido
 agregar_elem() {
     if [ $# -ne 1 ]; then
         echo "Error: Se debe indicar el valor para agregar"
@@ -20,7 +20,7 @@ agregar_elem() {
     echo "Elemento '$1' agregado al final del arreglo"
 }
 
-# Eliminar_elem: Elimina del arreglo el elemento que se encuentra en la posición recibida como parámetro
+# eliminar_elem: Elimina del arreglo el elemento que se encuentra en la posición recibida como parámetro
 eliminar_elem() {
     if [ $# -ne 1 ]; then
         echo "Error: Se debe indicar la posición a eliminar"
@@ -36,12 +36,12 @@ eliminar_elem() {
     echo "Elemento en posición $pos eliminado"
 }
 
-# Longitud: Imprime la longitud del arreglo
+# longitud: Imprime la longitud del arreglo en pantalla
 longitud() {
     echo "Longitud del arreglo: ${#array[@]}"
 }
 
-# Imprimir: Imprime todos los elementos del arreglo
+# imprimir: Imprime todos los elementos del arreglo en pantalla
 imprimir() {
     if [ ${#array[@]} -eq 0 ]; then
         echo "El arreglo está vacío"
@@ -50,7 +50,7 @@ imprimir() {
     fi
 }
 
-# Inicializar_con_valores: Crea un arreglo con longitud <parametro1> y, en todas las posiciones, asigna el valor <parametro2>
+# inicializar_con_valores: Crea un arreglo con longitud <parametro1> y, en todas las posiciones, asigna el valor <parametro2>
 inicializar_con_valores() {
     if [ $# -ne 2 ]; then
         echo "Error: Se debe indicar longitud y valor"
@@ -65,7 +65,7 @@ inicializar_con_valores() {
     echo "Arreglo llamado 'array' creado con longitud $longitud y valor '$valor' en todas las posiciones"
 }
 
-# PRUEBA
+# PRUEBAS
 
 inicializar
 agregar_elem "A"

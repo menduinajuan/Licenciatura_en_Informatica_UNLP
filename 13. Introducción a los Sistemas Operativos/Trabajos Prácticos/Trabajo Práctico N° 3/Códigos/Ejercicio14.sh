@@ -4,7 +4,7 @@
 
 # Control de cantidad de parámetros
 if [ $# -ne 3 ]; then
-    echo "Error: Se deben ingresar, exactamente, 3 parámetros"
+    echo "Error: Se deben pasar, exactamente, 3 parámetros"
     echo "Uso: $0 <directorio> -a|-b <CADENA>"
     exit 1
 fi

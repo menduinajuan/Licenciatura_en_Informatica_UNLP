@@ -30,7 +30,8 @@ mostrar_menu() {
     echo "27. Ejercicio 27"
     echo "28. Ejercicio 28"
     echo "29. Ejercicio 29"
-    echo "30. Ejercicio 30"
+    echo "30a. Ejercicio 30a"
+    echo "30b. Ejercicio 30b"
     echo "31. Ejercicio 31"
     echo "99. Salir"
     echo "------------------------------"
@@ -139,10 +140,15 @@ while true; do
             echo
             bash "$SCRIPTS_DIR/ejercicio29.sh"
             ;;
-        30)
-            echo "Ejecutando Ejercicio 30..."
+        30a)
+            echo "Ejecutando Ejercicio 30a..."
             echo
-            bash "$SCRIPTS_DIR/ejercicio30.sh"
+            bash "$SCRIPTS_DIR/ejercicio30a.sh"
+            ;;
+        30b)
+            echo "Ejecutando Ejercicio 30b..."
+            echo
+            bash "$SCRIPTS_DIR/ejercicio30b.sh"
             ;;
         31)
             echo "Ejecutando Ejercicio 31..."

@@ -8,12 +8,10 @@ read num1
 echo -n "Introducir segundo número: "
 read num2
 
-# Operaciones aritméticas
+# Algoritmo
 suma=$((num1 + num2))
 resta=$((num1 - num2))
 multiplicacion=$((num1 * num2))
-
-# ¿Cuál es el mayor de los números leídos?
 if [ $num1 -gt $num2 ]; then
     mayor=$num1
 elif [ $num1 -lt $num2 ]; then
