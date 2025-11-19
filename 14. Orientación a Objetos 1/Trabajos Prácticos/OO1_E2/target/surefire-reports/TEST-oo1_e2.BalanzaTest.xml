@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="oo1_e2.BalanzaTest" time="0.129" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="oo1_e2.BalanzaTest" time="0.143" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="AR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\juanc\AppData\Local\Temp\surefire407020514416194919\surefirebooter15415053640925299511.jar C:\Users\juanc\AppData\Local\Temp\surefire407020514416194919 2025-09-25T18-54-33_311-jvmRun1 surefire14829301831988959424tmp surefire_0196950255789088461tmp"/>
+    <property name="sun.java.command" value="C:\Users\juanc\AppData\Local\Temp\surefire14127240363050201245\surefirebooter3662571059763029676.jar C:\Users\juanc\AppData\Local\Temp\surefire14127240363050201245 2025-11-19T11-57-39_098-jvmRun1 surefire9993111268503773887tmp surefire_010214082207064250875tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="oo1_e2.**.*Test"/>
     <property name="surefire.test.class.path" value="G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\14. Orientación a Objetos 1\Trabajos Prácticos\OO1_E2\target\test-classes;G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\14. Orientación a Objetos 1\Trabajos Prácticos\OO1_E2\target\classes;C:\Users\juanc\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.2\junit-jupiter-engine-5.7.2.jar;C:\Users\juanc\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\juanc\.m2\repository\org\junit\platform\junit-platform-engine\1.7.2\junit-platform-engine-1.7.2.jar;C:\Users\juanc\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\juanc\.m2\repository\org\junit\platform\junit-platform-commons\1.7.2\junit-platform-commons-1.7.2.jar;C:\Users\juanc\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.2\junit-jupiter-api-5.7.2.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\juanc\AppData\Local\Temp\surefire407020514416194919\surefirebooter15415053640925299511.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\juanc\AppData\Local\Temp\surefire14127240363050201245\surefirebooter3662571059763029676.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="15.0.2+7-27"/>
@@ -57,9 +57,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="testPesoTotal" classname="oo1_e2.BalanzaTest" time="0.055"/>
-  <testcase name="testPonerEnCero" classname="oo1_e2.BalanzaTest" time="0.002"/>
-  <testcase name="testEmitirTicket" classname="oo1_e2.BalanzaTest" time="0.012"/>
+  <testcase name="testPesoTotal" classname="oo1_e2.BalanzaTest" time="0.067"/>
+  <testcase name="testPonerEnCero" classname="oo1_e2.BalanzaTest" time="0.001"/>
+  <testcase name="testEmitirTicket" classname="oo1_e2.BalanzaTest" time="0.021"/>
   <testcase name="testPrecioTotal" classname="oo1_e2.BalanzaTest" time="0.001"/>
   <testcase name="testCantidadDeProductos" classname="oo1_e2.BalanzaTest" time="0.001"/>
   <testcase name="testAgregarProducto" classname="oo1_e2.BalanzaTest" time="0.001"/>

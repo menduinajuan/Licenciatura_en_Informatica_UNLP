@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: oo1_e1.WallPostTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 s - in oo1_e1.WallPostTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.149 s - in oo1_e1.WallPostTest

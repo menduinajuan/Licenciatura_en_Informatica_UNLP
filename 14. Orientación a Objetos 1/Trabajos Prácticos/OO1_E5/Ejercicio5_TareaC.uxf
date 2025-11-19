@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>0</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Inversor
+--
+- nombre: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>140</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>InversionAccion
+--
+- nombre: String
+- cantidad: Integer
+- valorUnitario: Real</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>140</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>InversionPlazoFijo
+--
+- fecha: Date
+- montoDepositado: Real
+- interes: Real</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>60</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>/&lt;&lt;abstract&gt;&gt;/
+Inversion
+--
+--
+/+ getValorActual(): Real/</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
