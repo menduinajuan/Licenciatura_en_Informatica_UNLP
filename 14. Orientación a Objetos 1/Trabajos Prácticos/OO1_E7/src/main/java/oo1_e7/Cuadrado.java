@@ -26,9 +26,4 @@ public class Cuadrado implements Figura {
         return Math.pow(this.getLado(), 2);
     }
 
-    @Override
-    public String toString() {
-        return "El perímetro y el área del círculo son " + String.format("%.2f", getPerimetro()) + " y " + String.format("%.2f", getArea()) + ", respectivamente";
-    }
-
 }

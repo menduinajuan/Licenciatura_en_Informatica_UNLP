@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>110</x>
-      <y>0</y>
+      <x>150</x>
+      <y>40</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -15,7 +15,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>220</x>
+      <x>150</x>
       <y>0</y>
       <w>100</w>
       <h>30</h>
@@ -27,7 +27,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>0</y>
+      <y>40</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -38,11 +38,22 @@
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>40</y>
+      <y>80</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>Consumo</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>DistribuidoraElectrica</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

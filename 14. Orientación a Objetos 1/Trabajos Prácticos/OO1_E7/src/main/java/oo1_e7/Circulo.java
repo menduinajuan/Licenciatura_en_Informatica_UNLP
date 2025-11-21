@@ -34,9 +34,4 @@ public class Circulo implements Figura {
         return Math.PI*Math.pow(this.getRadio(), 2);
     }
 
-    @Override
-    public String toString() {
-        return "El perímetro y el área del círculo son " + String.format("%.2f", getPerimetro()) + " y " + String.format("%.2f", getArea()) + ", respectivamente";
-    }
-
 }

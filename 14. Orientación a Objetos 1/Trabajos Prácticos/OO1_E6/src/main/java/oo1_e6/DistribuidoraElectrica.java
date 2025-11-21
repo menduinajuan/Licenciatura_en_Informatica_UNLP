@@ -25,7 +25,7 @@ public class DistribuidoraElectrica {
     }
 
     public Cliente buscarCliente(String direccion) {
-         return this.getClientes().stream().filter(c -> c.getDireccion().equals(direccion)).findFirst().orElse(null);
+         return this.getClientes().stream().filter(c->c.getDireccion().equals(direccion)).findFirst().orElse(null);
     }
 
     public Factura emitirFactura(String direccion) {

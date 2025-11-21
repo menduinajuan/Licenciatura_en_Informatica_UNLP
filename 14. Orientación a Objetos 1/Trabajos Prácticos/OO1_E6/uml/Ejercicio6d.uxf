@@ -2,77 +2,16 @@
 <diagram program="umlet" version="15.1">
   <zoom_level>10</zoom_level>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>20</x>
-      <y>0</y>
-      <w>120</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>Cliente
---
-- nombre: String
-- apellido: String
-- direccion: String</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>0</x>
-      <y>180</y>
-      <w>160</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>Consumo
---
-- fecha: Date
-- energiaActiva: Real
-- energiaReactiva: Real
-- fpe: Real</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>520</x>
-      <y>20</y>
-      <w>120</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>CuadroTarifario
---
-- preciokWh: Real</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>240</x>
-      <y>0</y>
-      <w>180</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>Factura
---
-- cliente: Cliente
-- ultimoConsumo: Consumo
-- preciokWh: Real
-- bonificacion: Real
-- montoFinal: Real</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>70</y>
-      <w>120</w>
-      <h>130</h>
+      <x>100</x>
+      <y>40</y>
+      <w>100</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-m1=0..* consumos</panel_attributes>
-    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+m1=0..* clientes</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -88,34 +27,131 @@ m1=0..* consumos</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>410</x>
+      <x>330</x>
       <y>40</y>
-      <w>130</w>
-      <h>30</h>
+      <w>30</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>100</y>
-      <w>110</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;80.0;90.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>130</x>
-      <y>40</y>
-      <w>130</w>
+      <x>210</x>
+      <y>10</y>
+      <w>90</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>100</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+- nombre: String
+- apellido: String
+- direccion: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>230</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Consumo
+--
+- fecha: Date
+- energiaActiva: Real
+- energiaReactiva: Real
+- fpe: Real</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>0</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CuadroTarifario
+--
+- preciokWh: Real</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>250</x>
+      <y>100</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Factura
+--
+- cliente: Cliente
+- ultimoConsumo: Consumo
+- preciokWh: Real
+- bonificacion: Real
+- montoFinal: Real</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>DistribuidoraElectrica
+--
+- cuadroTarifario: CuadroTarifario</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>170</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..* consumos</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>130</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>200</y>
+      <w>90</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;70.0;10.0</additional_attributes>
   </element>
 </diagram>

@@ -19,7 +19,7 @@ public class CajaDeAhorro extends Cuenta {
     }
 
     @Override
-    public boolean puedeExtraer(double monto) {
+    protected boolean puedeExtraer(double monto) {
         return this.getSaldo()>=monto*(1+PORCENTAJE);
     }
 

@@ -29,9 +29,4 @@ public class Cuerpo3D {
         return 2*this.caraBasal.getArea()+this.caraBasal.getPerimetro()*this.getAltura();
     }
 
-    @Override
-    public String toString() {
-        return "El volumen y el área (o superficie exterior) del cuerpo son " + String.format("%.2f", getVolumen()) + " y " + String.format("%.2f", getSuperficieExterior()) + ", respectivamente";
-    }
-
 }
