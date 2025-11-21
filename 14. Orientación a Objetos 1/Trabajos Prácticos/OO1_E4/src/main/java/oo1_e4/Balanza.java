@@ -27,7 +27,7 @@ public class Balanza {
     }
 
     public void ponerEnCero() {
-        this.productos.clear();
+        this.getProductos().clear();
     }
 
     public void agregarProducto(Producto producto) {

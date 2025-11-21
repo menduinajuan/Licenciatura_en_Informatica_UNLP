@@ -10,7 +10,7 @@
     <version>1.0.0</version>
     <name>OO1_E7</name>
     <packaging>jar</packaging>
-    <description>Ejercicio 7 - Figuras y cuerpos</description>
+    <description>Ejercicio 7 - Figuras y Cuerpos</description>
     <properties>
             <java.version>11</java.version>
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

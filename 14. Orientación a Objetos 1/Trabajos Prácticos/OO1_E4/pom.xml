@@ -10,7 +10,7 @@
     <version>1.0.0</version>
     <name>OO1_E4</name>
     <packaging>jar</packaging>
-    <description>Ejercicio 4 - Balanza mejorada</description>
+    <description>Ejercicio 4 - Balanza Mejorada</description>
     <properties>
             <java.version>11</java.version>
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -25,7 +25,7 @@ public class InversionAccion implements Inversion {
     }
 
     @Override
-    public double getValorActual() {
+    public double valorActual() {
         return this.getValorUnitario()*this.getCantidad();
     }
 

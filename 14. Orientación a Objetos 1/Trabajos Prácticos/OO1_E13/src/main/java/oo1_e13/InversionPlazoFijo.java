@@ -5,33 +5,32 @@ import java.time.temporal.ChronoUnit;
 
 public class InversionPlazoFijo implements Inversion {
 
-    private LocalDate fecha;
+    private LocalDate fechaDeConstitucion;
     private double montoDepositado;
-    private double interes;
+    private double porcentajeDeInteresDiario;
 
-    public InversionPlazoFijo(double montoDepositado, double interes) {
-        this.fecha=LocalDate.now();
+    public InversionPlazoFijo(LocalDate fechaDeConstitucion, double montoDepositado, double porcentajeDeInteresDiario) {
+        this.fechaDeConstitucion=fechaDeConstitucion;
         this.montoDepositado=montoDepositado;
-        this.interes=interes;
+        this.porcentajeDeInteresDiario=porcentajeDeInteresDiario;
     }
 
-    public LocalDate getFecha() {
-        return this.fecha;
+    public LocalDate getFechaDeConstitucion() {
+        return this.fechaDeConstitucion;
     }
 
     public double getMontoDepositado() {
         return this.montoDepositado;
     }
 
-    public double getInteres() {
-        return this.interes;
+    public double getPorcentajeDeInteresDiario() {
+        return this.porcentajeDeInteresDiario;
     }
 
     @Override
-    public double getValorActual() {
-        double interesDiario=(this.getInteres()/100)/365;
-        long dias=ChronoUnit.DAYS.between(this.getFecha(), LocalDate.now());
-        return this.getMontoDepositado()*(1+interesDiario*dias);
+    public double valorActual() {
+        long dias=ChronoUnit.DAYS.between(this.getFechaDeConstitucion(), LocalDate.now());
+        return this.getMontoDepositado()*(1+(this.getPorcentajeDeInteresDiario()/100)*dias);
     }
 
 }

@@ -2,27 +2,26 @@ package oo1_e12;
 
 public class JobDescription {
 
-	private double effort;
+    private double effort;
+    private int priority;
+    private String description;
 
-	private int priority;
+    public JobDescription (double anEffort, int aPriority, String aDescription) {
+        this.effort=anEffort;
+        this.priority=aPriority;
+        this.description=aDescription;
+    }
 
-	private String description;
+    public double getEffort() {
+        return this.effort;
+    }
 
-	public JobDescription (double anEffort, int aPriority, String aDescription) {
-		this.effort = anEffort;
-		this.priority = aPriority;
-		this.description = aDescription;
-	}
+    public int getPriority() {
+        return this.priority;
+    }
 
-	public double getEffort() {
-			return effort;
-	}
+    public String getDescription() {
+        return this.description;
+    }
 
-	public int getPriority() {
-		return priority;
-	}
-
-	public String getDescription() {
-		return this.description;
-	}
 }

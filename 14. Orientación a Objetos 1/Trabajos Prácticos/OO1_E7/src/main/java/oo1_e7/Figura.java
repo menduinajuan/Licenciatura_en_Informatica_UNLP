@@ -1,7 +1,8 @@
 package oo1_e7;
 
-public class Figura {
+public interface Figura {
 
-    
+    public double getPerimetro();
+    public double getArea();
 
 }

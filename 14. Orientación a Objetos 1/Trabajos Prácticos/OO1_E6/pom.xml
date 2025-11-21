@@ -10,7 +10,7 @@
     <version>1.0.0</version>
     <name>OO1_E6</name>
     <packaging>jar</packaging>
-    <description>Ejercicio 6 - Distribuidora eléctrica</description>
+    <description>Ejercicio 6 - Distribuidora Eléctrica</description>
     <properties>
             <java.version>11</java.version>
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

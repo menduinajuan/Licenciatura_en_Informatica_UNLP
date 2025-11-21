@@ -1,15 +1,18 @@
 package oo1_e12;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class JobScheduler {
-    protected List<JobDescription> jobs;
-    protected String strategy;
+
+    private List<JobDescription> jobs;
+    private Strategy strategy;
 
     public JobScheduler () {
-        this.jobs = new ArrayList<>();
-        this.strategy = "FIFO";
+        this.jobs=new ArrayList<>();
+    }
+
+    public void setStrategy(Strategy strategy) {
+        this.strategy=strategy;
     }
 
     public void schedule(JobDescription job) {
@@ -17,52 +20,25 @@ public class JobScheduler {
     }
 
     public void unschedule(JobDescription job) {
-        if (job != null) {
+        if (job!=null)
             this.jobs.remove(job);
-        }
-    }
-
-    public String getStrategy() {
-        return this.strategy; 
     }
 
     public List<JobDescription> getJobs(){
-        return jobs;
+        return this.jobs;
     }
 
-    public void setStrategy(String aStrategy) {
-        this.strategy = aStrategy;
+    public Strategy getStrategy() {
+        return this.strategy; 
     }
 
     public JobDescription next() {
-        JobDescription nextJob = null;
-
-        switch (strategy) {
-            case "FIFO":
-                nextJob = jobs.get(0);
-                this.unschedule(nextJob);
-                return nextJob;
-
-            case "LIFO":
-                nextJob = jobs.get(jobs.size()-1);
-                this.unschedule(nextJob);
-                return nextJob;
-
-            case "HighestPriority":
-                nextJob = jobs.stream()
-                    .max((j1,j2) -> Double.compare(j1.getPriority(), j2.getPriority()))
-                    .orElse(null);
-                this.unschedule(nextJob);
-                return nextJob;
-
-            case "MostEffort":
-                nextJob = jobs.stream()
-                    .max((j1,j2) -> Double.compare(j1.getEffort(), j2.getEffort()))
-                    .orElse(null);
-                this.unschedule(nextJob);
-                return nextJob;
+        JobDescription nextJob=null;
+        if (this.getJobs()!=null) {
+            nextJob=this.getStrategy().next(this.getJobs());
+            this.unschedule(nextJob);
         }
-        return null;
+        return nextJob;
     }
 
 }

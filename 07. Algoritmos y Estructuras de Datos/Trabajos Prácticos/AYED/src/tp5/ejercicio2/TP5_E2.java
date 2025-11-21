@@ -1,7 +1,7 @@
 /*TRABAJO PRÁCTICO N° 5*/
 /*EJERCICIO 2*/
 /*
-(a) Implementar en JAVA una clase llamada Recorridos ubicada dentro del paquete ejercicio2 cumpliendo la siguiente especificación:
+(a) Implementar, en JAVA, una clase llamada Recorridos ubicada dentro del paquete ejercicio2 cumpliendo la siguiente especificación:
 dfs(Graph<T> grafo): List<T>
 // Retorna una lista con los datos de los vértices, con el recorrido en profundidad del grafo recibido como parámetro.
 bfs(Graph<T> grafo): List<T>

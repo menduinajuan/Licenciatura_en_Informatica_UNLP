@@ -29,7 +29,7 @@ public class WallPost {
     }
 
     public void dislike() {
-        if (this.likes!=0)
+        if (this.getLikes()!=0)
             this.likes--;
     }
 

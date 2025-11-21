@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 
 public class WallPostTest {
 
-    WallPost wallPost;
-    WallPost coolPost;
+    private WallPost wallPost;
+    private WallPost coolPost;
 
     @BeforeEach
     public void setUp() throws Exception {

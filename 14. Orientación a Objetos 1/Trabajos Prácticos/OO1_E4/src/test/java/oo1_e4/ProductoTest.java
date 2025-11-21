@@ -1,6 +1,5 @@
 package oo1_e4;
 
-import oo1_e4.Producto;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

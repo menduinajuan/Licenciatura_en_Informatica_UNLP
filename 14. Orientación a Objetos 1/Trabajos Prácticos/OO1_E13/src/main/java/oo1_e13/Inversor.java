@@ -16,10 +16,6 @@ public class Inversor {
         return this.nombre;
     }
 
-    public double getValorInversiones() {
-        return this.inversiones.stream().mapToDouble(Inversion::getValorActual).sum();
-    }
- 
     public List<Inversion> getInversiones() {
         return this.inversiones;
     }
@@ -28,10 +24,13 @@ public class Inversor {
         this.getInversiones().add(i);
     }
 
-    public Inversion sacarInversion(Inversion i) {
-        if (this.getInversiones().remove(i))
-            return i;
-        return null;
+    public void sacarInversion(Inversion i) {
+        if (i!=null)
+            this.getInversiones().remove(i);
+    }
+
+    public double valorActualInversiones() {
+        return this.getInversiones().stream().mapToDouble(Inversion::valorActual).sum();
     }
 
 }
