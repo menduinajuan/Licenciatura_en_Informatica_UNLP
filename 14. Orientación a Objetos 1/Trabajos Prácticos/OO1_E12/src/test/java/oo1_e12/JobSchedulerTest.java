@@ -1,10 +1,7 @@
 package oo1_e12;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 public class JobSchedulerTest {
 
@@ -38,46 +35,60 @@ public class JobSchedulerTest {
     }
 
     private void scheduleJobsIn(JobScheduler aJobScheduler) {
-        aJobScheduler.schedule(firstJob);
-        aJobScheduler.schedule(highestPriorityJob);
-        aJobScheduler.schedule(mostEffortJob);
-        aJobScheduler.schedule(lastJob);
+        aJobScheduler.schedule(this.firstJob);
+        aJobScheduler.schedule(this.highestPriorityJob);
+        aJobScheduler.schedule(this.mostEffortJob);
+        aJobScheduler.schedule(this.lastJob);
     }
 
     @Test
     public void testSchedule() {
         JobScheduler aScheduler=new JS_FIFO();
         this.scheduleJobsIn(aScheduler);
-        assertTrue(aScheduler.getJobs().contains(firstJob));
+        assertTrue(aScheduler.getJobs().contains(this.firstJob));
     }
 
     @Test
     public void testUnschedule() {
         JobScheduler aScheduler=new JS_FIFO();
         this.scheduleJobsIn(aScheduler);
-        aScheduler.unschedule(firstJob);
-        assertFalse(aScheduler.getJobs().contains(firstJob));
+        aScheduler.unschedule(this.firstJob);
+        assertFalse(aScheduler.getJobs().contains(this.firstJob));
     }
 
     @Test
     public void testNext() {
+
         JobScheduler scheduler;
+
         scheduler=this.newFifoScheduler();
+        assertNotEquals(scheduler.next(), this.firstJob);
+        assertEquals(scheduler.getJobs().size(), 0);
         this.scheduleJobsIn(scheduler);
-        assertEquals(scheduler.next(), firstJob);
+        assertEquals(scheduler.next(), this.firstJob);
         assertEquals(scheduler.getJobs().size(), 3);
+
         scheduler=this.newLifoScheduler();
+        assertNotEquals(scheduler.next(), this.lastJob);
+        assertEquals(scheduler.getJobs().size(), 0);
         this.scheduleJobsIn(scheduler);
-        assertEquals(scheduler.next(), lastJob);
+        assertEquals(scheduler.next(), this.lastJob);
         assertEquals(scheduler.getJobs().size(), 3);
+
         scheduler=this.newPriorityScheduler();
+        assertNotEquals(scheduler.next(), this.highestPriorityJob);
+        assertEquals(scheduler.getJobs().size(), 0);
         this.scheduleJobsIn(scheduler);
-        assertEquals(scheduler.next(), highestPriorityJob);
+        assertEquals(scheduler.next(), this.highestPriorityJob);
         assertEquals(scheduler.getJobs().size(), 3);
+
         scheduler=this.newEffortScheduler();
+        assertNotEquals(scheduler.next(), this.mostEffortJob);
+        assertEquals(scheduler.getJobs().size(), 0);
         this.scheduleJobsIn(scheduler);
-        assertEquals(scheduler.next(), mostEffortJob);
+        assertEquals(scheduler.next(), this.mostEffortJob);
         assertEquals(scheduler.getJobs().size(), 3);
+
     }
 
 }

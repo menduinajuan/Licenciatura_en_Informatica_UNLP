@@ -28,7 +28,7 @@ public class TP3_E3 {
 
         System.out.println("La altura del árbol general ag es " + ag.altura());
         System.out.println();
-        for (int i=1; i<num+1; i++)
+        for (int i=1; i<num; i++)
             System.out.println("La profundidad o nivel del dato " + i + " en el árbol general ag es " + ag.nivel(i));
         System.out.println();
         System.out.println("La amplitud (ancho) del árbol general ag es " + ag.ancho());

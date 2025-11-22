@@ -7,7 +7,7 @@ public interface Vertex<T> {
     * @return
     */
     public T getData();
-    
+
     /*
     * Reemplaza el dato del vértice.
     * @param dato
@@ -19,6 +19,5 @@ public interface Vertex<T> {
     * @return
     */
     public int getPosition();
-    
 
 }

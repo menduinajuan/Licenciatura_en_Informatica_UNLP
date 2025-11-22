@@ -53,7 +53,7 @@ public class EjercicioPermutaciones {
     }
 
     private static int ran_int(int a, int b) {
-        if (b<a || a<0 || b<0) throw new IllegalArgumentException("Parametros invalidos");
+        if ((b<a) || (a<0) || (b<0)) throw new IllegalArgumentException("Parámetros inválidos");
         return a+rand.nextInt(b-a+1);
     }
 

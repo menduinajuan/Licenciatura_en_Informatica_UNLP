@@ -11,31 +11,31 @@ public class Queue<T> extends Sequence {
     }
 
     public void enqueue(T dato) {
-        data.add(dato);
+        this.data.add(dato);
     }
 
     public T dequeue() {
-        return data.remove(0);
+        return this.data.remove(0);
     }
 
     public T head() {
-        return data.get(0);
+        return this.data.get(0);
     }
 
     @Override
     public int size() {
-        return data.size();
+        return this.data.size();
     }
 
     @Override
     public boolean isEmpty() {
-        return size()==0;
+        return this.size()==0;
     }
 
     @Override
     public String toString() {
         String str="[";
-	for (T i: data)
+	for (T i: this.data)
             str=str+i+", ";
 	str=str.substring(0, str.length()-2)+"]";
 	return str;

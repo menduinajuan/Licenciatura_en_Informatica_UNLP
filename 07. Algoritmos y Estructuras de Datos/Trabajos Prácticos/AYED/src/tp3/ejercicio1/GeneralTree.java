@@ -22,7 +22,7 @@ public class GeneralTree<T> {
     }
 
     public T getData() {
-        return data;
+        return this.data;
     }
 
     public void setData(T data) {
@@ -30,7 +30,7 @@ public class GeneralTree<T> {
     }
 
     public List<GeneralTree<T>> getChildren() {
-        return children;
+        return this.children;
     }
 
     public void setChildren(List<GeneralTree<T>> children) {
@@ -47,7 +47,7 @@ public class GeneralTree<T> {
     }
 
     public boolean hasChildren() {
-        return !this.children.isEmpty();
+        return !this.getChildren().isEmpty();
     }
 
     public boolean isEmpty(){
@@ -56,11 +56,11 @@ public class GeneralTree<T> {
 
     public void removeChild(GeneralTree<T> child) {
         if (this.hasChildren())
-            children.remove(child);
+            this.getChildren().remove(child);
     }
 
     public int altura() {
-        return !this.isEmpty() ? alturaHelper() : -1;
+        return !this.isEmpty() ? this.alturaHelper() : -1;
     }
 
     private int alturaHelper() {
@@ -72,7 +72,7 @@ public class GeneralTree<T> {
     }
 
     public int nivel(T dato) {
-        return !this.isEmpty() ? nivelHelper(dato) : -1;
+        return !this.isEmpty() ? this.nivelHelper(dato) : -1;
     }
 
     private int nivelHelper(T dato) {
@@ -99,7 +99,7 @@ public class GeneralTree<T> {
 
     public int ancho() {
         if (this.isEmpty()) return -1;
-        return !this.isLeaf() ? anchoHelper() : 1;
+        return !this.isLeaf() ? this.anchoHelper() : 1;
     }
 
     private int anchoHelper() {
@@ -126,7 +126,7 @@ public class GeneralTree<T> {
 
     public List<Integer> numerosImparesMayoresQuePreOrden(Integer n) {
         List<Integer> lista=new LinkedList<>();
-        if (!this.isEmpty()) numerosImparesMayoresQuePreOrden(n, lista);
+        if (!this.isEmpty()) this.numerosImparesMayoresQuePreOrden(n, lista);
         return lista;
     }
 
@@ -139,7 +139,7 @@ public class GeneralTree<T> {
 
     public List<Integer> numerosImparesMayoresQueInOrden(Integer n) {
         List<Integer> lista=new LinkedList<>();
-        if (!this.isEmpty()) numerosImparesMayoresQueInOrden(n, lista);
+        if (!this.isEmpty()) this.numerosImparesMayoresQueInOrden(n, lista);
         return lista;
     }
 
@@ -154,7 +154,7 @@ public class GeneralTree<T> {
 
     public List<Integer> numerosImparesMayoresQuePostOrden(Integer n) {
         List<Integer> lista=new LinkedList<>();
-        if (!this.isEmpty()) numerosImparesMayoresQuePostOrden(n, lista);
+        if (!this.isEmpty()) this.numerosImparesMayoresQuePostOrden(n, lista);
         return lista;
     }
 
@@ -184,7 +184,7 @@ public class GeneralTree<T> {
 
     public boolean esAncestro(T a, T b) {
         if (this.isEmpty()) return false;
-        return esAncestroHelper1(a, b);
+        return this.esAncestroHelper1(a, b);
     }
 
     private boolean esAncestroHelper1(T a, T b) {
@@ -204,7 +204,7 @@ public class GeneralTree<T> {
                 for (GeneralTree<T> child: ag.getChildren())
                     cola.enqueue(child);
         }
-        return ok ? esAncestroHelper2(nodo, b) : ok;
+        return ok ? this.esAncestroHelper2(nodo, b) : ok;
     }
 
     private boolean esAncestroHelper2(GeneralTree<T> nodo, T b) {

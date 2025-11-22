@@ -24,11 +24,8 @@ public abstract class JobScheduler {
     }
 
     public JobDescription next() {
-        JobDescription nextJob=null;
-        if (this.getJobs()!=null) {
-            nextJob=this.nextStrategy();
-            this.unschedule(nextJob);
-        }
+        JobDescription nextJob=this.nextStrategy();
+        this.unschedule(nextJob);
         return nextJob;
     }
 

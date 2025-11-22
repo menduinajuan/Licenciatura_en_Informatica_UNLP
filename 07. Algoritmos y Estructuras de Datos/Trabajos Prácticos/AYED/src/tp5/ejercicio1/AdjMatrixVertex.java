@@ -10,6 +10,7 @@ public class AdjMatrixVertex<T> implements Vertex<T> {
         this.position=position;
     }
 
+    @Override
     public void setData(T data) {
         this.data=data;
     }
@@ -18,10 +19,12 @@ public class AdjMatrixVertex<T> implements Vertex<T> {
         this.position=position;
     }
 
+    @Override
     public T getData() {
         return this.data;
     }
 
+    @Override
     public int getPosition() {
         return this.position;
     }

@@ -8,7 +8,7 @@ public class JS_FIFO extends JobScheduler {
 
     @Override
     public JobDescription nextStrategy() {
-        return this.getJobs().get(0);
+        return !this.getJobs().isEmpty() ? this.getJobs().get(0) : null;
     }
 
 }

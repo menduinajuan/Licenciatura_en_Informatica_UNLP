@@ -17,7 +17,7 @@ public class BinaryTree<T> {
     }
 
     public T getData() {
-        return data;
+        return this.data;
     }
 
     public void setData(T data) {
@@ -25,7 +25,7 @@ public class BinaryTree<T> {
     }
 
     public BinaryTree<T> getLeftChild() {
-        return leftChild;
+        return this.leftChild;
     }
 
     public BinaryTree<T> getRightChild() {
@@ -57,11 +57,11 @@ public class BinaryTree<T> {
     }
 
     public boolean hasLeftChild() {
-        return this.leftChild!=null;
+        return this.getLeftChild()!=null;
     }
 
     public boolean hasRightChild() {
-        return this.rightChild!=null;
+        return this.getRightChild()!=null;
     }
 
     @Override

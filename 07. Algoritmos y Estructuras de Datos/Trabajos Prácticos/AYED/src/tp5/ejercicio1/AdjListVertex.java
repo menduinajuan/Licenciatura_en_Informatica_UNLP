@@ -29,6 +29,10 @@ public class AdjListVertex<T> implements Vertex<T> {
         return this.position;
     }
 
+    public List<Edge<T>> getEdges() {
+        return this.edges;
+    }
+
     public void decrementPosition() {
         this.position--;
     }
@@ -40,21 +44,17 @@ public class AdjListVertex<T> implements Vertex<T> {
     public void connect(Vertex<T> destination, int weight) {
         Edge<T> edge=this.getEdge(destination);
         if (edge==null)
-            this.edges.add(new AdjListEdge<>(destination, weight));
+            this.getEdges().add(new AdjListEdge<>(destination, weight));
     }
 
     public void disconnect(Vertex<T> destination) {
         Edge<T> edge=this.getEdge(destination);
         if (edge!=null)
-            this.edges.remove(edge);
-    }
-
-    public List<Edge<T>> getEdges() {
-        return this.edges;
+            this.getEdges().remove(edge);
     }
 
     public Edge<T> getEdge(Vertex<T> destination) {
-        for (Edge<T> edge: this.edges)
+        for (Edge<T> edge: this.getEdges())
             if (edge.getTarget()==destination)
                return edge;
         return null;

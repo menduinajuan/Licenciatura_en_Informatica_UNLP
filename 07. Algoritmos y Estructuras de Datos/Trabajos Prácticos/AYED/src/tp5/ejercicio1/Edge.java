@@ -7,12 +7,11 @@ public interface Edge<T> {
     * @return
     */
     public Vertex<T> getTarget();
-    
+
     /*
     * Retorna el peso de la arista.
     * @return
     */
     public int getWeight();
-    
 
 }

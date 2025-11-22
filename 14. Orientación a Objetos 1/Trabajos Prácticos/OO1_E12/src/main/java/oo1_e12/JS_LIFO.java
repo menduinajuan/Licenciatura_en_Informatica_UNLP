@@ -8,7 +8,7 @@ public class JS_LIFO extends JobScheduler {
 
     @Override
     public JobDescription nextStrategy() {
-        return this.getJobs().get(this.getJobs().size()-1);
+        return !this.getJobs().isEmpty() ? this.getJobs().get(this.getJobs().size()-1) : null;
     }
 
 }
