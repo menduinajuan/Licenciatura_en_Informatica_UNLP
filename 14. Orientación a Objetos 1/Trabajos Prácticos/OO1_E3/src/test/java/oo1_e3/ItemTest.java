@@ -10,17 +10,17 @@ public class ItemTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        item=new Item("Azúcar", 2, 60);
+        this.item=new Item("Azúcar", 2, 60);
     }
 
     @Test
     public void testCostoUnitario() {
-        assertEquals(60, item.getCostoUnitario());
+        assertEquals(60, this.item.getCostoUnitario());
     }
 
     @Test
     public void testCosto() {
-        assertEquals(120, item.costo());
+        assertEquals(120, this.item.costo());
     }
 
 }

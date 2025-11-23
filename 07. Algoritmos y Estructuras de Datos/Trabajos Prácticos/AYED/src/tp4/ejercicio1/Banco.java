@@ -39,7 +39,7 @@ public class Banco {
     }
 
     public static void main(String[] args) {
-        Integer[] cuentas          =new Integer[CANTIDAD_CUENTAS];
+        Integer[] cuentas=new Integer[CANTIDAD_CUENTAS];
         Integer[] cuentasOptimizado=new Integer[CANTIDAD_CUENTAS];
         Arrays.fill(cuentas, 0);
         Arrays.fill(cuentasOptimizado, 0);

@@ -2,7 +2,6 @@ package oo1_e13;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 import org.junit.jupiter.api.*;
 
 public class InversorTest {
@@ -11,14 +10,29 @@ public class InversorTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        inversor=new Inversor("Matias");
+        this.inversor=new Inversor("Matias");
+    }
+
+    @Test
+    public void testAgregarSacarInversion() {
+        InversionAccion inversionAccion=new InversionAccion("BTC", 1, 100000);
+        InversionPlazoFijo inversionPlazoFijo=new InversionPlazoFijo(LocalDate.of(2025, 1, 1), 100000, 1);
+        assertEquals(0, this.inversor.getInversiones().size());
+        this.inversor.agregarInversion(inversionAccion);
+        assertEquals(1, this.inversor.getInversiones().size());
+        this.inversor.agregarInversion(inversionPlazoFijo);
+        assertEquals(2, this.inversor.getInversiones().size());
+        this.inversor.sacarInversion(inversionPlazoFijo);
+        assertEquals(1, this.inversor.getInversiones().size());
+        this.inversor.sacarInversion(inversionAccion);
+        assertEquals(0, this.inversor.getInversiones().size());
     }
 
     @Test
     public void testValorActualInversiones() {
 
         InversionAccion inversionAccion=new InversionAccion("BTC", 1, 100000);
-        InversionPlazoFijo inversionPlazoFijo=new InversionPlazoFijo(LocalDate.of(2025, 01, 01), 100000, 1);
+        InversionPlazoFijo inversionPlazoFijo=new InversionPlazoFijo(LocalDate.of(2025, 1, 1), 100000, 1);
         double valorActualInversiones=0;
 
         // Sin agregar inversiones

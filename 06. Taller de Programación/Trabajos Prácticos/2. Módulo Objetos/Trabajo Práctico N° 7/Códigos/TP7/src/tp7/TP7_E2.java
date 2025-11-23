@@ -3,8 +3,8 @@
 /*
 Utilizando la clase Persona, realizar un programa que almacene en un vector, a lo sumo, 15 personas.
 La información (nombre, DNI, edad) se debe generar aleatoriamente hasta obtener edad 0. Luego de almacenar la información:
-•	Informar la cantidad de personas mayores de 65 años.
-•	Mostrar la representación de la persona con menor DNI.
+    •	Informar la cantidad de personas mayores de 65 años.
+    •	Mostrar la representación de la persona con menor DNI.
 */
 
 package tp7;

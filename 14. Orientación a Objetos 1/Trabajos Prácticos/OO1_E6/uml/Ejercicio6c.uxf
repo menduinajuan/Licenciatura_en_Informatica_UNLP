@@ -4,16 +4,44 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
+      <x>150</x>
+      <y>60</y>
+      <w>100</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Factura
+--
+fecha
+bonificacion
+montoFinal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>0</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CuadroTarifario
+--
+preciokWh</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
       <x>0</x>
       <y>60</y>
-      <w>120</w>
+      <w>100</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>Cliente
 --
-- nombre: String
-- apellido: String
-- direccion: String</panel_attributes>
+nombre
+apellido
+direccion</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -21,45 +49,15 @@
     <coordinates>
       <x>0</x>
       <y>150</y>
-      <w>160</w>
+      <w>100</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>Consumo
 --
-- fecha: Date
-- energiaActiva: Real
-- energiaReactiva: Real
-- fpe: Real</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>230</x>
-      <y>0</y>
-      <w>120</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>CuadroTarifario
---
-- preciokWh: Real</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>230</x>
-      <y>60</y>
-      <w>180</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>Factura
---
-- cliente: Cliente
-- ultimoConsumo: Consumo
-- preciokWh: Real
-- bonificacion: Real
-- montoFinal: Real</panel_attributes>
+fecha
+energiaActiva
+energiaReactiva
+fpe</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -67,12 +65,11 @@
     <coordinates>
       <x>0</x>
       <y>0</y>
-      <w>220</w>
+      <w>140</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>DistribuidoraElectrica
---
-- cuadroTarifario: CuadroTarifario</panel_attributes>
+--</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

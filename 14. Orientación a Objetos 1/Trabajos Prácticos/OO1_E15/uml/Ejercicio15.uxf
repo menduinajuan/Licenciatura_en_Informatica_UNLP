@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>240</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>ClienteDeCorreo
+--
+
+--
++ getInbox(): Carpeta
+# getCarpetas(): Carpeta[*]
++ agregarCarpeta(carpeta: Carpeta)
++ eliminarCarpeta(carpeta: Carpeta)
++ recibir(email: Email)
++ buscar(texto: String): Email
++ espacioOcupado(): Int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>210</y>
+      <w>260</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Carpeta
+--
+- nombre: String
+--
++ getNombre(): String
+# getEmails(): Email[*]
++ agregarMail(mail: Email)
++ eliminarMail(mail: Email)
++ mover(email: Email, carpeta: Carpeta)
++ buscar(texto: String): Email
++ espacioOcupado(): Int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>210</y>
+      <w>240</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Email
+--
+- titulo: String
+- cuerpo: String
+--
++ getTitulo(): String
++ getCuerpo(): String
+# adjuntos(): Archivo[*]
++ buscar(texto: String): Boolean
++ espacioOcupado(): Int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>410</y>
+      <w>240</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Archivo
+--
+- nombre: String
+--
++ setNombre(nombre: String)
++ getNombre(): String
++ tamaño(): Int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>150</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..* carpetas</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>280</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..* emails</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>350</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..* adjuntos</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>60</x>
+      <y>150</y>
+      <w>70</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+inbox 1</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

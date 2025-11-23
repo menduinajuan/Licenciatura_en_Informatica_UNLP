@@ -5,8 +5,8 @@ Escribir una clase ParcialArboles que contenga UNA ÚNICA variable de instancia 
 public boolean isLeftTree(int num).
 El método devuelve true si el subárbol cuya raíz es “num” tiene, en su subárbol izquierdo, una cantidad mayor estricta de árboles con un único hijo que en su subárbol derecho. Y false en caso contrario.
 Consideraciones:
-•	Si “num” no se encuentra en el árbol, devuelve false.
-•	Si el árbol con raíz “num” no cuenta con una de sus ramas, considerar que, en esa rama, hay -1 árboles con único hijo.
+    •	Si “num” no se encuentra en el árbol, devuelve false.
+    •	Si el árbol con raíz “num” no cuenta con una de sus ramas, considerar que, en esa rama, hay -1 árboles con único hijo.
 */
 
 package tp2.ejercicio7;

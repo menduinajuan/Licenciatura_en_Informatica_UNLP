@@ -23,7 +23,7 @@ public class Presupuesto {
         return this.cliente;
     }
 
-    public List<Item> getItems() {
+    protected List<Item> getItems() {
         return this.items;
     }
     

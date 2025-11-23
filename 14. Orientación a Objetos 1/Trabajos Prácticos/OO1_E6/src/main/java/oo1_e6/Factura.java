@@ -1,10 +1,13 @@
 package oo1_e6;
 
+import java.time.LocalDate;
+
 public class Factura {
 
     private String cliente;
     private Consumo ultimoConsumo;
     private double preciokWh;
+    private LocalDate fecha;
     private double bonificacion;
     private double montoFinal;
 
@@ -12,8 +15,13 @@ public class Factura {
         this.cliente=cliente;
         this.ultimoConsumo=ultimoConsumo;
         this.preciokWh=preciokWh;
+        this.setFecha();
         this.setBonificacion();
         this.setMontoFinal();
+    }
+
+    private void setFecha() {
+        this.fecha=this.getUltimoConsumo().getFecha();
     }
 
     private void setBonificacion() {
@@ -36,6 +44,10 @@ public class Factura {
         return this.preciokWh;
     }
 
+    public LocalDate getFecha() {
+        return this.fecha;
+    }
+
     public double getBonificacion() {
         return this.bonificacion;
     }
@@ -47,7 +59,7 @@ public class Factura {
     @Override
     public String toString() {
         return "Cliente: " + this.getCliente() + "\n" +
-               "Fecha: " + this.getUltimoConsumo().getFecha().toString() + "\n" +
+               "Fecha: " + this.getFecha().toString() + "\n" +
                "Monto Final: $" + String.format("%.2f", this.getMontoFinal());
     }
 

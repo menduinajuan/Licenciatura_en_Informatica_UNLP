@@ -9,8 +9,10 @@ public class CuadroTarifario {
     }
 
     public void setPreciokWh(double preciokWh) {
-        if (preciokWh>0) this.preciokWh=preciokWh;
-        else             System.out.println("El precio del kWh debe ser mayor a 0 (cero)");
+        if (preciokWh>0)
+            this.preciokWh=preciokWh;
+        else
+            System.out.println("El precio del kWh debe ser mayor a 0 (cero)");
     }
 
     public double getPreciokWh() {

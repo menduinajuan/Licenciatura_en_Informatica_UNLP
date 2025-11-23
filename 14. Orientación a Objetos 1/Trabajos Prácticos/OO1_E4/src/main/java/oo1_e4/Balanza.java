@@ -22,7 +22,7 @@ public class Balanza {
         return this.productos.stream().mapToDouble(Producto::getPeso).sum();
     }
 
-    public List<Producto> getProductos() {
+    protected List<Producto> getProductos() {
         return this.productos;
     }
 

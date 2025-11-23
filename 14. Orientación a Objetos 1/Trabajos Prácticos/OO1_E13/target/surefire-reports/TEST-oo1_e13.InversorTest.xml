@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="oo1_e13.InversorTest" time="0.026" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="oo1_e13.InversorTest" time="0.028" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="AR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\juanc\AppData\Local\Temp\surefire442364036204534304\surefirebooter4947359988445672708.jar C:\Users\juanc\AppData\Local\Temp\surefire442364036204534304 2025-11-21T03-56-21_069-jvmRun1 surefire16106638783353436666tmp surefire_010822010072791377700tmp"/>
+    <property name="sun.java.command" value="C:\Users\juanc\AppData\Local\Temp\surefire9045616753237122235\surefirebooter1880961868019995110.jar C:\Users\juanc\AppData\Local\Temp\surefire9045616753237122235 2025-11-21T17-32-21_135-jvmRun1 surefire14758886908981321208tmp surefire_03380239364873545335tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="oo1_e13.**.*Test"/>
     <property name="surefire.test.class.path" value="G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\14. Orientación a Objetos 1\Trabajos Prácticos\OO1_E13\target\test-classes;G:\Mi unidad\JM\Facultad de Informática (FI)\Licenciatura en Informática\14. Orientación a Objetos 1\Trabajos Prácticos\OO1_E13\target\classes;C:\Users\juanc\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.2\junit-jupiter-engine-5.7.2.jar;C:\Users\juanc\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\juanc\.m2\repository\org\junit\platform\junit-platform-engine\1.7.2\junit-platform-engine-1.7.2.jar;C:\Users\juanc\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\juanc\.m2\repository\org\junit\platform\junit-platform-commons\1.7.2\junit-platform-commons-1.7.2.jar;C:\Users\juanc\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.2\junit-jupiter-api-5.7.2.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\juanc\AppData\Local\Temp\surefire442364036204534304\surefirebooter4947359988445672708.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\juanc\AppData\Local\Temp\surefire9045616753237122235\surefirebooter1880961868019995110.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="15.0.2+7-27"/>
@@ -58,4 +58,5 @@
     <property name="java.class.version" value="59.0"/>
   </properties>
   <testcase name="testValorActualInversiones" classname="oo1_e13.InversorTest" time="0.025"/>
+  <testcase name="testAgregarSacarInversion" classname="oo1_e13.InversorTest" time="0.001"/>
 </testsuite>

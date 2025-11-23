@@ -4,59 +4,56 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>160</x>
+      <x>120</x>
       <y>0</y>
       <w>110</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>Inversor
 --
-- nombre: String</panel_attributes>
+nombre</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>140</y>
-      <w>140</w>
+      <y>120</y>
+      <w>120</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>InversionAccion
 --
-- nombre: String
-- cantidad: Integer
-- valorUnitario: Real</panel_attributes>
+nombre
+cantidad
+valorUnitario</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>140</y>
-      <w>220</w>
+      <x>230</x>
+      <y>120</y>
+      <w>170</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>InversionPlazoFijo
 --
-- fechaDeConstitucion: Date
-- montoDepositado: Real
-- porcentajeDeInteresDiario: Real</panel_attributes>
+fecha
+montoDepositado
+porcentajeDeInteresDiario</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
+      <x>120</x>
       <y>60</y>
-      <w>140</w>
-      <h>70</h>
+      <w>110</w>
+      <h>50</h>
     </coordinates>
-    <panel_attributes>/&lt;&lt;abstract&gt;&gt;/
-Inversion
---
---
-/+ valorActual(): Real/</panel_attributes>
+    <panel_attributes>Inversion
+--</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

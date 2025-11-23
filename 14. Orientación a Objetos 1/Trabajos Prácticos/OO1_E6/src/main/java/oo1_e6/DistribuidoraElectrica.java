@@ -16,7 +16,7 @@ public class DistribuidoraElectrica {
         return this.cuadroTarifario;
     }
 
-    public List<Cliente> getClientes() {
+    protected List<Cliente> getClientes() {
         return this.clientes;
     }
 

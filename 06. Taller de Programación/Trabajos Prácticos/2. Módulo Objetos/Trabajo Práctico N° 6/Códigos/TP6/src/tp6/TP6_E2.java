@@ -3,8 +3,8 @@
 /*
 Escribir un programa que lea las alturas de los 15 jugadores de un equipo de básquet y las almacene en un vector.
 Luego, informar:
-•	La altura promedio.
-•	La cantidad de jugadores con altura por encima del promedio.
+    •	La altura promedio.
+    •	La cantidad de jugadores con altura por encima del promedio.
 NOTA: Se dispone de un esqueleto para este programa en Ej02Jugadores.java.
 */
 

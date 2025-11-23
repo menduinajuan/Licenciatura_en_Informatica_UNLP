@@ -10,32 +10,32 @@ public class ProductoTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        queso=new Producto();
+        this.queso=new Producto();
     }
 
     @Test
     public void testPeso() {
-        queso.setPeso(100);
-        assertEquals(100, queso.getPeso());
+        this.queso.setPeso(100);
+        assertEquals(100, this.queso.getPeso());
     }
 
     @Test
     public void testPrecioPorKilo() {
-        queso.setPrecioPorKilo(100);
-        assertEquals(100, queso.getPrecioPorKilo());
+        this.queso.setPrecioPorKilo(100);
+        assertEquals(100, this.queso.getPrecioPorKilo());
     }
 
     @Test
     public void testDescripcion() {
-        queso.setDescripcion("Queso crema");
-        assertEquals("Queso crema", queso.getDescripcion());
+        this.queso.setDescripcion("Queso crema");
+        assertEquals("Queso crema", this.queso.getDescripcion());
     }
 
     @Test
     public void testPrecio() {
-        queso.setPeso(0.1);
-        queso.setPrecioPorKilo(140);
-        assertEquals(14, queso.getPrecio());
+        this.queso.setPeso(0.1);
+        this.queso.setPrecioPorKilo(140);
+        assertEquals(14, this.queso.getPrecio());
     }
 
 }

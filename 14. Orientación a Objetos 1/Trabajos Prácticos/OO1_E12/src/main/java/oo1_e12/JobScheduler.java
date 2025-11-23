@@ -19,7 +19,7 @@ public abstract class JobScheduler {
             this.jobs.remove(job);
     }
 
-    public List<JobDescription> getJobs(){
+    protected List<JobDescription> getJobs(){
         return this.jobs;
     }
 

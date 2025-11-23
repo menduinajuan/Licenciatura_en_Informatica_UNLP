@@ -6,12 +6,12 @@ Uso de las estructuras de listas provistas por la API de Java. Para resolver est
 (b) Si en lugar de usar un ArrayList en el inciso anterior se hubiera usado un LinkedList, ¿qué diferencia se encuentra respecto de la implementación? Justificar.
 (c) ¿Existen otras alternativas para recorrer los elementos de la lista del inciso (a)?
 (d) Escribir un método que realice las siguientes acciones:
-•	Crear una lista que contenga 3 estudiantes.
-•	Generar una nueva lista que sea una copia de la lista anterior.
-•	Imprimir el contenido de la lista original y el contenido de la nueva lista.
-•	Modificar algún dato de los estudiantes.
-•	Volver a imprimir el contenido de la lista original y el contenido de la nueva lista. ¿Qué conclusiones se obtiene a partir de lo realizado?
-•	¿Cuántas formas de copiar una lista existen? ¿Qué diferencias existen entre ellas?
+    •	Crear una lista que contenga 3 estudiantes.
+    •	Generar una nueva lista que sea una copia de la lista anterior.
+    •	Imprimir el contenido de la lista original y el contenido de la nueva lista.
+    •	Modificar algún dato de los estudiantes.
+    •	Volver a imprimir el contenido de la lista original y el contenido de la nueva lista. ¿Qué conclusiones se obtiene a partir de lo realizado?
+    •	¿Cuántas formas de copiar una lista existen? ¿Qué diferencias existen entre ellas?
 (e) A la lista del inciso (d), agregar un nuevo estudiante. Antes de agregar, verificar que el estudiante no estaba incluído en la lista.
 (f) Escribir un método que devuelva verdadero o falso si la secuencia almacenada en la lista es o no capicúa: public boolean esCapicua(ArrayList<Integer> lista).
 (g) Considerar que se aplica la siguiente función de forma recursiva. A partir de un número n positivo, se obtiene una sucesión que termina en 1. Escribir un programa recursivo que, a partir de un número n, devuelva una lista con cada miembro de la sucesión.

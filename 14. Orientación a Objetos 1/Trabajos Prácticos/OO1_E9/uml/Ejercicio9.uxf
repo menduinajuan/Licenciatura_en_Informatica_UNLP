@@ -6,19 +6,27 @@
     <coordinates>
       <x>0</x>
       <y>0</y>
-      <w>120</w>
-      <h>50</h>
+      <w>230</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>Farola
 --
-- estado: Boolean</panel_attributes>
+- estado: Boolean
+--
++ &lt;&lt;create&gt;&gt; Farola()
++ pairWithNeighbor(f: Farola): void
++ getNeighbors(): Farola[*]
++ turnOn(): void
++ turnOff(): void
++ isOn(): Boolean
++ isOff(): Boolean</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>30</x>
-      <y>40</y>
+      <x>80</x>
+      <y>150</y>
       <w>100</w>
       <h>80</h>
     </coordinates>

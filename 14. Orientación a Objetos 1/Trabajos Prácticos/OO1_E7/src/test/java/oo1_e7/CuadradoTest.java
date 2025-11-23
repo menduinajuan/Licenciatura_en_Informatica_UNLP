@@ -10,23 +10,23 @@ public class CuadradoTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        cuadrado=new Cuadrado();
-        cuadrado.setLado(3);
+        this.cuadrado=new Cuadrado();
+        this.cuadrado.setLado(3);
     }
 
     @Test
     public void testLado() {
-        assertEquals(3, cuadrado.getLado());
+        assertEquals(3, this.cuadrado.getLado());
     }
 
     @Test
     public void testPerimetro() {
-        assertEquals(12, cuadrado.getPerimetro());
+        assertEquals(12, this.cuadrado.getPerimetro());
     }
 
     @Test
     public void testArea() {
-        assertEquals(9, cuadrado.getArea());
+        assertEquals(9, this.cuadrado.getArea());
     }
 
 }

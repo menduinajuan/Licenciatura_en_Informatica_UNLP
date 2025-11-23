@@ -2,10 +2,10 @@
 /*EJERCICIO 3*/
 /*
 (a) Definir una clase para representar estantes. Un estante almacena, a lo sumo, 20 libros. Implementar un constructor que permita iniciar el estante sin libros. Proveer métodos para:
-•	Devolver la cantidad de libros que hay almacenados.
-•	Devolver si el estante está lleno.
-•	Agregar un libro al estante.
-•	Devolver el libro con un título particular que se recibe.
+    •	Devolver la cantidad de libros que hay almacenados.
+    •	Devolver si el estante está lleno.
+    •	Agregar un libro al estante.
+    •	Devolver el libro con un título particular que se recibe.
 (b) Realizar un programa que instancie un estante. Cargar varios libros. A partir del estante, buscar e informar el autor del libro “Mujercitas”.
 (c) ¿Qué se modificaría en la clase definida para, ahora, permitir estantes que almacenen como máximo N libros? ¿Cómo se instanciaría el estante?
 */

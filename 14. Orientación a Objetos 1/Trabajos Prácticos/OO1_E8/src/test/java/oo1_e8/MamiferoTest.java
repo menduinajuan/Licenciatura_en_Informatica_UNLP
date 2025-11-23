@@ -20,88 +20,88 @@ public class MamiferoTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        nala=new Mamifero("Nala");
-        melquiades=new Mamifero("Melquiades");
-        mufasa=new Mamifero("Mufasa");
-        alexa=new Mamifero("Alexa");
-        elsa=new Mamifero("Elsa");
-        scar=new Mamifero("Scar");
-        sarabi=new Mamifero("Sarabi");
-        anonimo=new Mamifero();
-        alexa.setPadre(mufasa);
-        alexa.setMadre(sarabi);
-        mufasa.setPadre(melquiades);
-        mufasa.setMadre(nala);
-        sarabi.setPadre(scar);
-        sarabi.setMadre(elsa);
+        this.nala=new Mamifero("Nala");
+        this.melquiades=new Mamifero("Melquiades");
+        this.mufasa=new Mamifero("Mufasa");
+        this.alexa=new Mamifero("Alexa");
+        this.elsa=new Mamifero("Elsa");
+        this.scar=new Mamifero("Scar");
+        this.sarabi=new Mamifero("Sarabi");
+        this.anonimo=new Mamifero();
+        this.alexa.setPadre(this.mufasa);
+        this.alexa.setMadre(this.sarabi);
+        this.mufasa.setPadre(this.melquiades);
+        this.mufasa.setMadre(this.nala);
+        this.sarabi.setPadre(this.scar);
+        this.sarabi.setMadre(this.elsa);
     }
 
     @Test
     public void testIdentificador() {
-        anonimo.setIdentificador("Nala");
-        assertEquals("Nala", anonimo.getIdentificador());
+        this.anonimo.setIdentificador("Nala");
+        assertEquals("Nala", this.anonimo.getIdentificador());
     }
 
     @Test
     public void testEspecie() {
-        anonimo.setEspecie("Panthera leo");
-        assertEquals("Panthera leo", anonimo.getEspecie());
+        this.anonimo.setEspecie("Panthera leo");
+        assertEquals("Panthera leo", this.anonimo.getEspecie());
     }
 
     @Test
     public void testPadre() {
-        anonimo.setPadre(mufasa);
-        assertEquals(mufasa, anonimo.getPadre());
-        assertNull(nala.getPadre());
+        this.anonimo.setPadre(this.mufasa);
+        assertEquals(this.mufasa, this.anonimo.getPadre());
+        assertNull(this.nala.getPadre());
     }
 
     @Test
     public void testMadre() {
-        anonimo.setMadre(alexa);
-        assertEquals(alexa, anonimo.getMadre());
-        assertNull(nala.getMadre());
+        this.anonimo.setMadre(this.alexa);
+        assertEquals(this.alexa, this.anonimo.getMadre());
+        assertNull(this.nala.getMadre());
     }
 
     @Test
     void testAbueloPaterno() {
-        assertEquals(melquiades, alexa.getAbueloPaterno());
-        assertNull(mufasa.getAbueloPaterno());
-        assertNull(melquiades.getAbueloPaterno());
+        assertEquals(this.melquiades, this.alexa.getAbueloPaterno());
+        assertNull(this.mufasa.getAbueloPaterno());
+        assertNull(this.melquiades.getAbueloPaterno());
     }
 
     @Test
     void testAbuelaPaterna() {
-        assertEquals(nala, alexa.getAbuelaPaterna());
-        assertNull(mufasa.getAbuelaPaterna());
-        assertNull(nala.getAbuelaPaterna());
+        assertEquals(this.nala, this.alexa.getAbuelaPaterna());
+        assertNull(this.mufasa.getAbuelaPaterna());
+        assertNull(this.nala.getAbuelaPaterna());
     }
 
     @Test
     void testAbueloMaterno() {
-        assertEquals(scar, alexa.getAbueloMaterno());
-        assertNull(sarabi.getAbueloMaterno());
-        assertNull(scar.getAbueloMaterno());
+        assertEquals(this.scar, this.alexa.getAbueloMaterno());
+        assertNull(this.sarabi.getAbueloMaterno());
+        assertNull(this.scar.getAbueloMaterno());
     }
 
     @Test
     public void testAbuelaMaterna() {
-        assertEquals(elsa, alexa.getAbuelaMaterna());
-        assertNull(sarabi.getAbuelaMaterna());
-        assertNull(elsa.getAbuelaMaterna());
+        assertEquals(this.elsa, this.alexa.getAbuelaMaterna());
+        assertNull(this.sarabi.getAbuelaMaterna());
+        assertNull(this.elsa.getAbuelaMaterna());
     }
 
     @Test
     public void testTieneComoAncestroA() {
-        assertFalse(nala.tieneComoAncestroA(anonimo));
-        assertFalse(mufasa.tieneComoAncestroA(anonimo));
-        assertFalse(alexa.tieneComoAncestroA(anonimo));
-        assertFalse(alexa.tieneComoAncestroA(alexa));
-        assertTrue(alexa.tieneComoAncestroA(mufasa));
-        assertTrue(alexa.tieneComoAncestroA(sarabi));
-        assertTrue(alexa.tieneComoAncestroA(nala));
-        assertTrue(alexa.tieneComoAncestroA(melquiades));
-        assertTrue(alexa.tieneComoAncestroA(elsa));
-        assertTrue(alexa.tieneComoAncestroA(scar));
+        assertFalse(this.nala.tieneComoAncestroA(this.anonimo));
+        assertFalse(this.mufasa.tieneComoAncestroA(this.anonimo));
+        assertFalse(this.alexa.tieneComoAncestroA(this.anonimo));
+        assertFalse(this.alexa.tieneComoAncestroA(this.alexa));
+        assertTrue(this.alexa.tieneComoAncestroA(this.mufasa));
+        assertTrue(this.alexa.tieneComoAncestroA(this.sarabi));
+        assertTrue(this.alexa.tieneComoAncestroA(this.nala));
+        assertTrue(this.alexa.tieneComoAncestroA(this.melquiades));
+        assertTrue(this.alexa.tieneComoAncestroA(this.elsa));
+        assertTrue(this.alexa.tieneComoAncestroA(this.scar));
     }
 
 }

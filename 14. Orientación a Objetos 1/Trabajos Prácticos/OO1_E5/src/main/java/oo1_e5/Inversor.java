@@ -16,7 +16,7 @@ public class Inversor {
         return this.nombre;
     }
 
-    public List<Inversion> getInversiones() {
+    protected List<Inversion> getInversiones() {
         return this.inversiones;
     }
 

@@ -1,6 +1,6 @@
 {TRABAJO PRÁCTICO N° 0}
 {EJERCICIO 3}
-{Implementar un programa que procese las ventas de un supermercado. El supermercado dispone de una tabla con los precios y stocks de los 1000 productos que tiene a la venta.
+{Implementar un programa que procese las ventas de un supermercado. El supermercado dispone de una tabla con los precios y stocks de los 1.000 productos que tiene a la venta.
 (a) Implementar un módulo que retorne, en una estructura de datos adecuada, los tickets de las ventas.
 De cada venta, se lee código de venta y los productos vendidos. Las ventas finalizan con el código de venta -1.
 De cada producto, se lee código y cantidad de unidades solicitadas.

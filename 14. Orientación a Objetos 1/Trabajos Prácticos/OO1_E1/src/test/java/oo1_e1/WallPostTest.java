@@ -13,67 +13,67 @@ public class WallPostTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        wallPost=new WallPost();
-        coolPost=new WallPost();
-        coolPost.like();
-        coolPost.like();
-        coolPost.like();
-        coolPost.like();
-        coolPost.toggleFeatured();
+        this.wallPost=new WallPost();
+        this.coolPost=new WallPost();
+        this.coolPost.like();
+        this.coolPost.like();
+        this.coolPost.like();
+        this.coolPost.like();
+        this.coolPost.toggleFeatured();
     }
 
     @Test
     public void testConstructor() {
-        assertEquals("Undefined post", wallPost.getText());
-        assertEquals(0, wallPost.getLikes());
-        assertEquals(false, wallPost.isFeatured());
+        assertEquals("Undefined post", this.wallPost.getText());
+        assertEquals(0, this.wallPost.getLikes());
+        assertEquals(false, this.wallPost.isFeatured());
     }
 
     @Test
     public void testText() {
         final String hello="Hello";
-        wallPost.setText(hello);
-        assertEquals(hello, wallPost.getText());
+        this.wallPost.setText(hello);
+        assertEquals(hello, this.wallPost.getText());
         final String bye="Bye";
-        wallPost.setText(bye);
-        assertEquals(bye, wallPost.getText());
+        this.wallPost.setText(bye);
+        assertEquals(bye, this.wallPost.getText());
     }
 
     @Test
     public void testLike() {
-        assertEquals(0, wallPost.getLikes());
-        wallPost.like();
-        assertEquals(1, wallPost.getLikes());
-        wallPost.like();
-        wallPost.like();
-        wallPost.like();
-        assertEquals(4, wallPost.getLikes());
+        assertEquals(0, this.wallPost.getLikes());
+        this.wallPost.like();
+        assertEquals(1, this.wallPost.getLikes());
+        this.wallPost.like();
+        this.wallPost.like();
+        this.wallPost.like();
+        assertEquals(4, this.wallPost.getLikes());
     }
 
     @Test
     public void testDislike() {
-        coolPost.dislike();
-        assertEquals(3, coolPost.getLikes());
-        coolPost.dislike();
-        coolPost.dislike();
-        assertEquals(1, coolPost.getLikes());
-        coolPost.dislike();
-        assertEquals(0, coolPost.getLikes());
-        coolPost.dislike();
-        assertEquals(0, coolPost.getLikes());
+        this.coolPost.dislike();
+        assertEquals(3, this.coolPost.getLikes());
+        this.coolPost.dislike();
+        this.coolPost.dislike();
+        assertEquals(1, this.coolPost.getLikes());
+        this.coolPost.dislike();
+        assertEquals(0, this.coolPost.getLikes());
+        this.coolPost.dislike();
+        assertEquals(0, this.coolPost.getLikes());
     }
 
     @Test
     public void testFeatured() {
-        assertFalse(wallPost.isFeatured());
+        assertFalse(this.wallPost.isFeatured());
     }
 
     @Test
     public void testToggleFeatured() {
-        wallPost.toggleFeatured();
-        assertTrue(wallPost.isFeatured());
-        coolPost.toggleFeatured();
-        assertFalse(coolPost.isFeatured());
+        this.wallPost.toggleFeatured();
+        assertTrue(this.wallPost.isFeatured());
+        this.coolPost.toggleFeatured();
+        assertFalse(this.coolPost.isFeatured());
     }
 
 }

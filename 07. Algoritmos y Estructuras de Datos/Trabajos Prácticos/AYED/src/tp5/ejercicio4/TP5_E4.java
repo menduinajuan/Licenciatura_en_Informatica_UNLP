@@ -6,12 +6,12 @@ Partiendo desde el “Ayuntamiento” hasta un lugar destino en menos de X minut
 Escribir una clase llamada VisitaOslo e implementar su método:
 paseoEnBici(Graph<String> lugares, String destino, int maxTiempo, List<String> lugaresRestringidos): List<String>.
 NOTAS:
-•	El “Ayuntamiento” debe ser buscado antes de comenzar el recorrido para encontrar un camino.
-•	De no existir camino posible, se debe retornar una lista vacía.
-•	Se debe retornar el primer camino que se encuentre que cumpla las restricciones.
-•	Ejemplos de posibles caminos a retornar sin pasar por “Akker Brigge” y “Palacio Real” en no más de 120 min (maxTiempo):
-        o       Ayuntamiento, El Tigre, Museo Munch, Parque Botánico, Galería Nacional, Parque Vigeland, FolkMuseum, Museo Fram, Museo del Barco Polar, Museo Vikingo. El recorrido se hace en 91 minutos.
-        o       Ayuntamiento, Parque Botánico, Galería Nacional, Parque Vigeland, FolkMuseum, Museo Fram, Museo del Barco Polar, Museo Vikingo. El recorrido se hace en 70 minutos.
+    •	El “Ayuntamiento” debe ser buscado antes de comenzar el recorrido para encontrar un camino.
+    •	De no existir camino posible, se debe retornar una lista vacía.
+    •	Se debe retornar el primer camino que se encuentre que cumpla las restricciones.
+    •	Ejemplos de posibles caminos a retornar sin pasar por “Akker Brigge” y “Palacio Real” en no más de 120 min (maxTiempo):
+        o   Ayuntamiento, El Tigre, Museo Munch, Parque Botánico, Galería Nacional, Parque Vigeland, FolkMuseum, Museo Fram, Museo del Barco Polar, Museo Vikingo. El recorrido se hace en 91 minutos.
+        o   Ayuntamiento, Parque Botánico, Galería Nacional, Parque Vigeland, FolkMuseum, Museo Fram, Museo del Barco Polar, Museo Vikingo. El recorrido se hace en 70 minutos.
 */
 
 package tp5.ejercicio4;

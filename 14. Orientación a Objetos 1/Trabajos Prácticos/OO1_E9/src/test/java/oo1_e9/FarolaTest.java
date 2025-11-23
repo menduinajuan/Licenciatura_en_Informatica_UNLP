@@ -18,33 +18,33 @@ public class FarolaTest {
 
     @Test
     public void testConstructor() {
-        assertFalse(farolaUno.isOn(), "La farolaUno no está apagada");
-        assertTrue(farolaUno.isOff(), "La farolaUno no está apagada");
-        assertTrue(farolaUno.getNeighbors().isEmpty(), "La farolaUno no debería tener vecinos");
+        assertFalse(this.farolaUno.isOn(), "La farolaUno no está apagada");
+        assertTrue(this.farolaUno.isOff(), "La farolaUno no está apagada");
+        assertTrue(this.farolaUno.getNeighbors().isEmpty(), "La farolaUno no debería tener vecinos");
     }
 
     @Test
     public void testPairWithNeighbor() {
-        farolaUno.pairWithNeighbor(farolaDos);
-        assertTrue(farolaUno.getNeighbors().contains(farolaDos));
-        assertTrue(farolaDos.getNeighbors().contains(farolaUno));
+        this.farolaUno.pairWithNeighbor(this.farolaDos);
+        assertTrue(this.farolaUno.getNeighbors().contains(this.farolaDos));
+        assertTrue(this.farolaDos.getNeighbors().contains(this.farolaUno));
     }
 
     @Test
     public void testTurnOnAndOff() {
-        farolaUno.pairWithNeighbor(farolaDos);
-        farolaUno.turnOn();
-        assertTrue(farolaUno.isOn());
-        assertTrue(farolaDos.isOn());
-        farolaUno.turnOff();
-        assertFalse(farolaUno.isOn());
-        assertFalse(farolaDos.isOn());
-        farolaDos.turnOn();
-        assertTrue(farolaUno.isOn());
-        assertTrue(farolaDos.isOn());
-        farolaDos.turnOff();
-        assertFalse(farolaUno.isOn());
-        assertFalse(farolaDos.isOn());
+        this.farolaUno.pairWithNeighbor(this.farolaDos);
+        this.farolaUno.turnOn();
+        assertTrue(this.farolaUno.isOn());
+        assertTrue(this.farolaDos.isOn());
+        this.farolaUno.turnOff();
+        assertFalse(this.farolaUno.isOn());
+        assertFalse(this.farolaDos.isOn());
+        this.farolaDos.turnOn();
+        assertTrue(this.farolaUno.isOn());
+        assertTrue(this.farolaDos.isOn());
+        this.farolaDos.turnOff();
+        assertFalse(this.farolaUno.isOn());
+        assertFalse(this.farolaDos.isOn());
     }
 
 }

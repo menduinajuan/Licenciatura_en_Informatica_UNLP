@@ -7,19 +7,19 @@ De cada investigador, se tiene: nombre completo, categoría (1 a 5) y especialid
 Además, cualquier investigador puede pedir hasta un máximo de 5 subsidios.
 De cada subsidio, se conoce: el monto pedido, el motivo y si fue otorgado o no.
 (a) Implementar el modelo de clases teniendo en cuenta:
-•	Un proyecto sólo debería poder construirse con el nombre, código, nombre del director.
-•	Un investigador sólo debería poder construirse con nombre, categoría y especialidad.
-•	Un subsidio sólo debería poder construirse con el monto pedido y el motivo. Un subsidio siempre se crea en estado no-otorgado.
+    •	Un proyecto sólo debería poder construirse con el nombre, código, nombre del director.
+    •	Un investigador sólo debería poder construirse con nombre, categoría y especialidad.
+    •	Un subsidio sólo debería poder construirse con el monto pedido y el motivo. Un subsidio siempre se crea en estado no-otorgado.
 (b) Implementar los métodos necesarios (en las clases donde corresponda) que permitan:
-•	void agregarInvestigador(Investigador unInvestigador);
+    •	void agregarInvestigador(Investigador unInvestigador);
         // agregar un investigador al proyecto.
-•	void agregarSubsidio(Subsidio unSubsidio);
+    •	void agregarSubsidio(Subsidio unSubsidio);
         // agregar un subsidio al investigador.
-•	double dineroTotalOtorgado();
+    •	double dineroTotalOtorgado();
         // devolver el monto total otorgado en subsidios del proyecto (tener en cuenta todos los subsidios otorgados de todos los investigadores).
-•	void otorgarTodos(String nombre_completo);
+    •	void otorgarTodos(String nombre_completo);
         // otorgar todos los subsidios no-otorgados del investigador llamado nombre_completo.
-•	String toString();
+    •	String toString();
         // devolver un string con: nombre del proyecto, código, nombre del director, el total de dinero otorgado del proyecto y la siguiente información de cada investigador: nombre, categoría, especialidad y el total de dinero de sus subsidios otorgados.
 (c) Escribir un programa que instancie un proyecto con tres investigadores. Agregar dos subsidios a cada investigador y otorgar los subsidios de uno de ellos. Luego, imprimir todos los datos del proyecto en pantalla.
 */

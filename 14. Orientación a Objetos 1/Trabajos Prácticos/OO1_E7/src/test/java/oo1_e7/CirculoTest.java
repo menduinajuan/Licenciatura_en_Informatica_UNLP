@@ -10,28 +10,28 @@ public class CirculoTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        circulo=new Circulo();
-        circulo.setRadio(3);
+        this.circulo=new Circulo();
+        this.circulo.setRadio(3);
     }
 
     @Test
     public void testDiametro() {
-        assertEquals(6, circulo.getDiametro());
+        assertEquals(6, this.circulo.getDiametro());
     }
 
     @Test
     public void testRadio() {
-        assertEquals(3, circulo.getRadio());
+        assertEquals(3, this.circulo.getRadio());
     }
 
     @Test
     public void testPerimetro() {
-        assertEquals(18.85, circulo.getPerimetro(), 0.01);
+        assertEquals(18.85, this.circulo.getPerimetro(), 0.01);
     }
 
     @Test
     public void testArea() {
-        assertEquals(28.27, circulo.getArea(), 0.01);
+        assertEquals(28.27, this.circulo.getArea(), 0.01);
     }
 
 }

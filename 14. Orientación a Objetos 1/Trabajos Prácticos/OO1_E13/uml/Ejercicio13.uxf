@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>0</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Inversor
+--
+- nombre: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>220</y>
+      <w>520</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>InversionAccion
+--
+- nombre: String
+- cantidad: Integer
+- valorUnitario: Real
+--
++ &lt;&lt;create&gt;&gt; InversionAccion(nombre: String, cantidad: Integer, valorUnitario: Real)
++ valorActualInversion(): Real</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>350</y>
+      <w>730</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>InversionPlazoFijo
+--
+- fechaDeConstitucion: Date
+- montoDepositado: Real
+- porcentajeDeInteresDiario: Real
+--
++ &lt;&lt;create&gt;&gt; InversionPlazoFijo(fechaDeConstitucion: Date, montoDepositado: Real, porcentajeDeInteresDiario: Real)
++ valorActualInversion(): Real</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>100</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>/&lt;&lt;interface&gt;&gt;/
+Inversion
+--
+--
++ valorActual(): Real</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>160</y>
+      <w>450</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;430.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>160</y>
+      <w>400</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>380.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>40</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..* inversiones</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

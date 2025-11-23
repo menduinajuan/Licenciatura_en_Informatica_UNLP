@@ -28,7 +28,7 @@ public class Cliente {
         return this.direccion;
     }
 
-    public List<Consumo> getConsumos() {
+    protected List<Consumo> getConsumos() {
         return this.consumos;
     }
 
