@@ -17,7 +17,7 @@ public class Circulo implements Figura {
     }
 
     public double getRadio() {
-        return radio;
+        return this.radio;
     }
 
     public void setRadio(double radio) {

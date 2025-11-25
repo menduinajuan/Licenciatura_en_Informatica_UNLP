@@ -37,9 +37,7 @@ public class Cliente {
     }
 
     public Consumo getUltimoConsumo() {
-        if (!this.getConsumos().isEmpty())
-            return this.getConsumos().get(this.getConsumos().size()-1);
-        return null;
+        return !this.getConsumos().isEmpty() ? this.getConsumos().get(this.getConsumos().size()-1) : null;
     }
 
     @Override

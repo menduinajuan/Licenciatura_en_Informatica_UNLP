@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>20</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Usuario
+--
+- nombre: String
+- direccion: String
+- saldo: Real</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>150</y>
+      <w>290</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Conductor
+--
+- DESCUENTO: Real= 0.1 {static, readOnly}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>150</y>
+      <w>300</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Pasajero
+--
+- VIAJESMIN: Integer= 1 {static, readOnly}
+- DESCUENTO: Real= 5000 {static, readOnly}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>200</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Vehiculo
+--
+- descripcion: String
+- capacidad: Integer
+- anioFabricacion: Integer
+- valorMercado: Real</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>0</y>
+      <w>270</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Viaje
+--
+- costoTotal: Real
+- localidadOrigen: String
+- localidadDestino: String
+- fechaSalida: Date
+- DIASMAX: Integer= 2 {static, onlyRead}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>90</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>90</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>100</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>190</y>
+      <w>530</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=1..* vehiculos</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;510.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>100</y>
+      <w>130</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..* pasajeros</panel_attributes>
+    <additional_attributes>10.0;80.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>50</y>
+      <w>280</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..* viajes</panel_attributes>
+    <additional_attributes>260.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

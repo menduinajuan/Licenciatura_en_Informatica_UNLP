@@ -12,11 +12,11 @@ public class Cilindro extends Pieza {
     }
 
     public int getRadio() {
-        return radio;
+        return this.radio;
     }
 
     public int getAltura() {
-        return altura;
+        return this.altura;
     }
 
     @Override

@@ -13,7 +13,7 @@ public class Cuadrado implements Figura {
     }
 
     public double getLado() {
-        return lado;
+        return this.lado;
     }
 
     @Override

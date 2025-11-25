@@ -26,6 +26,15 @@ public class Email {
         return this.adjuntos;
     }
 
+    public void agregarArchivo(Archivo archivo) {
+        this.adjuntos().add(archivo);
+    }
+
+    public void eliminarArchivo(Archivo archivo) {
+        if (archivo!=null)
+            this.adjuntos().remove(archivo);
+    }
+
     public boolean buscar(String texto) {
         return this.getTitulo().contains(texto) || this.getCuerpo().contains(texto);
     }

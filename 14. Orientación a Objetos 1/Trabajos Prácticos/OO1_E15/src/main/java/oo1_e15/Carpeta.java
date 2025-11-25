@@ -20,18 +20,18 @@ public class Carpeta {
         return this.emails;
     }
 
-    public void agregarMail(Email mail) {
-        this.getEmails().add(mail);
+    public void agregarEmail(Email email) {
+        this.getEmails().add(email);
     }
 
-    public void eliminarMail(Email mail) {
-        if (mail!=null)
-            this.getEmails().remove(mail);
+    public void eliminarEmail(Email email) {
+        if (email!=null)
+            this.getEmails().remove(email);
     }
 
-    public void mover(Email email, Carpeta destino) {
-        this.eliminarMail(email);
-        destino.agregarMail(email);
+    public void mover(Email email, Carpeta carpeta) {
+        this.eliminarEmail(email);
+        carpeta.agregarEmail(email);
     }
 
     public Email buscar(String texto){

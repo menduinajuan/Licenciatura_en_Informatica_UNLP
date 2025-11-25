@@ -6,7 +6,7 @@ import tp1.ejercicio8.Queue;
 public class GeneralTree<T> {
 
     private T data;
-    private List<GeneralTree<T>> children=new LinkedList<GeneralTree<T>>();
+    private List<GeneralTree<T>> children=new LinkedList<>();
 
     public GeneralTree() {
         

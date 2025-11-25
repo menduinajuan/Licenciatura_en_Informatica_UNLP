@@ -2,7 +2,7 @@ package oo1_e11;
 
 public class CajaDeAhorro extends Cuenta {
 
-    private final static double PORCENTAJE=0.02;
+    private static final double PORCENTAJE=0.02;
 
     public CajaDeAhorro() {
         super();

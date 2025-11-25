@@ -19,7 +19,7 @@ public class Mamifero {
     }
 
     public String getIdentificador() {
-        return identificador;
+        return this.identificador;
     }
 
     public void setIdentificador(String identificador) {
@@ -27,7 +27,7 @@ public class Mamifero {
     }
 
     public String getEspecie() {
-        return especie;
+        return this.especie;
     }
 
     public void setEspecie(String especie) {
@@ -35,7 +35,7 @@ public class Mamifero {
     }
 
     public LocalDate getFechaNacimiento() {
-        return fechaNacimiento;
+        return this.fechaNacimiento;
     }
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
@@ -43,7 +43,7 @@ public class Mamifero {
     }
 
     public Mamifero getPadre() {
-        return padre;
+        return this.padre;
     }
 
     public void setPadre(Mamifero padre) {
@@ -51,7 +51,7 @@ public class Mamifero {
     }
 
     public Mamifero getMadre() {
-        return madre;
+        return this.madre;
     }
 
     public void setMadre(Mamifero madre) {

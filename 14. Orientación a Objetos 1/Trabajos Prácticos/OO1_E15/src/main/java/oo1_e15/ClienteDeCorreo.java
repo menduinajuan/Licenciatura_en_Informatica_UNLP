@@ -17,7 +17,7 @@ public class ClienteDeCorreo {
         return this.inbox;
     }
 
-    protected List<Carpeta> getCarpetas(){
+    protected List<Carpeta> getCarpetas() {
         return this.carpetas;
     }
 
@@ -30,8 +30,13 @@ public class ClienteDeCorreo {
             this.getCarpetas().remove(carpeta);
     }
 
+    public void mover(Email email, Carpeta carpeta) {
+        this.getInbox().eliminarEmail(email);
+        carpeta.agregarEmail(email);
+    }
+
     public void recibir(Email email) {
-        this.getInbox().agregarMail(email);
+        this.getInbox().agregarEmail(email);
     }
 
     public Email buscar(String texto) {

@@ -6,8 +6,8 @@
     <coordinates>
       <x>0</x>
       <y>0</y>
-      <w>240</w>
-      <h>160</h>
+      <w>260</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>ClienteDeCorreo
 --
@@ -17,6 +17,7 @@
 # getCarpetas(): Carpeta[*]
 + agregarCarpeta(carpeta: Carpeta)
 + eliminarCarpeta(carpeta: Carpeta)
++ mover(email: Email, carpeta: Carpeta)
 + recibir(email: Email)
 + buscar(texto: String): Email
 + espacioOcupado(): Int</panel_attributes>
@@ -26,7 +27,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>210</y>
+      <y>230</y>
       <w>260</w>
       <h>160</h>
     </coordinates>
@@ -36,8 +37,8 @@
 --
 + getNombre(): String
 # getEmails(): Email[*]
-+ agregarMail(mail: Email)
-+ eliminarMail(mail: Email)
++ agregarEmail(mail: Email)
++ eliminarEmail(mail: Email)
 + mover(email: Email, carpeta: Carpeta)
 + buscar(texto: String): Email
 + espacioOcupado(): Int</panel_attributes>
@@ -47,9 +48,9 @@
     <id>UMLClass</id>
     <coordinates>
       <x>360</x>
-      <y>210</y>
+      <y>230</y>
       <w>240</w>
-      <h>150</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>Email
 --
@@ -59,6 +60,8 @@
 + getTitulo(): String
 + getCuerpo(): String
 # adjuntos(): Archivo[*]
++ agregarArchivo(archivo: Archivo)
++ eliminarArchivo(archivo: Archivo)
 + buscar(texto: String): Boolean
 + espacioOcupado(): Int</panel_attributes>
     <additional_attributes/>
@@ -67,7 +70,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>360</x>
-      <y>410</y>
+      <y>460</y>
       <w>240</w>
       <h>100</h>
     </coordinates>
@@ -84,7 +87,7 @@
     <id>Relation</id>
     <coordinates>
       <x>120</x>
-      <y>150</y>
+      <y>170</y>
       <w>110</w>
       <h>80</h>
     </coordinates>
@@ -96,7 +99,7 @@ m1=0..* carpetas</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>250</x>
-      <y>280</y>
+      <y>300</y>
       <w>130</w>
       <h>40</h>
     </coordinates>
@@ -108,7 +111,7 @@ m1=0..* emails</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>470</x>
-      <y>350</y>
+      <y>400</y>
       <w>110</w>
       <h>80</h>
     </coordinates>
@@ -120,7 +123,7 @@ m1=0..* adjuntos</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>60</x>
-      <y>150</y>
+      <y>170</y>
       <w>70</w>
       <h>80</h>
     </coordinates>

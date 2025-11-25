@@ -5,6 +5,16 @@ import org.junit.jupiter.api.*;
 
 public class ArchivoTest {
 
-    
+    private Archivo archivo;
+
+    @BeforeEach
+    public void setUp() {
+        this.archivo=new Archivo("Archivo");
+    }
+
+    @Test
+    public void tamanio() {
+        assertEquals(7, this.archivo.tamanio());
+    }
 
 }
