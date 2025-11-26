@@ -11,7 +11,7 @@ public class InversionPlazoFijoTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        inversionPlazoFijo=new InversionPlazoFijo(LocalDate.of(2025, 01, 01), 100000, 1);
+        this.inversionPlazoFijo=new InversionPlazoFijo(LocalDate.of(2025, 01, 01), 100000, 1);
     }
 
     @Test
