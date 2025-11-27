@@ -101,7 +101,7 @@ m1=0..* carpetas</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-m1=0..* emails</panel_attributes>
+m2=0..* emails</panel_attributes>
     <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -125,7 +125,7 @@ m1=0..* adjuntos</panel_attributes>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-inbox 1</panel_attributes>
+m1=1 inbox</panel_attributes>
     <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

@@ -47,9 +47,9 @@ direccion</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
+      <x>10</x>
       <y>230</y>
-      <w>100</w>
+      <w>110</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>Consumo

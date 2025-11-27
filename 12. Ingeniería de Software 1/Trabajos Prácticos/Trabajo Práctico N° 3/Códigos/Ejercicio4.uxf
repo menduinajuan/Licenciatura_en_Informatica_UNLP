@@ -4,12 +4,12 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>90</x>
+      <x>140</x>
       <y>240</y>
-      <w>180</w>
+      <w>80</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>Encargado de mobiliario</panel_attributes>
+    <panel_attributes>Persona</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -27,34 +27,12 @@ halign=center</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>150</x>
+      <x>140</x>
       <y>350</y>
-      <w>60</w>
+      <w>80</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>Cliente</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLActor</id>
-    <coordinates>
-      <x>670</x>
-      <y>240</y>
-      <w>140</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>Servidor del banco</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>310</x>
-      <y>220</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Iniciar sesión</panel_attributes>
+    <panel_attributes>Operador</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -65,118 +43,62 @@ halign=center</panel_attributes>
       <w>120</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Cerrar sesión</panel_attributes>
+    <panel_attributes>Reciclar material</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLUseCase</id>
+    <id>Relation</id>
     <coordinates>
-      <x>310</x>
-      <y>320</y>
-      <w>120</w>
-      <h>40</h>
+      <x>200</x>
+      <y>340</y>
+      <w>130</w>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>Dar de alta sesión</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>510</x>
-      <y>270</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Pagar con tarjeta</panel_attributes>
-    <additional_attributes/>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
       <x>310</x>
       <y>380</y>
-      <w>200</w>
-      <h>50</h>
+      <w>120</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>Reservar alquiler de mobiliario</panel_attributes>
+    <panel_attributes>Actualizar monto</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>310</x>
+      <y>330</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Solicitar listado</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>230</y>
-      <w>120</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;60.0;100.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>210</x>
+      <x>200</x>
       <y>280</y>
-      <w>120</w>
+      <w>130</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>280</y>
-      <w>120</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>210</x>
+      <x>200</x>
       <y>390</y>
-      <w>120</w>
+      <w>130</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>500</x>
-      <y>300</y>
-      <w>120</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-&lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>620</x>
-      <y>280</y>
-      <w>120</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>210</x>
-      <y>300</y>
-      <w>380</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;100.0;170.0;70.0;360.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
   </element>
 </diagram>

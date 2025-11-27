@@ -4,12 +4,13 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>230</x>
-      <y>20</y>
+      <x>340</x>
+      <y>0</y>
       <w>120</w>
-      <h>80</h>
+      <h>90</h>
     </coordinates>
-    <panel_attributes>Usuario
+    <panel_attributes>/&lt;&lt;abstract&gt;&gt;/
+Usuario
 --
 - nombre: String
 - direccion: String
@@ -20,7 +21,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>150</y>
+      <y>140</y>
       <w>290</w>
       <h>50</h>
     </coordinates>
@@ -32,8 +33,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
-      <y>150</y>
+      <x>510</x>
+      <y>140</y>
       <w>300</w>
       <h>60</h>
     </coordinates>
@@ -46,8 +47,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>650</x>
-      <y>200</y>
+      <x>60</x>
+      <y>310</y>
       <w>170</w>
       <h>90</h>
     </coordinates>
@@ -62,8 +63,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>0</y>
+      <x>530</x>
+      <y>300</y>
       <w>270</w>
       <h>110</h>
     </coordinates>
@@ -79,70 +80,86 @@
   <element>
     <id>Relation</id>
     <coordinates>
+      <x>280</x>
+      <y>80</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>80</y>
+      <w>80</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
       <x>220</x>
-      <y>90</y>
-      <w>30</w>
-      <h>80</h>
+      <y>350</y>
+      <w>330</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <panel_attributes>lt=-
+m1=1 vehiculo
+m2=0..* viajes</panel_attributes>
+    <additional_attributes>10.0;10.0;310.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>90</y>
-      <w>30</w>
-      <h>80</h>
+      <x>660</x>
+      <y>190</y>
+      <w>110</w>
+      <h>130</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <panel_attributes>lt=&lt;-
+m1=0..* pasajeros</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>730</x>
-      <y>100</y>
-      <w>30</w>
-      <h>120</h>
+      <x>130</x>
+      <y>180</y>
+      <w>100</w>
+      <h>150</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=-
+m1=1 conductor
+m2=1..* vehiculos</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>140</x>
-      <y>190</y>
-      <w>530</w>
-      <h>90</h>
+      <y>180</y>
+      <w>110</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=-
+m1=1 conductor
 m2=1..* vehiculos</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0;510.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
-      <y>100</y>
-      <w>130</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-m1=0..* pasajeros</panel_attributes>
-    <additional_attributes>10.0;80.0;80.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>340</x>
-      <y>50</y>
-      <w>280</w>
-      <h>40</h>
+      <x>390</x>
+      <y>80</y>
+      <w>210</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=0..* viajes</panel_attributes>
-    <additional_attributes>260.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>140.0;220.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
