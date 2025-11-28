@@ -4,12 +4,12 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>90</x>
+      <x>140</x>
       <y>240</y>
-      <w>180</w>
+      <w>80</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>Encargado de mobiliario</panel_attributes>
+    <panel_attributes>Secretaria</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -27,12 +27,12 @@ halign=center</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>150</x>
+      <x>140</x>
       <y>350</y>
-      <w>60</w>
+      <w>80</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>Cliente</panel_attributes>
+    <panel_attributes>Empleado</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -43,7 +43,7 @@ halign=center</panel_attributes>
       <w>120</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Iniciar sesión</panel_attributes>
+    <panel_attributes>Cargar empleado</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -51,21 +51,10 @@ halign=center</panel_attributes>
     <coordinates>
       <x>310</x>
       <y>270</y>
-      <w>120</w>
+      <w>130</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Cerrar sesión</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>310</x>
-      <y>320</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Dar de alta sesión</panel_attributes>
+    <panel_attributes>Asociar obra social</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -73,10 +62,10 @@ halign=center</panel_attributes>
     <coordinates>
       <x>310</x>
       <y>380</y>
-      <w>200</w>
-      <h>50</h>
+      <w>160</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>Reservar alquiler de mobiliario</panel_attributes>
+    <panel_attributes>Notificar regularización</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -105,22 +94,68 @@ halign=center</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>210</x>
-      <y>280</y>
-      <w>120</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;60.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>210</x>
       <y>390</y>
       <w>120</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>670</x>
+      <y>290</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Servidor de la obra social</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>320</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>490</x>
+      <y>320</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Consultar morosidad</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>270</y>
+      <w>150</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0;130.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>350</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;50.0;100.0;50.0;100.0;10.0</additional_attributes>
   </element>
 </diagram>

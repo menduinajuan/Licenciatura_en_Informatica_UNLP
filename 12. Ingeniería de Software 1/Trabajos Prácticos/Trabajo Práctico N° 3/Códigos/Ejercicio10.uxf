@@ -2,17 +2,6 @@
 <diagram program="umlet" version="15.1">
   <zoom_level>10</zoom_level>
   <element>
-    <id>UMLActor</id>
-    <coordinates>
-      <x>90</x>
-      <y>240</y>
-      <w>180</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>Encargado de mobiliario</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>270</x>
@@ -28,33 +17,11 @@ halign=center</panel_attributes>
     <id>UMLActor</id>
     <coordinates>
       <x>150</x>
-      <y>350</y>
+      <y>180</y>
       <w>60</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>Cliente</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>310</x>
-      <y>220</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Iniciar sesión</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>310</x>
-      <y>270</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Cerrar sesión</panel_attributes>
+    <panel_attributes>Usuario</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -62,65 +29,187 @@ halign=center</panel_attributes>
     <coordinates>
       <x>310</x>
       <y>320</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Dar de alta usuario</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>330</y>
+      <w>130</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>170</y>
+      <w>130</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>310</x>
+      <y>160</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Dar de alta sesión</panel_attributes>
+    <panel_attributes>Alquilar bicicleta</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
       <x>310</x>
-      <y>380</y>
-      <w>200</w>
-      <h>50</h>
+      <y>210</y>
+      <w>120</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>Reservar alquiler de mobiliario</panel_attributes>
+    <panel_attributes>Devolver bicicleta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>460</x>
+      <y>320</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Pagar alquiler de bicicleta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>700</x>
+      <y>290</y>
+      <w>120</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Servidor de pago</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>230</y>
-      <w>120</w>
-      <h>80</h>
+      <x>620</x>
+      <y>320</y>
+      <w>130</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;60.0;100.0;10.0</additional_attributes>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>280</y>
-      <w>120</w>
+      <x>200</x>
+      <y>220</y>
+      <w>130</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>280</y>
-      <w>120</w>
-      <h>80</h>
+      <x>420</x>
+      <y>210</y>
+      <w>160</w>
+      <h>130</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;60.0</additional_attributes>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0;130.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>100</x>
+      <y>400</y>
+      <w>160</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Responsable del área</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
+      <x>200</x>
       <y>390</y>
-      <w>120</w>
+      <w>130</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>440</y>
+      <w>130</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>310</x>
+      <y>380</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Actualizar precio de alquiler</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>310</x>
+      <y>430</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Realizar seguimiento de bicicleta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>140</x>
+      <y>290</y>
+      <w>80</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Empleado</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>330</y>
+      <w>80</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>60.0;120.0;10.0;120.0;10.0;10.0;60.0;10.0</additional_attributes>
   </element>
 </diagram>

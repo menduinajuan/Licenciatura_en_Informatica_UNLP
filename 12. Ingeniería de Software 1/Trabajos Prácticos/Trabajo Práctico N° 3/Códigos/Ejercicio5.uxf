@@ -117,10 +117,10 @@ halign=center</panel_attributes>
     <coordinates>
       <x>310</x>
       <y>370</y>
-      <w>120</w>
+      <w>180</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Modificar códigos</panel_attributes>
+    <panel_attributes>Modificar código de acceso</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -159,9 +159,9 @@ halign=center</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>510</x>
+      <x>500</x>
       <y>320</y>
-      <w>120</w>
+      <w>130</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>Reportar incidente</panel_attributes>
@@ -170,7 +170,7 @@ halign=center</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>680</x>
+      <x>700</x>
       <y>290</y>
       <w>120</w>
       <h>110</h>
@@ -221,19 +221,19 @@ halign=center</panel_attributes>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;includes&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;100.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;100.0;150.0;100.0;150.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>470</x>
-      <y>270</y>
+      <y>260</y>
       <w>120</w>
-      <h>70</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;includes&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;50.0</additional_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0;100.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
