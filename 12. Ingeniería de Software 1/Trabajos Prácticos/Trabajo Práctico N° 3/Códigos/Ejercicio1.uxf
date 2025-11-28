@@ -150,11 +150,11 @@ halign=center</panel_attributes>
     <coordinates>
       <x>500</x>
       <y>330</y>
-      <w>100</w>
+      <w>90</w>
       <h>90</h>
     </coordinates>
-    <panel_attributes>lt=.&gt;
-&lt;&lt;includes&gt;&gt;</panel_attributes>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extends&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>

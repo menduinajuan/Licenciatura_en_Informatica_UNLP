@@ -131,8 +131,8 @@ halign=center</panel_attributes>
       <w>160</w>
       <h>130</h>
     </coordinates>
-    <panel_attributes>lt=.&gt;
-&lt;&lt;includes&gt;&gt;</panel_attributes>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extends&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;20.0;130.0;20.0;130.0;110.0</additional_attributes>
   </element>
   <element>
@@ -180,17 +180,6 @@ halign=center</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>310</x>
-      <y>430</y>
-      <w>220</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Realizar seguimiento de bicicleta</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>UMLActor</id>
     <coordinates>
       <x>140</x>
@@ -211,5 +200,16 @@ halign=center</panel_attributes>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;</panel_attributes>
     <additional_attributes>60.0;120.0;10.0;120.0;10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>310</x>
+      <y>430</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Seguir bicicleta</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

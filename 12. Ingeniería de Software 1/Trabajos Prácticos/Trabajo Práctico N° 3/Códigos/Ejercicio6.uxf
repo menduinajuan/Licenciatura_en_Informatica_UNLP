@@ -4,12 +4,12 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>90</x>
-      <y>240</y>
-      <w>180</w>
+      <x>150</x>
+      <y>290</y>
+      <w>60</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>Encargado de mobiliario</panel_attributes>
+    <panel_attributes>Cliente</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -25,28 +25,6 @@ halign=center</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLActor</id>
-    <coordinates>
-      <x>150</x>
-      <y>350</y>
-      <w>60</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>Cliente</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>310</x>
-      <y>220</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Iniciar sesión</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>UMLUseCase</id>
     <coordinates>
       <x>310</x>
@@ -54,7 +32,7 @@ halign=center</panel_attributes>
       <w>120</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Cerrar sesión</panel_attributes>
+    <panel_attributes>Solicitar préstamo</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -65,25 +43,25 @@ halign=center</panel_attributes>
       <w>120</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Dar de alta sesión</panel_attributes>
+    <panel_attributes>Adelantar cuotas</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
       <x>310</x>
-      <y>380</y>
-      <w>200</w>
-      <h>50</h>
+      <y>370</y>
+      <w>120</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>Reservar alquiler de mobiliario</panel_attributes>
+    <panel_attributes>Cancelar préstamo</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>210</x>
-      <y>230</y>
+      <y>280</y>
       <w>120</w>
       <h>80</h>
     </coordinates>
@@ -94,7 +72,7 @@ halign=center</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>210</x>
-      <y>280</y>
+      <y>330</y>
       <w>120</w>
       <h>30</h>
     </coordinates>
@@ -105,7 +83,7 @@ halign=center</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>210</x>
-      <y>280</y>
+      <y>330</y>
       <w>120</w>
       <h>80</h>
     </coordinates>
@@ -113,14 +91,48 @@ halign=center</panel_attributes>
     <additional_attributes>10.0;10.0;100.0;60.0</additional_attributes>
   </element>
   <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>690</x>
+      <y>290</y>
+      <w>140</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Servidor del Veraz</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>390</y>
-      <w>120</w>
-      <h>30</h>
+      <x>620</x>
+      <y>320</y>
+      <w>130</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>510</x>
+      <y>320</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Verificar CUIT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>280</y>
+      <w>110</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;60.0</additional_attributes>
   </element>
 </diagram>
