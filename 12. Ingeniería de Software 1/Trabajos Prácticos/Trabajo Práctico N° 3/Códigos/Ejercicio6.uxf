@@ -51,7 +51,7 @@ halign=center</panel_attributes>
     <coordinates>
       <x>310</x>
       <y>370</y>
-      <w>120</w>
+      <w>130</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>Cancelar préstamo</panel_attributes>

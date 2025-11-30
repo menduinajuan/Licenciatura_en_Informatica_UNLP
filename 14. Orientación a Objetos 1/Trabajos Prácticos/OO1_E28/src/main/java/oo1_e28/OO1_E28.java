@@ -31,7 +31,7 @@ public class OO1_E28 {
 
         D objeto7=new E();
         objeto7.mensajeAbstracto();
-        objeto7.mensajeParticular();
+        objeto7.mensajeParticular();        
 
         // INCISO (d)
 
