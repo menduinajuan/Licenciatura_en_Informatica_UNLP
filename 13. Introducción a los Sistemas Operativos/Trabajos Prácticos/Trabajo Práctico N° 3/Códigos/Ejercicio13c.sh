@@ -17,9 +17,9 @@ if [ -e "$nombre" ]; then
     if [ -d "$nombre" ]; then
         echo "‘$nombre’ existe y es un directorio"
     elif [ -f "$nombre" ]; then
-        echo "‘$nombre’ existe y es un archivo regular"
+        echo "‘$nombre’ existe y es un archivo"
     else
-        echo "‘$nombre’ existe, pero no es ni archivo ni directorio"
+        echo "‘$nombre’ existe, pero no es ni directorio ni archivo"
     fi
 else
     echo "‘$nombre’ no existe. Se creará un directorio con ese nombre..."

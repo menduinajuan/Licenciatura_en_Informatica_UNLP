@@ -12,10 +12,15 @@ fi
 # Algoritmo
 for usuario in "$@"; do
 
+    if ! id "$usuario" &>/dev/null; then
+        echo "El usuario $usuario no existe en el sistema"
+        continue
+    fi
+
     home_dir=$(getent passwd "$usuario" | cut -d: -f6)
 
-    if [ -z "$home_dir" ] || [ ! -d "$home_dir" ]; then
-        echo "El usuario '$usuario' no existe o no tiene home válido"
+    if [ ! -d "$home_dir" ]; then
+        echo "El usuario '$usuario' no tiene home válido"
         continue
     fi
 

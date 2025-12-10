@@ -33,7 +33,9 @@ public class DateLapseTest {
         assertFalse(this.dateLapse.includesDate(this.dateLapse.getFrom().minusDays(1)));
         assertFalse(this.dateLapse.includesDate(this.dateLapse.getTo().plusDays(1)));
         assertTrue(this.dateLapse.includesDate(this.dateLapse.getFrom()));
+        assertTrue(this.dateLapse.includesDate(this.dateLapse.getFrom().plusDays(1)));
         assertTrue(this.dateLapse.includesDate(this.dateLapse.getTo()));
+        assertTrue(this.dateLapse.includesDate(this.dateLapse.getTo().minusDays(1)));
     }
 
 }

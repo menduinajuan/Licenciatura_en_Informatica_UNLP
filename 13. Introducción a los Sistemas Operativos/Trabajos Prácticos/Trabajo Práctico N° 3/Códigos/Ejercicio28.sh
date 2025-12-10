@@ -3,6 +3,7 @@
 # Uso: ./Ejercicio28.sh
 
 # Vector
+touch "/home/existe.doc"
 archivos=($(find /home -maxdepth 1 -type f -name "*.doc" 2>/dev/null))
 
 # FUNCIONES
@@ -23,7 +24,8 @@ verArchivo() {
 
 # cantidadArchivos: Imprime la cantidad de archivos del /home con terminación .doc
 cantidadArchivos() {
-    echo "Cantidad de archivos .doc en /home: ${#archivos[@]}"
+    echo "Cantidad de archivos en el arreglo: ${#archivos[@]}"
+    echo "Cantidad de archivos .doc en /home: $(find /home -maxdepth 1 -type f -name "*.doc" | wc -l)"
 }
 
 # borrarArchivo: Elimina un archivo del arreglo y, opcionalmente, del FileSystem
@@ -53,19 +55,20 @@ borrarArchivo() {
         unset 'archivos[index]'
         archivos=("${archivos[@]}")
         echo "Archivo eliminado del arreglo"
-    else
+    elif [[ "$respuesta" == "No" || "$respuesta" == "no" ]]; then
         unset 'archivos[index]'
         archivos=("${archivos[@]}")
         rm -f "$ruta"
         echo "Archivo eliminado del arreglo y del FileSystem"
+    else
+        echo "Respuesta inválida. Se debe responder: 'Sí' o 'No'"
     fi
 
 }
 
 # PRUEBAS
 
-echo -n "Archivos encontrados: ${archivos[@]}"
-echo
+echo "Archivos encontrados: ${archivos[@]}"
 
 verArchivo "noexiste.doc"
 verArchivo "existe.doc"

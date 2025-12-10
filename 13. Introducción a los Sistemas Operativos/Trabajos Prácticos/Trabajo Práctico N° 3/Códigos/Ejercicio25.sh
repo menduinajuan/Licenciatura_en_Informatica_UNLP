@@ -15,12 +15,12 @@ posicion=1
 for ruta in "$@"; do
     if (( posicion % 2 != 0 )); then
         if [ -e "$ruta" ]; then
-            if [ -f "$ruta" ]; then
-                echo "Posición $posicion: '$ruta' existe y es un archivo"
-            elif [ -d "$ruta" ]; then
+            if [ -d "$ruta" ]; then
                 echo "Posición $posicion: '$ruta' existe y es un directorio"
+            elif [ -f "$ruta" ]; then
+                echo "Posición $posicion: '$ruta' existe y es un archivo"
             else
-                echo "Posición $posicion: '$ruta' existe, pero no es ni archivo ni directorio"
+                echo "Posición $posicion: '$ruta' existe, pero no es ni directorio ni archivo"
             fi
         else
             echo "Posición $posicion: '$ruta' no existe"

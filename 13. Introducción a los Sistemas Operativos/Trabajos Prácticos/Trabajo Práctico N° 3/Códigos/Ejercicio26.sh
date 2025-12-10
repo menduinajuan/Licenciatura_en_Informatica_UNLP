@@ -45,9 +45,9 @@ longitud() {
 imprimir() {
     if [ ${#array[@]} -eq 0 ]; then
         echo "El arreglo está vacío"
-    else
-        echo "Elementos del arreglo: ${array[@]}"
+       return 1
     fi
+    echo "Elementos del arreglo: ${array[@]}"
 }
 
 # inicializar_con_valores: Crea un arreglo con longitud <parametro1> y, en todas las posiciones, asigna el valor <parametro2>
@@ -68,6 +68,7 @@ inicializar_con_valores() {
 # PRUEBAS
 
 inicializar
+imprimir
 agregar_elem "A"
 agregar_elem "B"
 agregar_elem "C"
