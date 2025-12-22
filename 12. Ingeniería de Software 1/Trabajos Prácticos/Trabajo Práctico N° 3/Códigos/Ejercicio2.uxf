@@ -205,11 +205,11 @@ halign=center</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>200</x>
-      <y>350</y>
+      <y>330</y>
       <w>390</w>
-      <h>170</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;100.0;10.0;150.0;370.0;150.0;370.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;370.0;90.0;370.0;30.0</additional_attributes>
   </element>
 </diagram>

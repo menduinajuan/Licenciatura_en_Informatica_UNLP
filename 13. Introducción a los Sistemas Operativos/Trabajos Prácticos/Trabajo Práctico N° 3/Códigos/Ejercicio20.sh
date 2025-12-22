@@ -9,6 +9,9 @@ pila=()
 
 # push: Recibe un parámetro y lo agrega a la pila
 push() {
+    if [ "$#" -ne 1 ]; then
+        return 1
+    fi
     pila+=("$1")
 }
 
