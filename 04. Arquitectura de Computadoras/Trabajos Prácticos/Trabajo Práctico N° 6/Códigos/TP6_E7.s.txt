@@ -1,0 +1,143 @@
+			.data 
+CONTROL:		.word 0x10000
+DATA:			.word 0x10008
+CERO:			.byte 0x7E
+UNO:			.byte 0x0C
+DOS:			.byte 0xB6
+TRES:			.byte 0x9E
+CUATRO:			.byte 0xCC
+CINCO:			.byte 0xDA
+SEIS:			.byte 0xFA
+SIETE:			.byte 0x0E
+OCHO:			.byte 0xFE
+NUEVE:			.byte 0xDE
+MSJ:			.asciiz "INTRODUCIR NUMERO ENTERO DE UN DIGITO: "
+
+			.text
+			daddi $sp, $0, 0x400
+			ld $s0, CONTROL($0)
+			ld $s1, DATA($0)
+
+			daddi $t0, $0, MSJ
+			sd $t0, 0($s1)
+			daddi $t0, $0, 4
+			sd $t0, 0($s0)
+
+			daddi $t0, $0, 8
+			sd $t0, 0($s0)
+			ld $t0, 0($s1)
+			daddi $t1, $0, 8
+			dmulu $t0, $t0, $t1
+			ld $s2, CERO($t0) 
+
+SEGMENTO1:		andi $t0, $s2, 0x2
+			beqz $t0, SEGMENTO2
+			daddi $a0, $0, 8
+			daddi $a1, $0, 2
+			daddi $a2, $0, 3
+			daddi $a3, $0, 0
+			jal LINEA
+
+SEGMENTO2:		andi $t0, $s2, 0x4
+			beqz $t0, SEGMENTO3
+			daddi $a0, $0, 6
+			daddi $a1, $0, 5
+			daddi $a2, $0, 2
+			daddi $a3, $0, 1
+			jal LINEA
+
+SEGMENTO3:		andi $t0, $s2, 0x8
+			beqz $t0, SEGMENTO4
+			daddi $a0, $0, 2
+			daddi $a1, $0, 5
+			daddi $a2, $0, 3
+			daddi $a3, $0, 1
+			jal LINEA
+
+SEGMENTO4:		andi $t0, $s2, 0x10
+			beqz $t0, SEGMENTO5
+			daddi $a0, $0, 1
+			daddi $a1, $0, 2
+			daddi $a2, $0, 3
+			daddi $a3, $0, 0
+			jal LINEA
+
+SEGMENTO5:		andi $t0, $s2, 0x20
+			beqz $t0, SEGMENTO6
+			daddi $a0, $0, 2
+			daddi $a1, $0, 1
+			daddi $a2, $0, 3
+			daddi $a3, $0, 1
+			jal LINEA
+
+SEGMENTO6:		andi $t0, $s2, 0x40
+			beqz $t0, SEGMENTO7
+			daddi $a0, $0, 6
+			daddi $a1, $0, 1
+			daddi $a2, $0, 2
+			daddi $a3, $0, 1
+			jal LINEA
+
+SEGMENTO7:		andi $t0, $s2, 0x80
+			beqz $t0, FIN
+			daddi $a0, $0, 5
+			daddi $a1, $0, 2
+			daddi $a2, $0, 3
+			daddi $a3, $0, 0
+			jal LINEA
+
+FIN:			halt
+
+LINEA:			daddi $sp, $sp, -8
+			sd $ra, 0($sp)
+			daddi $sp, $sp, -8
+			sd $s2, 0($sp)
+			daddi $sp, $sp, -8
+			sd $s3, 0($sp)
+			daddi $sp, $sp, -8
+			sd $s4, 0($sp)
+			dadd $s4, $0, $a2
+			beqz $a3, HORIZONTAL
+			dadd $s2, $0, $a0
+			dadd $s3, $0, $a1
+
+IMPRIMIR_V:		beqz $s4, TERMINAR
+			dadd $a0, $0, $s2
+			dadd $a1, $0, $s3
+			jal PUNTO
+			daddi $s2, $s2, 1
+			daddi $s4, $s4, -1
+			j IMPRIMIR_V
+
+HORIZONTAL:		dadd $s2, $0, $a1
+			dadd $s3, $0, $a0
+
+IMPRIMIR_H:		beqz $s4, TERMINAR
+			dadd $a0, $0, $s3
+			dadd $a1, $0, $s2
+			jal PUNTO
+			daddi $s2, $s2, 1
+			daddi $s4, $s4, -1
+			j IMPRIMIR_H
+
+TERMINAR:		ld $s4,0($sp)
+			daddi $sp, $sp,8
+			ld $s3, 0($sp)
+			daddi $sp, $sp, 8
+			ld $s2, 0($sp)
+			daddi $sp, $sp, 8
+			ld $ra, 0($sp)
+			daddi $sp, $sp, 8
+			jr $ra
+
+PUNTO:			dadd $t0, $0, $0
+			daddi $t1, $0, 32
+			dsllv $a0, $a0, $t1
+			daddi $t1, $0, 40
+			dsllv $a1, $a1, $t1
+			dadd $t0, $t0, $a0
+			dadd $t0, $t0, $a1
+			sd $t0, 0($s1)
+			daddi $t1, $0, 5
+			sd $t1, 0($s0)
+			jr $ra

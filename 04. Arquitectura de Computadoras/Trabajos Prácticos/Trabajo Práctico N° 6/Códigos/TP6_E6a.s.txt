@@ -1,7 +1,7 @@
 		.data
-COORX:		.byte 24		; coordenada X de un punto
-COORY:		.byte 24		; coordenada Y de un punto
-COLOR:		.byte 255, 0, 255, 0	; color: máximo rojo + máximo azul -> magenta
+COORX:		.byte 24		; Coordenada X de un punto
+COORY:		.byte 24		; Coordenada Y de un punto
+COLOR:		.byte 255, 0, 255, 0	; Color: máximo rojo + máximo azul -> magenta
 CONTROL:	.word32 0x10000
 DATA:		.word32 0x10008
 

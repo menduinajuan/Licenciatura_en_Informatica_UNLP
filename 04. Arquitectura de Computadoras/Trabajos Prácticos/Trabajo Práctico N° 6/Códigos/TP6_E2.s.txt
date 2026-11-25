@@ -1,7 +1,7 @@
 			.data 
 CONTROL:		.word 0x10000
 DATA:			.word 0x10008
-MSJ:			.asciiz "INTRODUCIR UN NUMERO ENTERO DE UN DIGITO:\n"
+MSJ:			.asciiz "INTRODUCIR NUMERO ENTERO DE UN DIGITO:\n"
 ERROR:			.asciiz "ERROR"
 MENOSNUEVE:		.asciiz "MNUEVE"
 MENOSOCHO:		.asciiz "MOCHO"

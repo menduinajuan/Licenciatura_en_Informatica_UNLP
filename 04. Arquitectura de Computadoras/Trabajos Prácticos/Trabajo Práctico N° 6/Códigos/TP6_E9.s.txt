@@ -1,0 +1,82 @@
+			.data
+CONTROL:		.word32 0x10000
+DATA:			.word32 0x10008
+COLORES:		.word32 0x00FFFFFF, 0x00000000, 0x000000FF, 0x0000FF00, 0x00FF0000, 0x0000FFFF, 0x00FF00FF, 0x00FFFF00, 0x000080FF
+						; Fondo: 0= blanco, 1= negro, 2= rojo, 3= verde, 4= azul, 5= amarillo, 6= magenta, 7= cian, 8= naranja
+CURSOR:			.word32 0x00808080	; Gris
+IMG:			.space 2500		; 50x50 puntos, 1 byte por punto
+
+			.code
+			lwu $s0, CONTROL($0)
+			lwu $s1, DATA($0)
+			daddi $s2, $0, 25	; X del cursor
+			daddi $s3, $0, 25	; Y del cursor
+			daddi $s4, $0, 1	; Color seleccionado (1 a 8)
+			dadd $s5, $0, $0	; Modo: 0= desplazamiento, 1= dibujo
+			daddi $s6, $0, 50	; Ancho de la pantalla
+			daddi $t0, $0, 7	; Limpiar pantalla gráfica
+			sd $t0, 0($s0)
+
+LOOP:			dadd $a0, $0, $s2	; Dibuja el cursor
+			dadd $a1, $0, $s3
+			lwu $a2, CURSOR($0)
+			jal PUNTO
+			daddi $t0, $0, 9	; Espera una tecla
+			sd $t0, 0($s0)
+			lbu $s7, 0($s1)
+			dmulu $t1, $s3, $s6	; t1 = y*50 + x (posición en IMG)
+			dadd $t1, $t1, $s2
+			beqz $s5, RESTAURA
+			sb $s4, IMG($t1)	; Modo dibujo: pinta el punto
+
+RESTAURA:		lbu $t2, IMG($t1)	; Repone el punto que tapaba el cursor
+			dsll $t2, $t2, 2	; Índice x 4 (word32)
+			lwu $a2, COLORES($t2)
+			dadd $a0, $0, $s2
+			dadd $a1, $0, $s3
+			jal PUNTO
+			daddi $t0, $0, 97	; 'a'
+			beq $s7, $t0, IZQ
+			daddi $t0, $0, 100	; 'd'
+			beq $s7, $t0, DER
+			daddi $t0, $0, 119	; 'w'
+			beq $s7, $t0, ARRIBA
+			daddi $t0, $0, 115	; 's'
+ 			beq $s7, $t0, ABAJO
+			daddi $t0, $0, 32	; Espacio
+			beq $s7, $t0, MODO
+			daddi $t0, $s7, -48	; ¿Tecla '1' a '8'?
+			slti $t1, $t0, 1
+			bnez $t1, LOOP		; Menor que '1': se ignora
+			slti $t1, $t0, 9
+			beqz $t1, LOOP		; Mayor que '8': se ignora
+			dadd $s4, $0, $t0	; Nuevo color
+			j LOOP
+
+IZQ:			beqz $s2, LOOP		; Borde izquierdo
+			daddi $s2, $s2, -1
+			j LOOP
+
+DER:			daddi $t0, $0, 49
+			beq $s2, $t0, LOOP	; Borde derecho
+			daddi $s2, $s2, 1
+			j LOOP
+
+ARRIBA:			daddi $t0, $0, 49
+			beq $s3, $t0, LOOP	; Borde superior
+			daddi $s3, $s3, 1
+			j LOOP
+
+ABAJO:			beqz $s3, LOOP		; Borde inferior
+			daddi $s3, $s3, -1
+			j LOOP
+
+MODO:			xori $s5, $s5, 1	; Alterna desplazamiento / dibujo
+			j LOOP
+
+PUNTO:			sw $a2, 0($s1)		; Dibuja un punto en (a0 = x, a1 = y) con color a2
+			sb $a0, 5($s1)		; DATA+5 = x
+			sb $a1, 4($s1)		; DATA+4 = y
+			daddi $t0, $0, 5
+			sd $t0, 0($s0)
+			jr $ra

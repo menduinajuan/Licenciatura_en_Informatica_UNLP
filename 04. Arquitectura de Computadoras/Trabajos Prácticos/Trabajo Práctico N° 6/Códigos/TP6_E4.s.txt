@@ -4,7 +4,7 @@ DATA:				.word 0x10008
 CLAVE:				.asciiz "JUAN"
 MSJ_BIENV:			.asciiz "BIENVENIDO"
 MSJ_ERROR:			.asciiz "ERROR. INTRODUCIR, NUEVAMENTE, LA CLAVE:\n"
-MSJ:				.asciiz "INTRODUCIR UNA CLAVE DE CUATRO CARACTERES:\n"
+MSJ:				.asciiz "INTRODUCIR CLAVE DE CUATRO CARACTERES:\n"
 
 				.code
 				daddi $sp, $0, 0x400

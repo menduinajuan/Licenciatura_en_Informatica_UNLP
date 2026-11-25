@@ -1,7 +1,7 @@
 			.data 
 CONTROL:		.word 0x10000
 DATA:			.word 0x10008
-MSJ1:			.asciiz "INTRODUCIR DOS NUMEROS ENTEROS:\n"
+MSJ1:			.asciiz "INTRODUCIR DOS NUMEROS ENTEROS DE UN DIGITO:\n"
 MSJ2:			.asciiz "SU SUMA ES IGUAL A:\n"
 
 			.code
